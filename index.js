@@ -105,47 +105,4 @@ function getFahrenheite(celsiusVal) {
 }
 // console.log(getFahrenheite(101.3));
 
-// JavaScript Program to Solve Quadratic Equation
-function quadraticEquation(a, b, c) {
-  let discriminant = b * b - 4 * a * c;
-  
-  // discriminant > 0 formula b(square)−4ac
-  if (discriminant > 0) {
-    root1 = ((-b + Math.sqrt(discriminant)) / 2) * a;
-    root2 = ((-b - Math.sqrt(discriminant)) / 2) * a;
-    console.log(`The Root Of quadratic Equation are ${root1}, and ${root2}`);
-
-    // Condition For Real Equal Roots
-    // discriminant = 0 formula
-  } else if (discriminant === 0) {
-    root1 = root2 = -b / (2 * a);
-    console.log(`The Root Of quadratic Equation are ${root1}, and ${root2}`);
-
-    // if Roots Are Not Real
-    // discriminant > 0 formula
-  } else {
-    realroot = (-b / 2) * a;
-    imaginRoot = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
-    console.log(
-      `Roots are complex: ${realPart} + ${imagPart}i , ${realPart} - ${imagPart}i`
-    );
-  }
-}
-quadraticEquation(1, -3, 2);
-
-// Killometers to Milles
-function getMiles(Killometer) {
-  let factor = 0.621371;
-  let findMiles = Killometer * factor;
-  return findMiles;
-}
-// console.log(getMiles(5));
-
-// Javascript Program to Generate a Random Number
-function getRandomNum(){
-  let min = 10;
-  let max = 20;
-  let ranomNum = Math.floor(Math.random() * (max - min) + min);
-  console.log(ranomNum);
-};
-getRandomNum();
+// 

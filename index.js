@@ -108,7 +108,7 @@ function getFahrenheite(celsiusVal) {
 // JavaScript Program to Solve Quadratic Equation
 function quadraticEquation(a, b, c) {
   let discriminant = b * b - 4 * a * c;
-  
+
   // discriminant > 0 formula b(square)−4ac
   if (discriminant > 0) {
     root1 = ((-b + Math.sqrt(discriminant)) / 2) * a;
@@ -124,14 +124,14 @@ function quadraticEquation(a, b, c) {
     // if Roots Are Not Real
     // discriminant > 0 formula
   } else {
-    realroot = (-b / 2) * a;
+    realroot = -b / (2 * a).toFixed(2);
     imaginRoot = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
     console.log(
-      `Roots are complex: ${realPart} + ${imagPart}i , ${realPart} - ${imagPart}i`
+      `Roots are complex: ${realroot} + ${imaginRoot}i , ${realroot} - ${imaginRoot}i`
     );
   }
 }
-quadraticEquation(1, -3, 2);
+// quadraticEquation(1, -3, 2);
 
 // Killometers to Milles
 function getMiles(Killometer) {
@@ -142,10 +142,182 @@ function getMiles(Killometer) {
 // console.log(getMiles(5));
 
 // Javascript Program to Generate a Random Number
-function getRandomNum(){
+function getRandomNum() {
   let min = 10;
   let max = 20;
   let ranomNum = Math.floor(Math.random() * (max - min) + min);
   console.log(ranomNum);
+}
+// getRandomNum();
+
+// Quadeatic Operation
+function getQuadratic(a, b, c) {
+  let discriminant = b * b - 4 * a * c;
+  if (discriminant > 0) {
+    let root1 = ((-b + Math.sqrt(discriminant)) / 2) * a;
+    let root2 = ((-b - Math.sqrt(discriminant)) / 2) * a;
+    console.log(`print ${root1} and ${root2}`);
+  } else if (discriminant === 0) {
+    root1 = root2 = -b / (2 * a);
+    console.log(`The Root Of quadratic Equation are ${root1}, and ${root2}`);
+  } else {
+    realRoot = -b / (2 * a);
+    imaginRoot = Math.sqrt(-discriminant) / (2 * a).toFixed(2);
+    console.log(
+      `Roots are complex: ${realRoot} + ${imaginRoot}i , ${realroot} - ${imaginRoot}i`
+    );
+  }
+}
+// getQuadratic(1, 6, 5);
+
+// Javascript Program to Check if a number is Positive, Negative, or Zero
+function findState(num) {
+  let numValue = num;
+  if (numValue > 0) {
+    console.log(numValue, "Value Positive");
+  } else if (numValue === 0) {
+    console.log(numValue, "Value was Zero");
+  } else {
+    console.log(numValue, "Negative Value");
+  }
+}
+// findState(-2);
+
+// Write a function to check if a number is negative.
+function checkNegative(num) {
+  if (num < 0) {
+    console.log(num, "Negative");
+  } else if (num === 0) {
+    console.log(num, "Not Negative");
+  } else {
+    console.log(num, "Not Negative");
+  }
+}
+// checkNegative(4);
+
+// Javascript Program to Check if a Number is Odd or Even
+function findOddEven(num) {
+  if (num % 2 === 0) {
+    console.log("Even");
+  } else {
+    console.log("Odd");
+  }
+}
+// findOddEven(10);
+
+function ternaryOddEven(num) {
+  console.log(num % 2 === 0 ? "Even" : "Odd");
+}
+// ternaryOddEven(7);
+
+// JavaScript Program to Find the Largest Among Three Numbers
+function checkLargest(num1, num2) {
+  if (num1 > num2) {
+  } else {
+    console.log("Smaller");
+  }
+}
+// checkLargest(10, 20);
+
+function findLargest(num1, num2) {
+  if (num1 > num2 || num2 > num1) {
+    if (num1 > num2) {
+      console.log(num1);
+    } else {
+      console.log(num2);
+    }
+  }
+  if (num1 === num2) {
+    return num1, num2;
+  }
+}
+// findLargest(1, 8);
+
+// JavaScript Program to Check Prime Number
+function checkPrime(num) {
+  if (num < 2) {
+    return "Not Prime";
+  }
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % 2 === 0) {
+      return "Not Prime";
+    }
+  }
+  return `${num} is a prime number`;
+}
+// console.log(checkPrime(7));
+
+function primeRange(start, end) {
+  let result = [];
+  for (let i = start; i < end; i++) {
+    if (i < 2) {
+      continue;
+    }
+    let isPrime = true;
+    for (let j = 2; j <= Math.sqrt(start); j++) {
+      if (j % 2 === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      result.push(i);
+    }
+  }
+  return result;
+}
+// console.log(primeRange(1, 10));
+
+// Write a function to calculate the factorial of a number.
+function factorialNum(num) {
+  let initialNum = 1;
+    if (num < 0) {
+      return "Enter Valid Number";
+    };
+    if (num === 0) {
+      return 1;
+    };
+    for(let i = 1; i <= num; i++){
+      initialNum = i * initialNum;
+    };
+    return initialNum;
+}
+// console.log(factorialNum(6));
+
+function calculateFactorial(num) {
+    if (num === 0) {
+        return 1;
+    }
+    // Recursive case: multiply num by the factorial of (num - 1)
+    return num * calculateFactorial(num - 1);
 };
-getRandomNum();
+// console.log(calculateFactorial(5));
+
+// JavaScript Program To Display Multiplication Table(Table Form)
+function multiplicationTable(num) {
+  let result =[];
+  for(let i = 1; i <= 10; i++){
+    // let value = num * i;
+    result.push([num, i, num * i]);
+  };
+  return result;
+};
+// console.table(multiplicationTable(7));
+
+// JavaScript Program To Display Multiplication Table(signs)
+function multiplicationTable(num) {
+  for(let i = 1; i <= 10; i++){
+    let value = num * i;
+    // console.log(num, "x", i, "=", value);
+  };
+};
+multiplicationTable(4567);
+
+// JavaScript Program to Check Armstrong Number
+function checkArmstrongNum(num){
+  let digits = num.toString().split("").map(Number);
+  let power = digits.length
+  let sum = digits.reduce((acc, crr) => acc + Math.pow(crr, power), 0)
+  return sum;
+}
+console.log(checkArmstrongNum(153));

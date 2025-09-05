@@ -46,7 +46,7 @@ function findArea(base, height) {
   let area = (base * height) / halfOfRectangleArea;
   return area;
 }
-// console.log(findArea(4, 6));
+// console.log(findArea(4, 6)); hii
 
 // ANOTHER WAY
 // const side1 = parseInt(prompt("Enter Side1 Value"));

@@ -13,21 +13,21 @@
         // alert("Akash")
 
         function findLargestNum(){
-            // let num1 = parseInt(prompt("Enter Number-1",));
-            // let num2 = parseInt(prompt("Enter Number-2",));
-            // let num3 = parseInt(prompt("Enter Number-2",));
+            let num1 = parseInt(prompt("Enter Number-1",));
+            let num2 = parseInt(prompt("Enter Number-2",));
+            let num3 = parseInt(prompt("Enter Number-2",));
         
-            // let Largest;
-            // if(num1 > num2 && num1 > num3){
-            //     Largest = num1;
-            // } else if(num2 > num1 && num2 > num3){
-            //     Largest = num2;
-            // } else {
-            //     Largest = num3;
-            // };
-            // document.write(`The Largest Number Is ${Largest}`);
+            let Largest;
+            if(num1 > num2 && num1 > num3){
+                Largest = num1;
+            } else if(num2 > num1 && num2 > num3){
+                Largest = num2;
+            } else {
+                Largest = num3;
+            };
+            document.write(`The Largest Number Is ${Largest}`);
         };
-        findLargestNum();
+        // findLargestNum();
 
         function checkPrime(){
             let num = parseInt(prompt("Enter Number..."));
@@ -46,7 +46,7 @@
         };
         // checkPrime();
 
-        let num = parseInt(prompt("Enter Number..."));
+        // let num = parseInt(prompt("Enter Number..."));
         let storingValue = 1;
         function checkFactorial(){
             if(num < 0){return 'Error! Factorial for negative number does not exist.'};
@@ -56,7 +56,26 @@
             };
             return storingValue;
         };
-        document.write("Your Factorial Value is =", checkFactorial());
+        // document.write("Your Factorial Value is =", checkFactorial());
+
+        function checkArmstrong() {
+            let sum = 0;
+            let input = prompt("Enter Number...");
+            let digit = input.length;
+
+            let temp = input;
+            while(temp > 0){
+                let reminder  = temp % 10;
+                sum += Math.pow(reminder, digit);
+                temp = parseInt(temp / 10);
+            };
+            if(sum === input){
+                console.log("Armstrong");
+            } else {
+                console.log("Not Armstrong");
+            };
+        };
+        checkArmstrong();
         </script>
 </body>
 </html>

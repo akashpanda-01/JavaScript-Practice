@@ -318,6 +318,67 @@ function checkArmstrongNum(num){
   let digits = num.toString().split("").map(Number);
   let power = digits.length
   let sum = digits.reduce((acc, crr) => acc + Math.pow(crr, power), 0)
-  return sum;
-}
-console.log(checkArmstrongNum(153));
+  if(sum === num){
+    console.log("Armstrong");
+  } else {
+    console.log("Not a Armstrong");
+  };
+};
+// checkArmstrongNum(153);
+
+function checkArmstrongNumber(num) {
+    // let sum = 0;
+    let digits = num.toString().split("").map(Number);
+    let pow = digits.length;
+    return digits.reduce((acc, crr) => acc + Math.pow(crr, pow), 0) ? "Armstrong" : "Not Armstrong";
+};
+// console.log(checkArmstrongNumber(123));/
+
+function checkArmStrong(num){
+  return num === num.toString().split("").reduce((acc, crr) => acc + Math.pow(+crr, 3), 0) ? "ArmStrong" : "Not A ArmStrong";
+};
+// console.log(checkArmStrong(124));
+
+function armstrong(num){
+  let input = num.toString();
+  let output = 0;
+
+  for(let i = 0; i < input.length; i++){
+    let a = input.charAt(i);
+    output += Math.pow(parseInt(a), 3);
+  };
+  if(num === output) {
+    return "Armstrong";
+  } else {
+    return "Not Armstrong";
+  };
+};
+// console.log(armstrong(124));
+
+function checkArmStrongValue(num){
+  let originalVal = num; //For Comapre in the End
+  let sum = 0; // store the sum values of Number
+  let digits = 0; // we update while looping 
+
+  let n = num; //this will be modify 
+  while(n > 0){
+    n = Math.floor(n / 10);
+    digits++;
+  }
+  // console.log(n);
+
+  n = num;
+  while(n > 0){
+    let digit = n%10 ;
+    sum += Math.pow(digit, digits);
+    n = Math.floor(n / 10);
+  };
+  // console.log(n);
+  
+  if(originalVal === sum){
+    console.log("Armstrong");
+  } else {
+    console.log("Not Armstrong");
+  };
+};
+checkArmStrongValue(13);

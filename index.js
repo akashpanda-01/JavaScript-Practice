@@ -393,15 +393,15 @@ function checkArmStrongValue(num) {
 
 let score = 60;
 if (score >= 80 && score <= 100) {
-  console.log("Gread-A");
+  // console.log("Gread-A");
 } else if (score >= 70 && score <= 79) {
-  console.log("Grade- B");
+  // console.log("Grade- B");
 } else if (score >= 60 && score <= 69) {
-  console.log("Grade- C");
+  // console.log("Grade- C");
 } else if (score >= 50 && score <= 59) {
-  console.log("Grade- D");
+  // console.log("Grade- D");
 } else {
-  console.log("F");
+  // console.log("F");
 }
 
 function checkPositive(num) {
@@ -411,7 +411,7 @@ function checkPositive(num) {
     return num, "Negative";
   }
 }
-console.log(checkPositive(42));
+// console.log(checkPositive(42));
 
 function eligibleCheck(age) {
   if (age > 18) {
@@ -420,7 +420,8 @@ function eligibleCheck(age) {
     console.log("Not Eligible");
   }
 }
-eligibleCheck(3);
+// eligibleCheck(3);
+
 function checkEven(num) {
   if (num % 2 === 0) {
     console.log("Divisible");
@@ -428,7 +429,7 @@ function checkEven(num) {
     console.log("Not Devisible");
   }
 }
-checkEven(3);
+// checkEven(3);
 
 function checkArmstorageNumb(num) {
   return num ===
@@ -457,7 +458,7 @@ function armCheck(num) {
   };
   return output;
 };
-console.log(armCheck(123));
+// console.log(armCheck(123));
 
 
 function isArmstrong(num){
@@ -475,5 +476,113 @@ function checkArmstrongInterval(start, end){
   }
   return result;
 };
-console.log(checkArmstrongInterval(1, 999));
+// console.log(checkArmstrongInterval(1, 999));
 
+
+// ==================== CONDITIONAL STATEMENTS ==================
+// Write a Program To Check If a Number Is Positive Or Negative;
+let num = 15;
+if(num % 2 === 0){P
+  console.log("Positive");
+};
+if(num % 2 !== 0){
+  console.log("Negative");
+};
+
+// Check if Persion Is  eligible to vote .
+let personAge = 18;
+if(personAge >= 18){
+  console.log("Eligible");
+};
+if(personAge < 18){
+  console.log("Not Eligible");
+};
+
+// Check Number Is Even Or Not
+let num1 = 21;
+if(num1 % 2 === 0){
+  console.log("Even");
+};
+if(num1 % 2 !== 0){
+  console.log("Odd");
+};
+
+// Write a Program To check If a Number is Greater than 100.
+let num2 = 99;
+if(num2 >= 100){
+  console.log("Greater..");
+};
+if(!(num2 >= 100)){
+  console.log("Not Greater...");
+};
+
+// Check If a String is Empty or Not ?
+let str = 1;
+if(str === ""){
+  console.log("Empty");
+};
+if(str !== ""){
+  console.log("Not Empty");
+};
+
+// Take a Number and Print Whether it is greater or smaller than 50 
+let num3 = 49;
+if(num3 >= 50){
+  console.log("Greater");
+} else {
+  console.log("Not Greater");
+};
+
+// Ask A user For there exam mars And print "pass" if marks greater than 40 otherwise "Fail"
+let userMark = 41;
+if(userMark >= 40){
+  console.log("Pass");
+} else {
+  console.log("Fail");
+};
+
+// Write a Program to check whether a person is a child (age < 13) or not ?
+let person1 = 13;
+if(person1 < 13){
+  console.log("Child");
+} else {
+  console.log("Not Child");
+};
+
+// If a Number is Devisible by 5, print "Fizz", Oherwise print the Number ?
+let num4 = 12;
+if(num4 % 5 === 0){
+  console.log("Fizz");
+} else {
+  console.log(num4);
+};
+
+// Check If a Given Year is A leap Year Or Not;
+let year = 2021;
+if(year % 4 === 0 && year % 400 === 0 && year % 100 !== 0){
+  console.log(year, "Leap Year");
+} else {
+  console.log(year, "Not a Leap Year");
+};
+
+// Check If a Number is Positive, Negative or Zero ?
+let num5 = 0;
+if(num5 === 0){
+  console.log("Zero");
+} else if(num5 % 2 === 0){
+  console.log("Positive");
+} else {
+  console.log("Negative");
+};
+
+// Write a Program That assig a grade based on Mark ?
+let grade = 80;
+if(grade >= 90){
+  console.log("Grade: A");
+} else if(grade >= 75){
+  console.log("Grade: B");
+} else if(grade >= 50){
+  console.log("Grade: C");
+}else {
+  console.log("Fail");
+};

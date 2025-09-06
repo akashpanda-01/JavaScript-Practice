@@ -271,114 +271,209 @@ function primeRange(start, end) {
 // Write a function to calculate the factorial of a number.
 function factorialNum(num) {
   let initialNum = 1;
-    if (num < 0) {
-      return "Enter Valid Number";
-    };
-    if (num === 0) {
-      return 1;
-    };
-    for(let i = 1; i <= num; i++){
-      initialNum = i * initialNum;
-    };
-    return initialNum;
+  if (num < 0) {
+    return "Enter Valid Number";
+  }
+  if (num === 0) {
+    return 1;
+  }
+  for (let i = 1; i <= num; i++) {
+    initialNum = i * initialNum;
+  }
+  return initialNum;
 }
 // console.log(factorialNum(6));
 
 function calculateFactorial(num) {
-    if (num === 0) {
-        return 1;
-    }
-    // Recursive case: multiply num by the factorial of (num - 1)
-    return num * calculateFactorial(num - 1);
-};
+  if (num === 0) {
+    return 1;
+  }
+  // Recursive case: multiply num by the factorial of (num - 1)
+  return num * calculateFactorial(num - 1);
+}
 // console.log(calculateFactorial(5));
 
 // JavaScript Program To Display Multiplication Table(Table Form)
 function multiplicationTable(num) {
-  let result =[];
-  for(let i = 1; i <= 10; i++){
+  let result = [];
+  for (let i = 1; i <= 10; i++) {
     // let value = num * i;
     result.push([num, i, num * i]);
-  };
+  }
   return result;
-};
+}
 // console.table(multiplicationTable(7));
 
 // JavaScript Program To Display Multiplication Table(signs)
 function multiplicationTable(num) {
-  for(let i = 1; i <= 10; i++){
+  for (let i = 1; i <= 10; i++) {
     let value = num * i;
     // console.log(num, "x", i, "=", value);
-  };
-};
+  }
+}
 multiplicationTable(4567);
 
 // JavaScript Program to Check Armstrong Number
-function checkArmstrongNum(num){
+function checkArmstrongNum(num) {
   let digits = num.toString().split("").map(Number);
-  let power = digits.length
-  let sum = digits.reduce((acc, crr) => acc + Math.pow(crr, power), 0)
-  if(sum === num){
+  let power = digits.length;
+  let sum = digits.reduce((acc, crr) => acc + Math.pow(crr, power), 0);
+  if (sum === num) {
     console.log("Armstrong");
   } else {
     console.log("Not a Armstrong");
-  };
-};
+  }
+}
 // checkArmstrongNum(153);
 
 function checkArmstrongNumber(num) {
-    // let sum = 0;
-    let digits = num.toString().split("").map(Number);
-    let pow = digits.length;
-    return digits.reduce((acc, crr) => acc + Math.pow(crr, pow), 0) ? "Armstrong" : "Not Armstrong";
-};
+  // let sum = 0;
+  let digits = num.toString().split("").map(Number);
+  let pow = digits.length;
+  return digits.reduce((acc, crr) => acc + Math.pow(crr, pow), 0)
+    ? "Armstrong"
+    : "Not Armstrong";
+}
 // console.log(checkArmstrongNumber(123));/
 
-function checkArmStrong(num){
-  return num === num.toString().split("").reduce((acc, crr) => acc + Math.pow(+crr, 3), 0) ? "ArmStrong" : "Not A ArmStrong";
-};
+function checkArmStrong(num) {
+  return num ===
+    num
+      .toString()
+      .split("")
+      .reduce((acc, crr) => acc + Math.pow(+crr, 3), 0)
+    ? "ArmStrong"
+    : "Not A ArmStrong";
+}
 // console.log(checkArmStrong(124));
 
-function armstrong(num){
+function armstrong(num) {
   let input = num.toString();
   let output = 0;
 
-  for(let i = 0; i < input.length; i++){
+  for (let i = 0; i < input.length; i++) {
     let a = input.charAt(i);
     output += Math.pow(parseInt(a), 3);
-  };
-  if(num === output) {
+  }
+  if (num === output) {
     return "Armstrong";
   } else {
     return "Not Armstrong";
-  };
-};
+  }
+}
 // console.log(armstrong(124));
 
-function checkArmStrongValue(num){
+function checkArmStrongValue(num) {
   let originalVal = num; //For Comapre in the End
   let sum = 0; // store the sum values of Number
-  let digits = 0; // we update while looping 
+  let digits = 0; // we update while looping
 
-  let n = num; //this will be modify 
-  while(n > 0){
+  let n = num; //this will be modify
+  while (n > 0) {
     n = Math.floor(n / 10);
     digits++;
   }
   // console.log(n);
 
   n = num;
-  while(n > 0){
-    let digit = n%10 ;
+  while (n > 0) {
+    let digit = n % 10;
     sum += Math.pow(digit, digits);
     n = Math.floor(n / 10);
-  };
+  }
   // console.log(n);
-  
-  if(originalVal === sum){
+
+  if (originalVal === sum) {
     console.log("Armstrong");
   } else {
     console.log("Not Armstrong");
-  };
+  }
+}
+// checkArmStrongValue(13);
+
+let score = 60;
+if (score >= 80 && score <= 100) {
+  console.log("Gread-A");
+} else if (score >= 70 && score <= 79) {
+  console.log("Grade- B");
+} else if (score >= 60 && score <= 69) {
+  console.log("Grade- C");
+} else if (score >= 50 && score <= 59) {
+  console.log("Grade- D");
+} else {
+  console.log("F");
+}
+
+function checkPositive(num) {
+  if (num >= 0) {
+    return `${num}, Positive`;
+  } else {
+    return num, "Negative";
+  }
+}
+console.log(checkPositive(42));
+
+function eligibleCheck(age) {
+  if (age > 18) {
+    console.log("Eligible");
+  } else {
+    console.log("Not Eligible");
+  }
+}
+eligibleCheck(3);
+function checkEven(num) {
+  if (num % 2 === 0) {
+    console.log("Divisible");
+  } else {
+    console.log("Not Devisible");
+  }
+}
+checkEven(3);
+
+function checkArmstorageNumb(num) {
+  return num ===
+    num
+      .toString()
+      .split("")
+      .reduce((acc, crr) => acc + Math.pow(crr, 3), 0)
+    ? "Armstrong"
+    : "Not Armstrong";
 };
-checkArmStrongValue(13);
+// console.log(checkArmstorageNumb(153));
+
+function armCheck(num) {
+  let nums = num.toString().split("").map(Number);
+  let temp = [];
+  let output = "Not a Armstrong";
+
+  for(let i = 0; i < nums.length; i++){
+    temp.push(Math.pow(nums[i], 3));
+  };
+
+  let sum = temp.reduce((acc, crr) => acc + crr, 0);
+
+  if(sum === num){
+    output = "Armstrong";
+  };
+  return output;
+};
+console.log(armCheck(123));
+
+
+function isArmstrong(num){
+  let digit = toString().split("");
+  let power = digit.length;
+  let sum  = digit.reduce((acc, crr) => acc + Math.pow(crr, power), 0);
+  return sum === num;
+};
+function checkArmstrongInterval(start, end){
+  let result = [];
+  for(let i = start; i <= end; i++){
+    if(isArmstrong(i)){
+      result.push(i)
+    }
+  }
+  return result;
+};
+console.log(checkArmstrongInterval(1, 999));
+

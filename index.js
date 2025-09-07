@@ -106,7 +106,7 @@ function getFahrenheite(celsiusVal) {
 // console.log(getFahrenheite(101.3));
 
 // find Armstrong Number
-function isArmstrongNumber(num) {
+function isArmstrongNumber(num){
   let n = num;
   let digit =  num.toString().split("");
   console.log(digit);
@@ -122,12 +122,231 @@ function isArmstrongNumber(num) {
     n = parseInt(n/10)
     
   };
-  if(sum === num) {
+  if(sum === num){
+    console.log("ArmStrong");
+  } else {
+    console.log("Not ArmStrong Number"); 
+  };
+};
+// JavaScript Program to Solve Quadratic Equation
+function quadraticEquation(a, b, c) {
+  let discriminant = b * b - 4 * a * c;
+
+  // discriminant > 0 formula b(square)−4ac
+  if (discriminant > 0) {
+    root1 = ((-b + Math.sqrt(discriminant)) / 2) * a;
+    root2 = ((-b - Math.sqrt(discriminant)) / 2) * a;
+    console.log(`The Root Of quadratic Equation are ${root1}, and ${root2}`);
+
+    // Condition For Real Equal Roots
+    // discriminant = 0 formula
+  } else if (discriminant === 0) {
+    root1 = root2 = -b / (2 * a);
+    console.log(`The Root Of quadratic Equation are ${root1}, and ${root2}`);
+
+    // if Roots Are Not Real
+    // discriminant > 0 formula
+  } else {
+    realroot = -b / (2 * a).toFixed(2);
+    imaginRoot = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+    console.log(
+      `Roots are complex: ${realroot} + ${imaginRoot}i , ${realroot} - ${imaginRoot}i`
+    );
+  }
+}
+// quadraticEquation(1, -3, 2);
+
+// Killometers to Milles
+function getMiles(Killometer) {
+  let factor = 0.621371;
+  let findMiles = Killometer * factor;
+  return findMiles;
+}
+// console.log(getMiles(5));
+
+// Javascript Program to Generate a Random Number
+function getRandomNum() {
+  let min = 10;
+  let max = 20;
+  let ranomNum = Math.floor(Math.random() * (max - min) + min);
+  console.log(ranomNum);
+}
+// getRandomNum();
+
+// Quadeatic Operation
+function getQuadratic(a, b, c) {
+  let discriminant = b * b - 4 * a * c;
+  if (discriminant > 0) {
+    let root1 = ((-b + Math.sqrt(discriminant)) / 2) * a;
+    let root2 = ((-b - Math.sqrt(discriminant)) / 2) * a;
+    console.log(`print ${root1} and ${root2}`);
+  } else if (discriminant === 0) {
+    root1 = root2 = -b / (2 * a);
+    console.log(`The Root Of quadratic Equation are ${root1}, and ${root2}`);
+  } else {
+    realRoot = -b / (2 * a);
+    imaginRoot = Math.sqrt(-discriminant) / (2 * a).toFixed(2);
+    console.log(
+      `Roots are complex: ${realRoot} + ${imaginRoot}i , ${realroot} - ${imaginRoot}i`
+    );
+  }
+}
+// getQuadratic(1, 6, 5);
+
+// Javascript Program to Check if a number is Positive, Negative, or Zero
+function findState(num) {
+  let numValue = num;
+  if (numValue > 0) {
+    console.log(numValue, "Value Positive");
+  } else if (numValue === 0) {
+    console.log(numValue, "Value was Zero");
+  } else {
+    console.log(numValue, "Negative Value");
+  }
+}
+// findState(-2);
+
+// Write a function to check if a number is negative.
+function checkNegative(num) {
+  if (num < 0) {
+    console.log(num, "Negative");
+  } else if (num === 0) {
+    console.log(num, "Not Negative");
+  } else {
+    console.log(num, "Not Negative");
+  }
+}
+// checkNegative(4);
+
+// Javascript Program to Check if a Number is Odd or Even
+function findOddEven(num) {
+  if (num % 2 === 0) {
+    console.log("Even");
+  } else {
+    console.log("Odd");
+  }
+}
+// findOddEven(10);
+
+function ternaryOddEven(num) {
+  console.log(num % 2 === 0 ? "Even" : "Odd");
+}
+// ternaryOddEven(7);
+
+// JavaScript Program to Find the Largest Among Three Numbers
+function checkLargest(num1, num2) {
+  if (num1 > num2) {
+  } else {
+    console.log("Smaller");
+  }
+}
+// checkLargest(10, 20);
+
+function findLargest(num1, num2) {
+  if (num1 > num2 || num2 > num1) {
+    if (num1 > num2) {
+      console.log(num1);
+    } else {
+      console.log(num2);
+    }
+  }
+  if (num1 === num2) {
+    return num1, num2;
+  }
+}
+// findLargest(1, 8);
+
+// JavaScript Program to Check Prime Number
+function checkPrime(num) {
+  if (num < 2) {
+    return "Not Prime";
+  }
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % 2 === 0) {
+      return "Not Prime";
+    }
+  }
+  return `${num} is a prime number`;
+}
+// console.log(checkPrime(7));
+
+function primeRange(start, end) {
+  let result = [];
+  for (let i = start; i < end; i++) {
+    if (i < 2) {
+      continue;
+    }
+    let isPrime = true;
+    for (let j = 2; j <= Math.sqrt(start); j++) {
+      if (j % 2 === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      result.push(i);
+    }
+  }
+  return result;
+}
+// console.log(primeRange(1, 10));
+
+// Write a function to calculate the factorial of a number.
+function factorialNum(num) {
+  let initialNum = 1;
+  if (num < 0) {
+    return "Enter Valid Number";
+  }
+  if (num === 0) {
+    return 1;
+  }
+  for (let i = 1; i <= num; i++) {
+    initialNum = i * initialNum;
+  }
+  return initialNum;
+}
+// console.log(factorialNum(6));
+
+function calculateFactorial(num) {
+  if (num === 0) {
+    return 1;
+  }
+  // Recursive case: multiply num by the factorial of (num - 1)
+  return num * calculateFactorial(num - 1);
+}
+// console.log(calculateFactorial(5));
+
+// JavaScript Program To Display Multiplication Table(Table Form)
+function multiplicationTable(num) {
+  let result = [];
+  for (let i = 1; i <= 10; i++) {
+    // let value = num * i;
+    result.push([num, i, num * i]);
+  }
+  return result;
+}
+// console.table(multiplicationTable(7));
+
+// JavaScript Program To Display Multiplication Table(signs)
+function multiplicationTable(num) {
+  for (let i = 1; i <= 10; i++) {
+    let value = num * i;
+    // console.log(num, "x", i, "=", value);
+  }
+}
+multiplicationTable(4567);
+
+// JavaScript Program to Check Armstrong Number
+function checkArmstrongNum(num) {
+  let digits = num.toString().split("").map(Number);
+  let power = digits.length;
+  let sum = digits.reduce((acc, crr) => acc + Math.pow(crr, power), 0);
+  if (sum === num) {
     console.log("Armstrong");
   } else {
     console.log("Not a Armstrong");
   }
-}
+};
 // isArmstrongNumber(153);
 
 // =====================================================================================
@@ -179,4 +398,266 @@ function loopToChecck(start, end){
   }
   return output;
 };
-loopToChecck(100, 999);``
+loopToChecck(100, 999);
+// checkArmstrongNum(153);
+
+function checkArmstrongNumber(num) {
+  // let sum = 0;
+  let digits = num.toString().split("").map(Number);
+  let pow = digits.length;
+  return digits.reduce((acc, crr) => acc + Math.pow(crr, pow), 0)
+    ? "Armstrong"
+    : "Not Armstrong";
+}
+// console.log(checkArmstrongNumber(123));/
+
+function checkArmStrong(num) {
+  return num ===
+    num
+      .toString()
+      .split("")
+      .reduce((acc, crr) => acc + Math.pow(+crr, 3), 0)
+    ? "ArmStrong"
+    : "Not A ArmStrong";
+}
+// console.log(checkArmStrong(124));
+
+function armstrong(num) {
+  let input = num.toString();
+  let output = 0;
+
+  for (let i = 0; i < input.length; i++) {
+    let a = input.charAt(i);
+    output += Math.pow(parseInt(a), 3);
+  }
+  if (num === output) {
+    return "Armstrong";
+  } else {
+    return "Not Armstrong";
+  }
+}
+// console.log(armstrong(124));
+
+function checkArmStrongValue(num) {
+  let originalVal = num; //For Comapre in the End
+  let sum = 0; // store the sum values of Number
+  let digits = 0; // we update while looping
+
+  let n = num; //this will be modify
+  while (n > 0) {
+    n = Math.floor(n / 10);
+    digits++;
+  }
+  // console.log(n);
+
+  n = num;
+  while (n > 0) {
+    let digit = n % 10;
+    sum += Math.pow(digit, digits);
+    n = Math.floor(n / 10);
+  }
+  // console.log(n);
+
+  if (originalVal === sum) {
+    console.log("Armstrong");
+  } else {
+    console.log("Not Armstrong");
+  }
+}
+// checkArmStrongValue(13);
+
+let score = 60;
+if (score >= 80 && score <= 100) {
+  // console.log("Gread-A");
+} else if (score >= 70 && score <= 79) {
+  // console.log("Grade- B");
+} else if (score >= 60 && score <= 69) {
+  // console.log("Grade- C");
+} else if (score >= 50 && score <= 59) {
+  // console.log("Grade- D");
+} else {
+  // console.log("F");
+}
+
+function checkPositive(num) {
+  if (num >= 0) {
+    return `${num}, Positive`;
+  } else {
+    return num, "Negative";
+  }
+}
+// console.log(checkPositive(42));
+
+function eligibleCheck(age) {
+  if (age > 18) {
+    console.log("Eligible");
+  } else {
+    console.log("Not Eligible");
+  }
+}
+// eligibleCheck(3);
+
+function checkEven(num) {
+  if (num % 2 === 0) {
+    console.log("Divisible");
+  } else {
+    console.log("Not Devisible");
+  }
+}
+// checkEven(3);
+
+function checkArmstorageNumb(num) {
+  return num ===
+    num
+      .toString()
+      .split("")
+      .reduce((acc, crr) => acc + Math.pow(crr, 3), 0)
+    ? "Armstrong"
+    : "Not Armstrong";
+};
+// console.log(checkArmstorageNumb(153));
+
+function armCheck(num) {
+  let nums = num.toString().split("").map(Number);
+  let temp = [];
+  let output = "Not a Armstrong";
+
+  for(let i = 0; i < nums.length; i++){
+    temp.push(Math.pow(nums[i], 3));
+  };
+
+  let sum = temp.reduce((acc, crr) => acc + crr, 0);
+
+  if(sum === num){
+    output = "Armstrong";
+  };
+  return output;
+};
+// console.log(armCheck(123));
+
+
+function isArmstrong(num){
+  let digit = toString().split("");
+  let power = digit.length;
+  let sum  = digit.reduce((acc, crr) => acc + Math.pow(crr, power), 0);
+  return sum === num;
+};
+function checkArmstrongInterval(start, end){
+  let result = [];
+  for(let i = start; i <= end; i++){
+    if(isArmstrong(i)){
+      result.push(i)
+    }
+  }
+  return result;
+};
+// console.log(checkArmstrongInterval(1, 999));
+
+
+// ==================== CONDITIONAL STATEMENTS ==================
+// Write a Program To Check If a Number Is Positive Or Negative;
+let num = 15;
+if(num % 2 === 0){P
+  console.log("Positive");
+};
+if(num % 2 !== 0){
+  console.log("Negative");
+};
+
+// Check if Persion Is  eligible to vote .
+let personAge = 18;
+if(personAge >= 18){
+  console.log("Eligible");
+};
+if(personAge < 18){
+  console.log("Not Eligible");
+};
+
+// Check Number Is Even Or Not
+let num1 = 21;
+if(num1 % 2 === 0){
+  console.log("Even");
+};
+if(num1 % 2 !== 0){
+  console.log("Odd");
+};
+
+// Write a Program To check If a Number is Greater than 100.
+let num2 = 99;
+if(num2 >= 100){
+  console.log("Greater..");
+};
+if(!(num2 >= 100)){
+  console.log("Not Greater...");
+};
+
+// Check If a String is Empty or Not ?
+let str = 1;
+if(str === ""){
+  console.log("Empty");
+};
+if(str !== ""){
+  console.log("Not Empty");
+};
+
+// Take a Number and Print Whether it is greater or smaller than 50 
+let num3 = 49;
+if(num3 >= 50){
+  console.log("Greater");
+} else {
+  console.log("Not Greater");
+};
+
+// Ask A user For there exam mars And print "pass" if marks greater than 40 otherwise "Fail"
+let userMark = 41;
+if(userMark >= 40){
+  console.log("Pass");
+} else {
+  console.log("Fail");
+};
+
+// Write a Program to check whether a person is a child (age < 13) or not ?
+let person1 = 13;
+if(person1 < 13){
+  console.log("Child");
+} else {
+  console.log("Not Child");
+};
+
+// If a Number is Devisible by 5, print "Fizz", Oherwise print the Number ?
+let num4 = 12;
+if(num4 % 5 === 0){
+  console.log("Fizz");
+} else {
+  console.log(num4);
+};
+
+// Check If a Given Year is A leap Year Or Not;
+let year = 2021;
+if(year % 4 === 0 && year % 400 === 0 && year % 100 !== 0){
+  console.log(year, "Leap Year");
+} else {
+  console.log(year, "Not a Leap Year");
+};
+
+// Check If a Number is Positive, Negative or Zero ?
+let num5 = 0;
+if(num5 === 0){
+  console.log("Zero");
+} else if(num5 % 2 === 0){
+  console.log("Positive");
+} else {
+  console.log("Negative");
+};
+
+// Write a Program That assig a grade based on Mark ?
+let grade = 80;
+if(grade >= 90){
+  console.log("Grade: A");
+} else if(grade >= 75){
+  console.log("Grade: B");
+} else if(grade >= 50){
+  console.log("Grade: C");
+}else {
+  console.log("Fail");
+};

@@ -106,28 +106,25 @@ function getFahrenheite(celsiusVal) {
 // console.log(getFahrenheite(101.3));
 
 // find Armstrong Number
-function isArmstrongNumber(num){
+function isArmstrongNumber(num) {
   let n = num;
-  let digit =  num.toString().split("");
+  let digit = num.toString().split("");
   console.log(digit);
-  
-  let power =  digit.length;
+
+  let power = digit.length;
   console.log(power);
-  
-  
+
   let sum = 0;
-  while(n>0){
-    
-    sum += Math.pow(digit, power)
-    n = parseInt(n/10)
-    
-  };
-  if(sum === num){
+  while (n > 0) {
+    sum += Math.pow(digit, power);
+    n = parseInt(n / 10);
+  }
+  if (sum === num) {
     console.log("ArmStrong");
   } else {
-    console.log("Not ArmStrong Number"); 
-  };
-};
+    console.log("Not ArmStrong Number");
+  }
+}
 // JavaScript Program to Solve Quadratic Equation
 function quadraticEquation(a, b, c) {
   let discriminant = b * b - 4 * a * c;
@@ -346,19 +343,19 @@ function checkArmstrongNum(num) {
   } else {
     console.log("Not a Armstrong");
   }
-};
+}
 // isArmstrongNumber(153);
 
 // =====================================================================================
 // Loops
-function loopArmStrong(num){
+function loopArmStrong(num) {
   let digit = num.toString().split("");
   let power = digit.length;
   let sum = 0;
 
-  for(let digits of digit){
-    sum += Math.pow(Number(digits), power); 
-  };
+  for (let digits of digit) {
+    sum += Math.pow(Number(digits), power);
+  }
 
   return sum === num;
 }
@@ -369,35 +366,33 @@ function mathmaticalArmstorage(num) {
   let sum = 0;
   let digit = num.toString().split("");
   let power = digit.length;
-  
+
   let temp = num;
-  for(let  i = 0; i<num; i++){
+  for (let i = 0; i < num; i++) {
     sum += Math.pow(Number(digit), power);
-  };
+  }
   return sum === num;
   console.log(sum);
-  
 }
 console.log(mathmaticalArmstorage(153));
 
-
-function isArmstrong(num){
+function isArmstrong(num) {
   let digit = num.toString().split("");
   let power = digit.length;
   let sum = digit.reduce((acc, crr) => acc + Math.pow(Number(crr), power), 0);
   return sum === num;
-};
-function loopToChecck(start, end){
+}
+function loopToChecck(start, end) {
   let output = [];
-  for(let i = start; i<=end; i++){
-    if(isArmstrong(i)){
+  for (let i = start; i <= end; i++) {
+    if (isArmstrong(i)) {
       output.push(`${i} Armstrong`);
-    }else {
+    } else {
       output.push(`${i} Not Armstrong`);
-    };
+    }
   }
   return output;
-};
+}
 loopToChecck(100, 999);
 // checkArmstrongNum(153);
 
@@ -514,7 +509,7 @@ function checkArmstorageNumb(num) {
       .reduce((acc, crr) => acc + Math.pow(crr, 3), 0)
     ? "Armstrong"
     : "Not Armstrong";
-};
+}
 // console.log(checkArmstorageNumb(153));
 
 function armCheck(num) {
@@ -522,155 +517,154 @@ function armCheck(num) {
   let temp = [];
   let output = "Not a Armstrong";
 
-  for(let i = 0; i < nums.length; i++){
+  for (let i = 0; i < nums.length; i++) {
     temp.push(Math.pow(nums[i], 3));
-  };
+  }
 
   let sum = temp.reduce((acc, crr) => acc + crr, 0);
 
-  if(sum === num){
+  if (sum === num) {
     output = "Armstrong";
-  };
+  }
   return output;
-};
+}
 // console.log(armCheck(123));
 
-
-function isArmstrong(num){
+function isArmstrong(num) {
   let digit = toString().split("");
   let power = digit.length;
-  let sum  = digit.reduce((acc, crr) => acc + Math.pow(crr, power), 0);
+  let sum = digit.reduce((acc, crr) => acc + Math.pow(crr, power), 0);
   return sum === num;
-};
-function checkArmstrongInterval(start, end){
+}
+function checkArmstrongInterval(start, end) {
   let result = [];
-  for(let i = start; i <= end; i++){
-    if(isArmstrong(i)){
-      result.push(i)
+  for (let i = start; i <= end; i++) {
+    if (isArmstrong(i)) {
+      result.push(i);
     }
   }
   return result;
-};
+}
 // console.log(checkArmstrongInterval(1, 999));
-
 
 // ==================== CONDITIONAL STATEMENTS ==================
 // Write a Program To Check If a Number Is Positive Or Negative;
 let num = 15;
-if(num % 2 === 0){P
+if (num % 2 === 0) {
+  P;
   // console.log("Positive");
-};
-if(num % 2 !== 0){
+}
+if (num % 2 !== 0) {
   // console.log("Negative");
-};
+}
 
 // Check if Persion Is  eligible to vote .
 let personAge = 18;
-if(personAge >= 18){
+if (personAge >= 18) {
   //console.log("Eligible");
-};
-if(personAge < 18){
+}
+if (personAge < 18) {
   console.log("Not Eligible");
-};
+}
 
 // Check Number Is Even Or Not
 let num1 = 21;
-if(num1 % 2 === 0){
+if (num1 % 2 === 0) {
   // console.log("Even");
-};
-if(num1 % 2 !== 0){
+}
+if (num1 % 2 !== 0) {
   // console.log("Odd");
-};
+}
 
 // Write a Program To check If a Number is Greater than 100.
 let num2 = 99;
-if(num2 >= 100){
+if (num2 >= 100) {
   // console.log("Greater..");
-};
-if(!(num2 >= 100)){
+}
+if (!(num2 >= 100)) {
   // console.log("Not Greater...");
-};
+}
 
 // Check If a String is Empty or Not ?
 let str = 1;
-if(str === ""){
+if (str === "") {
   // console.log("Empty");
-};
-if(str !== ""){
+}
+if (str !== "") {
   // console.log("Not Empty");
-};
+}
 
-// Take a Number and Print Whether it is greater or smaller than 50 
+// Take a Number and Print Whether it is greater or smaller than 50
 let num3 = 49;
-if(num3 >= 50){
+if (num3 >= 50) {
   // console.log("Greater");
 } else {
   // console.log("Not Greater");
-};
+}
 
 // Ask A user For there exam mars And print "pass" if marks greater than 40 otherwise "Fail"
 let userMark = 41;
-if(userMark >= 40){
+if (userMark >= 40) {
   // console.log("Pass");
 } else {
   // console.log("Fail");
-};
+}
 
 // Write a Program to check whether a person is a child (age < 13) or not ?
 let person1 = 13;
-if(person1 < 13){
+if (person1 < 13) {
   console.log("Child");
 } else {
   // console.log("Not Child");
-};
+}
 
 // If a Number is Devisible by 5, print "Fizz", Oherwise print the Number ?
 let num4 = 12;
-if(num4 % 5 === 0){
+if (num4 % 5 === 0) {
   console.log("Fizz");
 } else {
   // console.log(num4);
-};
+}
 
 // Check If a Given Year is A leap Year Or Not;
 let year = 2021;
-if(year % 4 === 0 && year % 400 === 0 && year % 100 !== 0){
+if (year % 4 === 0 && year % 400 === 0 && year % 100 !== 0) {
   console.log(year, "Leap Year");
 } else {
   // console.log(year, "Not a Leap Year");
-};
+}
 
 // Check If a Number is Positive, Negative or Zero ?
 let num5 = 0;
-if(num5 === 0){
+if (num5 === 0) {
   // console.log("Zero");
-} else if(num5 % 2 === 0){
+} else if (num5 % 2 === 0) {
   console.log("Positive");
 } else {
   console.log("Negative");
-};
+}
 
 // Write a Program That assig a grade based on Mark ?
 let grade = 80;
-if(grade >= 90){
+if (grade >= 90) {
   console.log("Grade: A");
-} else if(grade >= 75){
+} else if (grade >= 75) {
   // console.log("Grade: B");
-} else if(grade >= 50){
+} else if (grade >= 50) {
   console.log("Grade: C");
-}else {
+} else {
   console.log("Fail");
-};
+}
 
 // Write a Program that prints the name of the month for numbers (1-12)?
 let findMonthWithNum = 1;
-switch(findMonthWithNum){
+switch (findMonthWithNum) {
   case 1:
     // console.log("January");
     break;
   case 2:
     console.log("Fabruary");
-      break;
+    break;
   case 3:
     console.log("March");
     break;
@@ -703,34 +697,35 @@ switch(findMonthWithNum){
     break;
   default:
     console.log("Enter a Valid Month Number 1 to 12");
-};
+}
 
 // A Calculator Program Using Switch : user Enter Two Number an operator(+, -, /, *)?
 let userNum1 = 5;
 let userNum2 = 28;
 let sum = "-";
 let result;
-switch(sum){
+switch (sum) {
   case "+":
-    console.log(result = userNum1 + userNum2);
+    console.log((result = userNum1 + userNum2));
     break;
   case "-":
     // console.log(result = userNum1 - userNum2);
     break;
   case "/":
-    console.log(result = userNum1 / userNum2);
+    console.log((result = userNum1 / userNum2));
     break;
   case "*":
-    console.log(result = userNum1 * userNum2);
+    console.log((result = userNum1 * userNum2));
     break;
-  default : console.log("Select a Valid Operator")
-};
+  default:
+    console.log("Select a Valid Operator");
+}
 
 // Checck Trafic Light Color
 let traficColor = ["red", "green", "yellow"];
 let index = 1;
 let color = traficColor[index];
-switch(color){
+switch (color) {
   case "red":
     console.log("Stop");
     break;
@@ -742,11 +737,11 @@ switch(color){
     break;
   default:
     console.log("Please Enter a Valid Index Number Between 0 to 2");
-};
+}
 
 // Write a Program To Check Grade Letters (A, B, C, D)
 let gradeNum = 89;
-switch(true){
+switch (true) {
   case gradeNum > 85:
     // console.log("Grade-A");
     break;
@@ -761,106 +756,161 @@ switch(true){
     break;
   default:
     console.log("Fail");
-};
+}
 
 //Check a Number is Between 10 and 50?
 let number = 100;
-if(number >= 10 && number <= 100){
+if (number >= 10 && number <= 100) {
   // console.log("Number is Between 10 and 50");
 } else {
   console.log("Not Between 10 and 50");
-};
+}
 
 let betwNum = 15;
-switch(true){
+switch (true) {
   case betwNum >= 15 && betwNum <= 100:
     // console.log("Number Is Between 1 and 10");
     break;
   default:
     console.log("Number is Not betweeen 1 to 10");
-};
+}
 
 // Check If a Person can apply for driving License (age > 18 and has ID proof)
 let userAge = 18;
 let userId = true;
-if(userAge >= 18 && userId === true){
+if (userAge >= 18 && userId === true) {
   // console.log("Vilid");
 } else {
   console.log("Not Valid");
-};
+}
 
-switch(true){
+switch (true) {
   case userAge >= 18 && userId === true:
     // console.log("Valid or Can Apply");
     break;
   default:
     console.log("Not Valid / cann't Apply ");
     break;
-};
+}
 
 //Check If a Number is Divisible by 3 or 7 Print "Speciial Number" ?
-let divisibleNum = 23 ;
-if(divisibleNum % 3 === 0 && divisibleNum % 7 === 0){
+let divisibleNum = 23;
+if (divisibleNum % 3 === 0 && divisibleNum % 7 === 0) {
   console.log("Special Number");
 } else {
   // console.log("Not Divisible");
-};
+}
 
-switch(true){
+switch (true) {
   case divisibleNum % 3 === 0 && divisibleNum % 7 === 0:
     console.log("Special Number");
     break;
   default:
-    // console.log("Not Divisible by 3 and 7");
-};
+  // console.log("Not Divisible by 3 and 7");
+}
 
 // Check if a username and password are correct (use two variables)
 let username = "Akash";
 let userpwd = 1234;
-if(username === "Akash" && userpwd === 1234){
+if (username === "Akash" && userpwd === 1234) {
   console.log("Verified");
-}else {
+} else {
   console.log("Not Verified");
-};
+}
 
-switch(true){
+switch (true) {
   case username === "Akash" && userpwd === 1234:
     console.log("Verified");
     break;
   default:
     console.log("Not Verified");
-};
+}
 
 //if it's raining print "You can go outside" otherwise "Stay in Home" ?
 let weather = "sun";
-if(weather === "raining"){
+if (weather === "raining") {
   console.log("Stay in Home");
-} else{
+} else {
   console.log("You can Go Outside");
-};
+}
 
 let raining = true;
-switch(!raining){
+switch (!raining) {
   case true:
     console.log("You can go outside");
     break;
   case false:
-    console.log("Stay in Home");   
-};
+    console.log("Stay in Home");
+}
 
 // Nested If Condition
 // write a program to check if a year is a century leap year (divisible by 400)
 let isLeapYear = 2023;
-if(isLeapYear % 100 === 0){
-  if(isLeapYear % 400 === 0){
+if (isLeapYear % 100 === 0) {
+  if (isLeapYear % 400 === 0) {
     console.log("Century leap Year");
-  } else{
+  } else {
     console.log("centry year but Not a Century Leap Year");
-  };
+  }
 } else {
-  if(isLeapYear % 4 === 0){
+  if (isLeapYear % 4 === 0) {
     console.log("Leap Year");
   } else {
-    console.log("Not Leap Year"); 
+    console.log("Not Leap Year");
+  }
+}
+
+// if a person' age > 18 then check if they also have a driving license "Can Drive" or "Can not Drive"
+let personsAge = 34;
+let personDrivingLicense = true;
+if (personsAge >= 18) {
+  if (personDrivingLicense === true) {
+    console.log("Can Drive");
+  } else {
+    console.log("Cann't Drive");
+  }
+} else {
+  console.log("Age Not Valid");
+}
+
+// Write a program to check if a number is: divisible by 2 or 3 -> "divisible by both"
+// only by 2 -> "divisible by 2", only by 3 -> "divisible by 3", else "not divisible"
+let checkNum = 20;
+if (checkNum % 2 === 0 && checkNum % 3 === 0) {
+  console.log("Both Divisible");
+} else {
+  if (checkNum % 2 === 0) {
+    console.log("Divisible By Only 2");
+  } else {
+    if(checkNum % 3 === 0){
+      console.log("Divisible by 3");
+    } else {
+      console.log("Not Divisble by Anyone");
+    };
   };
 };
+
+let checkNum1 = 6;
+if (checkNum1 % 2 === 0 || checkNum1 % 3 === 0) {
+  if (checkNum1 % 2 === 0) {
+    if (checkNum1 % 3 === 0) {
+      console.log("Both Divisible");
+      console.log("Divisible By 2");
+    } else {
+      console.log("not Divisiible by 3");
+    }
+  } else {
+    console.log("Divisible By 2");
+  }
+} else {
+  console.log("Not Divisible");
+};
+
+// Find a Program To find the largest of 4 numbersusing nested condition
+let largestNumbers = [12, 45, 34, 732];
+let getThroughIndex;
+
+if(largestNumbers[getThroughIndex]){
+  console.log();
+  
+}

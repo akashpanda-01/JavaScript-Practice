@@ -105,4 +105,78 @@ function getFahrenheite(celsiusVal) {
 }
 // console.log(getFahrenheite(101.3));
 
-// 
+// find Armstrong Number
+function isArmstrongNumber(num) {
+  let n = num;
+  let digit =  num.toString().split("");
+  console.log(digit);
+  
+  let power =  digit.length;
+  console.log(power);
+  
+  
+  let sum = 0;
+  while(n>0){
+    
+    sum += Math.pow(digit, power)
+    n = parseInt(n/10)
+    
+  };
+  if(sum === num) {
+    console.log("Armstrong");
+  } else {
+    console.log("Not a Armstrong");
+  }
+}
+// isArmstrongNumber(153);
+
+// =====================================================================================
+// Loops
+function loopArmStrong(num){
+  let digit = num.toString().split("");
+  let power = digit.length;
+  let sum = 0;
+
+  for(let digits of digit){
+    sum += Math.pow(Number(digits), power); 
+  };
+
+  return sum === num;
+}
+// console.log(loopArmStrong(15));
+
+//Mathematical Way
+function mathmaticalArmstorage(num) {
+  let sum = 0;
+  let digit = num.toString().split("");
+  let power = digit.length;
+  
+  let temp = num;
+  for(let  i = 0; i<num; i++){
+    sum += Math.pow(Number(digit), power);
+  };
+  return sum === num;
+  console.log(sum);
+  
+}
+console.log(mathmaticalArmstorage(153));
+
+
+function isArmstrong(num){
+  let digit = num.toString().split("");
+  let power = digit.length;
+  let sum = digit.reduce((acc, crr) => acc + Math.pow(Number(crr), power), 0);
+  return sum === num;
+};
+function loopToChecck(start, end){
+  let output = [];
+  for(let i = start; i<=end; i++){
+    if(isArmstrong(i)){
+      output.push(`${i} Armstrong`);
+    }else {
+      output.push(`${i} Not Armstrong`);
+    };
+  }
+  return output;
+};
+loopToChecck(100, 999);``

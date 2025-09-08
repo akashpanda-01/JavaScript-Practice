@@ -439,7 +439,7 @@ function checkArmstorageNumb(num) {
       .reduce((acc, crr) => acc + Math.pow(crr, 3), 0)
     ? "Armstrong"
     : "Not Armstrong";
-};
+}
 // console.log(checkArmstorageNumb(153));
 
 function armCheck(num) {
@@ -447,142 +447,472 @@ function armCheck(num) {
   let temp = [];
   let output = "Not a Armstrong";
 
-  for(let i = 0; i < nums.length; i++){
+  for (let i = 0; i < nums.length; i++) {
     temp.push(Math.pow(nums[i], 3));
-  };
+  }
 
   let sum = temp.reduce((acc, crr) => acc + crr, 0);
 
-  if(sum === num){
+  if (sum === num) {
     output = "Armstrong";
-  };
+  }
   return output;
-};
+}
 // console.log(armCheck(123));
 
-
-function isArmstrong(num){
+function isArmstrong(num) {
   let digit = toString().split("");
   let power = digit.length;
-  let sum  = digit.reduce((acc, crr) => acc + Math.pow(crr, power), 0);
+  let sum = digit.reduce((acc, crr) => acc + Math.pow(crr, power), 0);
   return sum === num;
-};
-function checkArmstrongInterval(start, end){
+}
+function checkArmstrongInterval(start, end) {
   let result = [];
-  for(let i = start; i <= end; i++){
-    if(isArmstrong(i)){
-      result.push(i)
+  for (let i = start; i <= end; i++) {
+    if (isArmstrong(i)) {
+      result.push(i);
     }
   }
   return result;
-};
+}
 // console.log(checkArmstrongInterval(1, 999));
-
 
 // ==================== CONDITIONAL STATEMENTS ==================
 // Write a Program To Check If a Number Is Positive Or Negative;
 let num = 15;
-if(num % 2 === 0){P
+if (num % 2 === 0) {
+  P;
   console.log("Positive");
-};
-if(num % 2 !== 0){
-  console.log("Negative");
-};
+}
+if (num % 2 !== 0) {
+  // console.log("Negative");
+}
 
 // Check if Persion Is  eligible to vote .
 let personAge = 18;
-if(personAge >= 18){
-  console.log("Eligible");
-};
-if(personAge < 18){
+if (personAge >= 18) {
+  // console.log("Eligible");
+}
+if (personAge < 18) {
   console.log("Not Eligible");
-};
+}
 
 // Check Number Is Even Or Not
 let num1 = 21;
-if(num1 % 2 === 0){
+if (num1 % 2 === 0) {
   console.log("Even");
-};
-if(num1 % 2 !== 0){
-  console.log("Odd");
-};
+}
+if (num1 % 2 !== 0) {
+  // console.log("Odd");
+}
 
 // Write a Program To check If a Number is Greater than 100.
 let num2 = 99;
-if(num2 >= 100){
+if (num2 >= 100) {
   console.log("Greater..");
-};
-if(!(num2 >= 100)){
-  console.log("Not Greater...");
-};
+}
+if (!(num2 >= 100)) {
+  // console.log("Not Greater...");
+}
 
 // Check If a String is Empty or Not ?
 let str = 1;
-if(str === ""){
+if (str === "") {
   console.log("Empty");
-};
-if(str !== ""){
-  console.log("Not Empty");
-};
+}
+if (str !== "") {
+  // console.log("Not Empty");
+}
 
-// Take a Number and Print Whether it is greater or smaller than 50 
+// Take a Number and Print Whether it is greater or smaller than 50
 let num3 = 49;
-if(num3 >= 50){
+if (num3 >= 50) {
   console.log("Greater");
 } else {
-  console.log("Not Greater");
-};
+  // console.log("Not Greater");
+}
 
 // Ask A user For there exam mars And print "pass" if marks greater than 40 otherwise "Fail"
 let userMark = 41;
-if(userMark >= 40){
-  console.log("Pass");
+if (userMark >= 40) {
+  // console.log("Pass");
 } else {
   console.log("Fail");
-};
+}
 
 // Write a Program to check whether a person is a child (age < 13) or not ?
 let person1 = 13;
-if(person1 < 13){
+if (person1 < 13) {
   console.log("Child");
 } else {
-  console.log("Not Child");
-};
+  // console.log("Not Child");
+}
 
 // If a Number is Devisible by 5, print "Fizz", Oherwise print the Number ?
 let num4 = 12;
-if(num4 % 5 === 0){
+if (num4 % 5 === 0) {
   console.log("Fizz");
 } else {
-  console.log(num4);
-};
+  // console.log(num4);
+}
 
 // Check If a Given Year is A leap Year Or Not;
 let year = 2021;
-if(year % 4 === 0 && year % 400 === 0 && year % 100 !== 0){
+if (year % 4 === 0 && year % 400 === 0 && year % 100 !== 0) {
   console.log(year, "Leap Year");
 } else {
-  console.log(year, "Not a Leap Year");
-};
+  // console.log(year, "Not a Leap Year");
+}
 
 // Check If a Number is Positive, Negative or Zero ?
 let num5 = 0;
-if(num5 === 0){
-  console.log("Zero");
-} else if(num5 % 2 === 0){
+if (num5 === 0) {
+  // console.log("Zero");
+} else if (num5 % 2 === 0) {
   console.log("Positive");
 } else {
   console.log("Negative");
-};
+}
 
 // Write a Program That assig a grade based on Mark ?
 let grade = 80;
-if(grade >= 90){
+if (grade >= 90) {
   console.log("Grade: A");
-} else if(grade >= 75){
-  console.log("Grade: B");
-} else if(grade >= 50){
+} else if (grade >= 75) {
+  // console.log("Grade: B");
+} else if (grade >= 50) {
   console.log("Grade: C");
-}else {
+} else {
   console.log("Fail");
+}
+
+// Write a Program to Find The Largest Of Three Numbers
+let a = 13;
+let b = 15;
+let c = 12;
+if (a >= b && a >= c) {
+  console.log("A isd greatter");
+} else if (b >= a && b >= c) {
+  // console.log("B is Greater");
+} else {
+  console.log("C is Greater");
+}
+
+// Check If a Character is a Vowel Or Consonant .
+let char = "a";
+if (char === "a") {
+  // console.log("Vowel");
+} else if (char === "e") {
+  console.log("Vowel");
+} else if (char === "i") {
+  console.log("Vowel");
+} else if (char === "o") {
+  console.log("Vowel");
+} else if (char === "u") {
+  console.log("Vowel");
+} else {
+  console.log("Not Vowel");
+}
+
+// Check the Time of Day Based On Hour(0-23)
+let time = 18;
+if (time >= 0 && time < 11) {
+  console.log("Good Morning");
+} else if (time >= 11 && time < 17) {
+  console.log("Good Afternoon");
+} else {
+  // console.log("Good Evening");
+}
+
+// Switch Case Statement
+let studenGrade = "B";
+switch (studenGrade) {
+  case "A":
+    console.log("85-100");
+    break;
+  case "B":
+    // console.log("65-85");
+    break;
+  case "C":
+    console.log("40-65");
+    break;
+  default:
+    console.log("Fail");
+}
+
+let number = 2;
+switch (number) {
+  case 1:
+    console.log("Today Is Monday");
+    break;
+  case 2:
+    // console.log("Today Is Tuesday");
+    break;
+  case 3:
+    console.log("Today Is Wednesday");
+    break;
+  case 4:
+    console.log("Today Is Thusday");
+    break;
+  case 5:
+    console.log("Today Is Friday");
+    break;
+  case 6:
+    console.log("Today Is Saturday");
+    break;
+  case 7:
+    console.log("Today Is Sunday");
+    break;
+  default:
+    console.log("Enter a Valid Day Number");
+}
+
+// Write a program To find the Largest OF Four Numbers using Nested condition
+let largNumber = [64, 100, 34, 45];
+let result;
+if (largNumber[0] > largNumber[1]) {
+  if (largNumber[0] > largNumber[2]) {
+    if (largNumber[0] > largNumber[3]) {
+      result = largNumber[0];
+    } else {
+      result = largNumber[3];
+    }
+  } else {
+    if (largNumber[2] > largNumber[3]) {
+      result = largNumber[2];
+    } else {
+      result = largNumber[3];
+    }
+  }
+} else {
+  if (largNumber[1] > largNumber[2]) {
+    if (largNumber[1] > largNumber[3]) {
+      result = largNumber[1];
+    } else {
+      result = largNumber[3];
+    }
+  } else {
+    if (largNumber[2] > largNumber[3]) {
+      result = largNumber[2];
+    } else {
+      result = largNumber[3];
+    }
+  }
+}
+// console.log(result);
+
+// Check if triangle id equilateral, isoscale, scalen using its side;
+let side1 = 6;
+let side2 = 6;
+let side3 = 6;
+if (side1 === side2 || side2 === side3) {
+  if (side1 === side2 && side1 === side3 && side2 === side3) {
+    // console.log("isosceles");
+  } else {
+    console.log("Equilateral");
+  }
+} else {
+  if (side1 !== side2 || side2 !== side3 || side3 !== side1) {
+    console.log("scalene");
+  } else {
+    console.log("Not valid Triangle");
+  }
+}
+
+let side11 = 23;
+let side22 = 23;
+let side33 = 34;
+let triangleCount;
+if (side11 == side22 && side22 == side33) {
+  if (side11 == side22 && side11 == side33 && side22 == side33) {
+    triangleCount = "isoscale";
+  } else {
+    triangleCount = "equilateral";
+  }
+} else {
+  if (side11 !== side22 && side11 !== side33 && side22 !== side33) {
+    triangleCount = "Scalen";
+  } else {
+    triangleCount = "Not a Valid Traingle";
+  }
+}
+// console.log(triangleCount);
+
+// Check a Number is Even or Odd using Ternary Operator;
+let checkNum = 23;
+let checkNumEvenOrOdd = checkNum % 2 === 0 ? "Even" : "Odd";
+// console.log(checkNumEvenOrOdd);
+
+//Print "Adult" if age > 18 else "Minor" using ternary;
+let age = 2;
+if (age >= 18 ? true : false) {
+  console.log("Adult");
+} else {
+  // console.log("Minor");
+}
+
+let age1 = 2;
+if (true) {
+  if (age1 >= 18 ? true : false) {
+    console.log("Adult");
+  } else {
+    // console.log("Minor");
+  }
+}
+
+//  Using Ternery print "Eligible" if ( marks > 40 else "Not Eligible")
+let chkMark = 24;
+if (true) {
+  // console.log(chkMark > 40 ? "Eligible" : "Not Eligible");
+}
+
+// Write a Program That return "Hot" id temp > 30, "cold" if temp < 10, otherwise "Normal"
+let temp = 2;
+if (true) {
+  console.log(temp >= 30 ? "Hot" : temp <= 10 ? "Cold" : "Normal");
+}
+
+// Write a Praogram t chakeck if given number is upparCase, lowescase, or not a letter
+let character = "A";
+if (character === character.toUpperCase()) {
+  console.log("Character Is Uppercase");
+} else if (character === character.toLowerCase()) {
+  console.log("Character is Lowercase");
+} else {
+  console.log("Enter Valid Character");
+}
+
+let char1 = "X";
+if (/[A-Z]/.test(char1)) {
+  console.log("UpperCase");
+} else if (/[a-z]/.test(char1)) {
+  console.log("Lowercase");
+} else {
+  console.log("Not a letter");
+}
+
+// Check id a number is 3diigt number .
+let numberDigit = 123;
+if (numberDigit >= 1 && numberDigit <= 9) {
+  console.log(numberDigit, "One Digit");
+} else if (numberDigit >= 10 && numberDigit <= 99) {
+  console.log(numberDigit, "Two Digit");
+} else {
+  console.log(numberDigit, "Three Digit");
+}
+
+// Write a program ti Check if today is weekend or weekday(using Date object)
+let date = new Date("2025-09-07");
+console.log(date);
+let resultDate = date.getDay();
+if (resultDate == 0 || resultDate == 6) {
+  // console.log("Weekend");
+} else {
+  console.log("WeekDay");
+}
+
+// ATM program if balance > withdrawal amount and withdrawal is < daily limit allow withdrawal
+let balance = 20;
+let withdrawalAmount = 10;
+let withdrawalNum = 5;
+let dailyLimit = 5;
+if (balance >= withdrawalAmount) {
+  if (withdrawalNum <= dailyLimit) {
+    // console.log("Allow Withdrawal");
+  } else {
+    console.log("Limit Cross");
+  }
+} else {
+  console.log("Not Allow");
+}
+
+// wirte a program to classify a students grade;
+let studentGrade = 90;
+if (studentGrade >= 90) {
+  // console.log("Excilent");
+} else {
+  if (studentGrade >= 70 && studentGrade <= 89) {
+    console.log("Good");
+  } else {
+    if (studentGrade >= 40 && studentGrade <= 69) {
+      console.log("Average");
+    } else {
+      console.log("Fail");
+    }
+  }
+}
+
+// Write a program that check if a number is  divisicle by 2 , 3, 5 -> "Supper Divisible"
+// divisible b only two of them => Partially Divisible, therwised "Not Divisible";
+let divisibleNum = 30;
+if (divisibleNum % 2 === 0) {
+  if (divisibleNum % 3 === 0) {
+    if (divisibleNum % 5 === 0) {
+      console.log("Supper Divisible");
+    } else {
+      console.log("Partial Divisible");
+    }
+  } else if (divisibleNum % 2 === 0) {
+    if (divisibleNum % 5 === 0) {
+      console.log("Partial Divisible");
+    } else {
+      console.log("Only Two Divisible");
+    }
+  }
+} else if (divisibleNum % 3 === 0) {
+  if (divisibleNum % 5 === 0) {
+    console.log("Partial Divisible");
+  } else {
+    if (divisibleNum % 5 === 0) {
+      if (divisibleNum % 2 === 0) {
+        console.log("Partial Divisible");
+      } else {
+        console.log("Not Divisible with 2");
+      }
+    } else {
+      console.log("Not Divisible With 5");
+    }
+  }
+} else {
+  console.log("Not Divisible With Any One");
+}
+
+// Another Way
+let divisibleNumber = 30;
+if(divisibleNumber % 2 === 0 && divisibleNumber % 3 === 0 && divisibleNumber % 5 === 0){
+  console.log("Supper Divisible");
+} else if(
+  divisibleNumber % 2 === 0 && divisibleNumber % 3 === 0 ||
+  divisibleNumber % 2 === 0 && divisibleNumber % 5 === 0 ||
+  divisibleNumber % 3 === 0 && divisibleNumber % 5 === 0
+){
+  console.log("Partial Divisible");
+} else if(divisibleNumber % 2 === 0){
+  console.log("Only 2 Divisible");
+} else if(divisibleNumber % 3 === 0){
+  console.log("Only 3 Divisible");
+} else if(divisibleNumber % 5 === 0){
+  console.log("Only 5 Divisible");
+} else {
+  console.log("Not Divisible With Anyone");
+};
+
+// Given a Student's marks in 3 subject
+let sub1 = 45;
+let sub2 = 44;
+let sub3 = 40;
+if (sub1 < 35 || sub1 < 35 || sub3 < 35) {
+  console.log("Fail");
+} else {
+  if (sub1 >= 90 || sub2 >= 90 || sub3 >= 90){
+    console.log("A+");
+  } else if((sub2 >= 75 && sub2 <= 89) && (sub1 >= 75 && sub1 <= 89) && (sub3 >= 75 && sub3 <= 89)){
+    console.log("A");
+  } else if((sub1 >= 60 && sub1 <= 74) && (sub2 >= 60 && sub2 <= 74) && (sub3 >= 60 && sub3 <= 74)){
+    console.log("B");
+  } else if((sub2 >= 40 && sub2 <= 59) && (sub1 >= 40 && sub1 <= 59) && (sub3 >= 40 && sub3 <= 59)){
+    console.log("C");
+  } else {
+    console.log("Pass");
+  };
 };

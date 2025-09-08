@@ -813,14 +813,14 @@ switch (true) {
 let username = "Akash";
 let userpwd = 1234;
 if (username === "Akash" && userpwd === 1234) {
-  console.log("Verified");
+  // console.log("Verified");
 } else {
   console.log("Not Verified");
 }
 
 switch (true) {
   case username === "Akash" && userpwd === 1234:
-    console.log("Verified");
+    // console.log("Verified");
     break;
   default:
     console.log("Not Verified");
@@ -831,7 +831,7 @@ let weather = "sun";
 if (weather === "raining") {
   console.log("Stay in Home");
 } else {
-  console.log("You can Go Outside");
+  // console.log("You can Go Outside");
 }
 
 let raining = true;
@@ -840,7 +840,7 @@ switch (!raining) {
     console.log("You can go outside");
     break;
   case false:
-    console.log("Stay in Home");
+    // console.log("Stay in Home");
 }
 
 // Nested If Condition
@@ -856,7 +856,7 @@ if (isLeapYear % 100 === 0) {
   if (isLeapYear % 4 === 0) {
     console.log("Leap Year");
   } else {
-    console.log("Not Leap Year");
+    // console.log("Not Leap Year");
   }
 }
 
@@ -865,7 +865,7 @@ let personsAge = 34;
 let personDrivingLicense = true;
 if (personsAge >= 18) {
   if (personDrivingLicense === true) {
-    console.log("Can Drive");
+    // console.log("Can Drive");
   } else {
     console.log("Cann't Drive");
   }
@@ -880,7 +880,7 @@ if (checkNum % 2 === 0 && checkNum % 3 === 0) {
   console.log("Both Divisible");
 } else {
   if (checkNum % 2 === 0) {
-    console.log("Divisible By Only 2");
+    // console.log("Divisible By Only 2");
   } else {
     if(checkNum % 3 === 0){
       console.log("Divisible by 3");
@@ -894,7 +894,7 @@ let checkNum1 = 6;
 if (checkNum1 % 2 === 0 || checkNum1 % 3 === 0) {
   if (checkNum1 % 2 === 0) {
     if (checkNum1 % 3 === 0) {
-      console.log("Both Divisible");
+      // console.log("Both Divisible");
       console.log("Divisible By 2");
     } else {
       console.log("not Divisiible by 3");
@@ -906,11 +906,77 @@ if (checkNum1 % 2 === 0 || checkNum1 % 3 === 0) {
   console.log("Not Divisible");
 };
 
-// Find a Program To find the largest of 4 numbersusing nested condition
-let largestNumbers = [12, 45, 34, 732];
+// Find a Program To find the largest of 4 numbers using nested condition
+let largestNumbers = [12, 45, 34, 32];
 let getThroughIndex;
 
-if(largestNumbers[getThroughIndex]){
-  console.log();
-  
-}
+if(largestNumbers[0] > largestNumbers[1]){
+  if(largestNumbers[0] > largestNumbers[2]){
+    if(largestNumbers[0] > largestNumbers[3]){
+      console.log(largestNumbers[0], "Largest Number");
+    } else {
+      console.log(largestNumbers[3], "Largest Number");
+    };
+  } else {
+    if(largestNumbers[2] > largestNumbers[3]){
+      console.log(largestNumbers[2], "Largest Number");
+    } else {
+      console.log(largestNumbers[3], "Largset Numbr");
+    };
+  };
+}else {
+  if(largestNumbers[1] > largestNumbers[2]){
+    if(largestNumbers[1] > largestNumbers[3]){
+      console.log(largestNumbers[1], "largset Number");
+    } else {
+      console.log(largestNumbers[3], "Largset Number");
+    };
+  } else {
+    if(largestNumbers[2] > largestNumbers[3]){
+      console.log(largestNumbers[2], "Largest Number");
+    } else {
+      console.log(largestNumbers[3], "Largest Number");
+    };
+  };
+};
+
+// wirte a program that checks if a number is divisible by 2, 3 , or 5 is "supper devisible"
+// divisible by two of them the "partially Divisible", otherwise ("not divisible");
+let numberCheck = 6;
+if(numberCheck % 2 ===0 && numberCheck % 3 === 0 && numberCheck % 5 === 0){
+  console.log("Supper Diviisible");
+} else if(
+  numberCheck % 2 === 0 && numberCheck % 3 === 0 ||
+  numberCheck % 2 === 0 && numberCheck % 5 === 0 ||
+  numberCheck % 3 === 0 && numberCheck % 5 === 0
+){
+  console.log("Partially Divisible");
+} else if(numberCheck  % 2 === 0){
+  console.log("Divisible By 2");
+} else if(numberCheck % 3 === 0){
+  console.log("Diivisible By 3 ");
+} else if(numberCheck % 5 === 0){
+  console.log("Divisible by 5");
+} else {
+  console.log("Not Divisible By anyone");
+};
+
+// check withdrawal amount is a multiple of 100, check if withdral amount < daily limit (25,000)
+// check if witdral amount < account balance , if all true -> "Transaction SuccessFull" else show the exact reason
+let withdrawalAmount = 30000;
+let accountBalance = 15000;
+let dailyLimit = 20000;
+
+if(withdrawalAmount % 100 === 0 && withdrawalAmount < dailyLimit && withdrawalAmount < accountBalance){
+  console.log("Transaction SuccessFul");
+} else if( withdrawalAmount % 100 !== 0){
+  console.log("Withdrawal Amount Not Multiple by 100");
+} else if(withdrawalAmount >= dailyLimit){
+  console.log("DailyLimit Was Crossed");
+} else if(withdrawalAmount >= accountBalance){
+  console.log("Account Balance Insuficient");
+} else {
+  console.log("Enter Valid Number");
+};
+
+// W

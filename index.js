@@ -655,7 +655,6 @@ if (grade >= 90) {
   console.log("Fail");
 }
 
-<<<<<<< HEAD
 // Write a Program to Find The Largest Of Three Numbers
 let a = 13;
 let b = 15;
@@ -803,13 +802,11 @@ switch (true) {
     break;
   case gradeNum >= 40 && gradeNum < 50:
     console.log("Grade-D");
->>>>>>> da990f8f055311c56b5f937bc8998c3de0c8cace
     break;
   default:
     console.log("Fail");
 }
 
-<<<<<<< HEAD
 let number = 2;
 switch (number) {
   case 1:
@@ -839,37 +836,37 @@ switch (number) {
 
 // Write a program To find the Largest OF Four Numbers using Nested condition
 let largNumber = [64, 100, 34, 45];
-let result;
+let resultt;
 if (largNumber[0] > largNumber[1]) {
   if (largNumber[0] > largNumber[2]) {
     if (largNumber[0] > largNumber[3]) {
-      result = largNumber[0];
+      resultt = largNumber[0];
     } else {
-      result = largNumber[3];
+      resultt = largNumber[3];
     }
   } else {
     if (largNumber[2] > largNumber[3]) {
-      result = largNumber[2];
+      resultt = largNumber[2];
     } else {
-      result = largNumber[3];
+      resultt = largNumber[3];
     }
   }
 } else {
   if (largNumber[1] > largNumber[2]) {
     if (largNumber[1] > largNumber[3]) {
-      result = largNumber[1];
+      resultt = largNumber[1];
     } else {
-      result = largNumber[3];
+      resultt = largNumber[3];
     }
   } else {
     if (largNumber[2] > largNumber[3]) {
-      result = largNumber[2];
+      resulttresultt = largNumber[2];
     } else {
       result = largNumber[3];
     }
   }
 }
-// console.log(result);
+// console.log(resultt);
 
 // Check if triangle id equilateral, isoscale, scalen using its side;
 let side1 = 6;
@@ -939,13 +936,13 @@ if (true) {
 // Write a Program That return "Hot" id temp > 30, "cold" if temp < 10, otherwise "Normal"
 let temp = 2;
 if (true) {
-  console.log(temp >= 30 ? "Hot" : temp <= 10 ? "Cold" : "Normal");
+  // console.log(temp >= 30 ? "Hot" : temp <= 10 ? "Cold" : "Normal");
 }
 
 // Write a Praogram t chakeck if given number is upparCase, lowescase, or not a letter
 let character = "A";
 if (character === character.toUpperCase()) {
-  console.log("Character Is Uppercase");
+  // console.log("Character Is Uppercase");
 } else if (character === character.toLowerCase()) {
   console.log("Character is Lowercase");
 } else {
@@ -954,7 +951,7 @@ if (character === character.toUpperCase()) {
 
 let char1 = "X";
 if (/[A-Z]/.test(char1)) {
-  console.log("UpperCase");
+  // console.log("UpperCase");
 } else if (/[a-z]/.test(char1)) {
   console.log("Lowercase");
 } else {
@@ -968,12 +965,12 @@ if (numberDigit >= 1 && numberDigit <= 9) {
 } else if (numberDigit >= 10 && numberDigit <= 99) {
   console.log(numberDigit, "Two Digit");
 } else {
-  console.log(numberDigit, "Three Digit");
+  // console.log(numberDigit, "Three Digit");
 }
 
 // Write a program ti Check if today is weekend or weekday(using Date object)
 let date = new Date("2025-09-07");
-console.log(date);
+// console.log(date);
 let resultDate = date.getDay();
 if (resultDate == 0 || resultDate == 6) {
   // console.log("Weekend");
@@ -1018,7 +1015,7 @@ let divisibleNum = 30;
 if (divisibleNum % 2 === 0) {
   if (divisibleNum % 3 === 0) {
     if (divisibleNum % 5 === 0) {
-      console.log("Supper Divisible");
+      // console.log("Supper Divisible");
     } else {
       console.log("Partial Divisible");
     }
@@ -1050,7 +1047,7 @@ if (divisibleNum % 2 === 0) {
 // Another Way
 let divisibleNumber = 30;
 if(divisibleNumber % 2 === 0 && divisibleNumber % 3 === 0 && divisibleNumber % 5 === 0){
-  console.log("Supper Divisible");
+  // console.log("Supper Divisible");
 } else if(
   divisibleNumber % 2 === 0 && divisibleNumber % 3 === 0 ||
   divisibleNumber % 2 === 0 && divisibleNumber % 5 === 0 ||
@@ -1081,15 +1078,14 @@ if (sub1 < 35 || sub1 < 35 || sub3 < 35) {
   } else if((sub1 >= 60 && sub1 <= 74) && (sub2 >= 60 && sub2 <= 74) && (sub3 >= 60 && sub3 <= 74)){
     console.log("B");
   } else if((sub2 >= 40 && sub2 <= 59) && (sub1 >= 40 && sub1 <= 59) && (sub3 >= 40 && sub3 <= 59)){
-    console.log("C");
+    // console.log("C");
   } else {
     console.log("Pass");
   };
 };
-=======
 //Check a Number is Between 10 and 50?
-let number = 100;
-if (number >= 10 && number <= 100) {
+let numberr = 100;
+if (numberr >= 10 && numberr <= 100) {
   // console.log("Number is Between 10 and 50");
 } else {
   console.log("Not Between 10 and 50");
@@ -1123,15 +1119,15 @@ switch (true) {
 }
 
 //Check If a Number is Divisible by 3 or 7 Print "Speciial Number" ?
-let divisibleNum = 23;
-if (divisibleNum % 3 === 0 && divisibleNum % 7 === 0) {
+let divisibleNumm = 23;
+if (divisibleNumm % 3 === 0 && divisibleNumm % 7 === 0) {
   console.log("Special Number");
 } else {
   // console.log("Not Divisible");
 }
 
 switch (true) {
-  case divisibleNum % 3 === 0 && divisibleNum % 7 === 0:
+  case divisibleNumm % 3 === 0 && divisibleNumm % 7 === 0:
     console.log("Special Number");
     break;
   default:
@@ -1142,14 +1138,14 @@ switch (true) {
 let username = "Akash";
 let userpwd = 1234;
 if (username === "Akash" && userpwd === 1234) {
-  console.log("Verified");
+  // console.log("Verified");
 } else {
   console.log("Not Verified");
 }
 
 switch (true) {
   case username === "Akash" && userpwd === 1234:
-    console.log("Verified");
+    // console.log("Verified");
     break;
   default:
     console.log("Not Verified");
@@ -1160,7 +1156,7 @@ let weather = "sun";
 if (weather === "raining") {
   console.log("Stay in Home");
 } else {
-  console.log("You can Go Outside");
+  // console.log("You can Go Outside");
 }
 
 let raining = true;
@@ -1169,7 +1165,7 @@ switch (!raining) {
     console.log("You can go outside");
     break;
   case false:
-    console.log("Stay in Home");
+    // console.log("Stay in Home");
 }
 
 // Nested If Condition
@@ -1185,7 +1181,7 @@ if (isLeapYear % 100 === 0) {
   if (isLeapYear % 4 === 0) {
     console.log("Leap Year");
   } else {
-    console.log("Not Leap Year");
+    // console.log("Not Leap Year");
   }
 }
 
@@ -1194,7 +1190,7 @@ let personsAge = 34;
 let personDrivingLicense = true;
 if (personsAge >= 18) {
   if (personDrivingLicense === true) {
-    console.log("Can Drive");
+    // console.log("Can Drive");
   } else {
     console.log("Cann't Drive");
   }
@@ -1204,14 +1200,14 @@ if (personsAge >= 18) {
 
 // Write a program to check if a number is: divisible by 2 or 3 -> "divisible by both"
 // only by 2 -> "divisible by 2", only by 3 -> "divisible by 3", else "not divisible"
-let checkNum = 20;
-if (checkNum % 2 === 0 && checkNum % 3 === 0) {
-  console.log("Both Divisible");
+let checkNumm = 20;
+if (checkNumm % 2 === 0 && checkNumm % 3 === 0) {
+  // console.log("Both Divisible");
 } else {
-  if (checkNum % 2 === 0) {
-    console.log("Divisible By Only 2");
+  if (checkNumm % 2 === 0) {
+    // console.log("Divisible By Only 2");
   } else {
-    if(checkNum % 3 === 0){
+    if(checkNumm % 3 === 0){
       console.log("Divisible by 3");
     } else {
       console.log("Not Divisble by Anyone");
@@ -1223,8 +1219,8 @@ let checkNum1 = 6;
 if (checkNum1 % 2 === 0 || checkNum1 % 3 === 0) {
   if (checkNum1 % 2 === 0) {
     if (checkNum1 % 3 === 0) {
-      console.log("Both Divisible");
-      console.log("Divisible By 2");
+      // console.log("Both Divisible");
+      // console.log("Divisible By 2");
     } else {
       console.log("not Divisiible by 3");
     }
@@ -1235,11 +1231,63 @@ if (checkNum1 % 2 === 0 || checkNum1 % 3 === 0) {
   console.log("Not Divisible");
 };
 
-// Find a Program To find the largest of 4 numbersusing nested condition
-let largestNumbers = [12, 45, 34, 732];
-let getThroughIndex;
+// if sum of any two < third => "Not a Triangle" else check all sides equal => "Equilatereal", Two Sides Equal => "Ososceles"
+// All different => "Scalene" also check if Pythagoras theorom holds => "Right-Angled Triangle".a
+let triangle1 = 12;
+let triangle2 = 12;
+let triangle3 = 12;
+if(
+  triangle1 + triangle2 <= triangle3 ||
+  triangle2 + triangle3 <= triangle1 ||
+  triangle3 + triangle1 <= triangle2
+){
+  console.log("Not a Triangle");
+} else if(triangle1 === triangle2 && triangle1 === triangle3 && triangle2 === triangle3){
+  // console.log("Equilateral");
+} else if(
+  triangle1 === triangle2 || triangle1 === triangle3 || triangle2 === triangle3
+){
+  console.log("Isosceles");
+} else if(triangle1 !== triangle2 && triangle1 !== triangle3 && triangle2 !== triangle3){
+  console.log("Scalene");
+};
 
-if(largestNumbers[getThroughIndex]){
-  console.log();
-  
-}
+// Electricity Bill Calculator
+// Units Consumed -> Apply Rates => 0-100 =>1.5/units , 101-300-> 2.5/units, 301-500->4/units
+// Above 500 => 6/units
+// Also Add 10% surcharg if bill > 2000.
+let units = 90;
+let bill;
+if(units > 0 && units <= 100){
+  bill = units * 1.5
+} else if(units >= 101 && units <= 300){
+  bill = (100 * 1.5) + (units - 100) * 2.5; 
+} else if(units >= 301 && units <= 500){
+  bill = (100 * 1.5) + (200 * 2.5) + (units - 200) * 4;
+} else {
+    if(units >= 500){
+    bill = (100 * 1.5) + ( 200 * 2.5) + (300 * 4) * 6;
+  };
+};
+if(bill > 2000){
+  bill = bill * 1.10;
+};
+console.log("₹",bill);
+
+// Numer Range Check 
+// Take Two Numbe "min" and "max"
+// Check iF A USER GIVEN NUMBER IS INSDE THE RANGE , EXACTLY AT THE BAOUNDARY, OR OUTSIDE;
+let userGivenNum = 10 ;
+let min = 10;
+let max = 100;
+if( userGivenNum >= min && userGivenNum <= max){
+  if(userGivenNum === min){
+    console.log("lower Boundary"); 
+  } else if(userGivenNum === max){
+    console.log("Upper Boundary");
+  } else {
+    console.log("Inside The Range");
+  };
+}else {
+  console.log("Out Side the Range");
+};

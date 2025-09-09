@@ -1153,6 +1153,7 @@ if (divisibleNum1 % 3 === 0 && divisibleNum1 % 7 === 0) {
   // console.log("Not Divisible");
 }
 
+let divisibleNumm = 3; 
 switch (true) {
   case divisibleNumm % 3 === 0 && divisibleNumm % 7 === 0:
     console.log("Special Number");
@@ -1260,7 +1261,6 @@ if (checkNum1 % 2 === 0 || checkNum1 % 3 === 0) {
     if (checkNum1 % 3 === 0) {
       // console.log("Both Divisible");
       // console.log("Divisible By 2");
-      console.log("Divisible By 2");
     } else {
       console.log("not Divisiible by 3");
     }
@@ -1313,7 +1313,7 @@ if(units > 0 && units <= 100){
 if(bill > 2000){
   bill = bill * 1.10;
 };
-console.log("₹",bill);
+// console.log("₹",bill);
 
 // Numer Range Check 
 // Take Two Numbe "min" and "max"
@@ -1323,7 +1323,7 @@ let min = 10;
 let max = 100;
 if( userGivenNum >= min && userGivenNum <= max){
   if(userGivenNum === min){
-    console.log("lower Boundary"); 
+    // console.log("lower Boundary"); 
   } else if(userGivenNum === max){
     console.log("Upper Boundary");
   } else {
@@ -1352,7 +1352,7 @@ if(largestNumbers[0] > largestNumbers[1]){
 }else {
   if(largestNumbers[1] > largestNumbers[2]){
     if(largestNumbers[1] > largestNumbers[3]){
-      console.log(largestNumbers[1], "largset Number");
+      // console.log(largestNumbers[1], "largset Number");
     } else {
       console.log(largestNumbers[3], "Largset Number");
     };
@@ -1375,7 +1375,7 @@ if(numberCheck % 2 ===0 && numberCheck % 3 === 0 && numberCheck % 5 === 0){
   numberCheck % 2 === 0 && numberCheck % 5 === 0 ||
   numberCheck % 3 === 0 && numberCheck % 5 === 0
 ){
-  console.log("Partially Divisible");
+  // console.log("Partially Divisible");
 } else if(numberCheck  % 2 === 0){
   console.log("Divisible By 2");
 } else if(numberCheck % 3 === 0){
@@ -1397,7 +1397,7 @@ if(withdrawalAmount1 % 100 === 0 && withdrawalAmount1 < dailyLimit1 && withdrawa
 } else if( withdrawalAmount1 % 100 !== 0){
   console.log("Withdrawal Amount Not Multiple by 100");
 } else if(withdrawalAmount1 >= dailyLimit1){
-  console.log("DailyLimit Was Crossed");
+  // console.log("DailyLimit Was Crossed");
 } else if(withdrawalAmount1 >= accountBalance){
   console.log("Account Balance Insuficient");
 } else {

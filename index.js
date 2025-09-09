@@ -805,7 +805,7 @@ switch (true) {
     break;
   default:
     console.log("Fail");
-}
+};
 
 let number = 2;
 switch (number) {
@@ -851,6 +851,23 @@ if (largNumber[0] > largNumber[1]) {
       resultt = largNumber[3];
     }
   }
+};
+
+let resultNum;
+if (largNumber[0] > largNumber[1]) {
+  if (largNumber[0] > largNumber[2]) {
+    if (largNumber[0] > largNumber[3]) {
+      resultNum = largNumber[0];
+    } else {
+      resultNum = largNumber[3];
+    }
+  } else {
+    if (largNumber[2] > largNumber[3]) {
+      resultNum = largNumber[2];
+    } else {
+      resultNum = largNumber[3];
+    }
+  }
 } else {
   if (largNumber[1] > largNumber[2]) {
     if (largNumber[1] > largNumber[3]) {
@@ -860,10 +877,18 @@ if (largNumber[0] > largNumber[1]) {
     }
   } else {
     if (largNumber[2] > largNumber[3]) {
-      resulttresultt = largNumber[2];
+      resultt = largNumber[2];
+
+      resultNum = largNumber[1];
     } else {
-      result = largNumber[3];
+      resultNum = largNumber[3];
     }
+  // } else {
+  //   if (largNumber[2] > largNumber[3]) {
+  //     resultNum = largNumber[2];
+  //   } else {
+  //     resultNum = largNumber[3];
+  //   }
   }
 }
 // console.log(resultt);
@@ -1084,8 +1109,9 @@ if (sub1 < 35 || sub1 < 35 || sub3 < 35) {
   };
 };
 //Check a Number is Between 10 and 50?
-let numberr = 100;
-if (numberr >= 10 && numberr <= 100) {
+
+let number1 = 100;
+if (number1 >= 10 && number1 <= 100) {
   // console.log("Number is Between 10 and 50");
 } else {
   console.log("Not Between 10 and 50");
@@ -1119,8 +1145,9 @@ switch (true) {
 }
 
 //Check If a Number is Divisible by 3 or 7 Print "Speciial Number" ?
-let divisibleNumm = 23;
-if (divisibleNumm % 3 === 0 && divisibleNumm % 7 === 0) {
+
+let divisibleNum1 = 23;
+if (divisibleNum1 % 3 === 0 && divisibleNum1 % 7 === 0) {
   console.log("Special Number");
 } else {
   // console.log("Not Divisible");
@@ -1208,12 +1235,24 @@ if (checkNumm % 2 === 0 && checkNumm % 3 === 0) {
     // console.log("Divisible By Only 2");
   } else {
     if(checkNumm % 3 === 0){
+
+let checkNumb = 20;
+if (checkNumb % 2 === 0 && checkNumb % 3 === 0) {
+  console.log("Both Divisible");
+} else {
+  if (checkNumb % 2 === 0) {
+    // console.log("Divisible By Only 2");
+  } else {
+    if(checkNumb % 3 === 0){
       console.log("Divisible by 3");
     } else {
       console.log("Not Divisble by Anyone");
     };
   };
 };
+};
+};
+}
 
 let checkNum1 = 6;
 if (checkNum1 % 2 === 0 || checkNum1 % 3 === 0) {
@@ -1221,6 +1260,7 @@ if (checkNum1 % 2 === 0 || checkNum1 % 3 === 0) {
     if (checkNum1 % 3 === 0) {
       // console.log("Both Divisible");
       // console.log("Divisible By 2");
+      console.log("Divisible By 2");
     } else {
       console.log("not Divisiible by 3");
     }
@@ -1230,6 +1270,7 @@ if (checkNum1 % 2 === 0 || checkNum1 % 3 === 0) {
 } else {
   console.log("Not Divisible");
 };
+
 
 // if sum of any two < third => "Not a Triangle" else check all sides equal => "Equilatereal", Two Sides Equal => "Ososceles"
 // All different => "Scalene" also check if Pythagoras theorom holds => "Right-Angled Triangle".a
@@ -1290,4 +1331,76 @@ if( userGivenNum >= min && userGivenNum <= max){
   };
 }else {
   console.log("Out Side the Range");
+}
+// Find a Program To find the largest of 4 numbers using nested condition
+let largestNumbers = [12, 45, 34, 32];
+
+if(largestNumbers[0] > largestNumbers[1]){
+  if(largestNumbers[0] > largestNumbers[2]){
+    if(largestNumbers[0] > largestNumbers[3]){
+      console.log(largestNumbers[0], "Largest Number");
+    } else {
+      console.log(largestNumbers[3], "Largest Number");
+    };
+  } else {
+    if(largestNumbers[2] > largestNumbers[3]){
+      console.log(largestNumbers[2], "Largest Number");
+    } else {
+      console.log(largestNumbers[3], "Largset Numbr");
+    };
+  };
+}else {
+  if(largestNumbers[1] > largestNumbers[2]){
+    if(largestNumbers[1] > largestNumbers[3]){
+      console.log(largestNumbers[1], "largset Number");
+    } else {
+      console.log(largestNumbers[3], "Largset Number");
+    };
+  } else {
+    if(largestNumbers[2] > largestNumbers[3]){
+      console.log(largestNumbers[2], "Largest Number");
+    } else {
+      console.log(largestNumbers[3], "Largest Number");
+    };
+  };
 };
+
+// wirte a program that checks if a number is divisible by 2, 3 , or 5 is "supper devisible"
+// divisible by two of them the "partially Divisible", otherwise ("not divisible");
+let numberCheck = 6;
+if(numberCheck % 2 ===0 && numberCheck % 3 === 0 && numberCheck % 5 === 0){
+  console.log("Supper Diviisible");
+} else if(
+  numberCheck % 2 === 0 && numberCheck % 3 === 0 ||
+  numberCheck % 2 === 0 && numberCheck % 5 === 0 ||
+  numberCheck % 3 === 0 && numberCheck % 5 === 0
+){
+  console.log("Partially Divisible");
+} else if(numberCheck  % 2 === 0){
+  console.log("Divisible By 2");
+} else if(numberCheck % 3 === 0){
+  console.log("Diivisible By 3 ");
+} else if(numberCheck % 5 === 0){
+  console.log("Divisible by 5");
+} else {
+  console.log("Not Divisible By anyone");
+};
+
+// check withdrawal amount is a multiple of 100, check if withdral amount < daily limit (25,000)
+// check if witdral amount < account balance , if all true -> "Transaction SuccessFull" else show the exact reason
+let withdrawalAmount1 = 30000;
+let accountBalance = 15000;
+let dailyLimit1 = 20000;
+
+if(withdrawalAmount1 % 100 === 0 && withdrawalAmount1 < dailyLimit1 && withdrawalAmount1 < accountBalance){
+  console.log("Transaction SuccessFul");
+} else if( withdrawalAmount1 % 100 !== 0){
+  console.log("Withdrawal Amount Not Multiple by 100");
+} else if(withdrawalAmount1 >= dailyLimit1){
+  console.log("DailyLimit Was Crossed");
+} else if(withdrawalAmount1 >= accountBalance){
+  console.log("Account Balance Insuficient");
+} else {
+  console.log("Enter Valid Number");
+};
+

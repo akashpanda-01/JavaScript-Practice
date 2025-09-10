@@ -1076,7 +1076,7 @@ if (
   divisibleNumber % 3 === 0 &&
   divisibleNumber % 5 === 0
 ) {
-  console.log("Supper Divisible");
+  // console.log("Supper Divisible");
 } else if (
   (divisibleNumber % 2 === 0 && divisibleNumber % 3 === 0) ||
   (divisibleNumber % 2 === 0 && divisibleNumber % 5 === 0) ||
@@ -1393,7 +1393,7 @@ if (largestNumbers[0] > largestNumbers[1]) {
 // divisible by two of them the "partially Divisible", otherwise ("not divisible");
 let numberCheck = 6;
 if (numberCheck % 2 === 0 && numberCheck % 3 === 0 && numberCheck % 5 === 0) {
-  console.log("Supper Diviisible");
+  // console.log("Supper Diviisible");
 } else if(
   numberCheck % 2 === 0 && numberCheck % 3 === 0 ||
   numberCheck % 2 === 0 && numberCheck % 5 === 0 ||
@@ -1456,7 +1456,7 @@ if (
   triangleSide1 === triangleSide3 ||
   triangleSide2 === triangleSide3
 ) {
-  console.log("isoscales");
+  // console.log("isoscales");
 } else if (
   triangleSide1 !== triangleSide2 &&
   triangleSide1 !== triangleSide3 &&
@@ -1470,7 +1470,7 @@ let cc;
 if (aa* aa + bb * bb === cc*cc) {
   console.log("Write Angled Triangle");
 } else {
-  console.log("Not Right Angled Triangled");
+  // console.log("Not Right Angled Triangled");
 }
 
 // check login wit two variables
@@ -1591,9 +1591,46 @@ for(let i = 1; i <= 50; i = i + 5){
 
 // Nested Loop
 for(let i = 1; i <= 3; i++){
-  console.log("Outer Loop", i);
+  // console.log("Outer Loop", i);
   for(let j = 1; j <= 3; j++){
-    console.log(j);
+    // console.log(j);
   };
->>>>>>> ab8a842e17cd38438e6fc9ba644a2c0affe1fbac
 };
+
+// While Loop
+{
+  let i = 1
+while(i <= 5){
+  // console.log(i);
+  i++
+};
+}
+
+{
+  let i = 5
+  while(i >= 1){
+    // console.log(i);
+    i--
+  };
+}
+
+//  Even
+{
+  let i = 1;
+  while(i <= 20){
+    let val = i * 2;
+    console.log(val);
+    i++
+  };
+};
+
+// odd
+{
+  let i = 1;
+  while(i <= 20){
+    let val = i * 2;
+    console.log(val);
+    i++
+  };
+};
+

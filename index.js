@@ -836,6 +836,23 @@ switch (number) {
 
 // Write a program To find the Largest OF Four Numbers using Nested condition
 let largNumber = [64, 100, 34, 45];
+let resultt;
+if (largNumber[0] > largNumber[1]) {
+  if (largNumber[0] > largNumber[2]) {
+    if (largNumber[0] > largNumber[3]) {
+      resultt = largNumber[0];
+    } else {
+      resultt = largNumber[3];
+    }
+  } else {
+    if (largNumber[2] > largNumber[3]) {
+      resultt = largNumber[2];
+    } else {
+      resultt = largNumber[3];
+    }
+  }
+};
+
 let resultNum;
 if (largNumber[0] > largNumber[1]) {
   if (largNumber[0] > largNumber[2]) {
@@ -854,19 +871,27 @@ if (largNumber[0] > largNumber[1]) {
 } else {
   if (largNumber[1] > largNumber[2]) {
     if (largNumber[1] > largNumber[3]) {
+      resultt = largNumber[1];
+    } else {
+      resultt = largNumber[3];
+    }
+  } else {
+    if (largNumber[2] > largNumber[3]) {
+      resultt = largNumber[2];
+
       resultNum = largNumber[1];
     } else {
       resultNum = largNumber[3];
     }
-  } else {
-    if (largNumber[2] > largNumber[3]) {
-      resultNum = largNumber[2];
-    } else {
-      resultNum = largNumber[3];
-    }
+  // } else {
+  //   if (largNumber[2] > largNumber[3]) {
+  //     resultNum = largNumber[2];
+  //   } else {
+  //     resultNum = largNumber[3];
+  //   }
   }
 }
-// console.log(result);
+// console.log(resultt);
 
 // Check if triangle id equilateral, isoscale, scalen using its side;
 let side1 = 6;
@@ -936,13 +961,13 @@ if (true) {
 // Write a Program That return "Hot" id temp > 30, "cold" if temp < 10, otherwise "Normal"
 let temp = 2;
 if (true) {
-  console.log(temp >= 30 ? "Hot" : temp <= 10 ? "Cold" : "Normal");
+  // console.log(temp >= 30 ? "Hot" : temp <= 10 ? "Cold" : "Normal");
 }
 
 // Write a Praogram t chakeck if given number is upparCase, lowescase, or not a letter
 let character = "A";
 if (character === character.toUpperCase()) {
-  console.log("Character Is Uppercase");
+  // console.log("Character Is Uppercase");
 } else if (character === character.toLowerCase()) {
   console.log("Character is Lowercase");
 } else {
@@ -951,7 +976,7 @@ if (character === character.toUpperCase()) {
 
 let char1 = "X";
 if (/[A-Z]/.test(char1)) {
-  console.log("UpperCase");
+  // console.log("UpperCase");
 } else if (/[a-z]/.test(char1)) {
   console.log("Lowercase");
 } else {
@@ -965,12 +990,12 @@ if (numberDigit >= 1 && numberDigit <= 9) {
 } else if (numberDigit >= 10 && numberDigit <= 99) {
   console.log(numberDigit, "Two Digit");
 } else {
-  console.log(numberDigit, "Three Digit");
+  // console.log(numberDigit, "Three Digit");
 }
 
 // Write a program ti Check if today is weekend or weekday(using Date object)
 let date = new Date("2025-09-07");
-console.log(date);
+// console.log(date);
 let resultDate = date.getDay();
 if (resultDate == 0 || resultDate == 6) {
   // console.log("Weekend");
@@ -1015,7 +1040,7 @@ let divisibleNum = 30;
 if (divisibleNum % 2 === 0) {
   if (divisibleNum % 3 === 0) {
     if (divisibleNum % 5 === 0) {
-      console.log("Supper Divisible");
+      // console.log("Supper Divisible");
     } else {
       console.log("Partial Divisible");
     }
@@ -1046,17 +1071,13 @@ if (divisibleNum % 2 === 0) {
 
 // Another Way
 let divisibleNumber = 30;
-if (
-  divisibleNumber % 2 === 0 &&
-  divisibleNumber % 3 === 0 &&
-  divisibleNumber % 5 === 0
-) {
+if(divisibleNumber % 2 === 0 && divisibleNumber % 3 === 0 && divisibleNumber % 5 === 0){
   console.log("Supper Divisible");
-} else if (
-  (divisibleNumber % 2 === 0 && divisibleNumber % 3 === 0) ||
-  (divisibleNumber % 2 === 0 && divisibleNumber % 5 === 0) ||
-  (divisibleNumber % 3 === 0 && divisibleNumber % 5 === 0)
-) {
+} else if(
+  divisibleNumber % 2 === 0 && divisibleNumber % 3 === 0 ||
+  divisibleNumber % 2 === 0 && divisibleNumber % 5 === 0 ||
+  divisibleNumber % 3 === 0 && divisibleNumber % 5 === 0
+){
   console.log("Partial Divisible");
 } else if (divisibleNumber % 2 === 0) {
   console.log("Only 2 Divisible");
@@ -1095,20 +1116,14 @@ if (sub1 < 35 || sub1 < 35 || sub3 < 35) {
     sub3 <= 74
   ) {
     console.log("B");
-  } else if (
-    sub2 >= 40 &&
-    sub2 <= 59 &&
-    sub1 >= 40 &&
-    sub1 <= 59 &&
-    sub3 >= 40 &&
-    sub3 <= 59
-  ) {
+  } else if((sub2 >= 40 && sub2 <= 59) && (sub1 >= 40 && sub1 <= 59) && (sub3 >= 40 && sub3 <= 59)){
     console.log("C");
   } else {
     console.log("Pass");
   }
 }
 //Check a Number is Between 10 and 50?
+
 let number1 = 100;
 if (number1 >= 10 && number1 <= 100) {
   // console.log("Number is Between 10 and 50");
@@ -1144,6 +1159,7 @@ switch (true) {
 }
 
 //Check If a Number is Divisible by 3 or 7 Print "Speciial Number" ?
+
 let divisibleNum1 = 23;
 if (divisibleNum1 % 3 === 0 && divisibleNum1 % 7 === 0) {
   console.log("Special Number");
@@ -1151,8 +1167,9 @@ if (divisibleNum1 % 3 === 0 && divisibleNum1 % 7 === 0) {
   // console.log("Not Divisible");
 }
 
+let divisibleNumm = 3; 
 switch (true) {
-  case divisibleNum % 3 === 0 && divisibleNum % 7 === 0:
+  case divisibleNumm % 3 === 0 && divisibleNumm % 7 === 0:
     console.log("Special Number");
     break;
   default:
@@ -1225,6 +1242,15 @@ if (personsAge >= 18) {
 
 // Write a program to check if a number is: divisible by 2 or 3 -> "divisible by both"
 // only by 2 -> "divisible by 2", only by 3 -> "divisible by 3", else "not divisible"
+let checkNumm = 20;
+if (checkNumm % 2 === 0 && checkNumm % 3 === 0) {
+  // console.log("Both Divisible");
+} else {
+  if (checkNumm % 2 === 0) {
+    // console.log("Divisible By Only 2");
+  } else {
+    if(checkNumm % 3 === 0){
+
 let checkNumb = 20;
 if (checkNumb % 2 === 0 && checkNumb % 3 === 0) {
   console.log("Both Divisible");
@@ -1236,16 +1262,16 @@ if (checkNumb % 2 === 0 && checkNumb % 3 === 0) {
       console.log("Divisible by 3");
     } else {
       console.log("Not Divisble by Anyone");
-    }
-  }
-}
+    };
+  };
+};
 
 let checkNum1 = 6;
 if (checkNum1 % 2 === 0 || checkNum1 % 3 === 0) {
   if (checkNum1 % 2 === 0) {
     if (checkNum1 % 3 === 0) {
       // console.log("Both Divisible");
-      console.log("Divisible By 2");
+      // console.log("Divisible By 2");
     } else {
       console.log("not Divisiible by 3");
     }
@@ -1256,9 +1282,69 @@ if (checkNum1 % 2 === 0 || checkNum1 % 3 === 0) {
   console.log("Not Divisible");
 }
 
+
+// if sum of any two < third => "Not a Triangle" else check all sides equal => "Equilatereal", Two Sides Equal => "Ososceles"
+// All different => "Scalene" also check if Pythagoras theorom holds => "Right-Angled Triangle".a
+let triangle1 = 12;
+let triangle2 = 12;
+let triangle3 = 12;
+if(
+  triangle1 + triangle2 <= triangle3 ||
+  triangle2 + triangle3 <= triangle1 ||
+  triangle3 + triangle1 <= triangle2
+){
+  console.log("Not a Triangle");
+} else if(triangle1 === triangle2 && triangle1 === triangle3 && triangle2 === triangle3){
+  // console.log("Equilateral");
+} else if(
+  triangle1 === triangle2 || triangle1 === triangle3 || triangle2 === triangle3
+){
+  console.log("Isosceles");
+} else if(triangle1 !== triangle2 && triangle1 !== triangle3 && triangle2 !== triangle3){
+  console.log("Scalene");
+};
+
+// Electricity Bill Calculator
+// Units Consumed -> Apply Rates => 0-100 =>1.5/units , 101-300-> 2.5/units, 301-500->4/units
+// Above 500 => 6/units
+// Also Add 10% surcharg if bill > 2000.
+let units = 90;
+let bill;
+if(units > 0 && units <= 100){
+  bill = units * 1.5
+} else if(units >= 101 && units <= 300){
+  bill = (100 * 1.5) + (units - 100) * 2.5; 
+} else if(units >= 301 && units <= 500){
+  bill = (100 * 1.5) + (200 * 2.5) + (units - 200) * 4;
+} else {
+    if(units >= 500){
+    bill = (100 * 1.5) + ( 200 * 2.5) + (300 * 4) * 6;
+  };
+};
+if(bill > 2000){
+  bill = bill * 1.10;
+};
+// console.log("₹",bill);
+
+// Numer Range Check 
+// Take Two Numbe "min" and "max"
+// Check iF A USER GIVEN NUMBER IS INSDE THE RANGE , EXACTLY AT THE BAOUNDARY, OR OUTSIDE;
+let userGivenNum = 10 ;
+let min = 10;
+let max = 100;
+if( userGivenNum >= min && userGivenNum <= max){
+  if(userGivenNum === min){
+    // console.log("lower Boundary"); 
+  } else if(userGivenNum === max){
+    console.log("Upper Boundary");
+  } else {
+    console.log("Inside The Range");
+  };
+}else {
+  console.log("Out Side the Range");
+}
 // Find a Program To find the largest of 4 numbers using nested condition
 let largestNumbers = [12, 45, 34, 32];
-let getThroughIndex;
 
 if (largestNumbers[0] > largestNumbers[1]) {
   if (largestNumbers[0] > largestNumbers[2]) {
@@ -1272,11 +1358,11 @@ if (largestNumbers[0] > largestNumbers[1]) {
       console.log(largestNumbers[2], "Largest Number");
     } else {
       console.log(largestNumbers[3], "Largset Numbr");
-    }
-  }
-} else {
-  if (largestNumbers[1] > largestNumbers[2]) {
-    if (largestNumbers[1] > largestNumbers[3]) {
+    };
+  };
+}else {
+  if(largestNumbers[1] > largestNumbers[2]){
+    if(largestNumbers[1] > largestNumbers[3]){
       console.log(largestNumbers[1], "largset Number");
     } else {
       console.log(largestNumbers[3], "Largset Number");
@@ -1295,13 +1381,13 @@ if (largestNumbers[0] > largestNumbers[1]) {
 let numberCheck = 6;
 if (numberCheck % 2 === 0 && numberCheck % 3 === 0 && numberCheck % 5 === 0) {
   console.log("Supper Diviisible");
-} else if (
-  (numberCheck % 2 === 0 && numberCheck % 3 === 0) ||
-  (numberCheck % 2 === 0 && numberCheck % 5 === 0) ||
-  (numberCheck % 3 === 0 && numberCheck % 5 === 0)
-) {
+} else if(
+  numberCheck % 2 === 0 && numberCheck % 3 === 0 ||
+  numberCheck % 2 === 0 && numberCheck % 5 === 0 ||
+  numberCheck % 3 === 0 && numberCheck % 5 === 0
+){
   console.log("Partially Divisible");
-} else if (numberCheck % 2 === 0) {
+} else if(numberCheck  % 2 === 0){
   console.log("Divisible By 2");
 } else if (numberCheck % 3 === 0) {
   console.log("Diivisible By 3 ");
@@ -1325,95 +1411,15 @@ if (
   console.log("Transaction SuccessFul");
 } else if (withdrawalAmount1 % 100 !== 0) {
   console.log("Withdrawal Amount Not Multiple by 100");
-} else if (withdrawalAmount1 >= dailyLimit1) {
+} else if(withdrawalAmount1 >= dailyLimit1){
   console.log("DailyLimit Was Crossed");
-} else if (withdrawalAmount1 >= accountBalance) {
+} else if(withdrawalAmount1 >= accountBalance){
   console.log("Account Balance Insuficient");
 } else {
   console.log("Enter Valid Number");
-}
-
-// if sum of any two < third -> "Not a Tringle"
-// else check all side equal = "EquiLateral", Two sides Equal => "Isoseles";
-// ALL Diifferentn => "Scalene"
-// Also Check If Pythogoras Theorom holds => "Right-angle triangle";
-let triangleSide1 = 3;
-let triangleSide2 = 3;
-let triangleSide3 = 6;
-if (
-  triangleSide1 + triangleSide2 <= triangleSide3 &&
-  triangleSide1 + triangleSide3 <= triangleSide2 &&
-  triangleSide2 + triangleSide3 <= triangleSide1
-) {
-  console.log("Not a Triangle");
-} else if (
-  triangleSide1 === triangleSide2 &&
-  triangleSide1 === triangleSide3 &&
-  triangleSide2 === triangleSide3
-) {
-  console.log("Equilateral");
-} else if (
-  triangleSide1 === triangleSide2 ||
-  triangleSide1 === triangleSide3 ||
-  triangleSide2 === triangleSide3
-) {
-  console.log("isoscales");
-} else if (
-  triangleSide1 !== triangleSide2 &&
-  triangleSide1 !== triangleSide3 &&
-  triangleSide2 !== triangleSide3
-) {
-  console.log("Scalene");
-}
-let aa = 6;
-let bb = 8;
-let cc;
-if (aa* aa + bb * bb === cc*cc) {
-  console.log("Write Angled Triangle");
-} else {
-  console.log("Not Right Angled Triangled");
-}
-
-// check login wit two variables
-// username ="Admin" and password= "1234" => "Welcome Admin"
-// username = "User" and Passwoord = "abcd" => "Welcome User"
-// if usernaame correct or Password Incorrect => "Incorrect Password"
-// else => "Invalid Credentials";
-let username1 = "Admn";
-let password1 = "acbc" ;
-if(username1 === "Admin" && password1 === "1234"){
-  console.log("Welcome Admin");
-} else if(username1 === "User" && password1 === "abcd") {
-  console.log("Welcome User");
-} else if(username1 === "Admin" && password1 !== "1234" || username1 === "User" && password1 === "abcd"){
-  console.log("Invalid password");
-} else {
-  // console.log("Invalid Credentials");
 };
 
-// unit consumed  => Apply rate;
-//0-100 => 1.5/unit, 101-300 => 2.5/uniit, 301-500 => 4/unit,
-//above 500 => 6/Unit Also add 10% sucharge if bill > 2000.
-let units = 2100;
-let bill;
-if(units >= 0 && units <= 100){
-  bill = 100 * 1.5;
-} else if(units >= 101 && units <= 300){
-  bill = (100 * 1.5) + (units - 100) * 2.5;
-} else if( units >= 301 && units <= 500){
-  bill = (100 * 1.5) + (200 * 2.5) + (units - 200) * 4;
-} else if(units >= 501){
-  bill = (100 * 1.5) + (200 * 2.5) + (300 * 4) + (units - 500) * 6;
-} else if(bill >= 2000) {
-  // bill = bill *= 1.10; // this is the shortcut of this down method
-  bill = bill + (bill * 0.10);
-};
-// console.log(bill);
-
-
-// while loop
-let i = 1;
-while(i <= 20){
-  let val = i * 2;
-  i++
+if(largestNumbers[getThroughIndex]){
+  console.log();
+  
 };

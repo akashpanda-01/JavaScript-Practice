@@ -1071,13 +1071,17 @@ if (divisibleNum % 2 === 0) {
 
 // Another Way
 let divisibleNumber = 30;
-if(divisibleNumber % 2 === 0 && divisibleNumber % 3 === 0 && divisibleNumber % 5 === 0){
+if (
+  divisibleNumber % 2 === 0 &&
+  divisibleNumber % 3 === 0 &&
+  divisibleNumber % 5 === 0
+) {
   console.log("Supper Divisible");
-} else if(
-  divisibleNumber % 2 === 0 && divisibleNumber % 3 === 0 ||
-  divisibleNumber % 2 === 0 && divisibleNumber % 5 === 0 ||
-  divisibleNumber % 3 === 0 && divisibleNumber % 5 === 0
-){
+} else if (
+  (divisibleNumber % 2 === 0 && divisibleNumber % 3 === 0) ||
+  (divisibleNumber % 2 === 0 && divisibleNumber % 5 === 0) ||
+  (divisibleNumber % 3 === 0 && divisibleNumber % 5 === 0)
+) {
   console.log("Partial Divisible");
 } else if (divisibleNumber % 2 === 0) {
   console.log("Only 2 Divisible");
@@ -1116,8 +1120,15 @@ if (sub1 < 35 || sub1 < 35 || sub3 < 35) {
     sub3 <= 74
   ) {
     console.log("B");
-  } else if((sub2 >= 40 && sub2 <= 59) && (sub1 >= 40 && sub1 <= 59) && (sub3 >= 40 && sub3 <= 59)){
-    console.log("C");
+  } else if (
+    sub2 >= 40 &&
+    sub2 <= 59 &&
+    sub1 >= 40 &&
+    sub1 <= 59 &&
+    sub3 >= 40 &&
+    sub3 <= 59
+  ) {
+    // console.log("C");
   } else {
     console.log("Pass");
   }
@@ -1250,21 +1261,23 @@ if (checkNumm % 2 === 0 && checkNumm % 3 === 0) {
     // console.log("Divisible By Only 2");
   } else {
     if(checkNumm % 3 === 0){
-
-let checkNumb = 20;
-if (checkNumb % 2 === 0 && checkNumb % 3 === 0) {
-  console.log("Both Divisible");
-} else {
-  if (checkNumb % 2 === 0) {
-    // console.log("Divisible By Only 2");
-  } else {
-    if (checkNumb % 3 === 0) {
-      console.log("Divisible by 3");
-    } else {
-      console.log("Not Divisble by Anyone");
+      let checkNumb = 20;
+      if (checkNumb % 2 === 0 && checkNumb % 3 === 0) {
+        console.log("Both Divisible");
+      } else {
+        if (checkNumb % 2 === 0) {
+          // console.log("Divisible By Only 2");
+        } else {
+          if (checkNumb % 3 === 0) {
+            console.log("Divisible by 3");
+          } else {
+            console.log("Not Divisble by Anyone");
+          };
+        };
+      };
     };
   };
-};
+}
 
 let checkNum1 = 6;
 if (checkNum1 % 2 === 0 || checkNum1 % 3 === 0) {
@@ -1308,23 +1321,23 @@ if(
 // Units Consumed -> Apply Rates => 0-100 =>1.5/units , 101-300-> 2.5/units, 301-500->4/units
 // Above 500 => 6/units
 // Also Add 10% surcharg if bill > 2000.
-let units = 90;
-let bill;
-if(units > 0 && units <= 100){
-  bill = units * 1.5
-} else if(units >= 101 && units <= 300){
-  bill = (100 * 1.5) + (units - 100) * 2.5; 
-} else if(units >= 301 && units <= 500){
-  bill = (100 * 1.5) + (200 * 2.5) + (units - 200) * 4;
+let unit = 90;
+let bills;
+if(unit > 0 && unit <= 100){
+  bills = unit * 1.5
+} else if(unit >= 101 && unit <= 300){
+  bills = (100 * 1.5) + (unit - 100) * 2.5; 
+} else if(unit >= 301 && unit <= 500){
+  bills = (100 * 1.5) + (200 * 2.5) + (unit - 200) * 4;
 } else {
     if(units >= 500){
-    bill = (100 * 1.5) + ( 200 * 2.5) + (300 * 4) * 6;
+    bills = (100 * 1.5) + ( 200 * 2.5) + (300 * 4) * 6;
   };
 };
-if(bill > 2000){
-  bill = bill * 1.10;
+if(bills > 2000){
+  bills = bills * 1.10;
 };
-// console.log("₹",bill);
+// console.log("₹",bills);
 
 // Numer Range Check 
 // Take Two Numbe "min" and "max"
@@ -1363,7 +1376,7 @@ if (largestNumbers[0] > largestNumbers[1]) {
 }else {
   if(largestNumbers[1] > largestNumbers[2]){
     if(largestNumbers[1] > largestNumbers[3]){
-      console.log(largestNumbers[1], "largset Number");
+      // console.log(largestNumbers[1], "largset Number");
     } else {
       console.log(largestNumbers[3], "Largset Number");
     }
@@ -1386,7 +1399,7 @@ if (numberCheck % 2 === 0 && numberCheck % 3 === 0 && numberCheck % 5 === 0) {
   numberCheck % 2 === 0 && numberCheck % 5 === 0 ||
   numberCheck % 3 === 0 && numberCheck % 5 === 0
 ){
-  console.log("Partially Divisible");
+  // console.log("Partially Divisible");
 } else if(numberCheck  % 2 === 0){
   console.log("Divisible By 2");
 } else if (numberCheck % 3 === 0) {
@@ -1412,14 +1425,175 @@ if (
 } else if (withdrawalAmount1 % 100 !== 0) {
   console.log("Withdrawal Amount Not Multiple by 100");
 } else if(withdrawalAmount1 >= dailyLimit1){
-  console.log("DailyLimit Was Crossed");
+  // console.log("DailyLimit Was Crossed");
 } else if(withdrawalAmount1 >= accountBalance){
   console.log("Account Balance Insuficient");
 } else {
   console.log("Enter Valid Number");
+}
+
+// if sum of any two < third -> "Not a Tringle"
+// else check all side equal = "EquiLateral", Two sides Equal => "Isoseles";
+// ALL Diifferentn => "Scalene"
+// Also Check If Pythogoras Theorom holds => "Right-angle triangle";
+let triangleSide1 = 3;
+let triangleSide2 = 3;
+let triangleSide3 = 6;
+if (
+  triangleSide1 + triangleSide2 <= triangleSide3 &&
+  triangleSide1 + triangleSide3 <= triangleSide2 &&
+  triangleSide2 + triangleSide3 <= triangleSide1
+) {
+  console.log("Not a Triangle");
+} else if (
+  triangleSide1 === triangleSide2 &&
+  triangleSide1 === triangleSide3 &&
+  triangleSide2 === triangleSide3
+) {
+  console.log("Equilateral");
+} else if (
+  triangleSide1 === triangleSide2 ||
+  triangleSide1 === triangleSide3 ||
+  triangleSide2 === triangleSide3
+) {
+  console.log("isoscales");
+} else if (
+  triangleSide1 !== triangleSide2 &&
+  triangleSide1 !== triangleSide3 &&
+  triangleSide2 !== triangleSide3
+) {
+  console.log("Scalene");
+}
+let aa = 6;
+let bb = 8;
+let cc;
+if (aa* aa + bb * bb === cc*cc) {
+  console.log("Write Angled Triangle");
+} else {
+  console.log("Not Right Angled Triangled");
+}
+
+// check login wit two variables
+// username ="Admin" and password= "1234" => "Welcome Admin"
+// username = "User" and Passwoord = "abcd" => "Welcome User"
+// if usernaame correct or Password Incorrect => "Incorrect Password"
+// else => "Invalid Credentials";
+let username1 = "Admn";
+let password1 = "acbc" ;
+if(username1 === "Admin" && password1 === "1234"){
+  console.log("Welcome Admin");
+} else if(username1 === "User" && password1 === "abcd") {
+  console.log("Welcome User");
+} else if(username1 === "Admin" && password1 !== "1234" || username1 === "User" && password1 === "abcd"){
+  console.log("Invalid password");
+} else {
+  // console.log("Invalid Credentials");
 };
 
-if(largestNumbers[getThroughIndex]){
-  console.log();
-  
+
+// unit consumed  => Apply rate;
+//0-100 => 1.5/unit, 101-300 => 2.5/uniit, 301-500 => 4/unit,
+//above 500 => 6/Unit Also add 10% sucharge if bill > 2000.
+let units = 2100;
+let bill;
+if(units >= 0 && units <= 100){
+  bill = 100 * 1.5;
+} else if(units >= 101 && units <= 300){
+  bill = (100 * 1.5) + (units - 100) * 2.5;
+} else if( units >= 301 && units <= 500){
+  bill = (100 * 1.5) + (200 * 2.5) + (units - 200) * 4;
+} else if(units >= 501){
+  bill = (100 * 1.5) + (200 * 2.5) + (300 * 4) + (units - 500) * 6;
+} else if(bill >= 2000) {
+  // bill = bill *= 1.10; // this is the shortcut of this down method
+  bill = bill + (bill * 0.10);
+};
+// console.log(bill);
+
+
+
+//  Check if year is leap year using exact rule : if divisible by 4 => possible leap year
+// if divisible by 100 => must also be divisible by 400 , else not a leap year
+let findLeapYear = 2025;
+if(findLeapYear % 400 === 0){
+  console.log("Leap Year");
+} else if(findLeapYear % 100 === 0){
+  console.log("Not a leap Year");
+} else  if (findLeapYear % 4 === 0){
+  console.log("Leap Year");
+}else {
+  // console.log("Not a leap year");
+};
+
+// E-commerce Discount Logic, If total Price > 5000 => 20% Discount
+//  Else If Total Price > 2000 => 10% Discount 
+// Else if user is a Prime number  -> 5% Discount
+// Else no Discount (Also Show Final Payable amount).
+let priceNum = 23;
+let totalAmount;
+let isPrime = true;
+if(priceNum > 1){
+  for(let i = 2; i <= Math.sqrt(priceNum); i++){
+    if(priceNum % i === 0){
+      isPrime = false;
+      break;
+    };
+  };
+} else {
+  isPrime = false;
+};
+if(priceNum >= 5000){
+  totalAmount = priceNum - (priceNum * 0.20);
+  console.log("20% Discount");
+} else if(priceNum >= 2000){
+  totalAmount = priceNum - (priceNum * 0.10);
+  console.log("10% Discount");
+} else if(isPrime){
+  totalAmount = priceNum - (priceNum * 0.05);
+  // console.log("5% Discount");
+} else {
+  totalAmount = priceNum;
+  console.log("No Discount");
+};
+
+// Nested Date Check 
+// if it's Weekend (saturday / sunday) => "Holiday";
+// Else IF it's first day of the month => "Salary Day";
+// Else => "Normal Woring Day";
+let newDate = new Date();
+let day = newDate.getDay();
+let dateNum = newDate.getDate();
+if(day === 0 || day === 6){
+  console.log("Holiday -", newDate.toLocaleDateString());
+} else if(dateNum === 1){
+  console.log("Salary Day -", newDate.toLocaleDateString());
+} else {
+  // console.log("Normal Working Day -", newDate.toLocaleDateString());
+};
+
+
+
+// =============================== LOOPS ================================
+for(let i = 1; i <= 10; i++){
+  let value = i * 5;
+  // console.log("5", i, value);
+};
+
+for(let i = 1; i <= 50; i = i + 5){
+  // console.log(i);
+}
+
+// let n = prompt("Enter Number..") // the number was string we have to convert it to intiger(number)
+// n = parseInt(n);
+// for(let i = n; i <= n * 10; i = i + 5){
+//   console.log(i);
+// };
+
+// Nested Loop
+for(let i = 1; i <= 3; i++){
+  console.log("Outer Loop", i);
+  for(let j = 1; j <= 3; j++){
+    console.log(j);
+  };
+>>>>>>> ab8a842e17cd38438e6fc9ba644a2c0affe1fbac
 };

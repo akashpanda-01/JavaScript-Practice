@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript project</title>
     <script src="./index.js"></script>
+    <script src="./app.js"></script>
   </head>
   <body>
+
+    <h1>TODO APP</h1>
+    <h3>"List" to show all tasks</h3>
+    <h3>"add"to todo</h3>
+    <h3>"delete" to remove a task</h3>
+    <h3>quit to exit the todos</h3>
+
+
+
+
+
     <script>
 
       // document.write("World it's Me Akash.. !");
@@ -26,10 +38,8 @@
           return "Not Armstorage";
         }
       }
-      document.write(checkArmstrong());
+    //   document.write(checkArmstrong());
     </script>
-  </body>
-</html>
 <script>
         // document.write("World it's Me Akash.. !",  "<br>");
         // alert("Akash")
@@ -47,7 +57,7 @@
             } else {
                 Largest = num3;
             };
-            document.write(`The Largest Number Is ${Largest}`);
+            // document.write(`The Largest Number Is ${Largest}`);
         };
         // findLargestNum();
 
@@ -85,16 +95,16 @@
             // let input = prompt("Enter Number...");
             let digit = input.length;
 
-            let temp = input;
+            // let temp = input;
             while(temp > 0){
                 let reminder  = temp % 10;
                 sum += Math.pow(reminder, digit);
                 temp = parseInt(temp / 10);
             };
             if(sum === input){
-                console.log("Armstrong");
+                // console.log("Armstrong");
             } else {
-                console.log("Not Armstrong");
+                // console.log("Not Armstrong");
             };
         };
         // checkArmstrong();
@@ -106,24 +116,24 @@
         //     document.write("not Multiply");
         // };
 
-        function checkArmStrongNum1(num){
+        // function checkArmStrongNum1(num){
             // let input = Number(prompt("Enter Number..."));
-            let sum = 0;
+            // let sum = 0;
 
-            let  temp = input;
-            while(temp > 0){
-                let reminder =(temp % 10); //ones digit
-                sum += Math.pow(reminder , 3);
-                temp = parseInt(temp / 10);
-            };
-            if(sum === input){
-                document.write("Armstrong");
-            } else {
-                document.write("Not Armstrong");
-            };
-        }
-        checkArmStrongNum1();
+            // let  temp = input;
+            // while(temp > 0){
+            //     let reminder =(temp % 10); //ones digit
+            //     sum += Math.pow(reminder , 3);
+            //     temp = parseInt(temp / 10);
+            // };
+            // if(sum === input){
+                // document.write("Armstrong");
+            // } else {
+                // document.write("Not Armstrong");
+            // };
+        // }
+        // checkArmStrongNum1();
         </script>
-</body>
+    </body>
 </html>
 

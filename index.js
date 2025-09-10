@@ -1658,10 +1658,46 @@ for (let i = 1; i <= 3; i++) {
 // LOOPS WITH ARRAYS
 let fruits = ["mango", "appel", "banana", "litchi", "orange"];
 for(let i = 0; i<fruits.length; i++){
-  console.log(i, fruits[i]);
+  // console.log(i, fruits[i]);
 };
 
 // Backward
 for(let i = fruits.length-1; i>=0; i--){
-  console.log(i, fruits[i]);
+  // console.log(i, fruits[i]);
 };
+
+// =========================LOOPS WITH ARRAY =======================
+let heroes = [
+  ["ironman", "spiderman", "thor"],
+  ["superman", "wonder woman", "flash"]
+];
+for(let i = 0; i < heroes.length; i++){
+  // console.log(heroes[i]);
+  for(let j = 0; j < heroes[i].length; j++){
+    // console.log(heroes[i][j]);
+  };
+};
+
+let student = [["aman", 95], ["akash", 98], ["shradha", 89]];
+for(let i = 0; i<student.length; i++){
+  // console.log(student[i]);
+  for(let j = 0; j<student[i].length; j++){
+    // console.log(student[i][j]);
+  };
+};
+
+// for of Loop
+let namesOfFruits = ["mango", "banana", "appel"]
+for(fruit of namesOfFruits){
+  // console.log(fruit);
+};
+
+let arrNames = [["a", "b", "c"], ["A", "B", "C"]];
+for(nme of arrNames){
+  // console.log(nme);
+  for(nm of nme){
+    // console.log(nm);
+  };
+};
+
+// TODO APP

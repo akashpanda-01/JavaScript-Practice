@@ -1404,3 +1404,87 @@ if(withdrawalAmount1 % 100 === 0 && withdrawalAmount1 < dailyLimit1 && withdrawa
   console.log("Enter Valid Number");
 };
 
+//  Check if year is leap year using exact rule : if divisible by 4 => possible leap year
+// if divisible by 100 => must also be divisible by 400 , else not a leap year
+let findLeapYear = 2025;
+if(findLeapYear % 400 === 0){
+  console.log("Leap Year");
+} else if(findLeapYear % 100 === 0){
+  console.log("Not a leap Year");
+} else  if (findLeapYear % 4 === 0){
+  console.log("Leap Year");
+}else {
+  // console.log("Not a leap year");
+};
+
+// E-commerce Discount Logic, If total Price > 5000 => 20% Discount
+//  Else If Total Price > 2000 => 10% Discount 
+// Else if user is a Prime number  -> 5% Discount
+// Else no Discount (Also Show Final Payable amount).
+let priceNum = 23;
+let totalAmount;
+let isPrime = true;
+if(priceNum > 1){
+  for(let i = 2; i <= Math.sqrt(priceNum); i++){
+    if(priceNum % i === 0){
+      isPrime = false;
+      break;
+    };
+  };
+} else {
+  isPrime = false;
+};
+if(priceNum >= 5000){
+  totalAmount = priceNum - (priceNum * 0.20);
+  console.log("20% Discount");
+} else if(priceNum >= 2000){
+  totalAmount = priceNum - (priceNum * 0.10);
+  console.log("10% Discount");
+} else if(isPrime){
+  totalAmount = priceNum - (priceNum * 0.05);
+  // console.log("5% Discount");
+} else {
+  totalAmount = priceNum;
+  console.log("No Discount");
+};
+
+// Nested Date Check 
+// if it's Weekend (saturday / sunday) => "Holiday";
+// Else IF it's first day of the month => "Salary Day";
+// Else => "Normal Woring Day";
+let newDate = new Date();
+let day = newDate.getDay();
+let dateNum = newDate.getDate();
+if(day === 0 || day === 6){
+  console.log("Holiday -", newDate.toLocaleDateString());
+} else if(dateNum === 1){
+  console.log("Salary Day -", newDate.toLocaleDateString());
+} else {
+  // console.log("Normal Working Day -", newDate.toLocaleDateString());
+};
+
+
+
+// =============================== LOOPS ================================
+for(let i = 1; i <= 10; i++){
+  let value = i * 5;
+  // console.log("5", i, value);
+};
+
+for(let i = 1; i <= 50; i = i + 5){
+  // console.log(i);
+}
+
+// let n = prompt("Enter Number..") // the number was string we have to convert it to intiger(number)
+// n = parseInt(n);
+// for(let i = n; i <= n * 10; i = i + 5){
+//   console.log(i);
+// };
+
+// Nested Loop
+for(let i = 1; i <= 3; i++){
+  console.log("Outer Loop", i);
+  for(let j = 1; j <= 3; j++){
+    console.log(j);
+  };
+};

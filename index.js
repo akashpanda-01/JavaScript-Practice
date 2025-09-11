@@ -1700,4 +1700,115 @@ for(nme of arrNames){
   };
 };
 
-// TODO APP
+// ===================== LOOP QUESTION ANSWER =============================
+// Print Number From 1 to 10 using a loop;
+for(let i = 0; i <= 10; i++){
+  // console.log(i);
+};
+
+//  Print Even Numbers Between 1 to 20 ?
+for(let i = 0; i<=10; i++){
+  let val = i * 2;
+  // console.log(val);
+};
+
+for(let i = 0; i<=20; i++){
+  if(i % 2 === 0){
+    // console.log(i);
+  };
+};
+
+for(let i = 0; i<=20; i = i + 2){
+  // console.log(i);
+};
+
+// print odd numbers between 1 to 15
+for(let i = 1; i<=15; i = i + 2){
+  // console.log(i);
+};
+
+for(let i = 0; i<=15; i++){
+  if( i % 2 != 0){
+    // console.log(i);
+  };
+};
+
+for(let i = 0; i<=15; i++){
+  let val = i * 2 + 1;
+  // console.log(val);
+};
+
+// Print Multiplication Table Of 5
+for(let i = 1; i<=10; i++){
+  let val = i * 5;
+  // console.log("5", i, val);
+};
+for(let i = 1; i<=10; i++){
+  let val = i % 5 === 0;         // it wil give us true or false
+  // console.log("5", i, val);
+};
+
+for(let i = 0; i<=50; i = i + 5){
+  // console.log(i);
+};
+
+// Print Number 10 to 1 reverse order
+for(let i = 10; i>=1; i--){
+  // console.log(i);
+};
+
+// LEVEL 2
+// Find Sum of numbers between 1 to 100
+let numSum = 0;
+for(let i = 1; i<=100; i++){
+  numSum += i;
+};
+// console.log("Sum is =",numSum);
+
+let n = 100
+let sum1 = n * (n + 1)/ 2;
+// console.log(sum1);
+
+{
+  let number =  Array.from({length: 100},( _, i) => i + 1);
+  // console.log(number);
+  let sum = number.reduce((acc, crr) => acc + crr, 0);
+  // console.log(sum);
+}
+
+{
+  let i = 1;
+  let sum = 0;
+  while(i <= 100){
+    sum = sum + i;
+    i++;
+    // console.log(sum);
+  };
+  // console.log(sum);
+};
+
+// Recursive Function
+{
+  function summ(n){
+    if(n === 1) return 1;
+    return n + summ(n - 1);
+  }
+}
+// console.log(summ(100));
+
+// Find The sum of even numbers from 1 to 50;
+{
+  let sum = 0;
+  let i = 1;
+  while(i <= 50){
+    sum = sum + i;
+    i++;
+    console.log(sum);
+  };
+};
+
+{
+  for(let i = 0; i<=50; i++){
+
+  }
+}

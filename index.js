@@ -1666,16 +1666,137 @@ for(let i = fruits.length-1; i>=0; i--){
   // console.log(i, fruits[i]);
 };
 
+<<<<<<< HEAD
 // Find the sum of even numbers from 1 to 50?
 {
   let sum = 0;
   for(let i = 0; i<=50; i = i + 2){
     // console.log(i);
     sum += i;
+=======
+// =========================LOOPS WITH ARRAY =======================
+let heroes = [
+  ["ironman", "spiderman", "thor"],
+  ["superman", "wonder woman", "flash"]
+];
+for(let i = 0; i < heroes.length; i++){
+  // console.log(heroes[i]);
+  for(let j = 0; j < heroes[i].length; j++){
+    // console.log(heroes[i][j]);
+  };
+};
+
+let student = [["aman", 95], ["akash", 98], ["shradha", 89]];
+for(let i = 0; i<student.length; i++){
+  // console.log(student[i]);
+  for(let j = 0; j<student[i].length; j++){
+    // console.log(student[i][j]);
+  };
+};
+
+// for of Loop
+let namesOfFruits = ["mango", "banana", "appel"]
+for(fruit of namesOfFruits){
+  // console.log(fruit);
+};
+
+let arrNames = [["a", "b", "c"], ["A", "B", "C"]];
+for(nme of arrNames){
+  // console.log(nme);
+  for(nm of nme){
+    // console.log(nm);
+  };
+};
+
+// ===================== LOOP QUESTION ANSWER =============================
+// Print Number From 1 to 10 using a loop;
+for(let i = 0; i <= 10; i++){
+  // console.log(i);
+};
+
+//  Print Even Numbers Between 1 to 20 ?
+for(let i = 0; i<=10; i++){
+  let val = i * 2;
+  // console.log(val);
+};
+
+for(let i = 0; i<=20; i++){
+  if(i % 2 === 0){
+    // console.log(i);
+  };
+};
+
+for(let i = 0; i<=20; i = i + 2){
+  // console.log(i);
+};
+
+// print odd numbers between 1 to 15
+for(let i = 1; i<=15; i = i + 2){
+  // console.log(i);
+};
+
+for(let i = 0; i<=15; i++){
+  if( i % 2 != 0){
+    // console.log(i);
+  };
+};
+
+for(let i = 0; i<=15; i++){
+  let val = i * 2 + 1;
+  // console.log(val);
+};
+
+// Print Multiplication Table Of 5
+for(let i = 1; i<=10; i++){
+  let val = i * 5;
+  // console.log("5", i, val);
+};
+for(let i = 1; i<=10; i++){
+  let val = i % 5 === 0;         // it wil give us true or false
+  // console.log("5", i, val);
+};
+
+for(let i = 0; i<=50; i = i + 5){
+  // console.log(i);
+};
+
+// Print Number 10 to 1 reverse order
+for(let i = 10; i>=1; i--){
+  // console.log(i);
+};
+
+// LEVEL 2
+// Find Sum of numbers between 1 to 100
+let numSum = 0;
+for(let i = 1; i<=100; i++){
+  numSum += i;
+};
+// console.log("Sum is =",numSum);
+
+let n = 100
+let sum1 = n * (n + 1)/ 2;
+// console.log(sum1);
+
+{
+  let number =  Array.from({length: 100},( _, i) => i + 1);
+  // console.log(number);
+  let sum = number.reduce((acc, crr) => acc + crr, 0);
+  // console.log(sum);
+}
+
+{
+  let i = 1;
+  let sum = 0;
+  while(i <= 100){
+    sum = sum + i;
+    i++;
+    // console.log(sum);
+>>>>>>> a578998020fda26843bc5f64d718c1890f257227
   };
   // console.log(sum);
 };
 
+<<<<<<< HEAD
 {
   let sum = 0;
   let i = 0;
@@ -1747,4 +1868,30 @@ for(let i = 1; i <= 10; i++){
     };
     i++;
   };
+=======
+// Recursive Function
+{
+  function summ(n){
+    if(n === 1) return 1;
+    return n + summ(n - 1);
+  }
+}
+// console.log(summ(100));
+
+// Find The sum of even numbers from 1 to 50;
+{
+  let sum = 0;
+  let i = 1;
+  while(i <= 50){
+    sum = sum + i;
+    i++;
+    console.log(sum);
+  };
+};
+
+{
+  for(let i = 0; i<=50; i++){
+
+  }
+>>>>>>> a578998020fda26843bc5f64d718c1890f257227
 }

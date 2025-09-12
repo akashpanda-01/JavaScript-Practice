@@ -2073,7 +2073,7 @@ for(let i = 1; i <= 10; i++){
 }
 
 {
-  // Find Faqctorial of a Given Numer 5.
+  // Find Factorial of a Given Numer 5.
   let n = 1;
   for(let i = 1; i<=5; i++){
     n = n * i;
@@ -2268,7 +2268,7 @@ for(let i = 1; i <= 10; i++){
     sum += digit;
     // temp = Math.floor(temp / 10);
   };
-  console.log(sum);
+  // console.log(sum);
 }
 {
   // Using While Loop;
@@ -2280,4 +2280,34 @@ for(let i = 1; i <= 10; i++){
     temp = Math.floor(temp / 10);
   };
   // console.log(sum);
+}
+{
+  let num = 222;
+  let reverse = "";
+  let temp = num.toString().split("")
+  for(let i = temp.length-1; i >= 0 ; i--){
+    reverse = reverse + temp[i];
+  };
+  reverse = Number(reverse);
+  if(reverse === num){
+    // console.log("Palindrome");
+  } else {
+    console.log("Not Palindrome");
+  };
+}
+{
+  let num = 232;
+  let original = num;
+  let revs = 0;
+  while(original > 0){
+    let digit = original % 10;
+    revs = revs * 10 + digit 
+    original = Math.floor(original / 10);
+  };
+  console.log(revs)
+  if(revs === num){
+    // console.log("Palindrom");
+  } else {
+    console.log("Not palindrom");
+  };
 }

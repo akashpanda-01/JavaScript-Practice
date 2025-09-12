@@ -2133,7 +2133,7 @@ for(let i = 1; i <= 10; i++){
       count++;
       i++
     };
-    console.log(count);
+    // console.log(count);
 }
 {
   let num = 234;
@@ -2142,11 +2142,142 @@ for(let i = 1; i <= 10; i++){
     count = count + 1;
     num = Math.floor(num / 10);
   }
-  console.log(count);
+  // console.log(count);
 }
 
 {
-  // Find Largest st Number In a given Number 7593;
+  // Find Largest Digit In a given Number 7593;
+  // Using For Loop
+  // STIRNG CONVERSION
   let n = 7593;
+  let largest = 0;
+  let numStr = Math.abs(n).toString();
+  for(let i = 0; i < numStr.length; i++){
+    let digit = parseInt(numStr[i]);
+    if(digit > largest){
+      largest = digit;
+    };
+  };
+  // console.log(largest);
+}
+{
+  let n = 12398546;
+  let largest = 0;
+  let toStr = n.toString();
+  for(let i = 0; i<toStr.length; i++){
+    let digit = parseInt(toStr[i]);
+    if(digit > largest){
+      largest = digit;
+    };
+  };
+  // console.log(largest);
+}
+
+// Using While Loop And Using Break
+{
+  let num = 9874;
+  if( num < 0){
+    num = -num;
+  };
+  let findLargest = 0;
+  let temp = num;
+  while(temp > 0){
+    let digit = temp % 10;
+    if(digit > findLargest){
+      findLargest = digit;
+    };
+    temp = Math.floor(temp / 10);
+  };
+  // console.log(findLargest);
+}
+{
+  let num = 59804;
+  let largest = 0;
+  let temp = num;
+  if(num === 0){
+    largest = 0;
+  } else {
+    while(true){
+      let digit = temp % 10;
+      if(digit > largest){
+        largest = digit;
+      };
+      temp = Math.floor(temp / 10);
+      if(temp === 0){
+        break;
+      };
+    };
+    // console.log(largest);
+  };
+}
+{
+  // Using For Of Loop
+  let num = 981264;
+  let largest  = 0;
+  let toStr = num.toString();
+  for(let char of toStr){
+    let digit = parseInt(char);
+    if(digit > largest){
+      largest = digit;
+    };
+
+  };
+  // console.log(largest);
+}
+{
+  // Using While With Break;
+  let num = 98723;
+  let largest = 0;
+  let temp = num;
+  while(temp > 0){
+    let digit = temp % 10;
+    if(digit > largest){
+      largest = digit ;
+    };
+    temp = Math.floor(temp / 10);
+    if(temp === 0){break;};
+  };
+  // console.log(largest);
   
+}
+{
+  // Using DO While
+  let num = 95234;
+  let largest = 0;
+  let temp = num;
+  if(num === 0 ){
+    largest = 0;
+  } else {
+    do{
+      let digit = temp % 10;
+      if(digit > largest){
+        largest = digit;
+      };
+      temp = Math.floor(temp / 10);
+    } while(temp > 0);
+  }
+  // console.log(largest);
+}
+{
+  // Find Sum OF Digits Of a Given Number
+  let num = 987;
+  let sum = 0;
+  let temp = num.toString();
+  for(let i = 0; i < temp.length; i++){
+    let digit = parseInt(temp[i]);
+    sum += digit;
+    // temp = Math.floor(temp / 10);
+  };
+  console.log(sum);
+}
+{
+  // Using While Loop;
+  let num = 9876;
+  let sum = 0;
+  let temp = num;
+  while(temp > 0){
+    sum += temp % 10;
+    temp = Math.floor(temp / 10);
+  };
+  // console.log(sum);
 }

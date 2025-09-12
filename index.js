@@ -1666,6 +1666,14 @@ for (let i = fruits.length - 1; i >= 0; i--) {
   // console.log(i, fruits[i]);
 }
 
+// Find the sum of even numbers from 1 to 50?
+{
+  let sum = 0;
+  for(let i = 0; i<=50; i = i + 2){
+    // console.log(i);
+    sum += i;
+  }
+}
 // =========================LOOPS WITH ARRAY =======================
 let heroes = [
   ["ironman", "spiderman", "thor"],
@@ -1790,10 +1798,83 @@ let sum1 = (n * (n + 1)) / 2;
     sum = sum + i;
     i++;
     // console.log(sum);
-  }
+
+  };
   // console.log(sum);
 }
 
+{
+  let sum = 0;
+  let i = 0;
+  while(i<=50){
+    sum += i;
+    i+= 2
+  };
+  // console.log(sum);
+}
+
+// Print The Squares of Number 1 to 10.
+for(let i = 1; i <= 10; i++){
+  let square = i * i;
+  // console.log(square);
+};
+
+{
+  let num = 1;
+  while(num <= 10){
+    let sqr = num * num;
+    // console.log(sqr);
+    num++
+  };
+};
+
+// Count How Many numbers Between 1-50 are divisible by 3.
+{
+  let count = 0;
+  for(let i = 1; i<=50; i++){
+    if(i % 3 === 0){
+      // console.log(i);
+      count++
+    };
+  };
+  // console.log(count);
+}
+
+{
+  let countNum = 0;
+  let i = 1;
+  while(i<=50){
+    if(i % 3 === 0){
+      countNum = countNum + 1;
+    };
+    i++
+  };
+  // console.log(countNum);
+  
+}
+
+{
+  //Print only numbers between 1-30 that are divisible by both 2 and 5.
+  for(let i = 1; i<=30; i++){
+    if(i % 2 === 0 &&  i % 5 === 0){
+      let printNum = i;
+      // console.log(printNum);
+    };
+  };
+};
+
+{
+  let i = 1;
+  while(i<=30){
+    if(i % 2 === 0){
+      if(i % 5 === 0){
+        let printNum = i;
+        // console.log(printNum);
+      };
+    };
+    i++;
+  };
+}
 // Recursive Function
 {
   function summ(n) {
@@ -2067,6 +2148,5 @@ let sum1 = (n * (n + 1)) / 2;
 {
   // Find Largest st Number In a given Number 7593;
   let n = 7593;
-  let 
-  }
+  
 }

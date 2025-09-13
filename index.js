@@ -1573,7 +1573,7 @@ let newDate = new Date();
 let day = newDate.getDay();
 let dateNum = newDate.getDate();
 if (day === 0 || day === 6) {
-  console.log("Holiday -", newDate.toLocaleDateString());
+  // console.log("Holiday -", newDate.toLocaleDateString());
 } else if (dateNum === 1) {
   console.log("Salary Day -", newDate.toLocaleDateString());
 } else {
@@ -2304,10 +2304,128 @@ for(let i = 1; i <= 10; i++){
     revs = revs * 10 + digit 
     original = Math.floor(original / 10);
   };
-  console.log(revs)
+  // console.log(revs)
   if(revs === num){
     // console.log("Palindrom");
   } else {
     console.log("Not palindrom");
+  };
+}
+{
+  let word = "madam";
+  let reverse = "";
+  for(let i = word.length -1; i>=0; i--){
+    reverse += word[i];
+  };
+  if(reverse === word){
+    // console.log("Palindrome");
+  } else {
+    console.log("Not a Palindrome");
+  };
+}
+{
+  let num = 333;
+  let temp = num.toString();
+  let reverse = 0;
+  for(let i = temp.length -1; i >= 0; i--){
+    let digit = Number(temp % 10);
+    reverse = reverse * 10 + digit;
+    temp = Math.floor(temp / 10);
+  };
+  // console.log(reverse);
+}
+{
+  let num = 333;
+  let reverse = 0;
+  let temp = num;
+  while(temp > 0){
+    let digit = temp % 10;
+    reverse = reverse * 10 + digit;
+    temp = Math.floor(temp / 10);
+  };
+  // console.log(reverse);
+  
+}
+{
+  let word = "level";
+  let isPalindrome = true;
+  for(let i = 0; i <= word.length/2; i++){
+    if(word[i] !== word[word.length-1-i]){
+      isPalindrome = false;
+      break;
+    };
+  };
+  if(isPalindrome){
+    // console.log(word, "IS Palindrome");
+  } else {
+    console.log(word, "Not a Palindrome");
+  };
+}
+{
+  // Print Fibonacci Seriwa first 10 numbers in fibonacci series
+  let num = 10;
+  let a = 0, b = 1;
+  // console.log(a, b);
+  
+  for(let i = 2; i <= num; i++){
+    let next = a + b;
+    // console.log(next);
+    a = b;
+    b = next;
+    // console.log(b);
+  };
+}
+{
+  let a = 0, b = 1;
+  let num = 10;
+  let i = 0;
+  while(i <= num){
+    let next = a + b;
+    a = b;
+    b = next;
+    i++;
+    // console.log(b);
+  };
+}
+{
+  let num = 10;
+  for(let i = 0; i<num; i++){
+    if(i === 0){
+      // console.log(0);
+    } else if(i === 1){
+      // console.log(1);
+    } else {
+      let a = 0, b = 1, next;
+      for(let j = 2; j <=i; j++){
+        next = a + b;
+        a = b;
+        b = next;
+      };
+      // console.log(b);
+    };
+  };
+}
+{
+  // Check Prime Number 
+  let num = 20;
+  let isPrime;
+  for(let i = 2; i<=Math.sqrt(num); i++){
+    if(num % i === 0){
+      isPrime = false;
+    } else {
+      isPrime = true;
+      // console.log(i);
+    }
+    // console.log(isPrime);
+  }
+}
+{
+  let n = 5;
+  for(let i = 1; i<=n; i++){
+    let row = "";
+    for(let j = 1; j <= i; j++){
+      row += " *";
+    };
+    // console.log(row);
   };
 }

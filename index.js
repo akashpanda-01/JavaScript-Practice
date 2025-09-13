@@ -1666,14 +1666,16 @@ for(let i = fruits.length-1; i>=0; i--){
   // console.log(i, fruits[i]);
 };
 
-<<<<<<< HEAD
+
 // Find the sum of even numbers from 1 to 50?
 {
   let sum = 0;
   for(let i = 0; i<=50; i = i + 2){
     // console.log(i);
     sum += i;
-=======
+  };
+}
+
 // =========================LOOPS WITH ARRAY =======================
 let heroes = [
   ["ironman", "spiderman", "thor"],
@@ -1791,12 +1793,11 @@ let sum1 = n * (n + 1)/ 2;
     sum = sum + i;
     i++;
     // console.log(sum);
->>>>>>> a578998020fda26843bc5f64d718c1890f257227
   };
   // console.log(sum);
 };
 
-<<<<<<< HEAD
+
 {
   let sum = 0;
   let i = 0;
@@ -1868,7 +1869,8 @@ for(let i = 1; i <= 10; i++){
     };
     i++;
   };
-=======
+}
+// =======
 // Recursive Function
 {
   function summ(n){
@@ -1893,5 +1895,4 @@ for(let i = 1; i <= 10; i++){
   for(let i = 0; i<=50; i++){
 
   }
->>>>>>> a578998020fda26843bc5f64d718c1890f257227
 }

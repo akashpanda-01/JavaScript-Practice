@@ -1669,84 +1669,212 @@ for (let i = fruits.length - 1; i >= 0; i--) {
 // Find the sum of even numbers from 1 to 50?
 {
   let sum = 0;
-  for (let i = 0; i <= 50; i = i + 2) {
+  for(let i = 0; i<=50; i = i + 2){
     // console.log(i);
     sum += i;
   }
+}
+// =========================LOOPS WITH ARRAY =======================
+let heroes = [
+  ["ironman", "spiderman", "thor"],
+  ["superman", "wonder woman", "flash"],
+];
+for (let i = 0; i < heroes.length; i++) {
+  // console.log(heroes[i]);
+  for (let j = 0; j < heroes[i].length; j++) {
+    // console.log(heroes[i][j]);
+  }
+}
+
+let student = [
+  ["aman", 95],
+  ["akash", 98],
+  ["shradha", 89],
+];
+for (let i = 0; i < student.length; i++) {
+  // console.log(student[i]);
+  for (let j = 0; j < student[i].length; j++) {
+    // console.log(student[i][j]);
+  }
+}
+
+// for of Loop
+let namesOfFruits = ["mango", "banana", "appel"];
+for (fruit of namesOfFruits) {
+  // console.log(fruit);
+}
+
+let arrNames = [
+  ["a", "b", "c"],
+  ["A", "B", "C"],
+];
+for (nme of arrNames) {
+  // console.log(nme);
+  for (nm of nme) {
+    // console.log(nm);
+  }
+}
+
+// ===================== LOOP QUESTION ANSWER =============================
+// Print Number From 1 to 10 using a loop;
+for (let i = 0; i <= 10; i++) {
+  // console.log(i);
+}
+
+//  Print Even Numbers Between 1 to 20 ?
+for (let i = 0; i <= 10; i++) {
+  let val = i * 2;
+  // console.log(val);
+}
+
+for (let i = 0; i <= 20; i++) {
+  if (i % 2 === 0) {
+    // console.log(i);
+  }
+}
+
+for (let i = 0; i <= 20; i = i + 2) {
+  // console.log(i);
+}
+
+// print odd numbers between 1 to 15
+for (let i = 1; i <= 15; i = i + 2) {
+  // console.log(i);
+}
+
+for (let i = 0; i <= 15; i++) {
+  if (i % 2 != 0) {
+    // console.log(i);
+  }
+}
+
+for (let i = 0; i <= 15; i++) {
+  let val = i * 2 + 1;
+  // console.log(val);
+}
+
+// Print Multiplication Table Of 5
+for (let i = 1; i <= 10; i++) {
+  let val = i * 5;
+  // console.log("5", i, val);
+}
+for (let i = 1; i <= 10; i++) {
+  let val = i % 5 === 0; // it wil give us true or false
+  // console.log("5", i, val);
+}
+
+for (let i = 0; i <= 50; i = i + 5) {
+  // console.log(i);
+}
+
+// Print Number 10 to 1 reverse order
+for (let i = 10; i >= 1; i--) {
+  // console.log(i);
+}
+
+// LEVEL 2
+// Find Sum of numbers between 1 to 100
+let numSum = 0;
+for (let i = 1; i <= 100; i++) {
+  numSum += i;
+}
+// console.log("Sum is =",numSum);
+
+let n = 100;
+let sum1 = (n * (n + 1)) / 2;
+// console.log(sum1);
+
+{
+  let number = Array.from({ length: 100 }, (_, i) => i + 1);
+  // console.log(number);
+  let sum = number.reduce((acc, crr) => acc + crr, 0);
+  // console.log(sum);
+}
+
+{
+  let i = 1;
+  let sum = 0;
+  while (i <= 100) {
+    sum = sum + i;
+    i++;
+    // console.log(sum);
+
+  };
   // console.log(sum);
 }
 
 {
   let sum = 0;
   let i = 0;
-  while (i <= 50) {
+  while(i<=50){
     sum += i;
-    i += 2;
-  }
+    i+= 2
+  };
   // console.log(sum);
 }
 
 // Print The Squares of Number 1 to 10.
-for (let i = 1; i <= 10; i++) {
+for(let i = 1; i <= 10; i++){
   let square = i * i;
   // console.log(square);
-}
+};
 
 {
   let num = 1;
-  while (num <= 10) {
+  while(num <= 10){
     let sqr = num * num;
     // console.log(sqr);
-    num++;
-  }
-}
+    num++
+  };
+};
 
 // Count How Many numbers Between 1-50 are divisible by 3.
 {
   let count = 0;
-  for (let i = 1; i <= 50; i++) {
-    if (i % 3 === 0) {
+  for(let i = 1; i<=50; i++){
+    if(i % 3 === 0){
       // console.log(i);
-      count++;
-    }
-  }
+      count++
+    };
+  };
   // console.log(count);
 }
 
 {
   let countNum = 0;
   let i = 1;
-  while (i <= 50) {
-    if (i % 3 === 0) {
+  while(i<=50){
+    if(i % 3 === 0){
       countNum = countNum + 1;
-    }
-    i++;
-  }
+    };
+    i++
+  };
   // console.log(countNum);
+  
 }
 
 {
   //Print only numbers between 1-30 that are divisible by both 2 and 5.
-  for (let i = 1; i <= 30; i++) {
-    if (i % 2 === 0 && i % 5 === 0) {
+  for(let i = 1; i<=30; i++){
+    if(i % 2 === 0 &&  i % 5 === 0){
       let printNum = i;
       // console.log(printNum);
-    }
-  }
-}
+    };
+  };
+};
 
 {
   let i = 1;
-  while (i <= 30) {
-    if (i % 2 === 0) {
-      if (i % 5 === 0) {
+  while(i<=30){
+    if(i % 2 === 0){
+      if(i % 5 === 0){
         let printNum = i;
         // console.log(printNum);
-      }
-    }
+      };
+    };
     i++;
-  }
-} // =======
+  };
+}
 // Recursive Function
 {
   function summ(n) {
@@ -1761,93 +1889,420 @@ for (let i = 1; i <= 10; i++) {
   let sum = 0;
   let i = 1;
   while (i <= 50) {
-    sum = sum + i;
+    if (i % 2 === 0) {
+      sum = sum + i;
+      // console.log("Adding", i, "Current sum", sum);
+    }
     i++;
+  }
+  // console.log(sum);
+}
+
+{
+  let sum = 0;
+  for (let i = 0; i <= 50; i++) {
+    if (i % 2 === 0) {
+      sum = sum + i;
+      // console.log(sum);
+    }
+  }
+}
+{
+  let sum = 0;
+  for (let i = 0; i <= 50; i = i + 2) {
+    sum = sum + i;
     // console.log(sum);
   }
 }
 
+// Print Squares of numbers
 {
-  for (let i = 0; i <= 50; i += 2) {
-    // console.log(i);
+  let num = 1;
+  while (num <= 10) {
+    let sqr = num * num;
+    // console.log(sqr);
+    num++;
   }
 }
 {
-  // Check Prime Numbers by given number
-  let num = 7;
-  if (num < 1) {
-    console.log("not a Prime Number");
+  let sqr;
+  for (let i = 1; i <= 10; i++) {
+    if (true) {
+      sqr = i * i;
+      // console.log(sqr);
+    }
+  }
+}
+
+// Count only numbers between 1-50 that are divisible by 3
+{
+  let count = 0;
+  for (let i = 0; i <= 50; i++) {
+    if (i % 3 === 0) {
+      // console.log(i);
+      count = count + 1;
+    }
+  }
+  // console.log(count);
+}
+
+{
+  let count = 0;
+  let i = 1;
+  while (i <= 50) {
+    if (i % 3 === 0) {
+      // console.log(i);
+      count++;
+    }
+    i++;
+  }
+  // console.log(count);
+}
+
+// Print Numbers Between 1-30 that are divisible by both 2 and 5.
+{
+  let countNum;
+  for (let i = 1; i <= 30; i++) {
+    if (i % 2 === 0 && i % 5 === 0) {
+      // console.log(i);
+      countNum = i;
+    }
+    // console.log(countNum);
+  }
+}
+{
+  let i = 1;
+  let count = 0;
+  while (i <= 30) {
+    if (i % 2 === 0 && i % 5 === 0) {
+      count = i;
+      // console.log(count);
+    }
+    i++;
+  }
+}
+
+// print star triangle
+{
+  let n = 5;
+  for (let i = 1; i <= n; i++) {
+    let row = ""
+    for (let j = 1; j <= i; j++) {
+      row += j;
+      row += "* ";
+    };
+    // console.log(row);
+  };
+}
+
+{
+  let n = 1
+  for(let i = 5; i>=n; i--){
+    let row = "";
+    for(let j = 1; j<=i; j++){
+      row += "* ";
+    };
+    // console.log(row);
+  };
+}
+
+{
+  let n = 5;
+  let i = n;
+  while(i >= 1){
+    let row = "";
+    let j = 1
+    
+    while(j <= i){
+      row += "* ";
+      j++;
+    };
+    // console.log(row);
+    i--;
+  }
+}
+{
+  let n = 5;
+  let i = 1;
+  while(i <= n){
+    let row = "";
+    let j = 1;
+    while(j <= i){
+      row += "* ";
+      j++;
+    };
+    // console.log(row);
+    i++;
+  }
+}
+
+{
+  // print Number In triangle.
+  let n = 5;
+  for(let i = 1; i <= n; i++){
+    let row = "";
+    for(let j = 1; j <= i; j++){
+      row += j;
+    };
+    // console.log(row);
+  };
+}
+
+{
+  let n = 5;
+  let i = 1;
+  while(i <= n){
+    let row = "";
+    for(let j = 1; j <= i; j++){
+      row += j;
+    };
+    // console.log(row);
+    i++;
+  };
+}
+
+{
+  let n = 5;
+  for(let i = 1; i<=n; i++){
+    let row = "";
+    for(let j = 1; j<=i; j++){
+      row += "* ";
+    };
+    // console.log(row);
+  };
+}
+
+{
+  // Find Factorial of a Given Numer 5.
+  let n = 1;
+  for(let i = 1; i<=5; i++){
+    n = n * i;
+    // console.log("n *",i ,"->", n);
+  };
+}
+
+{
+  let n = 1;
+  let i = 1;
+  while(i <= 5){
+    n *= i;
+    // console.log(n);
+    i++;
+  };
+}
+
+{
+  let n = 123;
+  let reverse = 0;
+  let temp = n;
+  for( let i = 1; temp > 0; i++){
+    reverse = reverse * 10 + (temp % 10);
+    temp = (temp - (temp % 10)) / 10;
+  };
+  // console.log(reverse);
+};
+
+{
+  let n = 542;
+  let temp = n;
+  let reverseVal = 0;
+  while(temp > 0){
+    reverseVal = reverseVal * 10 + (temp % 10);
+    temp = (temp - (temp % 10)) / 10;
+    // temp++;
+  };
+  // console.log(reverseVal);
+};
+
+{
+  // Count How Many digits are in a given number.
+  let num = 234;
+  let temp = num.toString().length;
+  let count = 0;
+  for(let i = 1; i <= temp; i++){
+    count++;
+  }
+  // console.log(count);
+}
+{
+  let num = 234;
+  let temp = num.toString().length;
+  let count = 0;
+  let i = 0;
+  while (i < temp){
+      count++;
+      i++
+    };
+    // console.log(count);
+}
+{
+  let num = 234;
+  let count = 0;
+  while(num > 0){
+    count = count + 1;
+    num = Math.floor(num / 10);
+  }
+  // console.log(count);
+}
+
+{
+  // Find Largest Digit In a given Number 7593;
+  // Using For Loop
+  // STIRNG CONVERSION
+  let n = 7593;
+  let largest = 0;
+  let numStr = Math.abs(n).toString();
+  for(let i = 0; i < numStr.length; i++){
+    let digit = parseInt(numStr[i]);
+    if(digit > largest){
+      largest = digit;
+    };
+  };
+  // console.log(largest);
+}
+{
+  let n = 12398546;
+  let largest = 0;
+  let toStr = n.toString();
+  for(let i = 0; i<toStr.length; i++){
+    let digit = parseInt(toStr[i]);
+    if(digit > largest){
+      largest = digit;
+    };
+  };
+  // console.log(largest);
+}
+
+// Using While Loop And Using Break
+{
+  let num = 9874;
+  if( num < 0){
+    num = -num;
+  };
+  let findLargest = 0;
+  let temp = num;
+  while(temp > 0){
+    let digit = temp % 10;
+    if(digit > findLargest){
+      findLargest = digit;
+    };
+    temp = Math.floor(temp / 10);
+  };
+  // console.log(findLargest);
+}
+{
+  let num = 59804;
+  let largest = 0;
+  let temp = num;
+  if(num === 0){
+    largest = 0;
   } else {
-    let isPrime = true;
-    for (let i = 2; i <= num; i++) {
-      if (num % i === 0) {
-        isPrime = false;
-        break;
-      }
-    };
-    if(isPrime){
-      console.log("Is Prime");
-    } else {
-      // console.log("Not a Prime Number");
-    };
-  }
-}
-{
-  let num = 7;
-  let isPrime = true;
-  for(let i = 2; i<num; i++){
-    if(num % i === 0){
-      isPrime = false;
-      break;
-    };
-  };
-  // console.log(isPrime); 
-}
-{
-  // Print All Prime Numbers between 1 to 50;
-  let num = 50;
-  for(let i = 2; i<=num; i++){
-    isPrime = true;
-    for(let j = 2; j<i; j++){
-      if(i % j === 0){
-        isPrime = false;
+    while(true){
+      let digit = temp % 10;
+      if(digit > largest){
+        largest = digit;
+      };
+      temp = Math.floor(temp / 10);
+      if(temp === 0){
         break;
       };
     };
-    if(isPrime){
-      // console.log(i);
-    };
-  }
-}
-{
-  //prime num =  Two loops check till i-1;
-  let num = 50;
-  for(let i = 2; i <= num; i++){
-    let isPrime = true;
-    for(let j = 2; j<i; j++){
-      if(i % j === 0){
-        isPrime = false;
-        break;
-      };
-    };
-    if(isPrime){
-      // console.log(i);
-    };
+    // console.log(largest);
   };
 }
 {
-  // find prime Number : optimize(check till √i only)
-  let num = 50;
-  for(let i = 2; i <= num; i++){
-    let isPrime = true;
-    for(let j = 2; j * j <= i; j++){
-      if(i % j === 0){
-        isPrime = false;
+  // Using For Of Loop
+  let num = 981264;
+  let largest  = 0;
+  let toStr = num.toString();
+  for(let char of toStr){
+    let digit = parseInt(char);
+    if(digit > largest){
+      largest = digit;
+    };
+
+  };
+  // console.log(largest);
+}
+{
+  // Using While With Break;
+  let num = 98723;
+  let largest = 0;
+  let temp = num;
+  while(temp > 0){
+    let digit = temp % 10;
+    if(digit > largest){
+      largest = digit ;
+    };
+    temp = Math.floor(temp / 10);
+    if(temp === 0){break;};
+  };
+  // console.log(largest);
+  
+}
+{
+  // Using DO While
+  let num = 95234;
+  let largest = 0;
+  let temp = num;
+  if(num === 0 ){
+    largest = 0;
+  } else {
+    do{
+      let digit = temp % 10;
+      if(digit > largest){
+        largest = digit;
       };
-    };
-    if(isPrime){
-      // console.log(i);
-    };
+      temp = Math.floor(temp / 10);
+    } while(temp > 0);
+  }
+  // console.log(largest);
+}
+{
+  // Find Sum OF Digits Of a Given Number
+  let num = 987;
+  let sum = 0;
+  let temp = num.toString();
+  for(let i = 0; i < temp.length; i++){
+    let digit = parseInt(temp[i]);
+    sum += digit;
+    // temp = Math.floor(temp / 10);
+  };
+  // console.log(sum);
+}
+{
+  // Using While Loop;
+  let num = 9876;
+  let sum = 0;
+  let temp = num;
+  while(temp > 0){
+    sum += temp % 10;
+    temp = Math.floor(temp / 10);
+  };
+  // console.log(sum);
+}
+{
+  let num = 222;
+  let reverse = "";
+  let temp = num.toString().split("")
+  for(let i = temp.length-1; i >= 0 ; i--){
+    reverse = reverse + temp[i];
+  };
+  reverse = Number(reverse);
+  if(reverse === num){
+    // console.log("Palindrome");
+  } else {
+    console.log("Not Palindrome");
+  };
+}
+{
+  let num = 232;
+  let original = num;
+  let revs = 0;
+  while(original > 0){
+    let digit = original % 10;
+    revs = revs * 10 + digit 
+    original = Math.floor(original / 10);
   };
   // console.log(revs)
   if(revs === num){
@@ -1971,6 +2426,19 @@ for (let i = 1; i <= 10; i++) {
     for(let j = 1; j <= i; j++){
       row += " *";
     };
-    // console.log(row);
+    console.log(row);
+  };
+}
+{
+  let n = 5;
+  for(let i = 1; i <= n; i++){
+    let row = "";
+    for(let j = 1; j<=i - 1; j++){
+      row += "  ";
+    };
+    for(let k = 2; k <=n; k++){
+      row += "*"
+    };
+    console.log(row);
   };
 }

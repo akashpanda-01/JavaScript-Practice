@@ -1573,7 +1573,7 @@ let newDate = new Date();
 let day = newDate.getDay();
 let dateNum = newDate.getDate();
 if (day === 0 || day === 6) {
-  console.log("Holiday -", newDate.toLocaleDateString());
+  // console.log("Holiday -", newDate.toLocaleDateString());
 } else if (dateNum === 1) {
   console.log("Salary Day -", newDate.toLocaleDateString());
 } else {
@@ -1669,89 +1669,88 @@ for (let i = fruits.length - 1; i >= 0; i--) {
 // Find the sum of even numbers from 1 to 50?
 {
   let sum = 0;
-  for(let i = 0; i<=50; i = i + 2){
+  for (let i = 0; i <= 50; i = i + 2) {
     // console.log(i);
     sum += i;
-  };
+  }
   // console.log(sum);
 }
 
 {
   let sum = 0;
   let i = 0;
-  while(i<=50){
+  while (i <= 50) {
     sum += i;
-    i+= 2
-  };
+    i += 2;
+  }
   // console.log(sum);
 }
 
 // Print The Squares of Number 1 to 10.
-for(let i = 1; i <= 10; i++){
+for (let i = 1; i <= 10; i++) {
   let square = i * i;
   // console.log(square);
-};
+}
 
 {
   let num = 1;
-  while(num <= 10){
+  while (num <= 10) {
     let sqr = num * num;
     // console.log(sqr);
-    num++
-  };
-};
+    num++;
+  }
+}
 
 // Count How Many numbers Between 1-50 are divisible by 3.
 {
   let count = 0;
-  for(let i = 1; i<=50; i++){
-    if(i % 3 === 0){
+  for (let i = 1; i <= 50; i++) {
+    if (i % 3 === 0) {
       // console.log(i);
-      count++
-    };
-  };
+      count++;
+    }
+  }
   // console.log(count);
 }
 
 {
   let countNum = 0;
   let i = 1;
-  while(i<=50){
-    if(i % 3 === 0){
+  while (i <= 50) {
+    if (i % 3 === 0) {
       countNum = countNum + 1;
-    };
-    i++
-  };
+    }
+    i++;
+  }
   // console.log(countNum);
-  
 }
 
 {
   //Print only numbers between 1-30 that are divisible by both 2 and 5.
-  for(let i = 1; i<=30; i++){
-    if(i % 2 === 0 &&  i % 5 === 0){
+  for (let i = 1; i <= 30; i++) {
+    if (i % 2 === 0 && i % 5 === 0) {
       let printNum = i;
       // console.log(printNum);
-    };
-  };
-};
+    }
+  }
+}
 
 {
   let i = 1;
-  while(i<=30){
-    if(i % 2 === 0){
-      if(i % 5 === 0){
+  while (i <= 30) {
+    if (i % 2 === 0) {
+      if (i % 5 === 0) {
         let printNum = i;
         // console.log(printNum);
-      };
-    };
+      }
+    }
     i++;
-  };
-}// =======
+  }
+} // =======
 // Recursive Function
 {
-  function summ(n){
-    if(n === 1) return 1;
+  function summ(n) {
+    if (n === 1) return 1;
     return n + summ(n - 1);
   }
 }
@@ -1761,15 +1760,143 @@ for(let i = 1; i <= 10; i++){
 {
   let sum = 0;
   let i = 1;
-  while(i <= 50){
+  while (i <= 50) {
     sum = sum + i;
     i++;
-    console.log(sum);
-  };
-};
-
-{
-  for(let i = 0; i<=50; i++){
-
+    // console.log(sum);
   }
 }
+
+{
+  for (let i = 0; i <= 50; i += 2) {
+    // console.log(i);
+  }
+}
+{
+  // Check Prime Numbers by given number
+  let num = 7;
+  if (num < 1) {
+    console.log("not a Prime Number");
+  } else {
+    let isPrime = true;
+    for (let i = 2; i <= num; i++) {
+      if (num % i === 0) {
+        isPrime = false;
+        break;
+      }
+    };
+    if(isPrime){
+      console.log("Is Prime");
+    } else {
+      // console.log("Not a Prime Number");
+    };
+  }
+}
+{
+  let num = 7;
+  let isPrime = true;
+  for(let i = 2; i<num; i++){
+    if(num % i === 0){
+      isPrime = false;
+      break;
+    };
+  };
+  // console.log(isPrime); 
+}
+{
+  // Print All Prime Numbers between 1 to 50;
+  let num = 50;
+  for(let i = 2; i<=num; i++){
+    isPrime = true;
+    for(let j = 2; j<i; j++){
+      if(i % j === 0){
+        isPrime = false;
+        break;
+      };
+    };
+    if(isPrime){
+      // console.log(i);
+    };
+  }
+}
+{
+  //prime num =  Two loops check till i-1;
+  let num = 50;
+  for(let i = 2; i <= num; i++){
+    let isPrime = true;
+    for(let j = 2; j<i; j++){
+      if(i % j === 0){
+        isPrime = false;
+        break;
+      };
+    };
+    if(isPrime){
+      // console.log(i);
+    };
+  };
+}
+{
+  // find prime Number : optimize(check till √i only)
+  let num = 50;
+  for(let i = 2; i <= num; i++){
+    let isPrime = true;
+    for(let j = 2; j * j <= i; j++){
+      if(i % j === 0){
+        isPrime = false;
+      };
+    };
+    if(isPrime){
+      // console.log(i);
+    };
+  };
+}
+{
+  let num = 50;
+  for(let i = 2; i <= num; i++){
+    let flag = 0;
+    for(let j = 2; j<i; j++){
+      if(i % j === 0){
+        flag = 1
+        break;
+      };
+    };
+    if(flag === 0){
+      // console.log(i);
+    };
+  };
+}
+{
+  // Checking Prime Number : using continue method
+  let num = 50;
+  for(let i = 2; i <= num; i++){
+    for(let j = 2; j<i; j++){
+      if( i % j === 0){
+        i++;
+        j = 1;
+      };
+    };
+    // console.log(i);
+  };
+}
+{
+  // Find GCD: Find Greatest Common Divisor (HCF) of two numbers using loop.
+  let a = 48;
+  let b = 18;
+  while(b !== 0){
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  // console.log(a);
+}
+{
+  let a = 36;
+  let b = 60;
+  let smaller = a < b ? a : b;
+  for(let i = 1; i<=smaller; i++){
+    if( a % i === 0 && b % i === 0){
+      gcd = i;
+    };
+  };
+  console.log(`GCD of ${a} and ${b} is: ${gcd}`);
+};

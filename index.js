@@ -2426,19 +2426,55 @@ for(let i = 1; i <= 10; i++){
     for(let j = 1; j <= i; j++){
       row += " *";
     };
-    console.log(row);
+    // console.log(row);
   };
 }
 {
   let n = 5;
   for(let i = 1; i <= n; i++){
-    let row = "";
-    for(let j = 1; j<=i - 1; j++){
-      row += "  ";
+    let row = " ";
+    for(let j = 1; j<=i; j++){
+      row += "";
     };
-    for(let k = 2; k <=n; k++){
-      row += "*"
+    for(let k = 1; k <=n; k++){
+      row += " * "
     };
-    console.log(row);
+    // console.log(row);
   };
+}
+{
+  let row = "";
+  let n = 5;
+  for(let i = 1; i<=n; i++){
+    row = "".repeat(n - 1);
+    for(let space = 1; space <= n - i; space++){
+      row += " ";
+    };
+    for(let j = 1; j <= i; j++){
+      row += j
+    }
+    for(let j = i - 1; j >= 1; j--){
+      row += j;
+    };
+    // console.log(row);
+  };
+}
+{
+  let n = 5;
+  let row = "";
+  for(let i = 1; i<=n; i++){
+    let space = " ".repeat(n - i);
+    // console.log(row);
+    let left = "";
+    for(let j = 1; j<=i; j++){
+      left += j;
+    };
+    let right = "";
+    for(let j = i - 1; j >= 1; j--){
+      right += j;
+    };
+    row += space + left + right + '\n'
+  };
+  console.log(row);
+  
 }

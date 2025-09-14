@@ -2568,7 +2568,7 @@ for(let i = 1; i <= 10; i++){
     for(let k = 1; k<=i; k++){
       row += "*";
     };
-    console.log(row);
+    // console.log(row);
   }
 }
 {
@@ -2581,6 +2581,38 @@ for(let i = 1; i <= 10; i++){
     for(let k = 1; k<=i; k++){
       row += "*";
     };
-    console.log(row);
+    // console.log(row);
   };
 }
+{
+  // Hollow star Square.
+  let n = 5;
+  for(let i = 1; i<=n; i++){
+    let pattern = "";
+    for(let j = 1; j <= n; j++){
+      if(i === 1 || i === n ){
+        pattern += "*";
+        console.log(pattern);
+      }else {
+        pattern += " ";
+      }
+    };
+    // console.log(pattern);
+  }
+}
+{
+  let n = 5;
+  let i = 1;
+  while(i <= n){
+    let pattern = "";
+    for(let j = 1; j <= n; j++){
+      if(i === 1 || i === n || j === 1 || j === n){
+        pattern += "*";
+      } else {
+        pattern += " ";
+      };
+    };
+    console.log(pattern);
+    i++
+  };
+};

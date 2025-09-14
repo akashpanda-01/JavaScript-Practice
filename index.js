@@ -2475,6 +2475,59 @@ for(let i = 1; i <= 10; i++){
     };
     row += space + left + right + '\n'
   };
-  console.log(row);
+  // console.log(row);
+  
+}
+{
+  let n = 5;
+  for(let i = 1; i<=n; i++){
+    let row = "";
+    for(let space = 1; space <= n-i; space++){
+      row += " ";
+    };
+    for(let j = 1; j <= i; j++){
+      row += j;
+    };
+    for(let j = i-1; j >= 1; j--){
+      row += j;
+    };
+    // console.log(row);
+  }
+}
+{
+  let n = 5;
+  for(let i = 1; i <= n; i++){
+    let row = "";
+    for(let space = 1; space<=n-i; space++){
+      row += " ";
+    };
+    for(let j = 1; j<=i; j++){
+      row += j;
+    };
+    for(let j = i-1; j>=1; j--){
+      row += j;
+    }
+    // console.log(row);
+  }
+}
+{
+  let n = 5;
+  let output = "";
+  for(let i = 1; i<=n; i++){
+    
+    let space = " ".repeat(n - i);
+    let left = "";
+    for(let j = 1; j<=i; j++){
+      left += j;
+    };
+    let right = "";
+    for(let j = i - 1; j>=1; j--){
+      right += j;
+    };
+    output += space+ left + right + "\n";
+  };
+  // console.log(output);
+}
+{
   
 }

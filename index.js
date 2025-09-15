@@ -1898,5 +1898,42 @@ for (let i = 1; i <= 10; i++) {
       gcd = i;
     };
   };
-  console.log(`GCD of ${a} and ${b} is: ${gcd}`);
+  // console.log(`GCD of ${a} and ${b} is: ${gcd}`);
 };
+{
+  let n = 5;
+  for(let i = 1; i <=n; i++){
+    let row = "";
+    for(let j = 1; j<=i; j++){
+      row += " *";
+    };
+    // console.log(row);
+  };
+}
+{
+  // Find sum of numbers from 1 to 100;
+  let num = 100;
+  let sum = 0;
+  for(let i = 1; i<=num; i++){
+    sum += i;
+  };
+  // console.log(sum);
+}
+{
+  // find the sum of even numbers 1 to 50.
+  let sum = 0;
+  let num = 50;
+  for(let i = 0; i <= num; i= i + 2){
+    sum += i;
+  };
+  // console.log(sum);
+}
+{
+  // print square of numbers from 1 to 10
+  let num = 10;
+  let square = 0;
+  for(let i = 1; i<=num; i++){
+    square = i * i;
+    // console.log(square);
+  };
+}

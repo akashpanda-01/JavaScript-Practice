@@ -3015,7 +3015,7 @@ function printVowel(str) {
       count++;
     }
   }
-  console.log(count);
+  // console.log(count);
 }
 printVowel("hello");
 
@@ -3034,7 +3034,53 @@ printVowel("hello");
         count++;
       };
     };
-    console.log(count);
+    // console.log(count);
   };
-  countVowels("Hello World")
+  // countVowels("Hello World")
+}
+{
+  //for a given array of numbers print the square of each value using forEach loop
+  let arr = [2, 4, 5, 5];
+  arr.forEach((num) => {
+    // console.log(num * num);
+  });
+}
+{
+  let num = [52, 67, 39];
+  let calculateSquare = (val) => {
+    // console.log(val * val);
+  };
+  num.forEach(calculateSquare)
+}
+// ===============Array==============
+{
+  let arr = [2, 4, 5, 5];
+  let newArr = arr.map((printVal) =>{
+    return printVal;
+  });
+  console.log(newArr);
+  
+}
+{
+  // Print Even Numbers By using Filter Mehod
+  let arr = [1, 2, 3, 4, 5, 6, 7, 9];
+  let even = arr.filter((element) => {
+    return element % 2 === 0;
+  });
+
+  console.log(even);
+  // Odd Values Using filter
+  let odd = arr.filter((element) => {
+    return element % 2 !== 0;
+  });
+
+  console.log(odd);
+  // greater Than 3
+  let greatestOf3 = arr.filter((element) => {
+    return element > 3;
+  })
+  console.log(greatestOf3);
+}
+{
+  // we are given array 
 }

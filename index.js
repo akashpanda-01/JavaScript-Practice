@@ -2592,7 +2592,7 @@ for(let i = 1; i <= 10; i++){
     for(let j = 1; j <= n; j++){
       if(i === 1 || i === n ){
         pattern += "*";
-        console.log(pattern);
+        // console.log(pattern);
       }else {
         pattern += " ";
       }
@@ -2612,7 +2612,141 @@ for(let i = 1; i <= 10; i++){
         pattern += " ";
       };
     };
-    console.log(pattern);
+    // console.log(pattern);
     i++
   };
 };
+{
+  // find the sum of number from 1 to 100;
+  let num = 100;
+  let sum  = 0;
+  for(let i = 1; i<=num ; i++){
+    sum += i;
+  };
+  // console.log(sum);
+}
+{
+  // find the sum of even numbers from 0 to 50;
+  let num = 50;
+  let sum = 0;
+  for(let i = 0; i<=num; i += 2){
+    sum += i;
+  };
+  // console.log(sum);
+}
+{
+  // // find the sum of even numbers from 1 to 50;
+  let num = 50;
+  let sum = 0;
+  for(let i = 1; i<=num; i++){
+    if(i % 2 === 0){
+      sum += i;
+    };
+  };
+  // console.log(sum);
+}
+{
+  // print the square of numbers from 1 to 10;
+  let num = 10;
+  let square = 0;
+  for(let i = 1; i<=num; i++){
+    square = i * i;
+    // console.log(square);
+  };
+}
+{
+  // count how many numbers between 1 to 50 are divisible by 3
+  let num = 50;
+  let count = 0;
+  for(let i = 1; i<=num; i++){
+    if(i % 3 === 0){
+      count++
+    };
+  };
+  // console.log(count);
+}
+{
+  // Print Numbers Between 1 to 30 that are divisible by both 2 and 5.
+  let num = 30;
+  for(let i = 1; i<=num ; i++){
+    if(i % 2 === 0 && i % 5 === 0){
+      // console.log(i);
+    };
+  };
+}
+{
+  // print left angle triangle ;
+  let num = 5;
+  for(let i = 1; i<=num; i++){
+    let row = "";
+    for(let j = 1; j<=i; j++){
+      row += " *"
+    };
+    // console.log(row);
+  };
+}
+{
+  // print reverse stars
+  let num = 5;
+  for(let i = 1; i<= num; i++){
+    let row = "";
+    for(let j = num; j>=i; j--){
+      row += " *";
+    };
+    // console.log(row);
+  };
+}
+{
+  let num = 5;
+  for(let i = 1; i<=num; i++){
+    let row = "";
+    for(let j = 1; j<=i; j++){
+      row += j;
+    };
+    // console.log(row);
+  };
+}
+{
+  // find the factorial of a given number(5)
+  let num = 5;
+  let factorial = 1;
+  for(let i = 1; i<=num; i++){
+    factorial *= i;
+    // console.log(factorial);
+  };
+}
+{
+  // Reverse a given number 123;
+  let num = 123;
+  let temp = num.toString();
+  // console.log(temp);
+  
+  let reverse = "";
+  for(let i = temp.length-1; i>=0; i--){
+    reverse += temp[i];
+  };
+  // console.log(reverse);
+}
+{
+  let digit = 123;
+  let temp = digit.toString();
+  let count = 0;
+  for(let i = 0; i<=temp.length - 1; i++){
+    count++;
+    // console.log(count);
+  };
+}
+{
+  // Find Largest Number Of a Given Number.
+  let num = 1945;
+  let greatest = 0;
+  let temp = num.toString();
+  let digit = "";
+  for(let i = 0; i<=temp; i++){
+    digit = Number(temp[i])
+    if(digit > greatest){
+      greatest = digit;
+    };
+  };
+  console.log(greatest);
+}

@@ -2901,101 +2901,140 @@ for (let i = 1; i <= 10; i++) {
 }
 {
   let num = 50;
-  for(let i = 2; i<=num; i++){
+  for (let i = 2; i <= num; i++) {
     let isPrime = true;
-    for(let j = 2; j<=Math.sqrt(i); j++){
-      if(i % j === 0){
+    for (let j = 2; j <= Math.sqrt(i); j++) {
+      if (i % j === 0) {
         isPrime = false;
         break;
-      };
-    };
-    if(isPrime){
+      }
+    }
+    if (isPrime) {
       // console.log(i, "Is Prime");
-    };
-  };
+    }
+  }
 }
 {
   let num = 50;
-  for(let i = 2; i<=num; i++){
+  for (let i = 2; i <= num; i++) {
     let isPrime = true;
-    for(let j = 2; j < i; j++){
-      if(i % j === 0){
+    for (let j = 2; j < i; j++) {
+      if (i % j === 0) {
         isPrime = false;
         break;
-      };
-    };
-    if(isPrime){
+      }
+    }
+    if (isPrime) {
       // console.log(i);
-    };
-  };
+    }
+  }
 }
 {
   let a = 48;
   let b = 18;
-  while(b !== 0){
+  while (b !== 0) {
     let temp = b;
     b = a % b;
     a = temp;
-  };
+  }
   // console.log(a);
-  
 }
 {
   let a = 48;
   let b = 18;
-  for(let i = Math.min(a, b); i >= 1; i--){
-    if(a % i === 0 && b % i === 0){
+  for (let i = Math.min(a, b); i >= 1; i--) {
+    if (a % i === 0 && b % i === 0) {
       gcd = i;
       break;
-    };
-  };
+    }
+  }
   // console.log(`GCD of ${a} and ${b} is: ${gcd}`);
-};
+}
 {
   let n = 5;
-  for(let i = 1; i <=n; i++){
+  for (let i = 1; i <= n; i++) {
     let row = "";
-    for(let j = 1; j<=i; j++){
+    for (let j = 1; j <= i; j++) {
       row += " *";
-    };
+    }
     // console.log(row);
-  };
+  }
 }
 {
   // Find sum of numbers from 1 to 100;
   let num = 100;
   let sum = 0;
-  for(let i = 1; i<=num; i++){
+  for (let i = 1; i <= num; i++) {
     sum += i;
-  };
+  }
   // console.log(sum);
 }
 {
   // find the sum of even numbers 1 to 50.
   let sum = 0;
   let num = 50;
-  for(let i = 0; i <= num; i= i + 2){
+  for (let i = 0; i <= num; i = i + 2) {
     sum += i;
-  };
+  }
   // console.log(sum);
 }
 {
   // print square of numbers from 1 to 10
   let num = 10;
   let square = 0;
-  for(let i = 1; i<=num; i++){
+  for (let i = 1; i <= num; i++) {
     square = i * i;
     // console.log(square);
-  };
+  }
   // console.log(gcd);
 }
 {
-  let a = 48, b = 18;
-  while(b !== 0){
+  let a = 48,
+    b = 18;
+  while (b !== 0) {
     let temp = b;
     b = a % b;
-    console.log(b);
-    
+    // console.log(b);
+
     a = temp;
   }
+}
+
+// =====================FUNCTION====================
+// create a function using "function" keyword that takes a string as an argument & return the number of vowels in string
+function printVowel(str) {
+  let count = 0;
+  for (let char of str) {
+    if (
+      char === "a" ||
+      char === "e" ||
+      char === "i" ||
+      char === "o" ||
+      char === "u"
+    ) {
+      count++;
+    }
+  }
+  console.log(count);
+}
+printVowel("hello");
+
+{
+  // Using Arrow Function performing same task
+  let countVowels = (str) => {
+    let count = 0;
+    for(char of str){
+      if(
+        char === "a" ||
+        char === "e" ||
+        char === "i" ||
+        char === "o" ||
+        char === "u"
+      ){
+        count++;
+      };
+    };
+    console.log(count);
+  };
+  countVowels("Hello World")
 }

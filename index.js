@@ -3058,25 +3058,117 @@ printVowel("hello");
   let newArr = arr.map((printVal) =>{
     return printVal;
   });
-  console.log(newArr);
+  // console.log(newArr);
   
 }
 {
-  // Print Even Numbers By using Filter Mehod
+  // Print Even Numbers By using Filter Method
   let arr = [1, 2, 3, 4, 5, 6, 7, 9];
   let even = arr.filter((element) => {
     return element % 2 === 0;
   });
 
-  console.log(even);
+  // console.log(even);
   // Odd Values Using filter
   let odd = arr.filter((element) => {
     return element % 2 !== 0;
   });
-  console.log(odd);
+  // console.log(odd);
   // greater Than 3
   let greatestOf3 = arr.filter((element) => {
     return element > 3;
   })
-  console.log(greatestOf3);
+  // console.log(greatestOf3);
+}
+{
+  // create an array of fruits and print all elements pne by one using loop
+  let arr = ["mango", "appel", "banana", "litchi"];
+  for(let el of arr){
+    // console.log(el)
+  }
+}
+{
+  // Create an aary of fruits of numbers and print its length
+  let arr = [1, 3, 4, 5, 6, 7];
+  // console.log(arr.length);
+}
+{
+  // Create an array of colors and print the first and last color in the array.
+  let arr = ["red", "blue", "orange", "black", "white"];
+  // console.log(arr[0], arr[4]);
+}
+{
+  // take array of numbers add one number at the end(using pushs).
+  let arr = [1, 2, 3, 4, 5, 6, 7];
+  arr.push(8);
+  // console.log(arr);
+
+  // Remove The Last Number using pop,
+  arr.pop(7);
+  // console.log(arr);
+}
+{
+  // add a name at the begining using unshift
+  let nme = ["a", 'b', "c", "d", "e"];
+  nme.unshift("ak");
+  // console.log(nme);
+  
+  // Remove first name using shift
+  nme.shift(0);
+  // console.log(nme);
+}
+{
+  // Create an array of 5 numbers  and change the value at index 2;
+  let arr = [1, 2, 3, 4, 5];
+  arr[2] = 100;
+  // console.log(arr);
+}
+{
+  // Create if a given numer exists in an array or not using  incluede
+  let arr = [1, 3, 4, 5, 6, 70];
+  if(arr.includes(4)){
+    // console.log(true);
+  } else {
+    console.log(false); 
+  }
+}
+{
+  // Find The Sum Of All numbers in an array using a for loop.
+  let num = [1, 3, 4, 5, 5];
+  let sum= 0 ;
+  for(let el of num){
+    sum += el;
+  }
+  // console.log(sum);
+}
+{
+  //Find Largest Number form an array of number
+  let arrNum = [2, 80, 5, 6, 30, 60];
+  let largest = 0;
+  for(let i = 0; i<=arrNum.length; i++){
+    if(arrNum[i] > largest){
+      largest = arrNum[i]
+    };
+  };
+  // console.log(largest);
+}
+{
+  // Reverse an array and print it , without using reverse() method
+  let arr = [1, 3, 4, 5, 6, 7];
+  let reverse = [];
+  for(let i = arr.length - 1; i>=0; i--){
+    reverse.push(arr[i])
+  };
+  console.log(reverse);
+}
+{
+  // Remove Duplicate numbers rom a nn array manually
+  let arr = [1, 1, 2, 2, 3, 4, 4];
+  let clearDuplicate = [];
+  for(let i = 0; i<=arr.length; i++){
+    if(!clearDuplicate.includes(arr[i])){
+        clearDuplicate.push(arr[i])
+    };
+  };
+  console.log(clearDuplicate);
 }

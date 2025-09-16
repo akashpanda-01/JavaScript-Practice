@@ -3073,14 +3073,10 @@ printVowel("hello");
   let odd = arr.filter((element) => {
     return element % 2 !== 0;
   });
-
   console.log(odd);
   // greater Than 3
   let greatestOf3 = arr.filter((element) => {
     return element > 3;
   })
   console.log(greatestOf3);
-}
-{
-  // we are given array 
 }

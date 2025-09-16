@@ -3248,6 +3248,7 @@ printVowel("hello");
   // console.log(merged);
 }
 {
+  // 
   let nums = [1, 2, 1 , 2, 3 , 4, 3];
   let count = {};
   for(let i = 0; i <nums.length; i++){
@@ -3258,4 +3259,17 @@ printVowel("hello");
       count[num] = 1;
     };
   }
+}
+{
+  let arr = [1, 2, 4, 1, 3, 4, 2];
+  let count = {};
+  for(let i = 0; i < arr.length; i++){
+    let num = arr[i]; 
+    if(count[num]){
+      count[num]++;
+    } else {
+      count[num] = 1;
+    };
+  };
+  console.log(count);
 }

@@ -3088,6 +3088,12 @@ printVowel("hello");
   }
 }
 {
+  let arr = ["a", "b", "c", "d"];
+  for(let el of arr){
+    // console.log(el);
+  };
+}
+{
   // Create an aary of fruits of numbers and print its length
   let arr = [1, 3, 4, 5, 6, 7];
   // console.log(arr.length);
@@ -3129,7 +3135,7 @@ printVowel("hello");
   if(arr.includes(4)){
     // console.log(true);
   } else {
-    console.log(false); 
+    // console.log(false); 
   }
 }
 {
@@ -3183,5 +3189,110 @@ printVowel("hello");
   };
   let num = total - sum;
   console.log(num);
-  
+}
+{
+  let arr = [1, 2, 3, 4, 5, 6];
+  let largest = 0;
+  for(let i = 0; i<=arr.length; i++){
+    if(largest < arr[i]){
+      largest = arr[i];
+    };
+  };
+  // console.log(largest);
+}
+{
+  // again doing reverse
+  let arr = ["a", "b", "c", "d"];
+  let reverse = [];
+  for(let i = arr.length - 1; i >= 0; i--){
+    reverse.push(arr[i]);
+  };
+  // console.log(reverse);
+}
+{
+  // remove duplicate numbers from an array manually
+  let arr = [1, 2, 2, 4, 5, 5];
+  let duplicate = [];
+  for(let i = 0; i < arr.length; i++){
+    if(!duplicate.includes(arr[i])){
+      duplicate.push(arr[i]);
+    };
+  };
+  // console.log(duplicate);
+}
+{
+  let arr = [10, 20, 30, 40];
+  let lar1 = 0;
+  let lar2 = 0;
+  for(let i = 0; i<arr.length; i++){
+    if(arr[i] > lar1){
+      lar2 = lar1;
+      lar1 = arr[i];
+    };
+  };
+  // console.log("largset =>", lar1, "SecondLargest =>",  lar2);
+}
+{
+  let arr = [50, 30, 40, 20, 10];
+  let largest = -Infinity;
+  let secondLargest = -Infinity;
+  for(let i = 0; i<arr.length; i++){
+    if(arr[i] > largest){
+      secondLargest = largest;
+      largest = arr[i];
+    }else if(arr[i] > secondLargest && arr[i] !== largest){
+      secondLargest = arr[i];
+    };
+  };
+  // console.log(secondLargest);
+}
+{
+  // Merge Two Arrays without concat method.
+  let a = [1, 2, 3];
+  let b = [4, 5, 6];
+  let merged = [];
+  for(let i = 0; i < a.length; i++){
+    merged.push(a[i]);
+  };
+  for(let i = 0; i<b.length; i++){
+    merged.push(b[i]);
+  };
+  // console.log(merged);
+}
+{
+  // 
+  let nums = [1, 2, 1 , 2, 3 , 4, 3];
+  let count = {};
+  for(let i = 0; i <nums.length; i++){
+    let num = nums[i];
+    if(count[num]){
+      count[num]++;
+    } else {
+      count[num] = 1;
+    };
+  }
+}
+{
+  let arr = [1, 2, 4, 1, 3, 4, 2];
+  let count = {};
+  for(let i = 0; i < arr.length; i++){
+    let num = arr[i]; 
+    if(count[num]){
+      count[num]++;
+    } else {
+      count[num] = 1;
+    };
+  };
+  console.log(count);
+}
+{
+  //Find The missing number in a given array;
+  let arr = [1, 2, 3, 5, 6];
+  let n = 6;
+  let total = (n * (n + 1)) / 2;
+  let sum = 0;
+  for(let i = 0; i<arr.length; i++){
+    sum += arr[i];
+  };
+  console.log(total - sum);
 }

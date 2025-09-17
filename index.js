@@ -3248,7 +3248,7 @@ printVowel("hello");
   // console.log(merged);
 }
 {
-  // 
+  // Count How Many Times each numbers appears in an array
   let nums = [1, 2, 1 , 2, 3 , 4, 3];
   let count = {};
   for(let i = 0; i <nums.length; i++){
@@ -3258,7 +3258,8 @@ printVowel("hello");
     } else {
       count[num] = 1;
     };
-  }
+  };
+  // console.log(count);
 }
 {
   let arr = [1, 2, 4, 1, 3, 4, 2];
@@ -3267,11 +3268,13 @@ printVowel("hello");
     let num = arr[i]; 
     if(count[num]){
       count[num]++;
+      // console.log(count);
+      
     } else {
       count[num] = 1;
     };
   };
-  console.log(count);
+  // console.log(count);
 }
 {
   //Find The missing number in a given array;
@@ -3282,5 +3285,110 @@ printVowel("hello");
   for(let i = 0; i<arr.length; i++){
     sum += arr[i];
   };
-  console.log(total - sum);
+  // console.log(total - sum);
+}
+{
+ let arr = [1, 2, 1, 2, 3, 4, 4];
+ let count = {};
+ for(let i = 0; i<arr.length; i++){
+  let num = arr[i];
+  if(count[num]){
+    count[num]++;   
+  } else {
+    count[num] = 1;
+  };
+ };
+//  console.log(count);
+}
+{
+  let arr = [1, 1, 1, 4, 5, 3, 3, 4, 5, 2, 2];
+  let count = {};
+  for(let i = 0; i < arr.length; i++){
+    let num = arr[i];
+    if(count[num]){
+      count[num]++;
+    } else {
+      count[num] = 1;
+    };
+  };
+  // console.log(count);
+}
+{
+  let arr = [1, 2, 3, 5, 6, 7];
+  let sum = 0;
+  let n = 7;
+  let total = n * (n +  1)/2;
+  for(let i = 0; i<arr.length; i++){
+    sum += arr[i];
+  };
+  let num = total - sum;
+  arr.splice(3, 0, num);
+  // console.log(arr);
+}
+{
+  let arr = [1, 2, 3, 5, 6, 7];
+  let n = 7;
+  let total = n * (n + 1) / 2;
+  let sum = 0;
+  for(let i = 0; i<arr.length + 1; i++){
+    // "arr.length + 1" will give "NaN"
+    sum += arr[i];
+  };
+  let num = total - sum;
+  arr.splice(3, 0, num);
+  // console.log(arr);
+}
+{
+  // Sort without using sort() method in an array
+  let arr = [5, 4, 3, 2, 1];
+  for(let i = 0; i < arr.length; i++){
+    let acending ;
+    if(arr[i] > acending){
+      acending.unshift(arr[i]);
+    };
+    arr.shift();
+    // console.log(acending);
+  };
+}
+{
+  let arr = [5, 4, 3, 2, 1];
+  let n = arr.length;
+
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - 1 - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        // swap
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      };
+    };
+  };
+  // console.log(arr);
+}
+{
+  let arr = [5, 4, 3, 2, 1];
+  let n = arr.length;
+  for(let i =0; i < n ; i++) {
+    for(let j = 0; j < n - 1 -i; j++){
+      if(arr[j] > arr[j + 1]){
+        let temp = arr[j]
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+}
+{
+  let arr = [5, 4, 3, 2, 1];
+  let n = arr.length;
+  for(let i =0; i < n - 1 ; i++) {
+    if(arr[i] > arr[i+ 1]){
+      let temp = arr[i];
+      arr[i] = arr[i + 1];
+      arr[i + 1] = temp;
+    };
+  };
+  console.log(arr);
+  
 }

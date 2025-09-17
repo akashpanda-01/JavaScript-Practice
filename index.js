@@ -3414,3 +3414,42 @@ printVowel("hello");
   };
   // console.log(arr);
 }
+{
+  // Remove duplicates
+  let arr =[1, 1, 2, 3, 4, 4, 3, 2];
+  let unique = [];
+  for(let i  = 0; i<arr.length; i++){
+    if(!unique.includes(arr[i])){
+      unique.push(arr[i]);
+    };
+  };
+  console.log(unique); 
+}
+{
+  // find Second Largest numberin an array
+  let arr = [10, 20, 30, 40];
+  let largest = [];
+  let secondLargest = [];
+  for(let i = 0; i< arr.length; i++){
+    if(largest < arr[i]){
+      let temp = arr[i];
+      secondLargest = largest;
+      largest = temp
+    }
+  }
+  console.log(largest, secondLargest);
+  
+}
+{
+  // Merge Two arrays manually without concat;
+  let a = [1, 2, 3,];
+  let b = [4, 5, 6];
+  let merge = [];
+  for(let i = 0; i < a.length; i++){
+    merge.push(a[i]);
+  };
+  for(let i = 0; i <b.length; i++){
+    merge.push(b[i])
+  }
+  console.log(merge);
+}

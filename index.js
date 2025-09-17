@@ -3437,7 +3437,7 @@ printVowel("hello");
       largest = temp
     }
   }
-  console.log(largest, secondLargest);
+  // console.log(largest, secondLargest);
   
 }
 {
@@ -3451,5 +3451,47 @@ printVowel("hello");
   for(let i = 0; i <b.length; i++){
     merge.push(b[i])
   }
-  console.log(merge);
+  // console.log(merge);
+}
+{
+  // Count how many times each numbers appears in an array
+  let arr = [1, 1, 2, 3 , 2];
+  let count = {};
+  for(let i = 0; i<arr.length; i++){
+    let num = arr[i];
+    if(count[num]){
+      count[num]++;
+    }else{
+      count[num] = 1;
+    };
+  };
+  console.log(count);
+}
+{
+  // In array Find The Missing Number .
+  let arr = [1, 2, 3, 5, 6];
+  let n = 6;
+  let total = n * (n + 1)/2;
+  let sum = 0;
+  for(let i = 0; i<arr.length; i++){
+    sum += arr[i];
+  };
+  // console.log(total - sum);
+}
+{
+  // Sort Array without using sort() method;
+  let arr = [5, 3, 8, 1, 4];
+  for(let i = 0; i<arr.length; i++){
+    for(let j = i + 1; j < arr.length; j++){
+      if(arr[i] > arr[j]){
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      };
+    };
+  };
+  console.log(arr);
+}
+{
+  
 }

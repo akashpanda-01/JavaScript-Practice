@@ -3179,6 +3179,18 @@ printVowel("hello");
   // console.log(clearDuplicate);
 }
 {
+  // find missing number in an array.
+  let arr = [1, 2, 3, 5, 6];
+  let n = 6;
+  let total = n * (n + 1)/ 2;
+  let sum = 0;
+  for(let i =0; i<arr.length; i++){
+    sum += arr[i]///;
+  };
+  let num = total - sum;
+  console.log(num);
+}
+{
   let arr = [1, 2, 3, 4, 5, 6];
   let largest = 0;
   for(let i = 0; i<=arr.length; i++){

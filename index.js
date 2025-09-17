@@ -3387,9 +3387,10 @@ printVowel("hello");
         let temp = arr[j]
         arr[j] = arr[j + 1];
         arr[j + 1] = temp;
-      }
-    }
-  }
+      };
+    };
+  };
+  // console.log(arr);
 }
 {
   let arr = [5, 4, 3, 2, 1];
@@ -3401,6 +3402,15 @@ printVowel("hello");
       arr[i + 1] = temp;
     };
   };
-  console.log(arr);
-  
+  // console.log(arr); 
+}
+{
+  // Reverse Array without creating new array
+  let arr = [1, 2, 3, 4, 5, 6];
+  for(let i = 0; i<arr.length / 2; i++){
+    let temp = arr[i];
+    arr[i] = arr[arr.length -1 -i];
+    arr[arr.length-1-i] = temp;
+  };
+  // console.log(arr);
 }

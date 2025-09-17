@@ -3188,7 +3188,7 @@ printVowel("hello");
     sum += arr[i]///;
   };
   let num = total - sum;
-  console.log(num);
+  // console.log(num);
 }
 {
   let arr = [1, 2, 3, 4, 5, 6];
@@ -3423,7 +3423,7 @@ printVowel("hello");
       unique.push(arr[i]);
     };
   };
-  console.log(unique); 
+  // console.log(unique); 
 }
 {
   // find Second Largest numberin an array
@@ -3465,7 +3465,7 @@ printVowel("hello");
       count[num] = 1;
     };
   };
-  console.log(count);
+  // console.log(count);
 }
 {
   // In array Find The Missing Number .
@@ -3490,8 +3490,91 @@ printVowel("hello");
       };
     };
   };
-  console.log(arr);
+  // console.log(arr);
 }
 {
+  // Reverse Array without creating new array
+  let arr = [1, 2, 3, 4, 5, 6];
+  for(let i = arr.length - 1; i > 0; i--){
+    for(let j = 0; j < i; j++){
+      if(arr[i] > arr[j - 1]){
+      let temp = arr[i];
+      arr[i] = arr[j - 1];
+      arr[j- 1] = temp;
+      };
+    };
+    // console.log(arr);
+  };
+}
+{
+  // Reverse Array without creating new array
+  let arr = [1, 2, 3, 4, 5, 6];
+  for(let i = 0; i < arr.length / 2; i++){
+    let temp = arr[i];
+    arr[i] = arr[arr.length - 1 -i];
+    arr[arr.length-1-i] = temp;
+  }
+  // console.log(arr);
+}
+{
+  // find The Even Numbers , Create a new array that contains only the even numbers
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  let evenNums = [];
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] % 2 === 0){
+      evenNums.push(arr[i]);
+    };
+  };
+  // console.log(evenNums);
+}
+{
+  // Find Maximum and Minimum numbers in an array
+  let arr = [10, 2, 23, 12 , 111];
+  let min = arr[0];
+  let max = arr[0];
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > max){
+      max = arr[i];
+    };
+    if(arr[i] < min){
+      min = arr[i];
+    };
+  };
+  // console.log(max, min);
+}
+{
+  // Count Even and Odd Numbers  in a given array;
+  let num = [ 1, 2, 3, 4, 5, 6, 7, 8,  9];
+  let oddCount = 0;
+  let evenCount = 0;
+  for(let i = 0; i<num.length; i++){
+    if(num[i] % 2 === 0){
+      evenCount++;
+    };
+    if(num[i] % 2 !== 0){
+      oddCount++;
+    };
+  };
+  // console.log("Even Count =>", evenCount, "Odd Count =>", oddCount);
+}
+{
+  // Remove all occurrences of a given nmber from an array without using filter
+  let arr = [1, 2, 3, 4, 5];
+  arr.splice(2, 1);
+  // console.log(arr);
+}
+{
+  // Find the common elements between two arrays and store them i a array;
+  let arr1 = [1, 3, 5, 6];
+  let arr2 = [1, 2, 3, 5];
+  let common = [];
+  for(let i = 0; i<arr1.length; i++){
+    for(let j = 0; j<arr2.length; j++){
+      if(arr1[i] === arr2[j]){
+        common.push(arr1[i])
+      };
+    };
+  };
+  // console.log(common);
   
 }

@@ -3159,7 +3159,7 @@ printVowel("hello");
   for(let i = arr.length - 1; i>=0; i--){
     reverse.push(arr[i])
   };
-  console.log(reverse);
+  // console.log(reverse);
 }
 {
   // Remove Duplicate numbers rom a nn array manually
@@ -3170,5 +3170,18 @@ printVowel("hello");
         clearDuplicate.push(arr[i])
     };
   };
-  console.log(clearDuplicate);
+  // console.log(clearDuplicate);
+}
+{
+  // find missing number in an array.
+  let arr = [1, 2, 3, 5, 6];
+  let n = 6;
+  let total = n * (n + 1)/ 2;
+  let sum = 0;
+  for(let i =0; i<arr.length; i++){
+    sum += arr[i]///;
+  };
+  let num = total - sum;
+  console.log(num);
+  
 }

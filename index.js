@@ -3311,24 +3311,29 @@ printVowel("hello");
       };
     };
   };
-  console.log(arr);
+  // console.log(arr);
 }
 {
   let newArr = [200, 34, 56, 34, 2, 3,];
   for(let i = 0; i<newArr.length; i++){
     for(let j =i + 1; j<newArr.length; j++){
-      if(arr[i] < arr[i + 1]){
-        let temp =  arr[i];
- let arr = [1, 2, 1, 2, 3, 4, 4];
- let count = {};
- for(let i = 0; i<arr.length; i++){
-  let num = arr[i];
-  if(count[num]){
-    count[num]++;   
-  } else {
-    count[num] = 1;
+      // if(arr[i] < arr[i + 1]){
+        // let temp =  arr[i];
+      // };
+    };
   };
- };
+}
+{
+  let arr = [1, 2, 1, 2, 3, 4, 4];
+  let count = {};
+  for(let i = 0; i<arr.length; i++){
+    let num = arr[i];
+    if(count[num]){
+      count[num]++;   
+    } else {
+      count[num] = 1;
+    };
+  };
 //  console.log(count);
 }
 {
@@ -3509,7 +3514,7 @@ printVowel("hello");
       };
     };
   };
-  console.log(arr);
+  // console.log(arr);
   // console.log(arr);
 }
 {
@@ -3584,16 +3589,97 @@ printVowel("hello");
   // console.log(arr);
 }
 {
-  // Find the common elements between two arrays and store them i a array;
+  // Find the common elements between two arrays and store them in a array;
   let arr1 = [1, 3, 5, 6];
   let arr2 = [1, 2, 3, 5];
   let common = [];
   for(let i = 0; i<arr1.length; i++){
     for(let j = 0; j<arr2.length; j++){
       if(arr1[i] === arr2[j]){
-        common.push(arr1[i]);
+        common.push(arr1[i])
       };
     };
   };
   // console.log(common);
+}
+{
+  // find the first duplicate element that appears in an arrray
+  let arr = [1, 1, 2, 3, 3, 2];
+  let duplicate = [];
+  for(let i = 0; i<arr.length; i++){
+    if(!duplicate.includes(arr[i])){
+      duplicate.push(arr[i]);
+    }
+  };
+  // console.log(duplicate);
+}
+{
+  // find the first duplicate element that appears in an arrray
+  let arr = [1, 2, 2, 3, 1, 2, 3];
+  let seen = [];
+  let duplicate = null;
+  for(let i = 0; i<arr.length; i++){
+    if(seen.includes(arr[i])){
+      duplicate = arr[i];
+      break;
+    };
+    seen.push(arr[i]);
+  };
+  // console.log(duplicate);
+}
+{
+  // Rotate an array by k positions to the right .
+  // [1, 2, 3, 4, 5] rotated by 2 -> [4, 5, 1, 2, 3]
+  let arr = [1, 2, 3, 4, 5];
+  let k = 2;
+  for(let i = 0; i < k; i++){
+    let last = arr.pop();
+    arr.unshift(last);
+  };
+  // console.log(arr);
+}
+{
+  // Write a program to check wether an array is sorted in asending order or not
+  let arr = [1, 3, 2, 5, 4];
+  for(let i = 0; i < arr.length - 1; i++){
+    if(arr[i] > arr[i + 1]){
+      // console.log("arr not sorted");
+      // let temp = arr[i];
+      // arr[i] = arr[i + 1];
+      // arr[i + 1] = temp;      
+    } else {
+      // console.log("arr sorted");
+    };
+  };
+  // console.log(arr);
+}
+{
+  // FIND an array that has duplicate values , find all the unique values
+  let arr = [1, 2, 1, 2, 3, 4, 2, 3, 4];
+  let num = [];
+  let duplicate = [];
+  for(let i = 0; i < arr.length; i++){
+    if(!num.includes(arr[i])){
+      num.push(arr[i]);
+    } else if(!duplicate.includes(arr[i])) {
+      duplicate.push(arr[i]);
+    };
+  };
+  // console.log(duplicate);
+}
+{
+  // Given a nested array like  [1, [2, [3, 4]], 5] flatten it into [1, 2, 3, 4, 5].
+  function flattenArray (arr){
+    let result = [];
+    for(let i =0; i < arr.length; i++){
+      let element = arr[i];
+      if(Array.isArray(element)){
+        result = result.concat(flattenArray(element));
+      } else {
+        result.push(arr[i]);
+      };
+    };
+    return result;
+  };
+  // console.log(flattenArray( [1, [2, [3, 4]], 5]));
 }

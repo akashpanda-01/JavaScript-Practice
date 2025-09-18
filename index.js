@@ -3268,7 +3268,7 @@ printVowel("hello");
     if(count[num]){
       count[num]++;
     } else {
-      count[num] = 1;
+      // count[num] = 1;
     };
   }
 }
@@ -3283,7 +3283,7 @@ printVowel("hello");
       count[num] = 1;
     };
   };
-  console.log(count);
+  // console.log(count);
 }
 {
   //Find The missing number in a given array;
@@ -3294,5 +3294,33 @@ printVowel("hello");
   for(let i = 0; i<arr.length; i++){
     sum += arr[i];
   };
-  console.log(total - sum);
+  // console.log(total - sum);
+}
+{
+  // sort an array without using sort;
+  let arr = [5, 4, 3, 2, 1];
+  for(let i = 0; i<arr.length; i++){
+    for(let j = i + 1; j<arr.length; j++){
+      if(arr[i] > arr[j]){
+        let temp = arr[i];
+        arr[i] = arr[j]
+        arr[j] = temp;
+      };
+    };
+  };
+  console.log(arr);
+}
+{
+  let newArr = [200, 34, 56, 34, 2, 3,];
+  for(let i = 0; i<newArr.length; i++){
+    for(let j =i + 1; j<newArr.length; j++){
+      if(arr[i] < arr[i + 1]){
+        let temp =  arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      };
+    };
+  };
+  console.log(arr);
+  
 }

@@ -3685,12 +3685,22 @@ printVowel("hello");
 
 {
   // Write a function that adds two numbers and return result.
-  function checkEven() {
+  function add() {
     return 20 + 20;
   }
-  let value = checkEven();
-  console.log(value);
+  let value = add();
+  // console.log(value);
 }
 {
-  
+  // Write a function that takes a number and checks if its even or not;
+  let num = 10;
+  function checkEven() {
+    if(num % 2 === 0){
+      return "Even";
+    } else {
+      return "Odd";
+    };
+  };
+  let result = checkEven();
+  // console.log(result);
 }

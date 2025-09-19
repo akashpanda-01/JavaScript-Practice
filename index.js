@@ -3727,5 +3727,16 @@ printVowel("hello");
   };
   let val = number(10);
   // console.log(val);
-  
+}
+{
+  // Write a Function That takes an array and return the sum of its elements;
+  function arrSum(arr){
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++){
+      sum += arr[i]; 
+    };
+    return sum;
+  }
+  let result = arrSum([1,2,3]);
+  console.log(result);
 }

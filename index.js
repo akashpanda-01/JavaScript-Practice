@@ -3023,17 +3023,17 @@ printVowel("hello");
   // Using Arrow Function performing same task
   let countVowels = (str) => {
     let count = 0;
-    for(char of str){
-      if(
+    for (char of str) {
+      if (
         char === "a" ||
         char === "e" ||
         char === "i" ||
         char === "o" ||
         char === "u"
-      ){
+      ) {
         count++;
-      };
-    };
+      }
+    }
     // console.log(count);
   };
   // countVowels("Hello World")
@@ -3050,16 +3050,15 @@ printVowel("hello");
   let calculateSquare = (val) => {
     // console.log(val * val);
   };
-  num.forEach(calculateSquare)
+  num.forEach(calculateSquare);
 }
 // ===============Array==============
 {
   let arr = [2, 4, 5, 5];
-  let newArr = arr.map((printVal) =>{
+  let newArr = arr.map((printVal) => {
     return printVal;
   });
   // console.log(newArr);
-  
 }
 {
   // Print Even Numbers By using Filter Method
@@ -3077,21 +3076,21 @@ printVowel("hello");
   // greater Than 3
   let greatestOf3 = arr.filter((element) => {
     return element > 3;
-  })
+  });
   // console.log(greatestOf3);
 }
 {
   // create an array of fruits and print all elements pne by one using loop
   let arr = ["mango", "appel", "banana", "litchi"];
-  for(let el of arr){
+  for (let el of arr) {
     // console.log(el)
   }
 }
 {
   let arr = ["a", "b", "c", "d"];
-  for(let el of arr){
+  for (let el of arr) {
     // console.log(el);
-  };
+  }
 }
 {
   // Create an aary of fruits of numbers and print its length
@@ -3115,10 +3114,10 @@ printVowel("hello");
 }
 {
   // add a name at the begining using unshift
-  let nme = ["a", 'b', "c", "d", "e"];
+  let nme = ["a", "b", "c", "d", "e"];
   nme.unshift("ak");
   // console.log(nme);
-  
+
   // Remove first name using shift
   nme.shift(0);
   // console.log(nme);
@@ -3132,17 +3131,17 @@ printVowel("hello");
 {
   // Create if a given numer exists in an array or not using  incluede
   let arr = [1, 3, 4, 5, 6, 70];
-  if(arr.includes(4)){
+  if (arr.includes(4)) {
     // console.log(true);
   } else {
-    // console.log(false); 
+    // console.log(false);
   }
 }
 {
   // Find The Sum Of All numbers in an array using a for loop.
   let num = [1, 3, 4, 5, 5];
-  let sum= 0 ;
-  for(let el of num){
+  let sum = 0;
+  for (let el of num) {
     sum += el;
   }
   // console.log(sum);
@@ -3151,99 +3150,99 @@ printVowel("hello");
   //Find Largest Number form an array of number
   let arrNum = [2, 80, 5, 6, 30, 60];
   let largest = 0;
-  for(let i = 0; i<=arrNum.length; i++){
-    if(arrNum[i] > largest){
-      largest = arrNum[i]
-    };
-  };
+  for (let i = 0; i <= arrNum.length; i++) {
+    if (arrNum[i] > largest) {
+      largest = arrNum[i];
+    }
+  }
   // console.log(largest);
 }
 {
   // Reverse an array and print it , without using reverse() method
   let arr = [1, 3, 4, 5, 6, 7];
   let reverse = [];
-  for(let i = arr.length - 1; i>=0; i--){
-    reverse.push(arr[i])
-  };
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reverse.push(arr[i]);
+  }
   // console.log(reverse);
 }
 {
   // Remove Duplicate numbers rom a nn array manually
   let arr = [1, 1, 2, 2, 3, 4, 4];
   let clearDuplicate = [];
-  for(let i = 0; i<=arr.length; i++){
-    if(!clearDuplicate.includes(arr[i])){
-        clearDuplicate.push(arr[i])
-    };
-  };
+  for (let i = 0; i <= arr.length; i++) {
+    if (!clearDuplicate.includes(arr[i])) {
+      clearDuplicate.push(arr[i]);
+    }
+  }
   // console.log(clearDuplicate);
 }
 {
   // find missing number in an array.
   let arr = [1, 2, 3, 5, 6];
   let n = 6;
-  let total = n * (n + 1)/ 2;
+  let total = (n * (n + 1)) / 2;
   let sum = 0;
-  for(let i =0; i<arr.length; i++){
-    sum += arr[i]///;
-  };
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]; ///;
+  }
   let num = total - sum;
   // console.log(num);
 }
 {
   let arr = [1, 2, 3, 4, 5, 6];
   let largest = 0;
-  for(let i = 0; i<=arr.length; i++){
-    if(largest < arr[i]){
+  for (let i = 0; i <= arr.length; i++) {
+    if (largest < arr[i]) {
       largest = arr[i];
-    };
-  };
+    }
+  }
   // console.log(largest);
 }
 {
   // again doing reverse
   let arr = ["a", "b", "c", "d"];
   let reverse = [];
-  for(let i = arr.length - 1; i >= 0; i--){
+  for (let i = arr.length - 1; i >= 0; i--) {
     reverse.push(arr[i]);
-  };
+  }
   // console.log(reverse);
 }
 {
   // remove duplicate numbers from an array manually
   let arr = [1, 2, 2, 4, 5, 5];
   let duplicate = [];
-  for(let i = 0; i < arr.length; i++){
-    if(!duplicate.includes(arr[i])){
+  for (let i = 0; i < arr.length; i++) {
+    if (!duplicate.includes(arr[i])) {
       duplicate.push(arr[i]);
-    };
-  };
+    }
+  }
   // console.log(duplicate);
 }
 {
   let arr = [10, 20, 30, 40];
   let lar1 = 0;
   let lar2 = 0;
-  for(let i = 0; i<arr.length; i++){
-    if(arr[i] > lar1){
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > lar1) {
       lar2 = lar1;
       lar1 = arr[i];
-    };
-  };
+    }
+  }
   // console.log("largset =>", lar1, "SecondLargest =>",  lar2);
 }
 {
   let arr = [50, 30, 40, 20, 10];
   let largest = -Infinity;
   let secondLargest = -Infinity;
-  for(let i = 0; i<arr.length; i++){
-    if(arr[i] > largest){
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
       secondLargest = largest;
       largest = arr[i];
-    }else if(arr[i] > secondLargest && arr[i] !== largest){
+    } else if (arr[i] > secondLargest && arr[i] !== largest) {
       secondLargest = arr[i];
-    };
-  };
+    }
+  }
   // console.log(secondLargest);
 }
 {
@@ -3251,41 +3250,40 @@ printVowel("hello");
   let a = [1, 2, 3];
   let b = [4, 5, 6];
   let merged = [];
-  for(let i = 0; i < a.length; i++){
+  for (let i = 0; i < a.length; i++) {
     merged.push(a[i]);
-  };
-  for(let i = 0; i<b.length; i++){
+  }
+  for (let i = 0; i < b.length; i++) {
     merged.push(b[i]);
-  };
+  }
   // console.log(merged);
 }
 {
   // Count How Many Times each numbers appears in an array
-  let nums = [1, 2, 1 , 2, 3 , 4, 3];
+  let nums = [1, 2, 1, 2, 3, 4, 3];
   let count = {};
-  for(let i = 0; i <nums.length; i++){
+  for (let i = 0; i < nums.length; i++) {
     let num = nums[i];
-    if(count[num]){
+    if (count[num]) {
       count[num]++;
     } else {
       // count[num] = 1;
-    };
-  };
+    }
+  }
   // console.log(count);
 }
 {
   let arr = [1, 2, 4, 1, 3, 4, 2];
   let count = {};
-  for(let i = 0; i < arr.length; i++){
-    let num = arr[i]; 
-    if(count[num]){
+  for (let i = 0; i < arr.length; i++) {
+    let num = arr[i];
+    if (count[num]) {
       count[num]++;
       // console.log(count);
-      
     } else {
       count[num] = 1;
-    };
-  };
+    }
+  }
   // console.log(count);
 }
 {
@@ -3294,69 +3292,69 @@ printVowel("hello");
   let n = 6;
   let total = (n * (n + 1)) / 2;
   let sum = 0;
-  for(let i = 0; i<arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
-  };
+  }
   // console.log(total - sum);
 }
 {
   // sort an array without using sort;
   let arr = [5, 4, 3, 2, 1];
-  for(let i = 0; i<arr.length; i++){
-    for(let j = i + 1; j<arr.length; j++){
-      if(arr[i] > arr[j]){
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] > arr[j]) {
         let temp = arr[i];
-        arr[i] = arr[j]
+        arr[i] = arr[j];
         arr[j] = temp;
-      };
-    };
-  };
+      }
+    }
+  }
   // console.log(arr);
 }
 {
-  let newArr = [200, 34, 56, 34, 2, 3,];
-  for(let i = 0; i<newArr.length; i++){
-    for(let j =i + 1; j<newArr.length; j++){
+  let newArr = [200, 34, 56, 34, 2, 3];
+  for (let i = 0; i < newArr.length; i++) {
+    for (let j = i + 1; j < newArr.length; j++) {
       // if(arr[i] < arr[i + 1]){
-        // let temp =  arr[i];
+      // let temp =  arr[i];
       // };
-    };
-  };
+    }
+  }
 }
 {
   let arr = [1, 2, 1, 2, 3, 4, 4];
   let count = {};
-  for(let i = 0; i<arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     let num = arr[i];
-    if(count[num]){
-      count[num]++;   
+    if (count[num]) {
+      count[num]++;
     } else {
       count[num] = 1;
-    };
-  };
-//  console.log(count);
+    }
+  }
+  //  console.log(count);
 }
 {
   let arr = [1, 1, 1, 4, 5, 3, 3, 4, 5, 2, 2];
   let count = {};
-  for(let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     let num = arr[i];
-    if(count[num]){
+    if (count[num]) {
       count[num]++;
     } else {
       count[num] = 1;
-    };
-  };
+    }
+  }
   // console.log(count);
 }
 {
   let arr = [1, 2, 3, 5, 6, 7];
   let sum = 0;
   let n = 7;
-  let total = n * (n +  1)/2;
-  for(let i = 0; i<arr.length; i++){
+  let total = (n * (n + 1)) / 2;
+  for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
-  };
+  }
   let num = total - sum;
   arr.splice(3, 0, num);
   // console.log(arr);
@@ -3364,12 +3362,12 @@ printVowel("hello");
 {
   let arr = [1, 2, 3, 5, 6, 7];
   let n = 7;
-  let total = n * (n + 1) / 2;
+  let total = (n * (n + 1)) / 2;
   let sum = 0;
-  for(let i = 0; i<arr.length + 1; i++){
+  for (let i = 0; i < arr.length + 1; i++) {
     // "arr.length + 1" will give "NaN"
     sum += arr[i];
-  };
+  }
   let num = total - sum;
   arr.splice(3, 0, num);
   // console.log(arr);
@@ -3377,14 +3375,14 @@ printVowel("hello");
 {
   // Sort without using sort() method in an array
   let arr = [5, 4, 3, 2, 1];
-  for(let i = 0; i < arr.length; i++){
-    let acending ;
-    if(arr[i] > acending){
+  for (let i = 0; i < arr.length; i++) {
+    let acending;
+    if (arr[i] > acending) {
       acending.unshift(arr[i]);
-    };
+    }
     arr.shift();
     // console.log(acending);
-  };
+  }
 }
 {
   let arr = [5, 4, 3, 2, 1];
@@ -3397,147 +3395,146 @@ printVowel("hello");
         let temp = arr[j];
         arr[j] = arr[j + 1];
         arr[j + 1] = temp;
-      };
-    };
-  };
+      }
+    }
+  }
   // console.log(arr);
 }
 {
   let arr = [5, 4, 3, 2, 1];
   let n = arr.length;
-  for(let i =0; i < n ; i++) {
-    for(let j = 0; j < n - 1 -i; j++){
-      if(arr[j] > arr[j + 1]){
-        let temp = arr[j]
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n - 1 - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
         arr[j] = arr[j + 1];
         arr[j + 1] = temp;
-      };
-    };
-  };
+      }
+    }
+  }
   // console.log(arr);
 }
 {
   let arr = [5, 4, 3, 2, 1];
   let n = arr.length;
-  for(let i =0; i < n - 1 ; i++) {
-    if(arr[i] > arr[i+ 1]){
+  for (let i = 0; i < n - 1; i++) {
+    if (arr[i] > arr[i + 1]) {
       let temp = arr[i];
       arr[i] = arr[i + 1];
       arr[i + 1] = temp;
-    };
-  };
-  // console.log(arr); 
+    }
+  }
+  // console.log(arr);
 }
 {
   // Reverse Array without creating new array
   let arr = [1, 2, 3, 4, 5, 6];
-  for(let i = 0; i<arr.length / 2; i++){
+  for (let i = 0; i < arr.length / 2; i++) {
     let temp = arr[i];
-    arr[i] = arr[arr.length -1 -i];
-    arr[arr.length-1-i] = temp;
-  };
+    arr[i] = arr[arr.length - 1 - i];
+    arr[arr.length - 1 - i] = temp;
+  }
   // console.log(arr);
 }
 {
   // Remove duplicates
-  let arr =[1, 1, 2, 3, 4, 4, 3, 2];
+  let arr = [1, 1, 2, 3, 4, 4, 3, 2];
   let unique = [];
-  for(let i  = 0; i<arr.length; i++){
-    if(!unique.includes(arr[i])){
+  for (let i = 0; i < arr.length; i++) {
+    if (!unique.includes(arr[i])) {
       unique.push(arr[i]);
-    };
-  };
-  // console.log(unique); 
+    }
+  }
+  // console.log(unique);
 }
 {
   // find Second Largest numberin an array
   let arr = [10, 20, 30, 40];
   let largest = [];
   let secondLargest = [];
-  for(let i = 0; i< arr.length; i++){
-    if(largest < arr[i]){
+  for (let i = 0; i < arr.length; i++) {
+    if (largest < arr[i]) {
       let temp = arr[i];
       secondLargest = largest;
-      largest = temp
+      largest = temp;
     }
   }
   // console.log(largest, secondLargest);
-  
 }
 {
   // Merge Two arrays manually without concat;
-  let a = [1, 2, 3,];
+  let a = [1, 2, 3];
   let b = [4, 5, 6];
   let merge = [];
-  for(let i = 0; i < a.length; i++){
+  for (let i = 0; i < a.length; i++) {
     merge.push(a[i]);
-  };
-  for(let i = 0; i <b.length; i++){
-    merge.push(b[i])
+  }
+  for (let i = 0; i < b.length; i++) {
+    merge.push(b[i]);
   }
   // console.log(merge);
 }
 {
   // Count how many times each numbers appears in an array
-  let arr = [1, 1, 2, 3 , 2];
+  let arr = [1, 1, 2, 3, 2];
   let count = {};
-  for(let i = 0; i<arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     let num = arr[i];
-    if(count[num]){
+    if (count[num]) {
       count[num]++;
-    }else{
+    } else {
       count[num] = 1;
-    };
-  };
+    }
+  }
   // console.log(count);
 }
 {
   // In array Find The Missing Number .
   let arr = [1, 2, 3, 5, 6];
   let n = 6;
-  let total = n * (n + 1)/2;
+  let total = (n * (n + 1)) / 2;
   let sum = 0;
-  for(let i = 0; i<arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
-  };
+  }
   // console.log(total - sum);
 }
 {
   // Sort Array without using sort() method;
   let arr = [5, 3, 8, 1, 4];
-  for(let i = 0; i<arr.length; i++){
-    for(let j = i + 1; j < arr.length; j++){
-      if(arr[i] > arr[j]){
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] > arr[j]) {
         let temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
-      };
-    };
-  };
+      }
+    }
+  }
   // console.log(arr);
   // console.log(arr);
 }
 {
   // Reverse Array without creating new array
   let arr = [1, 2, 3, 4, 5, 6];
-  for(let i = arr.length - 1; i > 0; i--){
-    for(let j = 0; j < i; j++){
-      if(arr[i] > arr[j - 1]){
-      let temp = arr[i];
-      arr[i] = arr[j - 1];
-      arr[j- 1] = temp;
-      };
-    };
+  for (let i = arr.length - 1; i > 0; i--) {
+    for (let j = 0; j < i; j++) {
+      if (arr[i] > arr[j - 1]) {
+        let temp = arr[i];
+        arr[i] = arr[j - 1];
+        arr[j - 1] = temp;
+      }
+    }
     // console.log(arr);
-  };
+  }
 }
 {
   // Reverse Array without creating new array
   let arr = [1, 2, 3, 4, 5, 6];
-  for(let i = 0; i < arr.length / 2; i++){
+  for (let i = 0; i < arr.length / 2; i++) {
     let temp = arr[i];
-    arr[i] = arr[arr.length - 1 -i];
-    arr[arr.length-1-i] = temp;
+    arr[i] = arr[arr.length - 1 - i];
+    arr[arr.length - 1 - i] = temp;
   }
   // console.log(arr);
 }
@@ -3545,41 +3542,41 @@ printVowel("hello");
   // find The Even Numbers , Create a new array that contains only the even numbers
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   let evenNums = [];
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i] % 2 === 0){
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
       evenNums.push(arr[i]);
-    };
-  };
+    }
+  }
   // console.log(evenNums);
 }
 {
   // Find Maximum and Minimum numbers in an array
-  let arr = [10, 2, 23, 12 , 111];
+  let arr = [10, 2, 23, 12, 111];
   let min = arr[0];
   let max = arr[0];
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i] > max){
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
       max = arr[i];
-    };
-    if(arr[i] < min){
+    }
+    if (arr[i] < min) {
       min = arr[i];
-    };
-  };
+    }
+  }
   // console.log(max, min);
 }
 {
   // Count Even and Odd Numbers  in a given array;
-  let num = [ 1, 2, 3, 4, 5, 6, 7, 8,  9];
+  let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let oddCount = 0;
   let evenCount = 0;
-  for(let i = 0; i<num.length; i++){
-    if(num[i] % 2 === 0){
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] % 2 === 0) {
       evenCount++;
-    };
-    if(num[i] % 2 !== 0){
+    }
+    if (num[i] % 2 !== 0) {
       oddCount++;
-    };
-  };
+    }
+  }
   // console.log("Even Count =>", evenCount, "Odd Count =>", oddCount);
 }
 {
@@ -3593,24 +3590,24 @@ printVowel("hello");
   let arr1 = [1, 3, 5, 6];
   let arr2 = [1, 2, 3, 5];
   let common = [];
-  for(let i = 0; i<arr1.length; i++){
-    for(let j = 0; j<arr2.length; j++){
-      if(arr1[i] === arr2[j]){
-        common.push(arr1[i])
-      };
-    };
-  };
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        common.push(arr1[i]);
+      }
+    }
+  }
   // console.log(common);
 }
 {
   // find the first duplicate element that appears in an arrray
   let arr = [1, 1, 2, 3, 3, 2];
   let duplicate = [];
-  for(let i = 0; i<arr.length; i++){
-    if(!duplicate.includes(arr[i])){
+  for (let i = 0; i < arr.length; i++) {
+    if (!duplicate.includes(arr[i])) {
       duplicate.push(arr[i]);
     }
-  };
+  }
   // console.log(duplicate);
 }
 {
@@ -3618,13 +3615,13 @@ printVowel("hello");
   let arr = [1, 2, 2, 3, 1, 2, 3];
   let seen = [];
   let duplicate = null;
-  for(let i = 0; i<arr.length; i++){
-    if(seen.includes(arr[i])){
+  for (let i = 0; i < arr.length; i++) {
+    if (seen.includes(arr[i])) {
       duplicate = arr[i];
       break;
-    };
+    }
     seen.push(arr[i]);
-  };
+  }
   // console.log(duplicate);
 }
 {
@@ -3632,25 +3629,25 @@ printVowel("hello");
   // [1, 2, 3, 4, 5] rotated by 2 -> [4, 5, 1, 2, 3]
   let arr = [1, 2, 3, 4, 5];
   let k = 2;
-  for(let i = 0; i < k; i++){
+  for (let i = 0; i < k; i++) {
     let last = arr.pop();
     arr.unshift(last);
-  };
+  }
   // console.log(arr);
 }
 {
   // Write a program to check wether an array is sorted in asending order or not
   let arr = [1, 3, 2, 5, 4];
-  for(let i = 0; i < arr.length - 1; i++){
-    if(arr[i] > arr[i + 1]){
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i + 1]) {
       // console.log("arr not sorted");
       // let temp = arr[i];
       // arr[i] = arr[i + 1];
-      // arr[i + 1] = temp;      
+      // arr[i + 1] = temp;
     } else {
       // console.log("arr sorted");
-    };
-  };
+    }
+  }
   // console.log(arr);
 }
 {
@@ -3658,30 +3655,41 @@ printVowel("hello");
   let arr = [1, 2, 1, 2, 3, 4, 2, 3, 4];
   let num = [];
   let duplicate = [];
-  for(let i = 0; i < arr.length; i++){
-    if(!num.includes(arr[i])){
+  for (let i = 0; i < arr.length; i++) {
+    if (!num.includes(arr[i])) {
       num.push(arr[i]);
-    } else if(!duplicate.includes(arr[i])) {
+    } else if (!duplicate.includes(arr[i])) {
       duplicate.push(arr[i]);
-    };
-  };
+    }
+  }
   // console.log(duplicate);
 }
 {
   // Given a nested array like  [1, [2, [3, 4]], 5] flatten it into [1, 2, 3, 4, 5].
-  function flattenArray (arr){
+  function flattenArray(arr) {
     let result = [];
-    for(let i =0; i < arr.length; i++){
+    for (let i = 0; i < arr.length; i++) {
       let element = arr[i];
-      if(Array.isArray(element)){
+      if (Array.isArray(element)) {
         result = result.concat(flattenArray(element));
       } else {
         result.push(arr[i]);
-      };
-    };
+      }
+    }
     return result;
-  };
+  }
   // console.log(flattenArray( [1, [2, [3, 4]], 5]));
+}
+
+// ========================== FUNCTION ===========================
+
+{
+  // Write a function that adds two numbers and return result.
+  function checkEven() {
+    return 20 + 20;
+  }
+  let value = checkEven();
+  console.log(value);
 }
 {
   

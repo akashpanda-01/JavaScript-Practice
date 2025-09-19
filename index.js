@@ -3711,7 +3711,7 @@ printVowel("hello");
     return nme += " Akash";
   };
   let result = name();
-  console.log(result);
+  // console.log(result);
 }
 {
   function name(nme){
@@ -3719,4 +3719,13 @@ printVowel("hello");
   };
   let val = name("Hello World");
   console.log(val);
+}
+{
+  // Write a Function That find Square OF a Number.
+  function number(num){
+    // return num * num;
+  };
+  let val = number(10);
+  // console.log(val);
+  
 }

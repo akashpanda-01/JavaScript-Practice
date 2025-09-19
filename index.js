@@ -3704,3 +3704,19 @@ printVowel("hello");
   let result = checkEven();
   // console.log(result);
 }
+{
+  // Write a function that takes a name and prints "Hello <name>";
+  let nme = "Hello";
+  function name(){
+    return nme += " Akash";
+  };
+  let result = name();
+  console.log(result);
+}
+{
+  function name(nme){
+    return nme;
+  };
+  let val = name("Hello World");
+  console.log(val);
+}

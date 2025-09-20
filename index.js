@@ -3840,7 +3840,7 @@ printVowel("hello");
     return vowels;
   };
   let countVowels = checkVowels("seeetring");
-  console.log(countVowels);
+  // console.log(countVowels);
 }
 {
   function countVwl(string){
@@ -3854,5 +3854,33 @@ printVowel("hello");
     return vowels;
   };
   let count = countVwl("string");
-  console.log(count);
+  // console.log(count);
+}
+{
+  // Write a function that takes an array and return only the even numbers;
+  function findEven(array){
+    let returnEven = [];
+      for(let value of array){
+        if(value % 2 === 0){
+          returnEven.push(value);
+        };
+      };
+    return returnEven;
+  };
+  let even = findEven([2, 3, 4, 5]);
+  console.log(even);
+}
+{
+  // Write a function that takes an array and return only the even numbers;
+  function findEven(array){
+    let returnEven = "";
+      for(let value of array){
+        if(value % 2 === 0){
+          returnEven += value + " ";
+        };
+      };
+    return returnEven;
+  };
+  let even = findEven([2, 3, 4, 5]);
+  console.log(even);
 }

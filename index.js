@@ -3897,5 +3897,14 @@ printVowel("hello");
     };
   };
   let check = isPalindrome(121);
-  console.log(check);
+  // console.log(check);
+}
+{
+  // FOr given Array of Numbers Print The square of each value using the forEach Loop.
+  let arr = [2, 3, 4, 5];
+  arr.forEach((val) => {
+    // console.log(val ** 2);
+    // console.log(val * val);
+    // console.log(Math.pow(val, 2));
+  })
 }

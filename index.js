@@ -3816,3 +3816,15 @@ printVowel("hello");
   }
   findFactoral(5);
 }
+{
+  // Write a function that takes two numbes and returns the greater one.
+  function findGreater(num1, num2){
+    if(num1 > num2){
+      return num1;
+    } else {
+      return num2;
+    };
+  };
+  let greater = findGreater(2 , 3);
+  // console.log(greater);
+}

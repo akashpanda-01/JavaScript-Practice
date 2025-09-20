@@ -3868,7 +3868,7 @@ printVowel("hello");
     return returnEven;
   };
   let even = findEven([2, 3, 4, 5]);
-  console.log(even);
+  // console.log(even);
 }
 {
   // Write a function that takes an array and return only the even numbers;
@@ -3882,5 +3882,20 @@ printVowel("hello");
     return returnEven;
   };
   let even = findEven([2, 3, 4, 5]);
-  console.log(even);
+  // console.log(even);
+}
+{
+  // Write a Function to check if a number or string is a palindrome.
+  function isPalindrome(val){
+    let str = val.toString();
+    let reverse = "";
+    for(let i = str.length-1; i >= 0; i--){
+      reverse += str[i]
+    };
+    if(str === reverse){
+      return reverse;
+    };
+  };
+  let check = isPalindrome(121);
+  console.log(check);
 }

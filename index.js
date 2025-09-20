@@ -3805,3 +3805,14 @@ printVowel("hello");
   let reverseString = (str) => str.split("").reverse().join("");
   // console.log(reverseString("Hello"));
 }
+{
+  // Write a Function That takes a number and returns its factorial.
+  function findFactoral(num){
+    let factorial = 1;
+    for(let i = num; i >= 1; i--){
+      factorial *= i;
+    };
+    // console.log(factorial);
+  }
+  findFactoral(5);
+}

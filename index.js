@@ -3718,7 +3718,7 @@ printVowel("hello");
     return nme;
   };
   let val = name("Hello World");
-  console.log(val);
+  // console.log(val);
 }
 {
   // Write a Function That find Square OF a Number.
@@ -3738,5 +3738,70 @@ printVowel("hello");
     return sum;
   }
   let result = arrSum([1,2,3]);
-  console.log(result);
+  // console.log(result);
+}
+{
+  // Write a Function that reverses a string
+  function reverse(str){
+    let rev = str.split("").reverse().join();
+    // console.log(rev);
+  }
+  reverse("hello");
+}
+{
+  // With Reduce() Method
+  function reverseStr(str) {
+    let reverse = str.split("").reduce((acc, crr) => crr + acc, '');
+    // console.log(reverse);
+  }
+  reverseStr("Hello")
+}
+{
+  // With For Loop
+  function reverseStr(str){
+    let reverse = "";
+    for(let i = str.length - 1; i >= 0; i--){
+      reverse += str[i]; 
+    };
+    // console.log(reverse);
+  };
+  reverseStr("Hello");
+}
+{
+  // With Arrsy From
+  function reverseStr(str){
+    let reverse = Array.from(str).reverse().join("");
+    // console.log(reverse);
+  };
+  reverseStr("Hello");
+}
+{
+  function reverseStr(str){
+    let reverse = "";
+    for(let char of str){
+      reverse = char + reverse;
+    };
+    // console.log(reverse);
+  }
+  reverseStr("Hello");
+}
+{
+  // Spred Operator Mehtod;
+  function reverseStr(str){
+    let reverse = [...str].reverse().join("");
+    // console.log(reverse);
+  };
+  reverseStr("Hello")
+}
+{
+  // Recursion Method
+  function reverseStr(str){
+    if(str === "") return "";
+    return reverseStr(str.substr(1)) + str[0];
+  }
+  // console.log(reverseStr("Hello"));
+}
+{
+  let reverseString = (str) => str.split("").reverse().join("");
+  // console.log(reverseString("Hello"));
 }

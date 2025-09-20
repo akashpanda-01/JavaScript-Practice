@@ -3828,3 +3828,31 @@ printVowel("hello");
   let greater = findGreater(2 , 3);
   // console.log(greater);
 }
+{
+  // Write a Function that takes a string and retruns how mnay vowels are in it ?
+  function checkVowels(string){
+    let vowels = 0;
+    for(let str of string.toLowerCase()){
+      if(str === "a" || str === "e" || str === "i" || str === "o" || str === "u"){
+        vowels++
+      };
+    };
+    return vowels;
+  };
+  let countVowels = checkVowels("seeetring");
+  console.log(countVowels);
+}
+{
+  function countVwl(string){
+    let vowels = 0;
+    let vowelsList = "aeiou";
+    for(let str of string.toLowerCase()){
+      if(vowelsList.includes(str)){
+        vowels++
+      };
+    };
+    return vowels;
+  };
+  let count = countVwl("string");
+  console.log(count);
+}

@@ -3925,5 +3925,20 @@ printVowel("hello");
     };
     return prime;
   };
-  console.log(getPrime([1,2, 3, 4, 5, 6, 7, 8, 9]));
+  // console.log(getPrime([1,2, 3, 4, 5, 6, 7, 8, 9]));
+}
+{
+  // Recursive Factorial
+  function factorial(n){
+    if(n === 0 || n === 1) return 1;
+    return n * factorial(n -1);
+  };
+  // console.log(factorial(5));
+}
+{
+  function recursionMethod(n){
+    if(n === 0 || n === 1) return 1;
+    return n * recursionMethod(n -1);
+  };
+  // console.log(recursionMethod(5));
 }

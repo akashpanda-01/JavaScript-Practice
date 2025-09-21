@@ -3908,3 +3908,22 @@ printVowel("hello");
     // console.log(Math.pow(val, 2));
   })
 }
+{
+  // Find Prime Number In array
+  function getPrime(arr){
+    let prime = [];;
+    for(let num of arr){
+      if(num < 2) continue;
+      let isPrime = true;
+      for(let i = 0; i < Math.sqrt(num); i++){
+        if(num % 2 === 0){
+          isPrime = false;
+          break;
+        };
+      };
+      if(isPrime) prime.push(num);
+    };
+    return prime;
+  };
+  console.log(getPrime([1,2, 3, 4, 5, 6, 7, 8, 9]));
+}

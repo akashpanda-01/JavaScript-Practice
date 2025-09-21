@@ -3973,5 +3973,16 @@ printVowel("hello");
     return result;
   };
   let finalRes = flattenArray([1, [2, [3, 4],5], 6]);
-  console.log(finalRes);
+  // console.log(finalRes);
+}
+{
+  // Count Occurrence of Each Element.
+  function countOccurrancce(arr){
+    let  count = {};
+    for(let num of arr){
+      count[num] = (count[num] || 0) + 1;
+    };
+    return count;
+  }
+  // console.log(countOccurrancce([1, 2, 2, 3, 1, 4, 1]));
 }

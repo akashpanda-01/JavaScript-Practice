@@ -3942,3 +3942,36 @@ printVowel("hello");
   };
   // console.log(recursionMethod(5));
 }
+{
+  // Find Second Largest Number in Array
+  function findSecNum(array){
+    let largest = -Infinity;
+    let secondLargest = -Infinity;
+    for(let num of array){
+        if(num > largest){
+          secondLargest = largest;
+          largest = num;
+        }else if(num > secondLargest && num !== largest){
+          secondLargest = num;
+        }
+    };
+    console.log(secondLargest);
+  };
+  findSecNum([1,2,3, 5, 4])
+}
+{
+  // Flatten Nested Array
+  function flattenArray(arr){
+    let result = [];
+    for(let el of arr){
+      if(Array.isArray(el)){
+        result = result.concat(flattenArray(el));
+      } else {
+        result.push(el);
+      };
+    };
+    return result;
+  };
+  let finalRes = flattenArray([1, [2, [3, 4],5], 6]);
+  console.log(finalRes);
+}

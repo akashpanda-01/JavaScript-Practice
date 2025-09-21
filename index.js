@@ -3955,7 +3955,7 @@ printVowel("hello");
           secondLargest = num;
         }
     };
-    console.log(secondLargest);
+    // console.log(secondLargest);
   };
   findSecNum([1,2,3, 5, 4])
 }
@@ -3985,4 +3985,13 @@ printVowel("hello");
     return count;
   }
   // console.log(countOccurrancce([1, 2, 2, 3, 1, 4, 1]));
+}
+{
+  // Fibbonacci Series Using Recursion
+  function fibbonacci(num){
+    if(num === 0) return 0;
+    if(num === 1) return 1;
+    return fibbonacci(num - 1) + fibbonacci(num - 2);
+  };
+  // console.log(fibbonacci(7));
 }

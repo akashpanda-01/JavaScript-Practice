@@ -4127,18 +4127,22 @@ printVowel("hello");
   //   });
 
   saveToDb("Apan College")
-  .then(() => {
+  .then((result) => {
     console.log("Data1 Saved");
+    console.log(result);
     return saveToDb("Hello World");
   })
-  .then(() => {
+  .then((result) => {
       console.log("Data2 Saved");
+      console.log(result);
       return saveToDb("Hello Ak");
   })
-  .then(() => {
+  .then((result) => {
     console.log("Data3 Saved");
+    console.log(result);
   })
-  .catch(() => {
+  .catch((error) => {
+    console.log(error);
     console.log("Promise Rejected");
   })
 }

@@ -3695,54 +3695,54 @@ printVowel("hello");
   // Write a function that takes a number and checks if its even or not;
   let num = 10;
   function checkEven() {
-    if(num % 2 === 0){
+    if (num % 2 === 0) {
       return "Even";
     } else {
       return "Odd";
-    };
-  };
+    }
+  }
   let result = checkEven();
   // console.log(result);
 }
 {
   // Write a function that takes a name and prints "Hello <name>";
   let nme = "Hello";
-  function name(){
-    return nme += " Akash";
-  };
+  function name() {
+    return (nme += " Akash");
+  }
   let result = name();
   // console.log(result);
 }
 {
-  function name(nme){
+  function name(nme) {
     return nme;
-  };
+  }
   let val = name("Hello World");
   // console.log(val);
 }
 {
   // Write a Function That find Square OF a Number.
-  function number(num){
+  function number(num) {
     // return num * num;
-  };
+  }
   let val = number(10);
   // console.log(val);
 }
 {
   // Write a Function That takes an array and return the sum of its elements;
-  function arrSum(arr){
+  function arrSum(arr) {
     let sum = 0;
-    for(let i = 0; i < arr.length; i++){
-      sum += arr[i]; 
-    };
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
     return sum;
   }
-  let result = arrSum([1,2,3]);
+  let result = arrSum([1, 2, 3]);
   // console.log(result);
 }
 {
   // Write a Function that reverses a string
-  function reverse(str){
+  function reverse(str) {
     let rev = str.split("").reverse().join();
     // console.log(rev);
   }
@@ -3751,52 +3751,52 @@ printVowel("hello");
 {
   // With Reduce() Method
   function reverseStr(str) {
-    let reverse = str.split("").reduce((acc, crr) => crr + acc, '');
+    let reverse = str.split("").reduce((acc, crr) => crr + acc, "");
     // console.log(reverse);
   }
-  reverseStr("Hello")
+  reverseStr("Hello");
 }
 {
   // With For Loop
-  function reverseStr(str){
+  function reverseStr(str) {
     let reverse = "";
-    for(let i = str.length - 1; i >= 0; i--){
-      reverse += str[i]; 
-    };
+    for (let i = str.length - 1; i >= 0; i--) {
+      reverse += str[i];
+    }
     // console.log(reverse);
-  };
+  }
   reverseStr("Hello");
 }
 {
   // With Arrsy From
-  function reverseStr(str){
+  function reverseStr(str) {
     let reverse = Array.from(str).reverse().join("");
     // console.log(reverse);
-  };
+  }
   reverseStr("Hello");
 }
 {
-  function reverseStr(str){
+  function reverseStr(str) {
     let reverse = "";
-    for(let char of str){
+    for (let char of str) {
       reverse = char + reverse;
-    };
+    }
     // console.log(reverse);
   }
   reverseStr("Hello");
 }
 {
   // Spred Operator Mehtod;
-  function reverseStr(str){
+  function reverseStr(str) {
     let reverse = [...str].reverse().join("");
     // console.log(reverse);
-  };
-  reverseStr("Hello")
+  }
+  reverseStr("Hello");
 }
 {
   // Recursion Method
-  function reverseStr(str){
-    if(str === "") return "";
+  function reverseStr(str) {
+    if (str === "") return "";
     return reverseStr(str.substr(1)) + str[0];
   }
   // console.log(reverseStr("Hello"));
@@ -3807,95 +3807,101 @@ printVowel("hello");
 }
 {
   // Write a Function That takes a number and returns its factorial.
-  function findFactoral(num){
+  function findFactoral(num) {
     let factorial = 1;
-    for(let i = num; i >= 1; i--){
+    for (let i = num; i >= 1; i--) {
       factorial *= i;
-    };
+    }
     // console.log(factorial);
   }
   findFactoral(5);
 }
 {
   // Write a function that takes two numbes and returns the greater one.
-  function findGreater(num1, num2){
-    if(num1 > num2){
+  function findGreater(num1, num2) {
+    if (num1 > num2) {
       return num1;
     } else {
       return num2;
-    };
-  };
-  let greater = findGreater(2 , 3);
+    }
+  }
+  let greater = findGreater(2, 3);
   // console.log(greater);
 }
 {
   // Write a Function that takes a string and retruns how mnay vowels are in it ?
-  function checkVowels(string){
+  function checkVowels(string) {
     let vowels = 0;
-    for(let str of string.toLowerCase()){
-      if(str === "a" || str === "e" || str === "i" || str === "o" || str === "u"){
-        vowels++
-      };
-    };
+    for (let str of string.toLowerCase()) {
+      if (
+        str === "a" ||
+        str === "e" ||
+        str === "i" ||
+        str === "o" ||
+        str === "u"
+      ) {
+        vowels++;
+      }
+    }
     return vowels;
-  };
+  }
   let countVowels = checkVowels("seeetring");
   // console.log(countVowels);
 }
 {
-  function countVwl(string){
+  function countVwl(string) {
     let vowels = 0;
     let vowelsList = "aeiou";
-    for(let str of string.toLowerCase()){
-      if(vowelsList.includes(str)){
-        vowels++
-      };
-    };
+    for (let str of string.toLowerCase()) {
+      if (vowelsList.includes(str)) {
+        vowels++;
+      }
+    }
     return vowels;
-  };
+  }
   let count = countVwl("string");
   // console.log(count);
 }
 {
   // Write a function that takes an array and return only the even numbers;
-  function findEven(array){
+  function findEven(array) {
     let returnEven = [];
-      for(let value of array){
-        if(value % 2 === 0){
-          returnEven.push(value);
-        };
-      };
+    for (let value of array) {
+      if (value % 2 === 0) {
+        returnEven.push(value);
+      }
+    }
     return returnEven;
-  };
+  }
   let even = findEven([2, 3, 4, 5]);
   // console.log(even);
 }
 {
   // Write a function that takes an array and return only the even numbers;
-  function findEven(array){
+  function findEven(array) {
     let returnEven = "";
-      for(let value of array){
-        if(value % 2 === 0){
-          returnEven += value + " ";
-        };
-      };
+    for (let value of array) {
+      if (value % 2 === 0) {
+        returnEven += value + " ";
+      }
+    }
     return returnEven;
-  };
+  }
   let even = findEven([2, 3, 4, 5]);
   // console.log(even);
 }
 {
   // Write a Function to check if a number or string is a palindrome.
-  function isPalindrome(val){
+  function isPalindrome(val) {
     let str = val.toString();
     let reverse = "";
-    for(let i = str.length-1; i >= 0; i--){
-      reverse += str[i]
-    };
-    if(str === reverse){
+    for (let i = str.length - 1; i >= 0; i--) {
+      reverse += str[i];
+    }
+    if (str === reverse) {
       return reverse;
-    };
-  };
+    }
+  }
   let check = isPalindrome(121);
   // console.log(check);
 }
@@ -3906,95 +3912,189 @@ printVowel("hello");
     // console.log(val ** 2);
     // console.log(val * val);
     // console.log(Math.pow(val, 2));
-  })
+  });
 }
-<<<<<<< HEAD
-=======
 {
   // Find Prime Number In array
-  function getPrime(arr){
-    let prime = [];;
-    for(let num of arr){
-      if(num < 2) continue;
+  function getPrime(arr) {
+    let prime = [];
+    for (let num of arr) {
+      if (num < 2) continue;
       let isPrime = true;
-      for(let i = 0; i < Math.sqrt(num); i++){
-        if(num % 2 === 0){
+      for (let i = 0; i < Math.sqrt(num); i++) {
+        if (num % 2 === 0) {
           isPrime = false;
           break;
-        };
-      };
-      if(isPrime) prime.push(num);
-    };
+        }
+      }
+      if (isPrime) prime.push(num);
+    }
     return prime;
-  };
+  }
   // console.log(getPrime([1,2, 3, 4, 5, 6, 7, 8, 9]));
 }
 {
   // Recursive Factorial
-  function factorial(n){
-    if(n === 0 || n === 1) return 1;
-    return n * factorial(n -1);
-  };
+  function factorial(n) {
+    if (n === 0 || n === 1) return 1;
+    return n * factorial(n - 1);
+  }
   // console.log(factorial(5));
 }
 {
-  function recursionMethod(n){
-    if(n === 0 || n === 1) return 1;
-    return n * recursionMethod(n -1);
-  };
+  function recursionMethod(n) {
+    if (n === 0 || n === 1) return 1;
+    return n * recursionMethod(n - 1);
+  }
   // console.log(recursionMethod(5));
 }
 {
   // Find Second Largest Number in Array
-  function findSecNum(array){
+  function findSecNum(array) {
     let largest = -Infinity;
     let secondLargest = -Infinity;
-    for(let num of array){
-        if(num > largest){
-          secondLargest = largest;
-          largest = num;
-        }else if(num > secondLargest && num !== largest){
-          secondLargest = num;
-        }
-    };
+    for (let num of array) {
+      if (num > largest) {
+        secondLargest = largest;
+        largest = num;
+      } else if (num > secondLargest && num !== largest) {
+        secondLargest = num;
+      }
+    }
     // console.log(secondLargest);
-  };
-  findSecNum([1,2,3, 5, 4])
+  }
+  findSecNum([1, 2, 3, 5, 4]);
 }
 {
   // Flatten Nested Array
-  function flattenArray(arr){
+  function flattenArray(arr) {
     let result = [];
-    for(let el of arr){
-      if(Array.isArray(el)){
+    for (let el of arr) {
+      if (Array.isArray(el)) {
         result = result.concat(flattenArray(el));
       } else {
         result.push(el);
-      };
-    };
+      }
+    }
     return result;
-  };
-  let finalRes = flattenArray([1, [2, [3, 4],5], 6]);
+  }
+  let finalRes = flattenArray([1, [2, [3, 4], 5], 6]);
   // console.log(finalRes);
 }
 {
   // Count Occurrence of Each Element.
-  function countOccurrancce(arr){
-    let  count = {};
-    for(let num of arr){
+  function countOccurrancce(arr) {
+    let count = {};
+    for (let num of arr) {
       count[num] = (count[num] || 0) + 1;
-    };
+    }
     return count;
   }
   // console.log(countOccurrancce([1, 2, 2, 3, 1, 4, 1]));
 }
 {
   // Fibbonacci Series Using Recursion
-  function fibbonacci(num){
-    if(num === 0) return 0;
-    if(num === 1) return 1;
+  function fibbonacci(num) {
+    if (num === 0) return 0;
+    if (num === 1) return 1;
     return fibbonacci(num - 1) + fibbonacci(num - 2);
-  };
+  }
   // console.log(fibbonacci(7));
 }
->>>>>>> 45eb518f07fb5154ed2956d49fb6674a4bc887e2
+{
+  // FUNCTION CALL BACK HELL
+  // function one(){
+  //     return 1;
+  //   };
+  //   function two(){
+  //     return one() + one();
+  //   };
+  //   function three(){
+  //     let ans = two() + one();
+  //     console.log(ans);
+  //   };
+  //   three();
+  // h1 = document.querySelector("h1");
+  // function changeColor(color, delay, nextChangeColor) {
+  //   setTimeout(() => {
+  //     h1.style.color = color;
+  //     if (nextChangeColor) nextChangeColor();
+  //   }, delay);
+  // }
+  // changeColor("red", 1000, () => {
+  //   changeColor("blue", 1000, () => {
+  //     changeColor("green", 1000, () => {
+  //       changeColor("orange", 1000, () => {
+  //         changeColor("red", 1000);
+  //       });
+  //     });
+  //   });
+  // });
+}
+{
+  // A CALLBACK FOR PROMISE
+  // function saveToDb(data, success, failure) {
+  //   let internetSpeed = Math.floor(Math.random() * 10) + 1;
+  //   if (internetSpeed > 4) {
+  //     success();
+  //   } else {
+  //     failure();
+  //   }
+  // }
+  //   saveToDb(
+  //     "Data1",
+  //     () => {
+  //       console.log("success : Your data was saved");
+  //       saveToDb(
+  //         "Data2",
+  //         () => {
+  //           console.log("Success: Your Data2 Was Saved");
+  //           saveToDb(
+  //             "Data3",
+  //             () => {
+  //               console.log("Success: Your Data3 Was Saved");
+  //             },
+  //             () => {
+  //               console.log("Failure: Weak Connection, Data3 Not Saved");
+  //             }
+  //           );
+  //         },
+  //         () => {
+  //           console.log("failure: Weak Connection, Data2 Not Saved");
+  //         }
+  //       );
+  //     },
+  //     () => {
+  //       console.log("failure: Weak Connection, Data Not Saved");
+  //     }
+  //   );
+  // }
+}
+{
+  function saveToDb() {
+    return new Promise((resolve, reject) => {
+      let internetSpeed = Math.floor(Math.random() * 10) + 1;
+      if (internetSpeed > 4) {
+        resolve("Successs State");
+      } else {
+        reject("Reject State");
+      }
+    });
+  }
+  // let request = saveToDb("Hello World")
+  // request
+  //   .then(() => {
+  //     console.log(request, "Success");
+  //   })
+  //   .catch(() => {
+  //     console.log(request, "reject");
+  //   });
+
+  // saveToDb("Hello World")
+  //   .then(() => {
+  //     console.log("Success");
+  //   })
+  //   .catch(() => {
+  //     console.log("Reject");
+  //   });
+}

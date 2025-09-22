@@ -4098,51 +4098,91 @@ printVowel("hello");
   //   });
 }
 
+// {
+// PROMISE CHANINIG
+// function saveToDb(data) {
+//   return new Promise((resolve, reject) => {
+//     let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//     if (internetSpeed > 4) {
+//       resolve("Success State");
+//     } else {
+//       reject("Reject State");
+//     }
+//   });
+// }
+// saveToDb("hello World")
+//   .then(() => {
+//     console.log("data1 saved");
+//     saveToDb("Hello")
+//     .then(() => {
+//       console.log("data2 saved");
+//       saveToDb("Hello World")
+//       .then(() => {
+//         console.log("data3 saved");
+//       });
+//     });
+//   })
+//   .catch(() => {
+//     console.log("Promise Was Rejected");
+//   });
+
+// saveToDb("Apan College")
+// .then((result) => {
+//   console.log("Data1 Saved");
+//   console.log(result);
+//   return saveToDb("Hello World");
+// })
+// .then((result) => {
+//     console.log("Data2 Saved");
+//     console.log(result);
+//     return saveToDb("Hello Ak");
+// })
+// .then((result) => {
+//   console.log("Data3 Saved");
+//   console.log(result);
+// })
+// .catch((error) => {
+//   console.log(error);
+//   console.log("Promise Rejected");
+// })
+// }
+
 {
-  // PROMISE CHANINIG
-  function saveToDb(data) {
+  let h1 = document.querySelector("h1");
+  function changeColor(color, delay) {
     return new Promise((resolve, reject) => {
-      let internetSpeed = Math.floor(Math.random() * 10) + 1;
-      if (internetSpeed > 4) {
-        resolve("Success State");
-      } else {
-        reject("Reject State");
-      }
+      setTimeout(() => {
+        let random = Math.floor(Math.random() * 10) + 1;
+        if (random < 3) {
+          reject("Internet Slow to Change Color");
+        } else {
+          h1.style.color = color;
+          resolve("Color Changed to: " + color);
+        }
+        // if(!color){
+        //   rej("No Color Provided");
+        // }else {
+        //   h1.style.color = color;
+        //   rel("Color Changed");
+        // }
+      }, delay);
     });
   }
-  // saveToDb("hello World")
-  //   .then(() => {
-  //     console.log("data1 saved");
-  //     saveToDb("Hello")
-  //     .then(() => {
-  //       console.log("data2 saved");
-  //       saveToDb("Hello World")
-  //       .then(() => {
-  //         console.log("data3 saved");
-  //       });
-  //     });
-  //   })
-  //   .catch(() => {
-  //     console.log("Promise Was Rejected");
-  //   });
 
-  saveToDb("Apan College")
-  .then((result) => {
-    console.log("Data1 Saved");
-    console.log(result);
-    return saveToDb("Hello World");
-  })
-  .then((result) => {
-      console.log("Data2 Saved");
+  changeColor("red", 1000)
+    .then((result) => {
       console.log(result);
-      return saveToDb("Hello Ak");
-  })
-  .then((result) => {
-    console.log("Data3 Saved");
-    console.log(result);
-  })
-  .catch((error) => {
-    console.log(error);
-    console.log("Promise Rejected");
-  })
+      return changeColor("blue", 1000);
+    })
+    .then((result) => {
+      console.log(result);
+      return changeColor("green", 1000);
+    })
+    .then((result) => {
+      console.log(result);
+      return changeColor("orange", 1000);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 }

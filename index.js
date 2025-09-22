@@ -4071,16 +4071,16 @@ printVowel("hello");
   // }
 }
 {
-  function saveToDb() {
-    return new Promise((resolve, reject) => {
-      let internetSpeed = Math.floor(Math.random() * 10) + 1;
-      if (internetSpeed > 4) {
-        resolve("Successs State");
-      } else {
-        reject("Reject State");
-      }
-    });
-  }
+  // function saveToDb() {
+  //   return new Promise((resolve, reject) => {
+  //     let internetSpeed = Math.floor(Math.random() * 10) + 1;
+  //     if (internetSpeed > 4) {
+  //       resolve("Successs State");
+  //     } else {
+  //       reject("Reject State");
+  //     }
+  //   });
+  // }
   // let request = saveToDb("Hello World")
   // request
   //   .then(() => {
@@ -4089,7 +4089,6 @@ printVowel("hello");
   //   .catch(() => {
   //     console.log(request, "reject");
   //   });
-
   // saveToDb("Hello World")
   //   .then(() => {
   //     console.log("Success");
@@ -4097,4 +4096,49 @@ printVowel("hello");
   //   .catch(() => {
   //     console.log("Reject");
   //   });
+}
+
+{
+  // PROMISE CHANINIG
+  function saveToDb(data) {
+    return new Promise((resolve, reject) => {
+      let internetSpeed = Math.floor(Math.random() * 10) + 1;
+      if (internetSpeed > 4) {
+        resolve("Success State");
+      } else {
+        reject("Reject State");
+      }
+    });
+  }
+  // saveToDb("hello World")
+  //   .then(() => {
+  //     console.log("data1 saved");
+  //     saveToDb("Hello")
+  //     .then(() => {
+  //       console.log("data2 saved");
+  //       saveToDb("Hello World")
+  //       .then(() => {
+  //         console.log("data3 saved");
+  //       });
+  //     });
+  //   })
+  //   .catch(() => {
+  //     console.log("Promise Was Rejected");
+  //   });
+
+  saveToDb("Apan College")
+  .then(() => {
+    console.log("Data1 Saved");
+    return saveToDb("Hello World");
+  })
+  .then(() => {
+      console.log("Data2 Saved");
+      return saveToDb("Hello Ak");
+  })
+  .then(() => {
+    console.log("Data3 Saved");
+  })
+  .catch(() => {
+    console.log("Promise Rejected");
+  })
 }

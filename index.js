@@ -3908,3 +3908,93 @@ printVowel("hello");
     // console.log(Math.pow(val, 2));
   })
 }
+<<<<<<< HEAD
+=======
+{
+  // Find Prime Number In array
+  function getPrime(arr){
+    let prime = [];;
+    for(let num of arr){
+      if(num < 2) continue;
+      let isPrime = true;
+      for(let i = 0; i < Math.sqrt(num); i++){
+        if(num % 2 === 0){
+          isPrime = false;
+          break;
+        };
+      };
+      if(isPrime) prime.push(num);
+    };
+    return prime;
+  };
+  // console.log(getPrime([1,2, 3, 4, 5, 6, 7, 8, 9]));
+}
+{
+  // Recursive Factorial
+  function factorial(n){
+    if(n === 0 || n === 1) return 1;
+    return n * factorial(n -1);
+  };
+  // console.log(factorial(5));
+}
+{
+  function recursionMethod(n){
+    if(n === 0 || n === 1) return 1;
+    return n * recursionMethod(n -1);
+  };
+  // console.log(recursionMethod(5));
+}
+{
+  // Find Second Largest Number in Array
+  function findSecNum(array){
+    let largest = -Infinity;
+    let secondLargest = -Infinity;
+    for(let num of array){
+        if(num > largest){
+          secondLargest = largest;
+          largest = num;
+        }else if(num > secondLargest && num !== largest){
+          secondLargest = num;
+        }
+    };
+    // console.log(secondLargest);
+  };
+  findSecNum([1,2,3, 5, 4])
+}
+{
+  // Flatten Nested Array
+  function flattenArray(arr){
+    let result = [];
+    for(let el of arr){
+      if(Array.isArray(el)){
+        result = result.concat(flattenArray(el));
+      } else {
+        result.push(el);
+      };
+    };
+    return result;
+  };
+  let finalRes = flattenArray([1, [2, [3, 4],5], 6]);
+  // console.log(finalRes);
+}
+{
+  // Count Occurrence of Each Element.
+  function countOccurrancce(arr){
+    let  count = {};
+    for(let num of arr){
+      count[num] = (count[num] || 0) + 1;
+    };
+    return count;
+  }
+  // console.log(countOccurrancce([1, 2, 2, 3, 1, 4, 1]));
+}
+{
+  // Fibbonacci Series Using Recursion
+  function fibbonacci(num){
+    if(num === 0) return 0;
+    if(num === 1) return 1;
+    return fibbonacci(num - 1) + fibbonacci(num - 2);
+  };
+  // console.log(fibbonacci(7));
+}
+>>>>>>> 45eb518f07fb5154ed2956d49fb6674a4bc887e2

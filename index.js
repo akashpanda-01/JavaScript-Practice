@@ -4304,7 +4304,7 @@ printVowel("hello");
     };
     return store;
   };
-  console.log(findIntersection([1, 3, 5, 7], [1, 2, 4, 5, 7]));
+  // console.log(findIntersection([1, 3, 5, 7], [1, 2, 4, 5, 7]));
 }
 {
   function findIntSec(arr1, arr2){
@@ -4316,6 +4316,12 @@ printVowel("hello");
     };
     return result;
   }
-  console.log(findIntSec([1, 3, 5], [1, 2, 3]));
-  
+  // console.log(findIntSec([1, 3, 5], [1, 2, 3]));
+}
+{
+  // Using Filter and Include method
+  function findIntSec(arr1, arr2){
+    return arr1.filter((val) => arr2.includes(val));
+  };
+  console.log(findIntSec([1, 2, 3], [1, 2, 3]));
 }

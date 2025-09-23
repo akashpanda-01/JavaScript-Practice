@@ -4148,41 +4148,57 @@ printVowel("hello");
 // }
 
 {
-  let h1 = document.querySelector("h1");
-  function changeColor(color, delay) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        let random = Math.floor(Math.random() * 10) + 1;
-        if (random < 3) {
-          reject("Internet Slow to Change Color");
-        } else {
-          h1.style.color = color;
-          resolve("Color Changed to: " + color);
-        }
+  // let h1 = document.querySelector("h1");
+  // function changeColor(color, delay) {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       let random = Math.floor(Math.random() * 10) + 1;
+  //       if (random < 3) {
+  //         reject("Internet Slow to Change Color");
+  //       } else {
+  //         h1.style.color = color;
+  //         resolve("Color Changed to: " + color);
+  //       }
         // if(!color){
         //   rej("No Color Provided");
         // }else {
         //   h1.style.color = color;
         //   rel("Color Changed");
         // }
-      }, delay);
-    });
-  }
+  //     }, delay);
+  //   });
+  // }
 
-  changeColor("red", 1000)
-    .then((result) => {
-      console.log(result);
-      return changeColor("blue", 1000);
-    })
-    .then((result) => {
-      console.log(result);
-      return changeColor("green", 1000);
-    })
-    .then((result) => {
-      console.log(result);
-      return changeColor("orange", 1000);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  // changeColor("red", 1000)
+  //   .then((result) => {
+  //     console.log(result);
+  //     return changeColor("blue", 1000);
+  //   })
+  //   .then((result) => {
+  //     console.log(result);
+  //     return changeColor("green", 1000);
+  //   })
+  //   .then((result) => {
+  //     console.log(result);
+  //     return changeColor("orange", 1000);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
+}
+
+{
+  // Find Longest Word In a Sentence
+  function longestWord(sentence){
+    let words = sentence.split(" ");
+    let longest = "";
+    for(let word of words){
+      if(word.length > longest.length){
+        longest = word;
+      };
+    };
+    return longest;
+  }
+  let result = longestWord("Hii Akash JavaScript");
+  // console.log(result);
 }

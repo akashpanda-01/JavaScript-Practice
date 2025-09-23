@@ -4231,16 +4231,13 @@ printVowel("hello");
   // Rotate Array by k step
   function rotateArray(arr){
     let k = 2 % arr.length;
-    console.log(k);
-    for(let i = arr.length - 1; i > k; i++){
-     for(let j = 0; j < arr.length; j++){
+    for(let i = 0; i < k; i++){
       let last = arr.pop();
       arr.unshift(last);
-     }
     };
     return arr;
   };
-  console.log(rotateArray([4, 5, 1, 2, 3]));
+  // console.log(rotateArray([4, 5, 1, 2, 3]));
 }
 {
   function rotateArr(arr){
@@ -4248,4 +4245,19 @@ printVowel("hello");
     return arr.splice(r).concat(arr.splice(0));
   };
   // console.log(rotateArr([1, 2, 3, 4, 5]));
+}
+{
+  // Find Majority Elements
+  function findMejority(arr){
+    let count = {};
+    for(let num of arr){
+      count[num] = (count[num] || 0) + 1;
+      if(count[num] > arr.length / 2){
+        count[num] = num;        
+      };
+    };
+    return count;
+  };
+  let result = findMejority([1, 1, 2, 2, 3, 3]);
+  console.log(result); 
 }

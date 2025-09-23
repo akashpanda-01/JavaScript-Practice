@@ -4259,5 +4259,53 @@ printVowel("hello");
     return count;
   };
   let result = findMejority([1, 1, 2, 2, 3, 3]);
-  console.log(result); 
+  // console.log(result); 
+}
+{
+  // Find First Non-Repeated Character
+  function findChar(str){
+    for(let i = 0; i < str.length; i++){
+      if(str.indexOf(str[i]) === str.lastIndexOf(str[i])){
+        console.log(str[i]);
+        return str[i]
+      };
+    };
+    console.log(str);
+    
+    return null
+  };
+  // console.log(findChar("swiss"));
+}
+{
+  function nonRepeatedChar(str){
+    let freq = {};
+    for(let char of str){
+      freq[char] = (freq[char] || 0) + 1;
+    };
+    for(let char of str){
+      if(freq[char] === 1){
+        return char;
+      };
+    };
+    return null;
+  };
+  // console.log(nonRepeatedChar("swiss"));
+}
+{
+  // Find Intersection
+  function findIntersection(arr1, arr2){
+    let store = [];
+    for(let char1 of arr1){
+      for(let j = 0; j < arr2.length; j++){    
+        if(arr1.includes(arr2[j])){
+          store = arr2[j];
+        };
+      };
+    };
+    return store;
+  };
+  console.log(findIntersection([1, 3, 5, 7], [1, 2, 4, 5, 7]));
+}
+{
+  
 }

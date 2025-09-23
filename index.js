@@ -4323,5 +4323,19 @@ printVowel("hello");
   function findIntSec(arr1, arr2){
     return arr1.filter((val) => arr2.includes(val));
   };
-  console.log(findIntSec([1, 2, 3], [1, 2, 3]));
+  // console.log(findIntSec([1, 2, 3], [1, 2, 3]));
+}
+{
+  function groupAnagrams(arr){
+    let group = {};
+    for(let word of arr){
+      let sorted = word.split("").sort().join("");
+      if(!group[sorted]){
+        group[sorted] = [];
+      }
+      group[sorted].push(word);
+    };
+    return group;
+  };
+  console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
 }

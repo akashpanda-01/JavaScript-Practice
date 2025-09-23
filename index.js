@@ -4202,3 +4202,50 @@ printVowel("hello");
   let result = longestWord("Hii Akash JavaScript");
   // console.log(result);
 }
+{
+  // Remove Duplicates from an Array and return an array without duplicetes
+  function removeDuplicates(arr){
+    return [...new Set(arr)]
+  }
+  // console.log(removeDuplicates([1, 1, 2, 3, 2, 3]));
+}
+{
+  // Find Missing Number In A sequence;
+  function  missingNumber(arr) {
+    let n = 6;
+    let expextedSum = (n * (n + 1)) / 2;
+    let actualSum = arr.reduce((acc, crr) => acc + crr, 0);
+    return expextedSum - actualSum;
+  }
+  // console.log(missingNumber([1, 2, 4, 5, 6]));
+}
+{
+  // Check the two string are Anagram or not
+  function isAnagram(str1, str2){
+    let normalize = (str) => str.toLowerCase().split("").sort().join("");
+      return normalize(str1) === normalize(str2);
+  };
+  // console.log(isAnagram("listen", "silent"));
+}
+{
+  // Rotate Array by k step
+  function rotateArray(arr){
+    let k = 2 % arr.length;
+    console.log(k);
+    for(let i = arr.length - 1; i > k; i++){
+     for(let j = 0; j < arr.length; j++){
+      let last = arr.pop();
+      arr.unshift(last);
+     }
+    };
+    return arr;
+  };
+  console.log(rotateArray([4, 5, 1, 2, 3]));
+}
+{
+  function rotateArr(arr){
+    let r = 2 % arr.length;
+    return arr.splice(r).concat(arr.splice(0));
+  };
+  // console.log(rotateArr([1, 2, 3, 4, 5]));
+}

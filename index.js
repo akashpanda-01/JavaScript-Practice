@@ -4307,5 +4307,15 @@ printVowel("hello");
   console.log(findIntersection([1, 3, 5, 7], [1, 2, 4, 5, 7]));
 }
 {
+  function findIntSec(arr1, arr2){
+    let result = [];
+    for(let num of arr1){
+      if(arr2.includes(num)){
+        result.push(num);
+      };
+    };
+    return result;
+  }
+  console.log(findIntSec([1, 3, 5], [1, 2, 3]));
   
 }

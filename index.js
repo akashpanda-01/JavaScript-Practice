@@ -3995,3 +3995,6 @@ printVowel("hello");
   };
   // console.log(fibbonacci(7));
 }
+{
+  
+}

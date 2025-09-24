@@ -3695,54 +3695,54 @@ printVowel("hello");
   // Write a function that takes a number and checks if its even or not;
   let num = 10;
   function checkEven() {
-    if(num % 2 === 0){
+    if (num % 2 === 0) {
       return "Even";
     } else {
       return "Odd";
-    };
-  };
+    }
+  }
   let result = checkEven();
   // console.log(result);
 }
 {
   // Write a function that takes a name and prints "Hello <name>";
   let nme = "Hello";
-  function name(){
-    return nme += " Akash";
-  };
+  function name() {
+    return (nme += " Akash");
+  }
   let result = name();
   // console.log(result);
 }
 {
-  function name(nme){
+  function name(nme) {
     return nme;
-  };
+  }
   let val = name("Hello World");
   // console.log(val);
 }
 {
   // Write a Function That find Square OF a Number.
-  function number(num){
+  function number(num) {
     // return num * num;
-  };
+  }
   let val = number(10);
   // console.log(val);
 }
 {
   // Write a Function That takes an array and return the sum of its elements;
-  function arrSum(arr){
+  function arrSum(arr) {
     let sum = 0;
-    for(let i = 0; i < arr.length; i++){
-      sum += arr[i]; 
-    };
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
     return sum;
   }
-  let result = arrSum([1,2,3]);
+  let result = arrSum([1, 2, 3]);
   // console.log(result);
 }
 {
   // Write a Function that reverses a string
-  function reverse(str){
+  function reverse(str) {
     let rev = str.split("").reverse().join();
     // console.log(rev);
   }
@@ -3751,52 +3751,52 @@ printVowel("hello");
 {
   // With Reduce() Method
   function reverseStr(str) {
-    let reverse = str.split("").reduce((acc, crr) => crr + acc, '');
+    let reverse = str.split("").reduce((acc, crr) => crr + acc, "");
     // console.log(reverse);
   }
-  reverseStr("Hello")
+  reverseStr("Hello");
 }
 {
   // With For Loop
-  function reverseStr(str){
+  function reverseStr(str) {
     let reverse = "";
-    for(let i = str.length - 1; i >= 0; i--){
-      reverse += str[i]; 
-    };
+    for (let i = str.length - 1; i >= 0; i--) {
+      reverse += str[i];
+    }
     // console.log(reverse);
-  };
+  }
   reverseStr("Hello");
 }
 {
   // With Arrsy From
-  function reverseStr(str){
+  function reverseStr(str) {
     let reverse = Array.from(str).reverse().join("");
     // console.log(reverse);
-  };
+  }
   reverseStr("Hello");
 }
 {
-  function reverseStr(str){
+  function reverseStr(str) {
     let reverse = "";
-    for(let char of str){
+    for (let char of str) {
       reverse = char + reverse;
-    };
+    }
     // console.log(reverse);
   }
   reverseStr("Hello");
 }
 {
   // Spred Operator Mehtod;
-  function reverseStr(str){
+  function reverseStr(str) {
     let reverse = [...str].reverse().join("");
     // console.log(reverse);
-  };
-  reverseStr("Hello")
+  }
+  reverseStr("Hello");
 }
 {
   // Recursion Method
-  function reverseStr(str){
-    if(str === "") return "";
+  function reverseStr(str) {
+    if (str === "") return "";
     return reverseStr(str.substr(1)) + str[0];
   }
   // console.log(reverseStr("Hello"));
@@ -3807,95 +3807,101 @@ printVowel("hello");
 }
 {
   // Write a Function That takes a number and returns its factorial.
-  function findFactoral(num){
+  function findFactoral(num) {
     let factorial = 1;
-    for(let i = num; i >= 1; i--){
+    for (let i = num; i >= 1; i--) {
       factorial *= i;
-    };
+    }
     // console.log(factorial);
   }
   findFactoral(5);
 }
 {
   // Write a function that takes two numbes and returns the greater one.
-  function findGreater(num1, num2){
-    if(num1 > num2){
+  function findGreater(num1, num2) {
+    if (num1 > num2) {
       return num1;
     } else {
       return num2;
-    };
-  };
-  let greater = findGreater(2 , 3);
+    }
+  }
+  let greater = findGreater(2, 3);
   // console.log(greater);
 }
 {
   // Write a Function that takes a string and retruns how mnay vowels are in it ?
-  function checkVowels(string){
+  function checkVowels(string) {
     let vowels = 0;
-    for(let str of string.toLowerCase()){
-      if(str === "a" || str === "e" || str === "i" || str === "o" || str === "u"){
-        vowels++
-      };
-    };
+    for (let str of string.toLowerCase()) {
+      if (
+        str === "a" ||
+        str === "e" ||
+        str === "i" ||
+        str === "o" ||
+        str === "u"
+      ) {
+        vowels++;
+      }
+    }
     return vowels;
-  };
+  }
   let countVowels = checkVowels("seeetring");
   // console.log(countVowels);
 }
 {
-  function countVwl(string){
+  function countVwl(string) {
     let vowels = 0;
     let vowelsList = "aeiou";
-    for(let str of string.toLowerCase()){
-      if(vowelsList.includes(str)){
-        vowels++
-      };
-    };
+    for (let str of string.toLowerCase()) {
+      if (vowelsList.includes(str)) {
+        vowels++;
+      }
+    }
     return vowels;
-  };
+  }
   let count = countVwl("string");
   // console.log(count);
 }
 {
   // Write a function that takes an array and return only the even numbers;
-  function findEven(array){
+  function findEven(array) {
     let returnEven = [];
-      for(let value of array){
-        if(value % 2 === 0){
-          returnEven.push(value);
-        };
-      };
+    for (let value of array) {
+      if (value % 2 === 0) {
+        returnEven.push(value);
+      }
+    }
     return returnEven;
-  };
+  }
   let even = findEven([2, 3, 4, 5]);
   // console.log(even);
 }
 {
   // Write a function that takes an array and return only the even numbers;
-  function findEven(array){
+  function findEven(array) {
     let returnEven = "";
-      for(let value of array){
-        if(value % 2 === 0){
-          returnEven += value + " ";
-        };
-      };
+    for (let value of array) {
+      if (value % 2 === 0) {
+        returnEven += value + " ";
+      }
+    }
     return returnEven;
-  };
+  }
   let even = findEven([2, 3, 4, 5]);
   // console.log(even);
 }
 {
   // Write a Function to check if a number or string is a palindrome.
-  function isPalindrome(val){
+  function isPalindrome(val) {
     let str = val.toString();
     let reverse = "";
-    for(let i = str.length-1; i >= 0; i--){
-      reverse += str[i]
-    };
-    if(str === reverse){
+    for (let i = str.length - 1; i >= 0; i--) {
+      reverse += str[i];
+    }
+    if (str === reverse) {
       return reverse;
-    };
-  };
+    }
+  }
   let check = isPalindrome(121);
   // console.log(check);
 }
@@ -3906,95 +3912,494 @@ printVowel("hello");
     // console.log(val ** 2);
     // console.log(val * val);
     // console.log(Math.pow(val, 2));
-  })
+  });
 }
 {
   // Find Prime Number In array
-  function getPrime(arr){
-    let prime = [];;
-    for(let num of arr){
-      if(num < 2) continue;
+  function getPrime(arr) {
+    let prime = [];
+    for (let num of arr) {
+      if (num < 2) continue;
       let isPrime = true;
-      for(let i = 0; i < Math.sqrt(num); i++){
-        if(num % 2 === 0){
+      for (let i = 0; i < Math.sqrt(num); i++) {
+        if (num % 2 === 0) {
           isPrime = false;
           break;
-        };
-      };
-      if(isPrime) prime.push(num);
-    };
+        }
+      }
+      if (isPrime) prime.push(num);
+    }
     return prime;
-  };
+  }
   // console.log(getPrime([1,2, 3, 4, 5, 6, 7, 8, 9]));
 }
 {
   // Recursive Factorial
-  function factorial(n){
-    if(n === 0 || n === 1) return 1;
-    return n * factorial(n -1);
-  };
+  function factorial(n) {
+    if (n === 0 || n === 1) return 1;
+    return n * factorial(n - 1);
+  }
   // console.log(factorial(5));
 }
 {
-  function recursionMethod(n){
-    if(n === 0 || n === 1) return 1;
-    return n * recursionMethod(n -1);
-  };
+  function recursionMethod(n) {
+    if (n === 0 || n === 1) return 1;
+    return n * recursionMethod(n - 1);
+  }
   // console.log(recursionMethod(5));
 }
 {
   // Find Second Largest Number in Array
-  function findSecNum(array){
+  function findSecNum(array) {
     let largest = -Infinity;
     let secondLargest = -Infinity;
-    for(let num of array){
-        if(num > largest){
-          secondLargest = largest;
-          largest = num;
-        }else if(num > secondLargest && num !== largest){
-          secondLargest = num;
-        }
-    };
+    for (let num of array) {
+      if (num > largest) {
+        secondLargest = largest;
+        largest = num;
+      } else if (num > secondLargest && num !== largest) {
+        secondLargest = num;
+      }
+    }
     // console.log(secondLargest);
-  };
-  findSecNum([1,2,3, 5, 4])
+  }
+  findSecNum([1, 2, 3, 5, 4]);
 }
 {
   // Flatten Nested Array
-  function flattenArray(arr){
+  function flattenArray(arr) {
     let result = [];
-    for(let el of arr){
-      if(Array.isArray(el)){
+    for (let el of arr) {
+      if (Array.isArray(el)) {
         result = result.concat(flattenArray(el));
       } else {
         result.push(el);
-      };
-    };
+      }
+    }
     return result;
-  };
-  let finalRes = flattenArray([1, [2, [3, 4],5], 6]);
+  }
+  let finalRes = flattenArray([1, [2, [3, 4], 5], 6]);
   // console.log(finalRes);
 }
 {
   // Count Occurrence of Each Element.
-  function countOccurrancce(arr){
-    let  count = {};
-    for(let num of arr){
+  function countOccurrancce(arr) {
+    let count = {};
+    for (let num of arr) {
       count[num] = (count[num] || 0) + 1;
-    };
+    }
     return count;
   }
   // console.log(countOccurrancce([1, 2, 2, 3, 1, 4, 1]));
 }
 {
   // Fibbonacci Series Using Recursion
-  function fibbonacci(num){
-    if(num === 0) return 0;
-    if(num === 1) return 1;
+  function fibbonacci(num) {
+    if (num === 0) return 0;
+    if (num === 1) return 1;
     return fibbonacci(num - 1) + fibbonacci(num - 2);
-  };
+  }
   // console.log(fibbonacci(7));
 }
 {
   
+  // FUNCTION CALL BACK HELL
+  // function one(){
+  //     return 1;
+  //   };
+  //   function two(){
+  //     return one() + one();
+  //   };
+  //   function three(){
+  //     let ans = two() + one();
+  //     console.log(ans);
+  //   };
+  //   three();
+  // h1 = document.querySelector("h1");
+  // function changeColor(color, delay, nextChangeColor) {
+  //   setTimeout(() => {
+  //     h1.style.color = color;
+  //     if (nextChangeColor) nextChangeColor();
+  //   }, delay);
+  // }
+  // changeColor("red", 1000, () => {
+  //   changeColor("blue", 1000, () => {
+  //     changeColor("green", 1000, () => {
+  //       changeColor("orange", 1000, () => {
+  //         changeColor("red", 1000);
+  //       });
+  //     });
+  //   });
+  // });
+}
+{
+  // A CALLBACK FOR PROMISE
+  // function saveToDb(data, success, failure) {
+  //   let internetSpeed = Math.floor(Math.random() * 10) + 1;
+  //   if (internetSpeed > 4) {
+  //     success();
+  //   } else {
+  //     failure();
+  //   }
+  // }
+  //   saveToDb(
+  //     "Data1",
+  //     () => {
+  //       console.log("success : Your data was saved");
+  //       saveToDb(
+  //         "Data2",
+  //         () => {
+  //           console.log("Success: Your Data2 Was Saved");
+  //           saveToDb(
+  //             "Data3",
+  //             () => {
+  //               console.log("Success: Your Data3 Was Saved");
+  //             },
+  //             () => {
+  //               console.log("Failure: Weak Connection, Data3 Not Saved");
+  //             }
+  //           );
+  //         },
+  //         () => {
+  //           console.log("failure: Weak Connection, Data2 Not Saved");
+  //         }
+  //       );
+  //     },
+  //     () => {
+  //       console.log("failure: Weak Connection, Data Not Saved");
+  //     }
+  //   );
+  // }
+}
+{
+  // function saveToDb() {
+  //   return new Promise((resolve, reject) => {
+  //     let internetSpeed = Math.floor(Math.random() * 10) + 1;
+  //     if (internetSpeed > 4) {
+  //       resolve("Successs State");
+  //     } else {
+  //       reject("Reject State");
+  //     }
+  //   });
+  // }
+  // let request = saveToDb("Hello World")
+  // request
+  //   .then(() => {
+  //     console.log(request, "Success");
+  //   })
+  //   .catch(() => {
+  //     console.log(request, "reject");
+  //   });
+  // saveToDb("Hello World")
+  //   .then(() => {
+  //     console.log("Success");
+  //   })
+  //   .catch(() => {
+  //     console.log("Reject");
+  //   });
+}
+
+// {
+// PROMISE CHANINIG
+// function saveToDb(data) {
+//   return new Promise((resolve, reject) => {
+//     let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//     if (internetSpeed > 4) {
+//       resolve("Success State");
+//     } else {
+//       reject("Reject State");
+//     }
+//   });
+// }
+// saveToDb("hello World")
+//   .then(() => {
+//     console.log("data1 saved");
+//     saveToDb("Hello")
+//     .then(() => {
+//       console.log("data2 saved");
+//       saveToDb("Hello World")
+//       .then(() => {
+//         console.log("data3 saved");
+//       });
+//     });
+//   })
+//   .catch(() => {
+//     console.log("Promise Was Rejected");
+//   });
+
+// saveToDb("Apan College")
+// .then((result) => {
+//   console.log("Data1 Saved");
+//   console.log(result);
+//   return saveToDb("Hello World");
+// })
+// .then((result) => {
+//     console.log("Data2 Saved");
+//     console.log(result);
+//     return saveToDb("Hello Ak");
+// })
+// .then((result) => {
+//   console.log("Data3 Saved");
+//   console.log(result);
+// })
+// .catch((error) => {
+//   console.log(error);
+//   console.log("Promise Rejected");
+// })
+// }
+
+{
+  // let h1 = document.querySelector("h1");
+  // function changeColor(color, delay) {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       let random = Math.floor(Math.random() * 10) + 1;
+  //       if (random < 3) {
+  //         reject("Internet Slow to Change Color");
+  //       } else {
+  //         h1.style.color = color;
+  //         resolve("Color Changed to: " + color);
+  //       }
+  // if(!color){
+  //   rej("No Color Provided");
+  // }else {
+  //   h1.style.color = color;
+  //   rel("Color Changed");
+  // }
+  //     }, delay);
+  //   });
+  // }
+  // changeColor("red", 1000)
+  //   .then((result) => {
+  //     console.log(result);
+  //     return changeColor("blue", 1000);
+  //   })
+  //   .then((result) => {
+  //     console.log(result);
+  //     return changeColor("green", 1000);
+  //   })
+  //   .then((result) => {
+  //     console.log(result);
+  //     return changeColor("orange", 1000);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
+}
+
+{
+  // Find Longest Word In a Sentence
+  function longestWord(sentence) {
+    let words = sentence.split(" ");
+    let longest = "";
+    for (let word of words) {
+      if (word.length > longest.length) {
+        longest = word;
+      }
+    }
+    return longest;
+  }
+  let result = longestWord("Hii Akash JavaScript");
+  // console.log(result);
+}
+{
+  // Remove Duplicates from an Array and return an array without duplicetes
+  function removeDuplicates(arr) {
+    return [...new Set(arr)];
+  }
+  // console.log(removeDuplicates([1, 1, 2, 3, 2, 3]));
+}
+{
+  // Find Missing Number In A sequence;
+  function missingNumber(arr) {
+    let n = 6;
+    let expextedSum = (n * (n + 1)) / 2;
+    let actualSum = arr.reduce((acc, crr) => acc + crr, 0);
+    return expextedSum - actualSum;
+  }
+  // console.log(missingNumber([1, 2, 4, 5, 6]));
+}
+{
+  // Check the two string are Anagram or not
+  function isAnagram(str1, str2) {
+    let normalize = (str) => str.toLowerCase().split("").sort().join("");
+    return normalize(str1) === normalize(str2);
+  }
+  // console.log(isAnagram("listen", "silent"));
+}
+{
+  // Rotate Array by k step
+  function rotateArray(arr) {
+    let k = 2 % arr.length;
+    for (let i = 0; i < k; i++) {
+      let last = arr.pop();
+      arr.unshift(last);
+    }
+    return arr;
+  }
+  // console.log(rotateArray([4, 5, 1, 2, 3]));
+}
+{
+  function rotateArr(arr) {
+    let r = 2 % arr.length;
+    return arr.splice(r).concat(arr.splice(0));
+  }
+  // console.log(rotateArr([1, 2, 3, 4, 5]));
+}
+{
+  // Find Majority Elements
+  function findMejority(arr) {
+    let count = {};
+    for (let num of arr) {
+      count[num] = (count[num] || 0) + 1;
+      if (count[num] > arr.length / 2) {
+        count[num] = num;
+      }
+    }
+    return count;
+  }
+  let result = findMejority([1, 1, 2, 2, 3, 3]);
+  // console.log(result);
+}
+{
+  // Find First Non-Repeated Character
+  function findChar(str) {
+    for (let i = 0; i < str.length; i++) {
+      if (str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
+        console.log(str[i]);
+        return str[i];
+      }
+    }
+    console.log(str);
+
+    return null;
+  }
+  // console.log(findChar("swiss"));
+}
+{
+  function nonRepeatedChar(str) {
+    let freq = {};
+    for (let char of str) {
+      freq[char] = (freq[char] || 0) + 1;
+    }
+    for (let char of str) {
+      if (freq[char] === 1) {
+        return char;
+      }
+    }
+    return null;
+  }
+  // console.log(nonRepeatedChar("swiss"));
+}
+{
+  // Find Intersection
+  function findIntersection(arr1, arr2) {
+    let store = [];
+    for (let char1 of arr1) {
+      for (let j = 0; j < arr2.length; j++) {
+        if (arr1.includes(arr2[j])) {
+          store = arr2[j];
+        }
+      }
+    }
+    return store;
+  }
+  // console.log(findIntersection([1, 3, 5, 7], [1, 2, 4, 5, 7]));
+}
+{
+  function findIntSec(arr1, arr2) {
+    let result = [];
+    for (let num of arr1) {
+      if (arr2.includes(num)) {
+        result.push(num);
+      }
+    }
+    return result;
+  }
+  // console.log(findIntSec([1, 3, 5], [1, 2, 3]));
+}
+{
+  // Using Filter and Include method
+  function findIntSec(arr1, arr2) {
+    return arr1.filter((val) => arr2.includes(val));
+  }
+  // console.log(findIntSec([1, 2, 3], [1, 2, 3]));
+}
+{
+  function groupAnagrams(arr) {
+    let group = {};
+    for (let word of arr) {
+      let sorted = word.split("").sort().join("");
+      if (!group[sorted]) {
+        group[sorted] = [];
+      }
+      group[sorted].push(word);
+    }
+    return group;
+  }
+  // console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+}
+{
+  function groupAnagrams(arr) {
+    let group = {};
+    for (let word of arr) {
+      let charKey = word.toLowerCase().split("").sort().join("");
+      if (!group[charKey]) {
+        group[charKey] = [];
+      }
+      group[charKey].push(word);
+    }
+    return group;
+  }
+  // console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat", "tab"]));
+}
+{
+  // Deep Clone An Object;
+  function deepClone(obj) {
+    return JSON.parse(JSON.stringify(obj));
+  }
+  let user = { name: "Akash", Age: "22", Address: { city: "Delhi" } };
+  let clone = deepClone(user);
+  clone.Address.city = "Mumbai";
+  // console.log(user.Address.city);
+  // console.log(clone.Address.city);
+  // console.log(user);
+  // console.log(clone);
+}
+{
+  // Find Element In Sorted Array (Binary Search)
+  function binarySearch(arr, target) {
+    let right = arr.length - 1;
+    let left = 0;
+    console.log(left);
+
+    while (left <= right){
+      let mid = Math.floor((left + right) / 2);
+      if (arr[mid] === target) {
+        return mid;
+      } else if (arr[mid] > target) {
+        right = mid - 1;
+      } else {
+        left = mid + 1;
+      };
+    };
+    return -1;
+  };
+  // console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 6));
+}
+{
+  // Check Balanced Parentheses
+ function validPraentheses(str){
+  let stack = [];
+  let map = {")": "(", "}": "{", "]": "["};
+  for(let char of str){
+    if(["(", "{", "["].includes(char)){
+      stack.push(char);
+    }else if([")", "}", "]"].includes(char)){
+      if(stack.pop() !== map[char]) return false;
+    };
+  };
+  return stack.length === 0;
+ } 
+ console.log(validPraentheses("{[()]}"));
 }

@@ -4159,16 +4159,15 @@ printVowel("hello");
   //         h1.style.color = color;
   //         resolve("Color Changed to: " + color);
   //       }
-        // if(!color){
-        //   rej("No Color Provided");
-        // }else {
-        //   h1.style.color = color;
-        //   rel("Color Changed");
-        // }
+  // if(!color){
+  //   rej("No Color Provided");
+  // }else {
+  //   h1.style.color = color;
+  //   rel("Color Changed");
+  // }
   //     }, delay);
   //   });
   // }
-
   // changeColor("red", 1000)
   //   .then((result) => {
   //     console.log(result);
@@ -4189,14 +4188,14 @@ printVowel("hello");
 
 {
   // Find Longest Word In a Sentence
-  function longestWord(sentence){
+  function longestWord(sentence) {
     let words = sentence.split(" ");
     let longest = "";
-    for(let word of words){
-      if(word.length > longest.length){
+    for (let word of words) {
+      if (word.length > longest.length) {
         longest = word;
-      };
-    };
+      }
+    }
     return longest;
   }
   let result = longestWord("Hii Akash JavaScript");
@@ -4204,14 +4203,14 @@ printVowel("hello");
 }
 {
   // Remove Duplicates from an Array and return an array without duplicetes
-  function removeDuplicates(arr){
-    return [...new Set(arr)]
+  function removeDuplicates(arr) {
+    return [...new Set(arr)];
   }
   // console.log(removeDuplicates([1, 1, 2, 3, 2, 3]));
 }
 {
   // Find Missing Number In A sequence;
-  function  missingNumber(arr) {
+  function missingNumber(arr) {
     let n = 6;
     let expextedSum = (n * (n + 1)) / 2;
     let actualSum = arr.reduce((acc, crr) => acc + crr, 0);
@@ -4221,136 +4220,169 @@ printVowel("hello");
 }
 {
   // Check the two string are Anagram or not
-  function isAnagram(str1, str2){
+  function isAnagram(str1, str2) {
     let normalize = (str) => str.toLowerCase().split("").sort().join("");
-      return normalize(str1) === normalize(str2);
-  };
+    return normalize(str1) === normalize(str2);
+  }
   // console.log(isAnagram("listen", "silent"));
 }
 {
   // Rotate Array by k step
-  function rotateArray(arr){
+  function rotateArray(arr) {
     let k = 2 % arr.length;
-    for(let i = 0; i < k; i++){
+    for (let i = 0; i < k; i++) {
       let last = arr.pop();
       arr.unshift(last);
-    };
+    }
     return arr;
-  };
+  }
   // console.log(rotateArray([4, 5, 1, 2, 3]));
 }
 {
-  function rotateArr(arr){
+  function rotateArr(arr) {
     let r = 2 % arr.length;
     return arr.splice(r).concat(arr.splice(0));
-  };
+  }
   // console.log(rotateArr([1, 2, 3, 4, 5]));
 }
 {
   // Find Majority Elements
-  function findMejority(arr){
+  function findMejority(arr) {
     let count = {};
-    for(let num of arr){
+    for (let num of arr) {
       count[num] = (count[num] || 0) + 1;
-      if(count[num] > arr.length / 2){
-        count[num] = num;        
-      };
-    };
+      if (count[num] > arr.length / 2) {
+        count[num] = num;
+      }
+    }
     return count;
-  };
+  }
   let result = findMejority([1, 1, 2, 2, 3, 3]);
-  // console.log(result); 
+  // console.log(result);
 }
 {
   // Find First Non-Repeated Character
-  function findChar(str){
-    for(let i = 0; i < str.length; i++){
-      if(str.indexOf(str[i]) === str.lastIndexOf(str[i])){
+  function findChar(str) {
+    for (let i = 0; i < str.length; i++) {
+      if (str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
         console.log(str[i]);
-        return str[i]
-      };
-    };
+        return str[i];
+      }
+    }
     console.log(str);
-    
-    return null
-  };
+
+    return null;
+  }
   // console.log(findChar("swiss"));
 }
 {
-  function nonRepeatedChar(str){
+  function nonRepeatedChar(str) {
     let freq = {};
-    for(let char of str){
+    for (let char of str) {
       freq[char] = (freq[char] || 0) + 1;
-    };
-    for(let char of str){
-      if(freq[char] === 1){
+    }
+    for (let char of str) {
+      if (freq[char] === 1) {
         return char;
-      };
-    };
+      }
+    }
     return null;
-  };
+  }
   // console.log(nonRepeatedChar("swiss"));
 }
 {
   // Find Intersection
-  function findIntersection(arr1, arr2){
+  function findIntersection(arr1, arr2) {
     let store = [];
-    for(let char1 of arr1){
-      for(let j = 0; j < arr2.length; j++){    
-        if(arr1.includes(arr2[j])){
+    for (let char1 of arr1) {
+      for (let j = 0; j < arr2.length; j++) {
+        if (arr1.includes(arr2[j])) {
           store = arr2[j];
-        };
-      };
-    };
+        }
+      }
+    }
     return store;
-  };
+  }
   // console.log(findIntersection([1, 3, 5, 7], [1, 2, 4, 5, 7]));
 }
 {
-  function findIntSec(arr1, arr2){
+  function findIntSec(arr1, arr2) {
     let result = [];
-    for(let num of arr1){
-      if(arr2.includes(num)){
+    for (let num of arr1) {
+      if (arr2.includes(num)) {
         result.push(num);
-      };
-    };
+      }
+    }
     return result;
   }
   // console.log(findIntSec([1, 3, 5], [1, 2, 3]));
 }
 {
   // Using Filter and Include method
-  function findIntSec(arr1, arr2){
+  function findIntSec(arr1, arr2) {
     return arr1.filter((val) => arr2.includes(val));
-  };
+  }
   // console.log(findIntSec([1, 2, 3], [1, 2, 3]));
 }
 {
-  function groupAnagrams(arr){
+  function groupAnagrams(arr) {
     let group = {};
-    for(let word of arr){
+    for (let word of arr) {
       let sorted = word.split("").sort().join("");
-      if(!group[sorted]){
+      if (!group[sorted]) {
         group[sorted] = [];
       }
       group[sorted].push(word);
-    };
+    }
     return group;
-  };
+  }
   // console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
 }
 {
-  function groupAnagrams(arr){
+  function groupAnagrams(arr) {
     let group = {};
-    for(let word of arr){
+    for (let word of arr) {
       let charKey = word.toLowerCase().split("").sort().join("");
-      if(!group[charKey]){
+      if (!group[charKey]) {
         group[charKey] = [];
-      };
+      }
       group[charKey].push(word);
-    };
+    }
     return group;
-  };
+  }
   // console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat", "tab"]));
-  
+}
+{
+  // Deep Clone An Object;
+  function deepClone(obj) {
+    return JSON.parse(JSON.stringify(obj));
+  }
+  let user = { name: "Akash", Age: "22", Address: { city: "Delhi" } };
+  let clone = deepClone(user);
+  clone.Address.city = "Mumbai";
+  // console.log(user.Address.city);
+  // console.log(clone.Address.city);
+  // console.log(user);
+  // console.log(clone);
+}
+{
+  // Find Element In Sorted Array (Binary Search)
+  function binarySearch(arr, target) {
+    let right = arr.length - 1;
+    let left = 0;
+    console.log(left);
+
+    while (left <= right){
+      let mid = Math.floor((left + right) / 2);
+      if (arr[mid] === target) {
+        return mid;
+      } else if (arr[mid] > target) {
+        right = mid - 1;
+      } else {
+        left = mid + 1;
+      };
+    };
+    return -1;
+  };
+  // console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 6));
 }

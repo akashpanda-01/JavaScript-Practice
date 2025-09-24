@@ -4337,5 +4337,20 @@ printVowel("hello");
     };
     return group;
   };
-  console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+  // console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+}
+{
+  function groupAnagrams(arr){
+    let group = {};
+    for(let word of arr){
+      let charKey = word.toLowerCase().split("").sort().join("");
+      if(!group[charKey]){
+        group[charKey] = [];
+      };
+      group[charKey].push(word);
+    };
+    return group;
+  };
+  // console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat", "tab"]));
+  
 }

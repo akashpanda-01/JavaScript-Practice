@@ -4418,7 +4418,7 @@ printVowel("hello");
     };
     return store.length === 0;
   };
-  console.log(checkValideParentheses("({[]})"));
+  // console.log(checkValideParentheses("({[]})"));
 }
 {
   function checkParenthesis(str){
@@ -4435,5 +4435,33 @@ printVowel("hello");
     }
     return store.length === 0
   };
-  console.log(checkParenthesis("({[]})"));
+  // console.log(checkParenthesis("({[]})"));
+}
+{
+  // Find subArray with maximum Sum
+  function maxSubArray(arr){
+    let maxFindHere = arr[0];
+    let maxSofar = arr[0];
+    for(let val of arr.slice(1)){
+      maxFindHere = Math.max(val, maxFindHere + val);
+      maxSofar = Math.max(maxSofar, maxFindHere);
+    };
+    return maxSofar;
+  };
+  // console.log(maxSubArray([1, 2, -1, -2]));
+}
+{
+  function subArr(arr){
+    let findMax = 0;
+    let maxSoFar = 0;
+    for(let i = 0; i < arr.length; i++){
+      findMax = Math.max(arr[i], findMax + arr[i]);
+      maxSoFar = Math.max(maxSoFar, findMax); 
+    }
+    return maxSoFar;
+  };
+  // console.log(subArr([1, 2, -1, -2]));
+}
+{
+  
 }

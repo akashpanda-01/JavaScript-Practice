@@ -4401,5 +4401,39 @@ printVowel("hello");
   };
   return stack.length === 0;
  } 
- console.log(validPraentheses("{[()]}"));
+//  console.log(validPraentheses("{[()]}"));
+}
+{
+  function checkValideParentheses(str){
+    let store = [];
+    let map = {"}": "{", ")": "(", "]": "["};
+    for(let char of str){
+      if(["(", "{", "["].includes(char)){
+        store.push(char)
+      } else if([")", "}", "]"].includes(char)){
+        if(store.pop() !== map[char]){
+          return false;
+        };
+      };
+    };
+    return store.length === 0;
+  };
+  console.log(checkValideParentheses("({[]})"));
+}
+{
+  function checkParenthesis(str){
+    let store = [];
+    let map = {"}": "{", ")": "(", "]": "["};
+    for(let char of str){
+      if(["(", "{", "["].includes(char)){
+        store.push(char);
+      } else if([")", "]", "}"].includes(char)){
+        if(store.pop() !== map[char]){
+          return false;
+        ;}
+      };
+    }
+    return store.length === 0
+  };
+  console.log(checkParenthesis("({[]})"));
 }

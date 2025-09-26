@@ -4002,7 +4002,6 @@ printVowel("hello");
   // console.log(fibbonacci(7));
 }
 {
-  
   // FUNCTION CALL BACK HELL
   // function one(){
   //     return 1;
@@ -4373,7 +4372,7 @@ printVowel("hello");
     let left = 0;
     console.log(left);
 
-    while (left <= right){
+    while (left <= right) {
       let mid = Math.floor((left + right) / 2);
       if (arr[mid] === target) {
         return mid;
@@ -4381,92 +4380,92 @@ printVowel("hello");
         right = mid - 1;
       } else {
         left = mid + 1;
-      };
-    };
+      }
+    }
     return -1;
-  };
+  }
   // console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 6));
 }
 {
   // Check Balanced Parentheses
- function validPraentheses(str){
-  let stack = [];
-  let map = {")": "(", "}": "{", "]": "["};
-  for(let char of str){
-    if(["(", "{", "["].includes(char)){
-      stack.push(char);
-    }else if([")", "}", "]"].includes(char)){
-      if(stack.pop() !== map[char]) return false;
-    };
-  };
-  return stack.length === 0;
- } 
-//  console.log(validPraentheses("{[()]}"));
+  function validPraentheses(str) {
+    let stack = [];
+    let map = { ")": "(", "}": "{", "]": "[" };
+    for (let char of str) {
+      if (["(", "{", "["].includes(char)) {
+        stack.push(char);
+      } else if ([")", "}", "]"].includes(char)) {
+        if (stack.pop() !== map[char]) return false;
+      }
+    }
+    return stack.length === 0;
+  }
+  //  console.log(validPraentheses("{[()]}"));
 }
 {
-  function checkValideParentheses(str){
+  function checkValideParentheses(str) {
     let store = [];
-    let map = {"}": "{", ")": "(", "]": "["};
-    for(let char of str){
-      if(["(", "{", "["].includes(char)){
-        store.push(char)
-      } else if([")", "}", "]"].includes(char)){
-        if(store.pop() !== map[char]){
+    let map = { "}": "{", ")": "(", "]": "[" };
+    for (let char of str) {
+      if (["(", "{", "["].includes(char)) {
+        store.push(char);
+      } else if ([")", "}", "]"].includes(char)) {
+        if (store.pop() !== map[char]) {
           return false;
-        };
-      };
-    };
+        }
+      }
+    }
     return store.length === 0;
-  };
+  }
   // console.log(checkValideParentheses("({[]})"));
 }
 {
-  function checkParenthesis(str){
+  function checkParenthesis(str) {
     let store = [];
-    let map = {"}": "{", ")": "(", "]": "["};
-    for(let char of str){
-      if(["(", "{", "["].includes(char)){
+    let map = { "}": "{", ")": "(", "]": "[" };
+    for (let char of str) {
+      if (["(", "{", "["].includes(char)) {
         store.push(char);
-      } else if([")", "]", "}"].includes(char)){
-        if(store.pop() !== map[char]){
+      } else if ([")", "]", "}"].includes(char)) {
+        if (store.pop() !== map[char]) {
           return false;
-        ;}
-      };
+        }
+      }
     }
-    return store.length === 0
-  };
+    return store.length === 0;
+  }
   // console.log(checkParenthesis("({[]})"));
 }
 {
   // Find subArray with maximum Sum
-  function maxSubArray(arr){
+  function maxSubArray(arr) {
     let maxFindHere = arr[0];
     let maxSofar = arr[0];
-    for(let val of arr.slice(1)){
+    for (let val of arr.slice(1)) {
       maxFindHere = Math.max(val, maxFindHere + val);
       maxSofar = Math.max(maxSofar, maxFindHere);
-    };
+    }
     return maxSofar;
-  };
+  }
   // console.log(maxSubArray([1, 2, -1, -2]));
 }
 {
-  function subArr(arr){
+  function subArr(arr) {
     let findMax = 0;
     let maxSoFar = 0;
-    for(let i = 0; i < arr.length; i++){
+    for (let i = 0; i < arr.length; i++) {
       findMax = Math.max(arr[i], findMax + arr[i]);
-      maxSoFar = Math.max(maxSoFar, findMax); 
+      maxSoFar = Math.max(maxSoFar, findMax);
     }
     return maxSoFar;
-  };
+  }
   // console.log(subArr([1, 2, -1, -2]));
 }
 {
   // Switch Case Statement
   // Write a switch statement to print the name of the day when given a number (1 = Monday, 7 = Sunday).
   let days = 0;
-  switch(days){
+  switch (days) {
     case 1:
       console.log("Today Is Monday");
       break;
@@ -4489,6 +4488,105 @@ printVowel("hello");
       console.log("Today Is Sunday");
       break;
     default:
-      // console.log("Enter Valid Day Number 1 to 7");
+    // console.log("Enter Valid Day Number 1 to 7");
+  }
+}
+{
+  // Use switch to implement a calculator (addition, subtraction, multiplication, division) based on an operator (+, -, *, /).
+  let num1 = 34;
+  let num2 = 34;
+  let sign = "";
+  switch (sign) {
+    case "+":
+      console.log(num1 + num2);
+      break;
+    case "-":
+      console.log(num1 - num2);
+      break;
+    case "*":
+      console.log(num1 * num2);
+      break;
+    case "/":
+      console.log(num1 / num2);
+      break;
+    default:
+    // console.log("Eneter Valid Operator");
+  }
+}
+{
+  // Write a switch that prints “Vowel” if the user enters a, e, i, o, u, otherwise print “Consonant”.
+  let userEnter = "Akash";
+  switch (userEnter[0].toLowerCase()) {
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+      // console.log("Vowel");
+      break;
+    default:
+      console.log("Constant");
+  }
+}
+{
+  let monthNum = "";
+  switch (monthNum) {
+    case 1:
+      console.log("Jan");
+      break;
+    case 2:
+      console.log("Fab");
+      break;
+    case 3:
+      console.log("Mar");
+      break;
+    case 4:
+      console.log("Apr");
+      break;
+    case 5:
+      console.log("May");
+      break;
+    case 6:
+      console.log("Jun");
+      break;
+    case 7:
+      console.log("Jul");
+      break;
+    case 8:
+      console.log("Aug");
+      break;
+    case 9:
+      console.log("Sep");
+      break;
+    case 10:
+      console.log("Oct");
+      break;
+    case 11:
+      console.log("Nov");
+      break;
+    case 12:
+      console.log("Dec");
+      break;
+    // default: console.log("Enter Valid Number 1 to 12");
+  }
+}
+{
+  // Create a Switch that prints the grade based on marks (A, B, C, D)
+  let mark = 88;
+  switch (true) {
+    case mark >= 90:
+      console.log("A");
+      break;
+    case mark > 79 && mark <= 89:
+      console.log("B");
+      break;
+    case mark > 65 && mark <= 79:
+      console.log("C");
+      break;
+    case mark > 55 && mark <= 65:
+      console.log("D");
+      break;
+    default:
+      console.log("Fail");
   }
 }

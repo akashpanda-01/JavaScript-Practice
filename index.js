@@ -4654,3 +4654,22 @@ console.log(isBalanced("{[()]}")); // true
 console.log(isBalanced("{[(])}")); // false
 
 }
+{
+  function permutations(str) {
+  if (str.length <= 1) return [str];
+
+  let result = [];
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    let rest = str.slice(0, i) + str.slice(i + 1);
+    for (let perm of permutations(rest)) {
+      result.push(char + perm);
+    }
+  }
+  return result;
+}
+
+console.log(permutations("abc"));
+// Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
+
+}

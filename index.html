@@ -4,16 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript project</title>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/25/25231.png">
-
-    
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+    />
   </head>
   <body>
-
-    <h1>Hello World...</h1>
-
+    <!-- <h1>Hello World...</h1> -->
+    <button id="green">Green</button>
+    <button id="orange">Orange</button>
     <script>
-
+        function clickHandler(color) {
+            return function () {
+                document.body.style.backgroundColor = `${color}`;
+            }
+        }
+        document.getElementById("green").onclick = clickHandler("green");
+        document.getElementById("orange").onclick = clickHandler("orange");
+    </script>
+    <script>
       // document.write("World it's Me Akash.. !");
       // alert("Akash")
       function checkArmstrong() {
@@ -31,104 +40,107 @@
           return "Not Armstorage";
         }
       }
-    //   document.write(checkArmstrong());
+      //   document.write(checkArmstrong());
     </script>
-<script>
-        // document.write("World it's Me Akash.. !",  "<br>");
-        // alert("Akash")
+    <script>
+      // document.write("World it's Me Akash.. !",  "<br>");
+      // alert("Akash")
 
-        function findLargestNum(){
-            // let num1 = parseInt(prompt("Enter Number-1",));
-            // let num2 = parseInt(prompt("Enter Number-2",));
-            // let num3 = parseInt(prompt("Enter Number-2",));
-        
-            let Largest;
-            if(num1 > num2 && num1 > num3){
-                Largest = num1;
-            } else if(num2 > num1 && num2 > num3){
-                Largest = num2;
-            } else {
-                Largest = num3;
-            };
-            // document.write(`The Largest Number Is ${Largest}`);
-        };
-        // findLargestNum();
+      function findLargestNum() {
+        // let num1 = parseInt(prompt("Enter Number-1",));
+        // let num2 = parseInt(prompt("Enter Number-2",));
+        // let num3 = parseInt(prompt("Enter Number-2",));
 
-        function checkPrime(){
-            // let num = parseInt(prompt("Enter Numb  er..."));
-            let result;
-            if(num < 1){
-                result = "Not a Prime";
-            };
-            for(let i = 2; i * 1 <= num / 2; i++){
-                if(num%i === 0){
-                    result = "Not a Prime";
-                    break;
-                };
-                result = "Prime";
-            };
-            // document.write(`${result}`);
-        };
-        // checkPrime();
+        let Largest;
+        if (num1 > num2 && num1 > num3) {
+          Largest = num1;
+        } else if (num2 > num1 && num2 > num3) {
+          Largest = num2;
+        } else {
+          Largest = num3;
+        }
+        // document.write(`The Largest Number Is ${Largest}`);
+      }
+      // findLargestNum();
 
-        // let num = parseInt(prompt("Enter Number..."));
-        let storingValue = 1;
-        function checkFactorial(){
-            if(num < 0){return 'Error! Factorial for negative number does not exist.'};
-            if(num === 0){return "The factorial of", num, " 1."};
-            for(let i = 1; i <= num; i++){
-                storingValue = storingValue*=i;
-            };
-            return storingValue;
-        };
-        // document.write("Your Factorial Value is =", checkFactorial());
+      function checkPrime() {
+        // let num = parseInt(prompt("Enter Numb  er..."));
+        let result;
+        if (num < 1) {
+          result = "Not a Prime";
+        }
+        for (let i = 2; i * 1 <= num / 2; i++) {
+          if (num % i === 0) {
+            result = "Not a Prime";
+            break;
+          }
+          result = "Prime";
+        }
+        // document.write(`${result}`);
+      }
+      // checkPrime();
 
-        function checkArmstrong() {
-            let sum = 0;
-            // let input = prompt("Enter Number...");
-            let digit = input.length;
+      // let num = parseInt(prompt("Enter Number..."));
+      let storingValue = 1;
+      function checkFactorial() {
+        if (num < 0) {
+          return "Error! Factorial for negative number does not exist.";
+        }
+        if (num === 0) {
+          return "The factorial of", num, " 1.";
+        }
+        for (let i = 1; i <= num; i++) {
+          storingValue = storingValue *= i;
+        }
+        return storingValue;
+      }
+      // document.write("Your Factorial Value is =", checkFactorial());
 
-            // let temp = input;
-            while(temp > 0){
-                let reminder  = temp % 10;
-                sum += Math.pow(reminder, digit);
-                temp = parseInt(temp / 10);
-            };
-            if(sum === input){
-                // console.log("Armstrong");
-            } else {
-                // console.log("Not Armstrong");
-            };
-        };
-        // checkArmstrong();
+      function checkArmstrong() {
+        let sum = 0;
+        // let input = prompt("Enter Number...");
+        let digit = input.length;
 
-        // let userInput = prompt("Enter Number");
-        // if(userInput%5 === 0){
-        //     document.write("Multiple");
-        // } else {
-        //     document.write("not Multiply");
-        // };
+        // let temp = input;
+        while (temp > 0) {
+          let reminder = temp % 10;
+          sum += Math.pow(reminder, digit);
+          temp = parseInt(temp / 10);
+        }
+        if (sum === input) {
+          // console.log("Armstrong");
+        } else {
+          // console.log("Not Armstrong");
+        }
+      }
+      // checkArmstrong();
 
-        // function checkArmStrongNum1(num){
-            // let input = Number(prompt("Enter Number..."));
-            // let sum = 0;
+      // let userInput = prompt("Enter Number");
+      // if(userInput%5 === 0){
+      //     document.write("Multiple");
+      // } else {
+      //     document.write("not Multiply");
+      // };
 
-            // let  temp = input;
-            // while(temp > 0){
-            //     let reminder =(temp % 10); //ones digit
-            //     sum += Math.pow(reminder , 3);
-            //     temp = parseInt(temp / 10);
-            // };
-            // if(sum === input){
-                // document.write("Armstrong");
-            // } else {
-                // document.write("Not Armstrong");
-            // };
-        // }
-        // checkArmStrongNum1();
-        </script>
-        <script src="./index.js"></script>
-        <script src="./app.js"></script>
-    </body>
+      // function checkArmStrongNum1(num){
+      // let input = Number(prompt("Enter Number..."));
+      // let sum = 0;
+
+      // let  temp = input;
+      // while(temp > 0){
+      //     let reminder =(temp % 10); //ones digit
+      //     sum += Math.pow(reminder , 3);
+      //     temp = parseInt(temp / 10);
+      // };
+      // if(sum === input){
+      // document.write("Armstrong");
+      // } else {
+      // document.write("Not Armstrong");
+      // };
+      // }
+      // checkArmStrongNum1();
+    </script>
+    <script src="./index.js"></script>
+    <script src="./app.js"></script>
+  </body>
 </html>
-

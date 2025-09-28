@@ -4760,5 +4760,29 @@ printVowel("hello");
   function findmax(arr) {
     return Math.max(...arr);
   };
-  console.log(findmax([1,102, 3, 4, 5]));
+  // console.log(findmax([1,102, 3, 4, 5]));
+}
+
+{
+  // Write a Function that counts the  number of vowelss in a string
+  function countVowls(str){
+    let vowels = "aeiou";
+    let count = 0;
+    for(char of str){
+      if(vowels.includes(char)){
+        count++;
+      };
+    };
+    return count;
+  };
+  // console.log(countVowls("aeceeeeeeeeede"));
+}
+{
+  // Write a Function To check if a given srting is a palindrome.
+  function checckPlaindrome(str){
+    let isPlaindrome = true;
+    for(let char of str){
+      if()
+    }
+  }
 }

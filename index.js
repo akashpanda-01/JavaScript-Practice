@@ -4269,7 +4269,7 @@ printVowel("hello");
         return str[i];
       }
     }
-    console.log(str);
+    // console.log(str);
 
     return null;
   }
@@ -4370,7 +4370,7 @@ printVowel("hello");
   function binarySearch(arr, target) {
     let right = arr.length - 1;
     let left = 0;
-    console.log(left);
+    // console.log(left);
 
     while (left <= right) {
       let mid = Math.floor((left + right) / 2);
@@ -4400,7 +4400,7 @@ printVowel("hello");
   };
   return stack.length === 0;
  } 
- console.log(validPraentheses("{[()]}"));
+//  console.log(validPraentheses("{[()]}"));
 }
 {
   function isParenthesesValid(str){
@@ -4417,7 +4417,7 @@ printVowel("hello");
     };
     return stack.length === 0;
   };
-  console.log(isParenthesesValid("({[]})")); 
+  // console.log(isParenthesesValid("({[]})")); 
   function validPraentheses(str) {
     let stack = [];
     let map = { ")": "(", "}": "{", "]": "[" };
@@ -4555,7 +4555,7 @@ printVowel("hello");
       // console.log("Vowel");
       break;
     default:
-      console.log("Constant");
+      // console.log("Constant");
   }
 }
 {
@@ -4608,7 +4608,7 @@ printVowel("hello");
       console.log("A");
       break;
     case mark > 79 && mark <= 89:
-      console.log("B");
+      // console.log("B");
       break;
     case mark > 65 && mark <= 79:
       console.log("C");
@@ -4631,7 +4631,7 @@ printVowel("hello");
   return binarySearch(arr, target, mid + 1, right);
 }
 
-console.log(binarySearch([1, 2, 3, 4, 5, 6], 4)); 
+// console.log(binarySearch([1, 2, 3, 4, 5, 6], 4)); 
 // Output: 3 (index of 4)
 
 }
@@ -4650,8 +4650,8 @@ console.log(binarySearch([1, 2, 3, 4, 5, 6], 4));
   return stack.length === 0;
 }
 
-console.log(isBalanced("{[()]}")); // true
-console.log(isBalanced("{[(])}")); // false
+// console.log(isBalanced("{[()]}")); // true
+// console.log(isBalanced("{[(])}")); // false
 
 }
 {
@@ -4669,7 +4669,7 @@ console.log(isBalanced("{[(])}")); // false
   return result;
 }
 
-console.log(permutations("abc"));
+// console.log(permutations("abc"));
 // Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
 
 }
@@ -4686,7 +4686,41 @@ console.log(permutations("abc"));
   return longest;
 }
 
-console.log(longestWord("I love JavaScript programming")); 
+// console.log(longestWord("I love JavaScript programming")); 
 // Output: "programming"
-
+}
+{
+  // Write a Function that take two numbers and returns their sum
+  function findSum(num1, num2){
+    return num1 + num2;
+  };
+  // console.log(findSum(1, 4));
+}
+{
+  // Write a function to check wether a number is even or odd
+  function findNum(num){
+    return num % 2 === 0 ? "Even" : "Odd";
+  }
+  // console.log(findNum(2));
+}
+{
+  // Create a Function that returns the factorial of a given number
+  function findFactorial(num){
+    let result = 1;
+    for(let i = 1; i <= num; i++){
+      result *= i;
+    };
+    // console.log(result);
+  };
+  findFactorial(5);
+}
+{
+  // Write a Function to convert celsius to fahrenheit;
+  function findCelsiusToFahrenheit(n){
+    let celsius = n;
+    let divisior = 9/5;
+    let sumNum = 32;
+    return celsius * divisior + sumNum;
+  };
+  // console.log(findCelsiusToFahrenheit(25),"°F");
 }

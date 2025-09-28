@@ -4724,3 +4724,40 @@ printVowel("hello");
   };
   // console.log(findCelsiusToFahrenheit(25),"°F");
 }
+{
+  // Write a Function That Takes a string and return it in reverse order;
+  function reverseOrder(str){
+    return str.split("").reverse().join("");
+  }
+  // console.log(reverseOrder("Akash"));
+}
+{
+  function reverseOrder(str){
+    // let temp = str.split("");
+    let reverse = "";
+    for(let i = str.length - 1; i >= 0; i--){
+      reverse += str[i];
+    };
+    return reverse;
+  };
+  // console.log(reverseOrder("Akash"));
+}
+{
+  // Write a Number that return the maximum number of an array;
+  function findMaximum(arr){
+    let maximum = [];
+    for(let val of arr){
+      if(val > maximum){
+        maximum = val;
+      };
+    };
+    return maximum;
+  };
+  // console.log(findMaximum([1, 2, 3, 4, 5]));
+}
+{
+  function findmax(arr) {
+    return arr.max();
+  };
+  console.log(findmax([1, 2, 3, 4, 5]));
+}

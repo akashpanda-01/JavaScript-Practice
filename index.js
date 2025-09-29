@@ -4779,10 +4779,22 @@ printVowel("hello");
 }
 {
   // Write a Function To check if a given srting is a palindrome.
-  function checckPlaindrome(str){
+  function checkPlaindrome(str){
     let isPlaindrome = true;
-    for(let char of str){
-      if()
-    }
-  }
+    for(let i = 0; i <= str.length/2; i++){
+      if(str[i] !== str[str.length-1-i]){
+        isPlaindrome = false;
+        break;
+      };
+    };
+    if(isPlaindrome){
+        console.log(str, "Is a Palindrome");
+      } else {
+        console.log(str, "Is Not a Plaindrome");
+      };
+  };
+  checkPlaindrome("level")
+}
+{
+  
 }

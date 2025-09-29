@@ -4777,12 +4777,3 @@ printVowel("hello");
   };
   // console.log(countVowls("aeceeeeeeeeede"));
 }
-{
-  // Write a Function To check if a given srting is a palindrome.
-  function checckPlaindrome(str){
-    let isPlaindrome = true;
-    for(let char of str){
-      if()
-    }
-  }
-}

@@ -4777,3 +4777,90 @@ printVowel("hello");
   };
   // console.log(countVowls("aeceeeeeeeeede"));
 }
+{
+  // Write a Function To check if a given srting is a palindrome.
+  function checkPlaindrome(str){
+    let isPlaindrome = true;
+    for(let i = 0; i <= str.length/2; i++){
+      if(str[i] !== str[str.length-1-i]){
+        isPlaindrome = false;
+        break;
+      };
+    };
+    if(isPlaindrome){
+        // console.log(str, "Is a Palindrome");
+      } else {
+        console.log(str, "Is Not a Plaindrome");
+      };
+  };
+  checkPlaindrome("level")
+}
+{
+  function checkPlaindrome(num){
+    let str = num.toString();
+    let val = str.split("").reverse().join("");
+    let reverse = parseInt(val);
+    if(reverse === num){
+      // console.log(reverse, "Is a Palindrome");
+    } else {
+      console.log(reverse, "Not a Palindrome");
+    };
+  };
+  checkPlaindrome(121);
+}
+{
+  function isPlaindrome(num){
+    let reverse = 0;
+    let temp = num;
+    let toStr = num.toString()
+    for(let i = 0; i <= toStr.length -1; i++){
+      let digit = parseInt(temp % 10);
+      reverse = reverse * 10 + digit;
+      temp = Math.floor(temp / 10);
+    };
+    if(num === reverse){
+      // console.log(reverse, "Plaindreome");
+    } else {
+      console.log(reverse, "Not Palindrome");
+    };
+  };
+  isPlaindrome(121)
+}
+{
+  function findFibbonacci(num){
+    let a = 0, b = 1, next;
+    if(a === num) return a;
+    if(b === num) return b;
+    for(let i = 2; i <= num; i++){
+      next = a+b;
+      a = b;
+      b = next;
+    }
+    return b;
+  };
+  // console.log(findFibbonacci(5));
+}
+{
+  function findDuplicate(arr){
+    let duplicate = [];
+    for(let i = 0; i < arr.length-1; i++){
+      if(!duplicate.includes(arr[i])){
+        duplicate.push(arr[i]);
+      };
+    };
+    // console.log(duplicate);
+  };
+  findDuplicate([1, 1, 2, 2, 3, 3]);
+}
+{
+  // Write a Recursive Function to Calculate sum of Two Numbers
+  function recursiveSum(num){
+    let sum = 0;
+   if(num < 10){
+    return num;
+   };
+  sum = (num % 10) + recursiveSum(Math.floor(num / 10));
+  return sum;
+  }
+  console.log(recursiveSum(1234));
+}

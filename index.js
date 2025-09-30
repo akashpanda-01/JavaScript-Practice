@@ -4974,3 +4974,20 @@ printVowel("hello");
   let obj = {name: "Akash"}
   log.call(obj,  "Hello")
 }
+{
+  function debounce(func, delay){
+    let timeOutId;
+    return function (...arg){
+      clearTimeout(timeOutId);
+      timeOutId = setTimeout(() => {
+        func.apply(this, arg);
+      }, 1000);
+    };
+  };
+  const log = debounce(function(msg) {
+    console.log(this.name + ": " + msg);
+  }, 1000);
+  
+  let obj = {name: "Akash"};
+  log.call(obj, "Hello");
+}

@@ -4941,5 +4941,23 @@ printVowel("hello");
     };
     return result.concat(left.slice(i)).concat(right.slice(j));
   };
-  console.log(mergeSort([5, 2, 9, 1, 5, 6]));
+  // console.log(mergeSort([5, 2, 9, 1, 5, 6]));
+}
+{
+  // Impliment a Function To Debounce another function 
+  function debounce(fun, delay){
+    let timeOutId;
+    return function (...args) {
+      console.log(args);
+      clearTimeout(timeOutId);
+      console.log(timeOutId);
+      timeOutId = setTimeout(() => {
+        fun.apply(this, args);
+      }, delay);
+      console.log(timeOutId);
+      
+    };
+  };
+  const log = debounce(() => console.log("Called"), 1000);
+  log();
 }

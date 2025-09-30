@@ -4388,36 +4388,36 @@ printVowel("hello");
 }
 {
   // Check Balanced Parentheses
- function validPraentheses(str){
-  let stack = [];
-  let map = {")": "(", "}": "{", "]": "["};
-  for(let char of str){
-    if(["(", "{", "["].includes(char)){
-      stack.push(char);
-    }else if([")", "}", "]"].includes(char)){
-      if(stack.pop() !== map[char]) return false;
-    };
-  };
-  return stack.length === 0;
- } 
-//  console.log(validPraentheses("{[()]}"));
+  function validPraentheses(str) {
+    let stack = [];
+    let map = { ")": "(", "}": "{", "]": "[" };
+    for (let char of str) {
+      if (["(", "{", "["].includes(char)) {
+        stack.push(char);
+      } else if ([")", "}", "]"].includes(char)) {
+        if (stack.pop() !== map[char]) return false;
+      }
+    }
+    return stack.length === 0;
+  }
+  //  console.log(validPraentheses("{[()]}"));
 }
 {
-  function isParenthesesValid(str){
-    let stack = []
-    let map = {"}": "{", ")": "(", "]": "["};
-    for(let char of str){
-      if(["(", "{", "["].includes(char)){
+  function isParenthesesValid(str) {
+    let stack = [];
+    let map = { "}": "{", ")": "(", "]": "[" };
+    for (let char of str) {
+      if (["(", "{", "["].includes(char)) {
         stack.push(char);
-      } else if([")", "}", "]"].includes(char)){
-         if(stack.pop() !== map[char]){
+      } else if ([")", "}", "]"].includes(char)) {
+        if (stack.pop() !== map[char]) {
           return false;
-         };
-      };
-    };
+        }
+      }
+    }
     return stack.length === 0;
-  };
-  // console.log(isParenthesesValid("({[]})")); 
+  }
+  // console.log(isParenthesesValid("({[]})"));
   function validPraentheses(str) {
     let stack = [];
     let map = { ")": "(", "}": "{", "]": "[" };
@@ -4555,7 +4555,7 @@ printVowel("hello");
       // console.log("Vowel");
       break;
     default:
-      // console.log("Constant");
+    // console.log("Constant");
   }
 }
 {
@@ -4622,302 +4622,301 @@ printVowel("hello");
 }
 {
   // Geneteren All Permutations Of string
-  // 
+  //
   function binarySearch(arr, target, left = 0, right = arr.length - 1) {
-  if (left > right) return -1;
+    if (left > right) return -1;
 
-  let mid = Math.floor((left + right) / 2);
-  if (arr[mid] === target) return mid;
-  if (target < arr[mid]) return binarySearch(arr, target, left, mid - 1);
-  return binarySearch(arr, target, mid + 1, right);
-}
+    let mid = Math.floor((left + right) / 2);
+    if (arr[mid] === target) return mid;
+    if (target < arr[mid]) return binarySearch(arr, target, left, mid - 1);
+    return binarySearch(arr, target, mid + 1, right);
+  }
 
-// console.log(binarySearch([1, 2, 3, 4, 5, 6], 4)); 
-// Output: 3 (index of 4)
-
+  // console.log(binarySearch([1, 2, 3, 4, 5, 6], 4));
+  // Output: 3 (index of 4)
 }
 {
   function isBalanced(str) {
-  let stack = [];
-  let map = { ")": "(", "}": "{", "]": "[" };
+    let stack = [];
+    let map = { ")": "(", "}": "{", "]": "[" };
 
-  for (let char of str) {
-    if (["(", "{", "["].includes(char)) {
-      stack.push(char);
-    } else if ([")", "}", "]"].includes(char)) {
-      if (stack.pop() !== map[char]) return false;
+    for (let char of str) {
+      if (["(", "{", "["].includes(char)) {
+        stack.push(char);
+      } else if ([")", "}", "]"].includes(char)) {
+        if (stack.pop() !== map[char]) return false;
+      }
     }
+    return stack.length === 0;
   }
-  return stack.length === 0;
-}
 
-// console.log(isBalanced("{[()]}")); // true
-// console.log(isBalanced("{[(])}")); // false
-
+  // console.log(isBalanced("{[()]}")); // true
+  // console.log(isBalanced("{[(])}")); // false
 }
 {
   function permutations(str) {
-  if (str.length <= 1) return [str];
+    if (str.length <= 1) return [str];
 
-  let result = [];
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i];
-    let rest = str.slice(0, i) + str.slice(i + 1);
-    for (let perm of permutations(rest)) {
-      result.push(char + perm);
+    let result = [];
+    for (let i = 0; i < str.length; i++) {
+      let char = str[i];
+      let rest = str.slice(0, i) + str.slice(i + 1);
+      for (let perm of permutations(rest)) {
+        result.push(char + perm);
+      }
     }
+    return result;
   }
-  return result;
-}
 
-// console.log(permutations("abc"));
-// Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
-
+  // console.log(permutations("abc"));
+  // Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
 }
 {
   function longestWord(sentence) {
-  let words = sentence.split(" ");
-  let longest = "";
+    let words = sentence.split(" ");
+    let longest = "";
 
-  for (let word of words) {
-    if (word.length > longest.length) {
-      longest = word;
+    for (let word of words) {
+      if (word.length > longest.length) {
+        longest = word;
+      }
     }
+    return longest;
   }
-  return longest;
-}
 
-// console.log(longestWord("I love JavaScript programming")); 
-// Output: "programming"
+  // console.log(longestWord("I love JavaScript programming"));
+  // Output: "programming"
 }
 {
   // Write a Function that take two numbers and returns their sum
-  function findSum(num1, num2){
+  function findSum(num1, num2) {
     return num1 + num2;
-  };
+  }
   // console.log(findSum(1, 4));
 }
 {
   // Write a function to check wether a number is even or odd
-  function findNum(num){
+  function findNum(num) {
     return num % 2 === 0 ? "Even" : "Odd";
   }
   // console.log(findNum(2));
 }
 {
   // Create a Function that returns the factorial of a given number
-  function findFactorial(num){
+  function findFactorial(num) {
     let result = 1;
-    for(let i = 1; i <= num; i++){
+    for (let i = 1; i <= num; i++) {
       result *= i;
-    };
+    }
     // console.log(result);
-  };
+  }
   findFactorial(5);
 }
 {
   // Write a Function to convert celsius to fahrenheit;
-  function findCelsiusToFahrenheit(n){
+  function findCelsiusToFahrenheit(n) {
     let celsius = n;
-    let divisior = 9/5;
+    let divisior = 9 / 5;
     let sumNum = 32;
     return celsius * divisior + sumNum;
-  };
+  }
   // console.log(findCelsiusToFahrenheit(25),"°F");
 }
 {
   // Write a Function That Takes a string and return it in reverse order;
-  function reverseOrder(str){
+  function reverseOrder(str) {
     return str.split("").reverse().join("");
   }
   // console.log(reverseOrder("Akash"));
 }
 {
-  function reverseOrder(str){
+  function reverseOrder(str) {
     // let temp = str.split("");
     let reverse = "";
-    for(let i = str.length - 1; i >= 0; i--){
+    for (let i = str.length - 1; i >= 0; i--) {
       reverse += str[i];
-    };
+    }
     return reverse;
-  };
+  }
   // console.log(reverseOrder("Akash"));
 }
 {
   // Write a Number that return the maximum number of an array;
-  function findMaximum(arr){
+  function findMaximum(arr) {
     let maximum = [];
-    for(let val of arr){
-      if(val > maximum){
+    for (let val of arr) {
+      if (val > maximum) {
         maximum = val;
-      };
-    };
+      }
+    }
     return maximum;
-  };
+  }
   // console.log(findMaximum([1, 2, 3, 4, 5]));
 }
 {
   function findmax(arr) {
     return Math.max(...arr);
-  };
+  }
   // console.log(findmax([1,102, 3, 4, 5]));
 }
 
 {
   // Write a Function that counts the  number of vowelss in a string
-  function countVowls(str){
+  function countVowls(str) {
     let vowels = "aeiou";
     let count = 0;
-    for(char of str){
-      if(vowels.includes(char)){
+    for (char of str) {
+      if (vowels.includes(char)) {
         count++;
-      };
-    };
+      }
+    }
     return count;
-  };
+  }
   // console.log(countVowls("aeceeeeeeeeede"));
 }
 {
   // Write a Function To check if a given srting is a palindrome.
-  function checkPlaindrome(str){
+  function checkPlaindrome(str) {
     let isPlaindrome = true;
-    for(let i = 0; i <= str.length/2; i++){
-      if(str[i] !== str[str.length-1-i]){
+    for (let i = 0; i <= str.length / 2; i++) {
+      if (str[i] !== str[str.length - 1 - i]) {
         isPlaindrome = false;
         break;
-      };
-    };
-    if(isPlaindrome){
-        // console.log(str, "Is a Palindrome");
-      } else {
-        console.log(str, "Is Not a Plaindrome");
-      };
-  };
-  checkPlaindrome("level")
+      }
+    }
+    if (isPlaindrome) {
+      // console.log(str, "Is a Palindrome");
+    } else {
+      console.log(str, "Is Not a Plaindrome");
+    }
+  }
+  checkPlaindrome("level");
 }
 {
-  function checkPlaindrome(num){
+  function checkPlaindrome(num) {
     let str = num.toString();
     let val = str.split("").reverse().join("");
     let reverse = parseInt(val);
-    if(reverse === num){
+    if (reverse === num) {
       // console.log(reverse, "Is a Palindrome");
     } else {
       console.log(reverse, "Not a Palindrome");
-    };
-  };
+    }
+  }
   checkPlaindrome(121);
 }
 {
-  function isPlaindrome(num){
+  function isPlaindrome(num) {
     let reverse = 0;
     let temp = num;
-    let toStr = num.toString()
-    for(let i = 0; i <= toStr.length -1; i++){
+    let toStr = num.toString();
+    for (let i = 0; i <= toStr.length - 1; i++) {
       let digit = parseInt(temp % 10);
       reverse = reverse * 10 + digit;
       temp = Math.floor(temp / 10);
-    };
-    if(num === reverse){
+    }
+    if (num === reverse) {
       // console.log(reverse, "Plaindreome");
     } else {
       console.log(reverse, "Not Palindrome");
-    };
-  };
-  isPlaindrome(121)
+    }
+  }
+  isPlaindrome(121);
 }
 {
-  function findFibbonacci(num){
-    let a = 0, b = 1, next;
-    if(a === num) return a;
-    if(b === num) return b;
-    for(let i = 2; i <= num; i++){
-      next = a+b;
+  function findFibbonacci(num) {
+    let a = 0,
+      b = 1,
+      next;
+    if (a === num) return a;
+    if (b === num) return b;
+    for (let i = 2; i <= num; i++) {
+      next = a + b;
       a = b;
       b = next;
     }
     return b;
-  };
+  }
   // console.log(findFibbonacci(5));
 }
 {
-  function findDuplicate(arr){
+  function findDuplicate(arr) {
     let duplicate = [];
-    for(let i = 0; i < arr.length-1; i++){
-      if(!duplicate.includes(arr[i])){
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (!duplicate.includes(arr[i])) {
         duplicate.push(arr[i]);
-      };
-    };
+      }
+    }
     // console.log(duplicate);
-  };
+  }
   findDuplicate([1, 1, 2, 2, 3, 3]);
 }
 {
   // Write a Recursive Function to Calculate sum of Two Numbers
-  function recursiveSum(num){
+  function recursiveSum(num) {
     let sum = 0;
-   if(num < 10){
-    return num;
-   };
-  sum = (num % 10) + recursiveSum(Math.floor(num / 10));
-  return sum;
+    if (num < 10) {
+      return num;
+    }
+    sum = (num % 10) + recursiveSum(Math.floor(num / 10));
+    return sum;
   }
   // console.log(recursiveSum(1234));
 }
 {
   // Write a Function That Takes a String and returns The First non-repeated character
-  function nonRepeatedChar(str){
+  function nonRepeatedChar(str) {
     let freq = {};
-    for(char of str){
+    for (char of str) {
       freq[char] = (freq[char] || 0) + 1;
-    };
-    for(char of str){
-      if(freq[char] === 1){
+    }
+    for (char of str) {
+      if (freq[char] === 1) {
         return char;
       }
     }
     return null;
-  };
+  }
   // console.log(nonRepeatedChar("sstr"));
 }
 {
   // Write a Function That sort an aaray of number without using built-in-sort()
-  function sortArr(arr){
+  function sortArr(arr) {
     let n = arr.length;
-    for(let i = 0; i < n -1; i++){
-      for(let j = 0; j<n-i-1; j++){
-        if(arr[j] > arr[j+1]){
+    for (let i = 0; i < n - 1; i++) {
+      for (let j = 0; j < n - i - 1; j++) {
+        if (arr[j] > arr[j + 1]) {
           let temp = arr[j];
           arr[j] = arr[j + 1];
           arr[j + 1] = temp;
-        };
-      };
-    };
+        }
+      }
+    }
     return arr;
-  };
-  // console.log(sortArr([6, 5, 4, 3, 2, 1, 0])); 
+  }
+  // console.log(sortArr([6, 5, 4, 3, 2, 1, 0]));
 }
 {
   // Sorting Array Numbers in Quick Sort
-  function quickSort(arr){
-    if(arr.length <= 1) return arr;
-    let pivot = arr[arr.length-1];
+  function quickSort(arr) {
+    if (arr.length <= 1) return arr;
+    let pivot = arr[arr.length - 1];
     let left = [];
     let right = [];
-    for(let i = 0; i<arr.length-1; i++){
-      if(arr[i] < pivot){
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] < pivot) {
         left.push(arr[i]);
-      }else {
+      } else {
         right.push(arr[i]);
-      };
-    };
+      }
+    }
     return [...quickSort(left), pivot, ...quickSort(right)];
-  };
+  }
   // console.log(quickSort([5, 2, 9, 1, 5, 6]));
 }
 {
-  function mergeSort(arr){
-    if(arr.length <= 1) return arr;
+  function mergeSort(arr) {
+    if (arr.length <= 1) return arr;
 
     let mid = Math.floor(arr.length / 2);
     let left = mergeSort(arr.slice(0, mid));
@@ -4926,38 +4925,35 @@ printVowel("hello");
     // console.log(right);
     // console.log(arr);
 
-    return merge(left, right)
-  };
-  function merge(left, right){
+    return merge(left, right);
+  }
+  function merge(left, right) {
     let result = [];
-    let i = 0, j = 0;
+    let i = 0,
+      j = 0;
 
-    while(i < left.length && j < right.length){
-      if(left[i] < right[j]){
+    while (i < left.length && j < right.length) {
+      if (left[i] < right[j]) {
         result.push(left[i++]);
       } else {
         result.push(right[j++]);
-      };
-    };
+      }
+    }
     return result.concat(left.slice(i)).concat(right.slice(j));
-  };
+  }
   // console.log(mergeSort([5, 2, 9, 1, 5, 6]));
 }
 {
-  // Impliment a Function To Debounce another function 
-  function debounce(fun, delay){
+  // Impliment a Function To Debounce another function
+  function debounce(fun, delay) {
     let timeOutId;
     return function (...args) {
-      console.log(args);
       clearTimeout(timeOutId);
-      console.log(timeOutId);
       timeOutId = setTimeout(() => {
         fun.apply(this, args);
       }, delay);
-      console.log(timeOutId);
-      
     };
-  };
+  }
   const log = debounce(() => console.log("Called"), 1000);
   log();
 }

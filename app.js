@@ -32,9 +32,27 @@ x();
     }
   };
   name.printFullName(); 
+
+
+  let name2 = {
+    firstName: "Virat",
+    lastName: "Kohli",
+  }
+  name.printFullName.call(name2)
+
 }
 
-let name2 = {
-  firstName: "Virat",
-  lastName: "Kohli",
+
+
+function debounce(fun, delay) {
+  let timeOutId;
+  return function (...args) {
+    clearTimeout(timeOutId);
+    timeOutId = setTimeout(() => {
+      fun.apply(this, args);
+    }, delay)
+  };
 }
+// const log = debounce(() => console.log("Called"), 1000);
+// log();
+

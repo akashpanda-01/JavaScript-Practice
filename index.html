@@ -10,17 +10,22 @@
     />
   </head>
   <body>
+    <div>
+      <input type="text" onkeyup="" />
+    </div>
     <!-- <h1>Hello World...</h1> -->
-    <button id="green">Green</button>
-    <button id="orange">Orange</button>
+    <div>
+      <button id="green">Green</button>
+      <button id="orange">Orange</button>
+    </div>
     <script>
-        function clickHandler(color) {
-            return function () {
-                document.body.style.backgroundColor = `${color}`;
-            }
-        }
-        document.getElementById("green").onclick = clickHandler("green");
-        document.getElementById("orange").onclick = clickHandler("orange");
+      function clickHandler(color) {
+        return function () {
+          document.body.style.backgroundColor = `${color}`;
+        };
+      }
+      document.getElementById("green").onclick = clickHandler("green");
+      document.getElementById("orange").onclick = clickHandler("orange");
     </script>
     <script>
       // document.write("World it's Me Akash.. !");

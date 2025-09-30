@@ -22,3 +22,19 @@ x();
   x();
   
 }
+
+{
+  let name = {
+    firstName: "Hello",
+    lastName: "World",
+    printFullName: function (){
+      console.log(this.firstName + " " + this.lastName);
+    }
+  };
+  name.printFullName(); 
+}
+
+let name2 = {
+  firstName: "Virat",
+  lastName: "Kohli",
+}

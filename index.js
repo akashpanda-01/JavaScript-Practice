@@ -372,9 +372,9 @@ function mathmaticalArmstorage(num) {
     sum += Math.pow(Number(digit), power);
   }
   return sum === num;
-  console.log(sum);
+  // console.log(sum);
 }
-console.log(mathmaticalArmstorage(153));
+// console.log(mathmaticalArmstorage(153));
 
 function isArmstrong(num) {
   let digit = num.toString().split("");
@@ -4862,5 +4862,84 @@ printVowel("hello");
   sum = (num % 10) + recursiveSum(Math.floor(num / 10));
   return sum;
   }
-  console.log(recursiveSum(1234));
+  // console.log(recursiveSum(1234));
+}
+{
+  // Write a Function That Takes a String and returns The First non-repeated character
+  function nonRepeatedChar(str){
+    let freq = {};
+    for(char of str){
+      freq[char] = (freq[char] || 0) + 1;
+    };
+    for(char of str){
+      if(freq[char] === 1){
+        return char;
+      }
+    }
+    return null;
+  };
+  // console.log(nonRepeatedChar("sstr"));
+}
+{
+  // Write a Function That sort an aaray of number without using built-in-sort()
+  function sortArr(arr){
+    let n = arr.length;
+    for(let i = 0; i < n -1; i++){
+      for(let j = 0; j<n-i-1; j++){
+        if(arr[j] > arr[j+1]){
+          let temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+        };
+      };
+    };
+    return arr;
+  };
+  // console.log(sortArr([6, 5, 4, 3, 2, 1, 0])); 
+}
+{
+  // Sorting Array Numbers in Quick Sort
+  function quickSort(arr){
+    if(arr.length <= 1) return arr;
+    let pivot = arr[arr.length-1];
+    let left = [];
+    let right = [];
+    for(let i = 0; i<arr.length-1; i++){
+      if(arr[i] < pivot){
+        left.push(arr[i]);
+      }else {
+        right.push(arr[i]);
+      };
+    };
+    return [...quickSort(left), pivot, ...quickSort(right)];
+  };
+  // console.log(quickSort([5, 2, 9, 1, 5, 6]));
+}
+{
+  function mergeSort(arr){
+    if(arr.length <= 1) return arr;
+
+    let mid = Math.floor(arr.length / 2);
+    let left = mergeSort(arr.slice(0, mid));
+    let right = mergeSort(arr.slice(mid));
+    // console.log(left);
+    // console.log(right);
+    // console.log(arr);
+
+    return merge(left, right)
+  };
+  function merge(left, right){
+    let result = [];
+    let i = 0, j = 0;
+
+    while(i < left.length && j < right.length){
+      if(left[i] < right[j]){
+        result.push(left[i++]);
+      } else {
+        result.push(right[j++]);
+      };
+    };
+    return result.concat(left.slice(i)).concat(right.slice(j));
+  };
+  console.log(mergeSort([5, 2, 9, 1, 5, 6]));
 }

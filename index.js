@@ -4954,8 +4954,8 @@ printVowel("hello");
       }, delay);
     };
   }
-  const log = debounce(() => console.log("Called"), 1000);
-  log();
+  // const log = debounce(() => console.log("Called"), 1000);
+  // log();
 }
 
 {
@@ -4968,11 +4968,11 @@ printVowel("hello");
     };
   };
   const log = debounce(function (msg) {
-    console.log(this.name + ": " + msg);
+    // console.log(this.name + ": " + msg);
   }, 1000);
 
   let obj = {name: "Akash"}
-  log.call(obj,  "Hello")
+  // log.call(obj,  "Hello")
 }
 {
   function debounce(func, delay){
@@ -4981,13 +4981,40 @@ printVowel("hello");
       clearTimeout(timeOutId);
       timeOutId = setTimeout(() => {
         func.apply(this, arg);
-      }, 1000);
+      }, delay);
     };
   };
   const log = debounce(function(msg) {
-    console.log(this.name + ": " + msg);
+    // console.log(this.name + ": " + msg);
   }, 1000);
   
   let obj = {name: "Akash"};
   log.call(obj, "Hello");
+}
+{
+  function debounce(func, delay){
+    let timeOutId;
+    return function (...arg){
+      clearTimeout(timeOutId);
+      timeOutId = setTimeout(() => {
+        func.apply(this, arg);
+      }, delay);
+    };
+  };
+  
+  // const log = debounce(function (msg) {
+    // console.log(this.name, msg)
+  // }, 1000);
+  // let obj = {name: "Akash"};
+  // log.call(obj, "Hello");
+}
+{
+  function findAnagram(str1, str2){
+    let normalize = (str) => str.toLowerCase().split("").sort().join("");
+    console.log(normalize);
+    
+    return normalize(str1) === normalize(str2);
+  }
+  console.log(findAnagram("listen", "silent"));
+  
 }

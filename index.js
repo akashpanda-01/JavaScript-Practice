@@ -5137,6 +5137,7 @@ printVowel("hello");
   // calculator(2, "/", 9);
 }
 {
+  // Take a color (red, green, yellow) and print trafic light instruction using switch 
   function traficLight(clr){
     switch(clr){
       case "red":
@@ -5152,5 +5153,26 @@ printVowel("hello");
         console.log("Enter Valid Color");
     };
   };
-  traficLight("red");
+  // traficLight("red");
+}
+{
+  // Write a Program that group multiple cases
+  function multipeCase(weekday){
+    switch(weekday.toLowerCase()){
+      case "monday":
+      case "tueday":
+      case "wednesday":
+      case "thusday" :
+      case "friday" :
+        console.log(`${weekday} is a Weekday`);
+        break;
+      case "Sunday":
+      case "Saturday":
+        console.log(`${weekday} is Weekend`);
+        break;
+      default:
+        console.log("Enter Valid Day");
+    };
+  };
+  multipeCase("Monday");
 }

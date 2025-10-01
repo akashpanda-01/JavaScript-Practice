@@ -1575,7 +1575,7 @@ let dateNum = newDate.getDate();
 if (day === 0 || day === 6) {
   // console.log("Holiday -", newDate.toLocaleDateString());
 } else if (dateNum === 1) {
-  console.log("Salary Day -", newDate.toLocaleDateString());
+  // console.log("Salary Day -", newDate.toLocaleDateString());
 } else {
   // console.log("Normal Working Day -", newDate.toLocaleDateString());
 }
@@ -4949,9 +4949,9 @@ printVowel("hello");
     let timeOutId;
     return function (...args) {
       clearTimeout(timeOutId);
-      timeOutId = setTimeout(() => {
-        fun.apply(this, args);
-      }, delay);
+      // timeOutId = setTimeout(() => {
+      //   fun.apply(this, args);
+      // }, delay);
     };
   }
   // const log = debounce(() => console.log("Called"), 1000);
@@ -4962,9 +4962,9 @@ printVowel("hello");
   function debounce(func, delay){
     let timeOutId ;
     return function (...arg) {
-      timeOutId = setTimeout(() => {
-        func.apply(this, arg);
-      }, delay)
+      // timeOutId = setTimeout(() => {
+      //   func.apply(this, arg);
+      // }, delay)
     };
   };
   const log = debounce(function (msg) {
@@ -4979,9 +4979,9 @@ printVowel("hello");
     let timeOutId;
     return function (...arg){
       clearTimeout(timeOutId);
-      timeOutId = setTimeout(() => {
-        func.apply(this, arg);
-      }, delay);
+      // timeOutId = setTimeout(() => {
+      //   func.apply(this, arg);
+      // }, delay);
     };
   };
   const log = debounce(function(msg) {
@@ -4996,9 +4996,9 @@ printVowel("hello");
     let timeOutId;
     return function (...arg){
       clearTimeout(timeOutId);
-      timeOutId = setTimeout(() => {
-        func.apply(this, arg);
-      }, delay);
+      // timeOutId = setTimeout(() => {
+      //   func.apply(this, arg);
+      // }, delay);
     };
   };
   
@@ -5015,6 +5015,103 @@ printVowel("hello");
     
     return normalize(str1) === normalize(str2);
   }
-  console.log(findAnagram("listen", "silent"));
+  // console.log(findAnagram("listen", "silent"));
   
+}
+
+// ==================== SWITCH CASE ========================
+{
+  // Write a program using switch to print the name of the month
+  function findMonth(num){
+    switch(true){
+    case num === 1:
+      console.log("Jan");
+      break;
+    case num === 2:
+      console.log("Fab");
+      break;
+      case num === 3:
+        console.log("Mar");
+        break;
+      case num === 4:
+        console.log("Apr");
+        break;
+      case num === 5:
+        console.log("May");
+        break;
+      case num === 6:
+        console.log("Jun");
+        break;
+      case num === 7:
+        console.log("Jul");
+        break;
+      case num === 8:
+        console.log("Aug");
+        break;
+      case num === 9:
+        console.log("Sep");
+        break;
+      case num === 10:
+        console.log("Oct");
+        break;
+      case num === 11:
+        console.log("Nov");
+        break;
+      case num === 12:
+        console.log("Dec");
+        break;
+      default:
+        console.log("Enter Valid Month Number");
+    };
+  };
+  // findMonth(5);
+}
+{
+  // Take a Number (0-6) and print the day of the week
+  function findWeek(num){
+    switch(true){
+      case num === 0:
+        console.log("Today Is Sunday");
+        break;
+      case num === 1:
+        console.log("Today Is Monday");
+        break;
+      case num === 2:
+        console.log("Today Is Tuesday");
+        break;
+      case num === 3:
+        console.log("Today Is Wednesday");
+        break;
+      case num === 4:
+        console.log("Today Is Thusday");
+        break;
+      case num === 5:
+        console.log("Today Is Friday");
+        break;
+      case num === 6:
+        console.log("Today Is SaturDay");
+        break;
+      default:
+        console.log("Enter Valid Number of Week");
+    };
+  };
+  // findWeek(2);
+}
+{
+  // Write a Program to Check The Type Of Fruit
+  function typeFruit(str){
+    switch(str.toLowerCase()){
+      case "apple":
+      case "mango":
+      case "banana":
+        console.log("This Is a Fruit");
+        break;
+      case "carrot":
+        console.log("Vegitable");
+        break;
+      default:
+        console.log("Unknown Item");
+    };
+  };
+  typeFruit("mango");
 }

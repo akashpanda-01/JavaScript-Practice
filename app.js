@@ -44,15 +44,32 @@ x();
 
 
 
-function debounce(fun, delay) {
-  let timeOutId;
-  return function (...args) {
-    clearTimeout(timeOutId);
-    timeOutId = setTimeout(() => {
-      fun.apply(this, args);
-    }, delay)
-  };
-}
+// function debounce(fun, delay) {
+//   let timeOutId;
+//   return function (...args) {
+//     clearTimeout(timeOutId);
+//     timeOutId = setTimeout(() => {
+//       fun.apply(this, args);
+//     }, delay)
+//   };
+// }
 // const log = debounce(() => console.log("Called"), 1000);
 // log();
 
+{
+  class Person {
+    constructor(name, age){
+      this.name = name;
+      this.age = age;
+    };
+
+    greet(){
+      console.log(`Hello My Name Is ${this.name}`);
+    };
+  };
+  const person1 = new Person("Akash", 23);
+  const person2 = new Person("Virat", 37);
+
+  person1.greet();
+  person2.greet();
+}

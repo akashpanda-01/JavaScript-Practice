@@ -5113,7 +5113,7 @@ printVowel("hello");
         console.log("Unknown Item");
     };
   };
-  typeFruit("mango");
+  // typeFruit("mango");
 }
 {
   function calculator(num1, operator, num2){
@@ -5174,5 +5174,18 @@ printVowel("hello");
         console.log("Enter Valid Day");
     };
   };
-  multipeCase("Monday");
+  // multipeCase("Monday");
+}
+{
+  function menuDriven(num1, choice, num2){
+    switch(choice){
+      case 1: console.log("Add: " + (num1 + num2)); break;
+      case 2: console.log("Substract: " + (num1 - num2)); break;
+      case 3: console.log("Multiply: " + (num1 * num2)); break;
+      case 4: console.log("Devide: " + (num1 / num2)); break;
+      case 5: console.log("Exit :"); break;
+      default : console.log("Invalid Choice");
+    };
+  };
+  // menuDriven(2, 3, 5);
 }

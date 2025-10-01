@@ -5134,8 +5134,23 @@ printVowel("hello");
         console.log("Enter Valid Operator");
     };
   };
-  calculator(2, "/", 9);
+  // calculator(2, "/", 9);
 }
 {
-  
+  function traficLight(clr){
+    switch(clr){
+      case "red":
+        console.log("Stop");
+        break;
+      case "Yellow":
+        console.log("Ready");
+        break;
+      case "Green":
+        console.log("Go");
+        break;
+      default:
+        console.log("Enter Valid Color");
+    };
+  };
+  traficLight("red");
 }

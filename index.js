@@ -5115,3 +5115,27 @@ printVowel("hello");
   };
   typeFruit("mango");
 }
+{
+  function calculator(num1, operator, num2){
+    switch(true){
+      case operator === "+":
+        console.log(num1 + num2);
+        break;
+      case operator === "-":
+        console.log(num1 - num2);
+        break;
+      case operator === "*":
+        console.log(num1 * num2);
+        break;
+      case operator === "/":
+        console.log(num1 / num2);
+        break;
+      default:
+        console.log("Enter Valid Operator");
+    };
+  };
+  calculator(2, "/", 9);
+}
+{
+  
+}

@@ -5190,3 +5190,33 @@ printVowel("hello");
   };
   // menuDriven(2, 3, 5);
 }
+{
+  // Write a program that takes a number 1-12 and tells you thw season
+  function seasonNum(num){
+    switch(num){
+      case 1:
+      case 2:
+      case 12:
+        console.log(`Month ${num} is Winter`);
+        break;
+      case 3:
+      case 4:
+      case 5:
+        console.log(`Month ${num} is Spring`);
+        break;
+      case 6:
+      case 7:
+      case 8:
+        console.log(`Month ${num} is Summer`);
+        break;
+      case 9:
+      case 10:
+      case 11:
+        console.log(`Month ${num} is Autumn`);
+        break;
+      default:
+        console.log("Enter Valid Month Number");
+    };
+  };
+  seasonNum(1);
+}

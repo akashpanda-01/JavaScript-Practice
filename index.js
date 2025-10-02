@@ -5248,3 +5248,18 @@ printVowel("hello");
   };
   atmMenu(200, 4);
 }
+{
+  let color = "red";
+
+switch(color) {
+  case "red":
+    console.log("Stop");
+  case "yellow":
+    console.log("Wait");
+  case "green":
+    console.log("Go");
+  default:
+    console.log("Invalid color");
+}
+
+}

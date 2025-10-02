@@ -5218,5 +5218,33 @@ printVowel("hello");
         console.log("Enter Valid Month Number");
     };
   };
-  seasonNum(1);
+  // seasonNum(1);
+}
+{
+  function atmMenu(amount, choice) {
+    let balance = 2000;
+    switch(choice){
+      case 1:
+        console.log(`Your Balance Is : ${balance}`);
+        break;
+      case 2:
+        balance += amount;
+        console.log(`Deposited : ${balance}`);
+        break;
+      case 3:
+        if(amount <= balance){
+          balance -= amount;
+          console.log("Withdrawl :" + amount + "New Balance" + balance);
+        } else {
+          console.log("Insufficient Balance");
+        };
+        break;
+      case 4:
+        console.log("Thank You For Using ATM");
+        break;
+      default:
+        console.log("Invalid option");
+    };
+  };
+  atmMenu(200, 4);
 }

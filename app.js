@@ -88,5 +88,15 @@ const greet = function(name) {
 };
 
 console.log(greet("Akash"));  // Hello Akash
+}
+{
+  // Named Function Expression
+  const factorial = function fact(n) {
+  if (n <= 1) return 1;
+  return n * fact(n - 1); // recursive call using its own name
+};
+
+console.log(factorial(5)); // 120
+// console.log(fact(5));
 
 }

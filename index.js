@@ -5256,14 +5256,14 @@ printVowel("hello");
         console.log("Invalid option");
     }
   }
-  atmMenu(200, 4);
+  // atmMenu(200, 4);
 }
 {
   let color = "red";
 
   switch (color) {
     case "red":
-      console.log("Stop");
+      // console.log("Stop");
     case "yellow":
       console.log("Wait");
     case "green":
@@ -5273,5 +5273,20 @@ printVowel("hello");
   }
 }
 {
-  
+  function checkAge(age) {
+    switch (true) {
+      case age < 13:
+        console.log("Child");
+        break;
+      case age >= 13 && age < 20:
+        console.log("Teenager");
+        break;
+      case age >= 20:
+        console.log("Adult");
+        break;
+      default:
+        console.log("Invalid age");
+    };
+  };
+  // checkAge(23);
 }

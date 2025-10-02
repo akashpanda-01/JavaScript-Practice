@@ -98,5 +98,7 @@ console.log(greet("Akash"));  // Hello Akash
 
 console.log(factorial(5)); // 120
 // console.log(fact(5));
-
+}
+{
+  // 
 }

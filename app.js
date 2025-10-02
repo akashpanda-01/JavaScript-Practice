@@ -73,3 +73,10 @@ x();
   person1.greet();
   person2.greet();
 }
+{
+  // Function Statement
+  function sayHello() {
+  console.log("Hello World");
+}
+// sayHello()
+}

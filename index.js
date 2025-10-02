@@ -4959,77 +4959,76 @@ printVowel("hello");
 }
 
 {
-  function debounce(func, delay){
-    let timeOutId ;
+  function debounce(func, delay) {
+    let timeOutId;
     return function (...arg) {
       // timeOutId = setTimeout(() => {
       //   func.apply(this, arg);
       // }, delay)
     };
-  };
+  }
   const log = debounce(function (msg) {
     // console.log(this.name + ": " + msg);
   }, 1000);
 
-  let obj = {name: "Akash"}
+  let obj = { name: "Akash" };
   // log.call(obj,  "Hello")
 }
 {
-  function debounce(func, delay){
+  function debounce(func, delay) {
     let timeOutId;
-    return function (...arg){
+    return function (...arg) {
       clearTimeout(timeOutId);
       // timeOutId = setTimeout(() => {
       //   func.apply(this, arg);
       // }, delay);
     };
-  };
-  const log = debounce(function(msg) {
+  }
+  const log = debounce(function (msg) {
     // console.log(this.name + ": " + msg);
   }, 1000);
-  
-  let obj = {name: "Akash"};
+
+  let obj = { name: "Akash" };
   log.call(obj, "Hello");
 }
 {
-  function debounce(func, delay){
+  function debounce(func, delay) {
     let timeOutId;
-    return function (...arg){
+    return function (...arg) {
       clearTimeout(timeOutId);
       // timeOutId = setTimeout(() => {
       //   func.apply(this, arg);
       // }, delay);
     };
-  };
-  
+  }
+
   // const log = debounce(function (msg) {
-    // console.log(this.name, msg)
+  // console.log(this.name, msg)
   // }, 1000);
   // let obj = {name: "Akash"};
   // log.call(obj, "Hello");
 }
 {
-  function findAnagram(str1, str2){
+  function findAnagram(str1, str2) {
     let normalize = (str) => str.toLowerCase().split("").sort().join("");
     console.log(normalize);
-    
+
     return normalize(str1) === normalize(str2);
   }
   // console.log(findAnagram("listen", "silent"));
-  
 }
 
 // ==================== SWITCH CASE ========================
 {
   // Write a program using switch to print the name of the month
-  function findMonth(num){
-    switch(true){
-    case num === 1:
-      console.log("Jan");
-      break;
-    case num === 2:
-      console.log("Fab");
-      break;
+  function findMonth(num) {
+    switch (true) {
+      case num === 1:
+        console.log("Jan");
+        break;
+      case num === 2:
+        console.log("Fab");
+        break;
       case num === 3:
         console.log("Mar");
         break;
@@ -5062,14 +5061,14 @@ printVowel("hello");
         break;
       default:
         console.log("Enter Valid Month Number");
-    };
-  };
+    }
+  }
   // findMonth(5);
 }
 {
   // Take a Number (0-6) and print the day of the week
-  function findWeek(num){
-    switch(true){
+  function findWeek(num) {
+    switch (true) {
       case num === 0:
         console.log("Today Is Sunday");
         break;
@@ -5093,14 +5092,14 @@ printVowel("hello");
         break;
       default:
         console.log("Enter Valid Number of Week");
-    };
-  };
+    }
+  }
   // findWeek(2);
 }
 {
   // Write a Program to Check The Type Of Fruit
-  function typeFruit(str){
-    switch(str.toLowerCase()){
+  function typeFruit(str) {
+    switch (str.toLowerCase()) {
       case "apple":
       case "mango":
       case "banana":
@@ -5111,13 +5110,13 @@ printVowel("hello");
         break;
       default:
         console.log("Unknown Item");
-    };
-  };
+    }
+  }
   // typeFruit("mango");
 }
 {
-  function calculator(num1, operator, num2){
-    switch(true){
+  function calculator(num1, operator, num2) {
+    switch (true) {
       case operator === "+":
         console.log(num1 + num2);
         break;
@@ -5132,14 +5131,14 @@ printVowel("hello");
         break;
       default:
         console.log("Enter Valid Operator");
-    };
-  };
+    }
+  }
   // calculator(2, "/", 9);
 }
 {
-  // Take a color (red, green, yellow) and print trafic light instruction using switch 
-  function traficLight(clr){
-    switch(clr){
+  // Take a color (red, green, yellow) and print trafic light instruction using switch
+  function traficLight(clr) {
+    switch (clr) {
       case "red":
         console.log("Stop");
         break;
@@ -5151,19 +5150,19 @@ printVowel("hello");
         break;
       default:
         console.log("Enter Valid Color");
-    };
-  };
+    }
+  }
   // traficLight("red");
 }
 {
   // Write a Program that group multiple cases
-  function multipeCase(weekday){
-    switch(weekday.toLowerCase()){
+  function multipeCase(weekday) {
+    switch (weekday.toLowerCase()) {
       case "monday":
       case "tueday":
       case "wednesday":
-      case "thusday" :
-      case "friday" :
+      case "thusday":
+      case "friday":
         console.log(`${weekday} is a Weekday`);
         break;
       case "Sunday":
@@ -5172,28 +5171,39 @@ printVowel("hello");
         break;
       default:
         console.log("Enter Valid Day");
-    };
-  };
+    }
+  }
   // multipeCase("Monday");
 }
 {
   // Impliment a menu driven program
-  function menuDriven(num1, choice, num2){
-    switch(choice){
-      case 1: console.log("Add: " + (num1 + num2)); break;
-      case 2: console.log("Substract: " + (num1 - num2)); break;
-      case 3: console.log("Multiply: " + (num1 * num2)); break;
-      case 4: console.log("Devide: " + (num1 / num2)); break;
-      case 5: console.log("Exit :"); break;
-      default : console.log("Invalid Choice");
-    };
-  };
+  function menuDriven(num1, choice, num2) {
+    switch (choice) {
+      case 1:
+        console.log("Add: " + (num1 + num2));
+        break;
+      case 2:
+        console.log("Substract: " + (num1 - num2));
+        break;
+      case 3:
+        console.log("Multiply: " + num1 * num2);
+        break;
+      case 4:
+        console.log("Devide: " + num1 / num2);
+        break;
+      case 5:
+        console.log("Exit :");
+        break;
+      default:
+        console.log("Invalid Choice");
+    }
+  }
   // menuDriven(2, 3, 5);
 }
 {
   // Write a program that takes a number 1-12 and tells you thw season
-  function seasonNum(num){
-    switch(num){
+  function seasonNum(num) {
+    switch (num) {
       case 1:
       case 2:
       case 12:
@@ -5216,14 +5226,14 @@ printVowel("hello");
         break;
       default:
         console.log("Enter Valid Month Number");
-    };
-  };
+    }
+  }
   // seasonNum(1);
 }
 {
   function atmMenu(amount, choice) {
     let balance = 2000;
-    switch(choice){
+    switch (choice) {
       case 1:
         console.log(`Your Balance Is : ${balance}`);
         break;
@@ -5232,34 +5242,36 @@ printVowel("hello");
         console.log(`Deposited : ${balance}`);
         break;
       case 3:
-        if(amount <= balance){
+        if (amount <= balance) {
           balance -= amount;
           console.log("Withdrawl :" + amount + "New Balance" + balance);
         } else {
           console.log("Insufficient Balance");
-        };
+        }
         break;
       case 4:
         console.log("Thank You For Using ATM");
         break;
       default:
         console.log("Invalid option");
-    };
-  };
+    }
+  }
   atmMenu(200, 4);
 }
 {
   let color = "red";
 
-switch(color) {
-  case "red":
-    console.log("Stop");
-  case "yellow":
-    console.log("Wait");
-  case "green":
-    console.log("Go");
-  default:
-    console.log("Invalid color");
+  switch (color) {
+    case "red":
+      console.log("Stop");
+    case "yellow":
+      console.log("Wait");
+    case "green":
+      console.log("Go");
+    default:
+      console.log("Invalid color");
+  }
 }
-
+{
+  
 }

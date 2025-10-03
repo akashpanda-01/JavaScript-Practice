@@ -120,15 +120,36 @@ const greet = function(name) {
 {
   let str = "    hello      ";
   let newEdit  = str.trim();
-  console.log(newEdit);
+  // console.log(newEdit);
   let newMsg = newEdit.toUpperCase();
-  console.log(newMsg);
+  // console.log(newMsg);
 }
 {
   // Slice() Method
   // Return a part of the original string as a new string
   let str = "Hello World";
-  let cut = str.slice(6, 11);
-  console.log(cut);
-  
+  // let cut = str.slice(6, 11);
+  let cut = str.slice(-3)
+  // console.log(cut); 
+}
+{
+  // Replace Method (replace())
+  // search a value in string and return a new srting with the value repalced
+  let str = "i Love Coding";
+  let replace = str.replace("Love", "do");
+  // console.log(replace);
+}
+{
+  // Repeat method()
+  // Return a string the Number of copies of a string
+  let str = "Hello";
+  let newStr = str.repeat(3);
+  // console.log(newStr);
+}
+
+{
+  // QN => For the given string trim it and convert to uppercase
+  let msg = "hello";
+  let edit = msg.trim().toUpperCase();
+  // console.log(edit);
 }

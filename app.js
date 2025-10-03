@@ -100,5 +100,9 @@ console.log(factorial(5)); // 120
 // console.log(fact(5));
 }
 {
-  // 
+  let str = "hello";
+  let upper = str.toUpperCase();
+  console.log(upper);
+  console.log(str);
+  
 }

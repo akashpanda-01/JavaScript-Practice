@@ -153,3 +153,12 @@ const greet = function(name) {
   let edit = msg.trim().toUpperCase();
   // console.log(edit);
 }
+// Array
+{
+  // splice(start, delete, add)
+  let color = ["red", "yellow", "blue", "green", "orange", "white"];
+  // console.log(color.splice(2));
+  // console.log(color.splice(0, 1, 0));
+  // console.log(color.splice(0 , 1, "black", "gray"));
+  // console.log(color);
+}

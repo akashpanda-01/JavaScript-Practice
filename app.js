@@ -28,7 +28,7 @@ x();
     firstName: "Hello",
     lastName: "World",
     printFullName: function (){
-      console.log(this.firstName + " " + this.lastName);
+      // console.log(this.firstName + " " + this.lastName);
     }
   };
   name.printFullName(); 
@@ -64,7 +64,7 @@ x();
     };
 
     greet(){
-      console.log(`Hello My Name Is ${this.name}`);
+      // console.log(`Hello My Name Is ${this.name}`);
     };
   };
   const person1 = new Person("Akash", 23);
@@ -76,7 +76,7 @@ x();
 {
   // Function Statement
   function sayHello() {
-  console.log("Hello World");
+  // console.log("Hello World");
 }
 // sayHello()
 }
@@ -87,7 +87,7 @@ const greet = function(name) {
   return "Hello " + name;
 };
 
-console.log(greet("Akash"));  // Hello Akash
+// console.log(greet("Akash"));  // Hello Akash
 }
 {
   // Named Function Expression
@@ -96,13 +96,31 @@ console.log(greet("Akash"));  // Hello Akash
   return n * fact(n - 1); // recursive call using its own name
 };
 
-console.log(factorial(5)); // 120
+// console.log(factorial(5)); // 120
 // console.log(fact(5));
 }
 {
+  // String Creates New string While Using a method
   let str = "hello";
   let upper = str.toUpperCase();
-  console.log(upper);
-  console.log(str);
-  
+  // console.log(upper);
+  // console.log(str);
+}
+{
+  // Method With Argument
+  let str = "Hellow World";
+  // console.log(str.indexOf("l"));
+}
+{
+  // Method Chaining
+  // Using One Method after another. Order Of Execution will be left to right.
+  let msg = "Hello world           ";
+  // console.log(msg.toUpperCase().trim());
+}
+{
+  let str = "    hello      ";
+  let newEdit  = str.trim();
+  console.log(newEdit);
+  let newMsg = newEdit.toUpperCase();
+  console.log(newMsg);
 }

@@ -124,3 +124,11 @@ const greet = function(name) {
   let newMsg = newEdit.toUpperCase();
   console.log(newMsg);
 }
+{
+  // Slice() Method
+  // Return a part of the original string as a new string
+  let str = "Hello World";
+  let cut = str.slice(6, 11);
+  console.log(cut);
+  
+}

@@ -5290,3 +5290,9 @@ printVowel("hello");
   };
   // checkAge(23);
 }
+{
+  // Tic Tac Toy
+  let arr = [["X", null, "O"], [null, "X", null], ["O", null, "X"]];
+  arr[0][1] = "X";
+  console.log(arr);
+}

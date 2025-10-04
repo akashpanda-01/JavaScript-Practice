@@ -5272,7 +5272,7 @@ printVowel("hello");
       console.log("Go");
       break;
     default:
-      // console.log("Invalid color");
+    // console.log("Invalid color");
   }
 }
 {
@@ -5289,28 +5289,41 @@ printVowel("hello");
         break;
       default:
         console.log("Invalid age");
-    };
-  };
+    }
+  }
   // checkAge(23);
 }
 {
   // Tic Tac Toy
-  let arr = [["X", null, "O"], [null, "X", null], ["O", null, "X"]];
+  let arr = [
+    ["X", null, "O"],
+    [null, "X", null],
+    ["O", null, "X"],
+  ];
   arr[0][1] = "X";
   // console.log(arr);
 }
 {
   function checkArmstrongNumber(num) {
     let nums = num.toString().split("").map(Number);
-    let output = "Not Armstrong"
+    let output = "Not Armstrong";
     let temp = [];
-    for(let i = 0; i < nums.length; i++){
-        temp.push(Math.pow(nums[i], 3));
-    };
+    for (let i = 0; i < nums.length; i++) {
+      temp.push(Math.pow(nums[i], 3));
+    }
     let sum = temp.reduce((acc, crr) => acc + crr, 0);
-    if(sum === num){
-        output = "Armstrong";
-    };
+    if (sum === num) {
+      output = "Armstrong";
+    }
     return output;
+  }
 }
+
+{
+  function checkArmstrongNumber(num) {
+    return num === num.toString().split("").map(Number)
+    .reduce((sum, x) => sum + Math.pow(x, 3), 0)
+    ? "Armstrong" : "Not Armstrong";
+};
+console.log(checkArmstrongNumber(342))
 }

@@ -5359,5 +5359,17 @@ printVowel("hello");
 
     return num == ans ? "Armstrong" : "Not Armstrong";
   };
-  console.log(checkArmstrongNumber(153));
+  // console.log(checkArmstrongNumber(153));
+}
+{
+  function checkArmstrong(num){
+    let num1 = num.toString().split("");
+    let res = [];
+    for(let i = 0; i < num1.length; i++){
+      res.push(Math.pow(num1[i], 3));
+    };
+    let ans = res.reduce((a,b) => a+b, 0);
+    return num === ans ? "Armstrong" : "Not Armstrong";
+  };
+  console.log(checkArmstrong(153));
 }

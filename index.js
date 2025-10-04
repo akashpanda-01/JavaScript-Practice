@@ -5317,7 +5317,7 @@ printVowel("hello");
     }
     return output;
   }
-  console.log(checkArmstrongNumber(342));
+  // console.log(checkArmstrongNumber(342));
 }
 
 {
@@ -5327,4 +5327,16 @@ printVowel("hello");
     ? "Armstrong" : "Not Armstrong";
 };
 // console.log(checkArmstrongNumber(342));
+}
+{
+  function armstrong(num){
+    let x = num.toString().split("");
+    let length = x.length;
+    const y = x.reduce((acc, crr) => {
+      const number = Number(crr);
+      return acc + (crr ** length);
+    }, 0);
+    return y === num ? "Armstrong" : "Not Armstrong";
+  };
+  // console.log(armstrong(370))
 }

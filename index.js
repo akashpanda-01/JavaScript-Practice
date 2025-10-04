@@ -5322,21 +5322,42 @@ printVowel("hello");
 
 {
   function checkArmstrongNumber(num) {
-    return num === num.toString().split("").map(Number)
-    .reduce((sum, x) => sum + Math.pow(x, 3), 0)
-    ? "Armstrong" : "Not Armstrong";
-};
-// console.log(checkArmstrongNumber(342));
+    return num ===
+      num
+        .toString()
+        .split("")
+        .map(Number)
+        .reduce((sum, x) => sum + Math.pow(x, 3), 0)
+      ? "Armstrong"
+      : "Not Armstrong";
+  }
+  // console.log(checkArmstrongNumber(342));
 }
 {
-  function armstrong(num){
+  function armstrong(num) {
     let x = num.toString().split("");
     let length = x.length;
     const y = x.reduce((acc, crr) => {
       const number = Number(crr);
-      return acc + (crr ** length);
+      return acc + crr ** length;
     }, 0);
     return y === num ? "Armstrong" : "Not Armstrong";
-  };
+  }
   // console.log(armstrong(370))
+}
+{
+  function checkArmstrongNumber(num) {
+    let num1 = num.toString().split("").map(Number);
+    console.log(num1);
+
+    let res = [];
+    for (let i = 0; i < num1.length; i++) {
+      res.push(num1[i] * num1[i] * num1[i]);
+    }
+
+    let ans = res.reduce((a, b) => a + b);
+
+    return num == ans ? "Armstrong" : "Not Armstrong";
+  };
+  console.log(checkArmstrongNumber(153));
 }

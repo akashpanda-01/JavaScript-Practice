@@ -162,3 +162,24 @@ const greet = function(name) {
   // console.log(color.splice(0 , 1, "black", "gray"));
   // console.log(color);
 }
+
+{
+  function attachEvent(){
+    let count = 0;
+    document.getElementById("clickMe").addEventListener("click", function xyz(){
+      // console.log("Button Clicked", count++);
+    });
+  };
+  attachEvent();
+}
+{
+  // // Find Arm Strong Number
+  // function findArmstrong(num){
+  //   let sum = 0;
+  //   let temp = num;
+  //   let toStr = num.toString(); 
+  //   while(true){
+  //     if()
+  //   }
+  // }
+}

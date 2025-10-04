@@ -5146,7 +5146,7 @@ printVowel("hello");
         console.log("Ready");
         break;
       case "Green":
-        console.log("Go");
+        // console.log("Go");
         break;
       default:
         console.log("Enter Valid Color");
@@ -5264,12 +5264,15 @@ printVowel("hello");
   switch (color) {
     case "red":
       // console.log("Stop");
+      break;
     case "yellow":
       console.log("Wait");
+      break;
     case "green":
       console.log("Go");
+      break;
     default:
-      console.log("Invalid color");
+      // console.log("Invalid color");
   }
 }
 {
@@ -5294,5 +5297,20 @@ printVowel("hello");
   // Tic Tac Toy
   let arr = [["X", null, "O"], [null, "X", null], ["O", null, "X"]];
   arr[0][1] = "X";
-  console.log(arr);
+  // console.log(arr);
+}
+{
+  function checkArmstrongNumber(num) {
+    let nums = num.toString().split("").map(Number);
+    let output = "Not Armstrong"
+    let temp = [];
+    for(let i = 0; i < nums.length; i++){
+        temp.push(Math.pow(nums[i], 3));
+    };
+    let sum = temp.reduce((acc, crr) => acc + crr, 0);
+    if(sum === num){
+        output = "Armstrong";
+    };
+    return output;
+}
 }

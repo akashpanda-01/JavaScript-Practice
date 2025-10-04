@@ -5317,6 +5317,7 @@ printVowel("hello");
     }
     return output;
   }
+  console.log(checkArmstrongNumber(342));
 }
 
 {
@@ -5325,5 +5326,5 @@ printVowel("hello");
     .reduce((sum, x) => sum + Math.pow(x, 3), 0)
     ? "Armstrong" : "Not Armstrong";
 };
-console.log(checkArmstrongNumber(342))
+// console.log(checkArmstrongNumber(342));
 }

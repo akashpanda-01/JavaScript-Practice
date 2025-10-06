@@ -167,10 +167,10 @@ const greet = function(name) {
   function attachEvent(){
     let count = 0;
     document.getElementById("clickMe").addEventListener("click", function xyz(){
-      // console.log("Button Clicked", count++);
+      console.log("Button Clicked", count++);
     });
   };
-  attachEvent();
+  // attachEvent();
 }
 {
   // // Find Arm Strong Number
@@ -183,3 +183,58 @@ const greet = function(name) {
   //   }
   // }
 }
+
+// HIGHER ORDER FUNCTION
+// let radius = [3, 1, 2, 4];
+// const calculateArea = function (radius) {
+//   let output = [];
+
+//   for(let i = 0; i<radius.length; i++){
+//     output.push(Math.PI * radius[i] * radius[i]);
+//   };
+//   return output;
+// };
+// console.log(calculateArea(radius));
+
+// const calculateCircumference = function (radius) {
+//   let output = [];
+//   for(let i = 0; i < radius.length; i++){
+//     output.push(2 * Math.PI * radius[i]);
+//   };
+//   return output;
+// };
+// console.log(calculateCircumference(radius));
+
+// const calculateDiameter = function (radius) {
+//   let output = [];
+//   for(let i = 0; i < radius.length; i++){
+//     output.push(2 * radius[i]);
+//   };
+//   return output;
+// };
+// console.log(calculateDiameter(radius));
+
+
+// WITH OPTIMIZATION
+let radius = [3, 1, 2, 4];
+
+const area = function (radius) {
+  return Math.PI * Math.pow(radius, 2);
+};
+const diameter = function (radius) {
+  return 2 * radius;
+};
+const circumference = function (radius) {
+  return 2 * Math.PI * radius;
+};
+
+const calculate = function (radius, logic) {
+  let output = [];
+  for(let i = 0; i < radius.length; i++){
+    output.push(logic(radius[i]));
+  };
+  return output;
+};
+console.log(calculate(radius, area));
+console.log(calculate(radius, diameter));
+console.log(calculate(radius, circumference));

@@ -80,7 +80,7 @@
     };
     return acc;
   }, []);
-  console.log(output3);
+  // console.log(output3);
   
 
   const output2 = user.filter(function (ele){
@@ -114,4 +114,68 @@
   // }, {});
   // console.log(output);
   
+}
+
+{
+  // let name = {
+  //   firstName: "Radhe",
+  //   lastName: "Krishna"
+  // };
+
+  // let printMyName = function () {
+  //   console.log(this.firstName + " " + this.lastName);
+  // };
+
+  // Function.prototype.mybind = function(...args){
+  //   let obj = this;
+  //   console.log(this);
+  //   return function () {
+  //     obj.call(args[0])
+  //   };
+  // };
+  // let printMyName2 = printMyName.mybind(name);
+  // printMyName2();
+  
+}
+
+
+{
+  let name = {
+    firstName: "Radhe",
+    lastName: "Krishna"
+  };
+
+  let printName = function (hometown, state) {
+    console.log(this.firstName + " " + this.lastName + ", " + hometown + ", " + state);
+  };
+
+  Function.prototype.mybind = function (...args) {
+    let obj = this;
+    params = args.splice(1)
+    console.log(params);
+    return function (...args2) {
+      obj.apply(args[0], [...params, ...args2])
+      console.log(...params, ...args2);
+      
+    }
+  };
+  const printMyName2 = printName.mybind(name, "Duarka");
+  printMyName2("unknown");
+}
+
+{
+  function Person (name) {
+    this.name = name;
+  };
+
+  Person.prototype.sayHello = function () {
+    console.log(`Hello I am Devoti of ${this.name}`);
+    
+  }
+
+  const p1 = new Person("Radhe");
+  const p2 = new Person("Krishna");
+
+  p1.sayHello();
+  p2.sayHello();
 }

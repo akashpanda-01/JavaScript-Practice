@@ -190,9 +190,8 @@ Print the final array.
   numbers.push(4);
   numbers.unshift(0);
   numbers.pop();
-  
+
   // console.log(numbers);
-  
 }
 {
   // Write a program to print the number of elements in an array:
@@ -204,16 +203,15 @@ Print the final array.
   let names = ["Radhe", "Krishna", "Govind"];
   // With for Loop
   let print = [];
-  for(let i = 0; i < names.length; i++){
+  for (let i = 0; i < names.length; i++) {
     print.push(names[i]);
-  };
+  }
   // console.log(print);
-  
+
   // forEach Loop
   names.forEach((item) => {
     // console.log(item);
-    
-  })
+  });
 }
 {
   // Print the middle element of an array (no matter how many elements are there).
@@ -224,4 +222,132 @@ Print the final array.
 
   let mid = arr.filter((_, i) => i === Math.floor(arr.length / 2))[0];
   // console.log(mid);
+}
+{
+  // Check if the number 10 exists in this array:
+  let nums = [4, 6, 8, 10, 12];
+  let res = nums.includes(10) ? "Exists" : "Not";
+  console.log(res);
+}
+{
+  // Use slice() to get [20, 30]
+  // Use splice() to remove [30, 40] from original array
+  let arr = [10, 20, 30, 40, 50];
+  let slice = arr.slice(1, 3);
+  // console.log( slice);
+  let splice = arr.splice(2, 2);
+}
+// console.log(splice);
+{
+  // Combine these two arrays into one:
+  // Try using both concat() and spread operator (...).
+  let even = [2, 4, 6];
+  let odd = [1, 3, 5];
+
+  let combine = even.concat(odd);
+  // console.log(combine);
+
+  let add = [];
+  add.push(...even, ...odd);
+  // console.log(add);
+}
+{
+  // Convert "JavaScript is fun" into an array of words.
+  let str = "JavaScript is fun";
+  let words = str.split(" ");
+  // console.log(words);
+}
+{
+  // Convert ["I", "love", "coding"] into the string "I love coding".
+  let arr = ["I", "Love", "Coding"];
+  let toStr = arr.join(" ");
+  // console.log(toStr);
+}
+{
+  // Use map(), Return a new array where each number is squared.
+  let nums = [1, 2, 3, 4];
+  let newArr = nums.map((sqr) => sqr ** 2);
+  // console.log(newArr);
+}
+{
+  // Use filter(), Return only the ages greater than or equal to 18.
+  let ages = [12, 25, 17, 30, 40];
+  let greater = ages.filter((itm) => itm > 18);
+  // console.log(greater);
+}
+{
+  // Use reduce(), Find the sum of all numbers in:
+  let arr = [5, 10, 15, 20];
+  let val = arr.reduce((acc, crr) => acc + crr);
+  // console.log(val);
+}
+{
+  // Use find(), Find the first user whose age is greater than 22.
+  let users = [
+    { name: "Alice", age: 20 },
+    { name: "Bob", age: 25 },
+    { name: "Charlie", age: 30 },
+  ];
+  let first = users.find((objs) => {
+    if (objs["age"] > 22) {
+      return objs["age"];
+    }
+  });
+  // console.log(first);
+}
+{
+  // Remove duplicates from:
+  let nums = [1, 2, 2, 3, 4, 4, 5];
+  let duplicates = [];
+  nums.forEach((item) => {
+    if (!duplicates.includes(item)) {
+      duplicates.push(item);
+    }
+  });
+  // console.log(duplicates);
+}
+// Check if all marks are greater than 40.
+// Check if some marks are greater than 80.
+{
+  let marks = [45, 67, 89, 90, 50];
+  let result = marks.reduce((acc, crr) => {
+    if(crr <= 40) acc.allAbove40 = false;
+    return acc
+  }, {allAbove40: true});
+
+  // console.log(result.allAbove40 ? "All Above 40" : "Some Above 40");
+}
+{
+  let marks = [45, 67, 89, 90, 50];
+  let allAbove40 = marks.filter((items) => items >= 40)
+  // console.log(allAbove40 ? "All Above 40" : "Some Above 40");
+}
+{
+  let marks = [45, 67, 89, 90, 50];
+  let allAbove40 = true;
+  for(let nums of marks){
+    if(nums >= 40){
+      allAbove40  = true;
+    } else {
+      allAbove40 = false;
+    };
+  };
+  // console.log(allAbove40 ? "All Above 40" : "Some Above 40");
+}
+{
+  // Flatten [1, [2, [3, [4]]]] into a single array using flat().
+  let arr = [1, [2, [3, [4]]]];
+  let newArr = arr.flat(Infinity);
+  // console.log(newArr);
+}
+{
+  // Sort [100, 20, 3, 55] in ascending order correctly (not alphabetically).
+  let arr = [100, 20, 3, 55];
+  let newArr = [];
+  let res = arr.reduce((acc, crr) => {
+    if(acc < crr){
+      newArr.push(acc);
+    }
+  });
+  console.log(res);
 }

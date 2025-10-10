@@ -44,6 +44,5 @@
   const personMap = new Map(Object.entries(person));
   for(let [key, val] of personMap){
     console.log(key, val);
-  }
-
+  };
 }

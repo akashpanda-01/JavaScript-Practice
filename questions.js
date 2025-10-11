@@ -227,7 +227,7 @@ Print the final array.
   // Check if the number 10 exists in this array:
   let nums = [4, 6, 8, 10, 12];
   let res = nums.includes(10) ? "Exists" : "Not";
-  console.log(res);
+  // console.log(res);
 }
 {
   // Use slice() to get [20, 30]
@@ -310,28 +310,31 @@ Print the final array.
 // Check if some marks are greater than 80.
 {
   let marks = [45, 67, 89, 90, 50];
-  let result = marks.reduce((acc, crr) => {
-    if(crr <= 40) acc.allAbove40 = false;
-    return acc
-  }, {allAbove40: true});
+  let result = marks.reduce(
+    (acc, crr) => {
+      if (crr <= 40) acc.allAbove40 = false;
+      return acc;
+    },
+    { allAbove40: true }
+  );
 
   // console.log(result.allAbove40 ? "All Above 40" : "Some Above 40");
 }
 {
   let marks = [45, 67, 89, 90, 50];
-  let allAbove40 = marks.filter((items) => items >= 40)
+  let allAbove40 = marks.filter((items) => items >= 40);
   // console.log(allAbove40 ? "All Above 40" : "Some Above 40");
 }
 {
   let marks = [45, 67, 89, 90, 50];
   let allAbove40 = true;
-  for(let nums of marks){
-    if(nums >= 40){
-      allAbove40  = true;
+  for (let nums of marks) {
+    if (nums >= 40) {
+      allAbove40 = true;
     } else {
       allAbove40 = false;
-    };
-  };
+    }
+  }
   // console.log(allAbove40 ? "All Above 40" : "Some Above 40");
 }
 {
@@ -345,9 +348,148 @@ Print the final array.
   let arr = [100, 20, 3, 55];
   let newArr = [];
   let res = arr.reduce((acc, crr) => {
-    if(acc < crr){
+    if (acc < crr) {
       newArr.push(acc);
     }
   });
-  console.log(res);
+  // console.log(res);
+}
+{
+  // Flatten Nasted Array
+  let arr = [1, 2, [3, 4, [5, [6]]]];
+  let res = arr.flat(Infinity);
+  // console.log(res);
+}
+
+{
+  // Sort Array
+  let arr = [5, 4, 3, 2, 1];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] > arr[j]) {
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  // console.log(arr);
+}
+{
+  // Find Maximum Number in [10, 20, 30, 40, 50] using Math.max(), .reduce()
+  let arr = [10, 20, 30, 40, 50];
+  let max = Math.max(...arr);
+  // console.log(max);
+}
+{
+  let arr = [10, 20, 30, 40, 50];
+  let max = arr.reduce((acc, crr) => {
+    if(crr > acc){
+      acc = crr;
+    };
+    return acc;
+  });
+  // console.log(max);
+}
+{
+  // Clone let arr = [1, 2, 3]; into a new array and add 4 without changing the original one.
+  let arr = [1, 2, 3];
+  // let temp = arr.slice();
+  let temp = [...arr];
+  // let temp = Array.from(arr);
+  temp.push(4);
+  // console.log(arr);
+  // console.log(temp);
+  
+}
+{
+  // Check if 50 exists in [10, 20, 30, 40, 50].
+  let arr = [10, 20, 30, 40, 50];
+  let isInclude = arr.includes(50);
+  console.log(isInclude);
+}
+{
+  // Find the first and last index of 2 in [1, 2, 3, 2, 4].
+  const arr = [1, 2, 3, 2, 4];
+  const firstIdx = arr.indexOf(2);
+  const lastIdx = arr.lastIndexOf(2);
+  // console.log(firstIdx, lastIdx);
+}
+{
+  // Find the first number greater than 10, and its index.
+  let nums = [5, 10, 15, 20];
+  let find = nums.find(n => n > 10);
+  let findIdx = nums.findIndex((n) => n > 10);
+  // console.log(find, findIdx);
+}
+{
+  // Create a new array with each number doubled.
+  let arr = [2, 4, 6];
+  let doubled = arr.map((n) => n * 2);
+  // console.log(doubled);
+}
+{
+  // Return only ages greater than or equal to 18.
+  let ages = [12, 25, 17, 30];
+  let returnVal = ages.filter((n) => n > 18);
+  // console.log(returnVal);
+}
+{
+  // Find the sum of all numbers in [1, 2, 3, 4, 5].
+  let nums = [1, 2, 3, 4, 5];
+  let sum = nums.reduce((acc, crr) => acc + crr);
+  // console.log(sum);
+}
+{
+  // Sort [40, 100, 1, 5, 25] in ascending numeric order.
+  let arr = [40, 100, 1, 5, 25];
+  let sortArr = arr.sort((a, b) => a - b);
+  // console.log(sortArr);
+}
+{
+  // Reverse the array [1, 2, 3, 4].
+  let arr = [1, 2, 3, 4];
+  let reverse = arr.reverse();
+  // console.log(reverse);
+}
+{
+  // Flatten [1, [2, [3, [4]]]] into a single array.
+  let arr = [1, [2, [3, [4]]]];
+  let flatten = arr.flat(Infinity);
+  // console.log(flatten);
+}
+{
+  // Check if all marks are greater than 40.
+  // Check if some marks are greater than 80.
+  let marks = [45, 67, 89, 90, 50];
+  let allAbove40 = marks.every(mrk => mrk < 40);
+  let allAbove80 = marks.some(sm => sm > 80);
+  if(allAbove40){
+    console.log("Some Above 40");
+  } else {
+    console.log("all above 40");
+  }
+  if(allAbove80){
+    console.log("Some are Greater Than 80");
+  } else {
+    console.log("All Above 80");
+  }
+}
+{
+  // Create an array of length 5 and fill it with "A".
+  let arr = ["a", "b", "c", "d", "e"];
+  let fil = arr.fill("A", 3, 4);
+  console.log(fil);
+}
+{
+  // Check which of these are arrays:
+  let check =[[1, 2, 3], "Hello", {a: 1}, new Array(3)];
+  check.forEach((i) => console.log(Array.isArray(i)));  
+
+  let result = check.map((i) => Array.isArray(i))
+  if(result){
+    console.log("Firsy");
+    
+  }
+  console.log(result);
 }

@@ -467,10 +467,10 @@ Print the final array.
   if(allAbove40){
     console.log("Some Above 40");
   } else {
-    console.log("all above 40");
+    // console.log("all above 40");
   }
   if(allAbove80){
-    console.log("Some are Greater Than 80");
+    // console.log("Some are Greater Than 80");
   } else {
     console.log("All Above 80");
   }
@@ -479,17 +479,40 @@ Print the final array.
   // Create an array of length 5 and fill it with "A".
   let arr = ["a", "b", "c", "d", "e"];
   let fil = arr.fill("A", 3, 4);
-  console.log(fil);
+  // console.log(fil);
 }
 {
   // Check which of these are arrays:
   let check =[[1, 2, 3], "Hello", {a: 1}, new Array(3)];
-  check.forEach((i) => console.log(Array.isArray(i)));  
+  // check.forEach((i) => console.log(Array.isArray(i)));  
 
   let result = check.map((i) => Array.isArray(i))
   if(result){
-    console.log("Firsy");
-    
-  }
-  console.log(result);
+    // console.log(result);
+  };
+  // console.log(result);
+}
+{
+  // Use copyWithin() to copy the first two elements to positions starting from index 3.
+  let arr = [1, 2, 3, 4, 5];
+  let copy = arr.copyWithin(3, 0, 2);
+  // console.log(copy);
+}
+{
+  // Convert the string "HELLO" into an array of its characters using Array.from().
+  let str = "HELLO";
+  let inArr = Array.from(str);
+  // console.log(inArr);
+}
+{
+  /*
+  From [1, 2, 3, 4, 5],
+👉 filter numbers > 2
+👉 double them
+👉 find the total sum (use chaining with filter(), map(), reduce()).
+  */
+
+  let arr =[1, 2, 3, 4, 5];
+  let chain = arr.filter((n) => n > 2).map((m) => m * 2).reduce((acc, crr) => acc + crr);
+  // console.log(chain);
 }

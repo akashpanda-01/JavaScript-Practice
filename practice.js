@@ -62,7 +62,7 @@
       };
     };
   };
-  console.log(arr1);
+  // console.log(arr1);
   
 
   // DECENDING ORDER
@@ -77,6 +77,64 @@
       };
     };
   };
-  console.log(arr2);
+  // console.log(arr2);
   
 }
+  class Parent {
+    constructor(name, identy) {
+      this.name = name;
+      this.identy = identy;
+    };
+  };
+
+  class Child extends Parent{
+    constructor(name, identy){
+      console.log(name, identy);
+      super(name, identy);
+    };
+  };
+
+  let obj = new Child("RadheKrishna", "Bhagawan");
+
+  {
+    // QN:=> You are creating a website for your college.
+    // Create a class User with 2 propeerties, name & email. it has a method called viewData() that
+    // allows user to view website data.
+
+    // Create a new class called admin which inherit from user . Add a new method called editData
+    // to Admin that allow it to edit website data.
+
+    let DATA = "Secret Information";
+    class User {
+      constructor(name, email){
+        this.name = name;
+        this.email = email;
+        
+      }
+
+      viewData() {
+        console.log("Data = ", DATA)
+      }
+    };
+
+    class Admin extends User{
+      constructor(name, email){
+        super(name, email);
+      }
+
+      editData(){
+        DATA = "Some New Values";
+      }
+    }
+
+    // Admin.__proto__ = User;
+
+    let student1 = new User("Akash", "akash@yahoo.com");
+    let student2 = new User("Raj", "raj@gamil.com");
+    let admin  = new Admin("admin", "admin@google.com");
+    student1.viewData();
+    student2.viewData();
+    admin.editData();
+    console.log(DATA);
+    
+  }

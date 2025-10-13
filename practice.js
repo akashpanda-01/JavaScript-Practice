@@ -62,7 +62,7 @@
       };
     };
   };
-  console.log(arr1);
+  // console.log(arr1);
   
 
   // DECENDING ORDER
@@ -77,6 +77,56 @@
       };
     };
   };
-  console.log(arr2);
+  // console.log(arr2);
+}
+
+
+
+// ====================== OBJECT ========================
+{
+function createUser(name, score){
+  this.name = name;
+  this.score = score;
+};
+
+createUser.prototype.increment = function (){
+  this.score++
+}
+
+createUser.prototype.printMe = function () {
+  // console.log(`Price is ${this.score}`);
+};
+
+let chai = new createUser("chai", 20);
+chai.printMe()
+}
+
+{
+  let user = {name : "Akash"};
+  // console.log(user.hasOwnProperty("name"));
+  // console.log("name" in user); 
+}
+
+{
+  let obj = {a: "1", b: "2", c: "3"};
+  for(let key in obj){
+    console.log(key, obj[key]);
+  };
+  console.log(Object.keys(obj));
+  console.log(Object.values(obj));
+  console.log(Object.entries(obj));
+}
+
+{
+  // Shallow Copy
+  let obj = {name : "akash"};
+  let copy1 = Object.assign({}, obj);
+  let copy2 = {...obj};
+  // Deep Copy
+  let deepCopy = JSON.parse(JSON.stringify(obj));
+
+  console.log(copy1);
+  console.log(copy2);
+  console.log(deepCopy);
   
 }

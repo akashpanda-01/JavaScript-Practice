@@ -1,3 +1,4 @@
+
 {
   // Find Factorial of a given number 5.
   let num = 1;
@@ -315,7 +316,7 @@ Print the final array.
       if (crr <= 40) acc.allAbove40 = false;
       return acc;
     },
-    { allAbove40: true }
+    // { allAbove40: true }
   );
 
   // console.log(result.allAbove40 ? "All Above 40" : "Some Above 40");
@@ -330,7 +331,7 @@ Print the final array.
   let allAbove40 = true;
   for (let nums of marks) {
     if (nums >= 40) {
-      allAbove40 = true;
+      // allAbove40 = true;
     } else {
       allAbove40 = false;
     }
@@ -488,8 +489,108 @@ Print the final array.
 
   let result = check.map((i) => Array.isArray(i))
   if(result){
-    console.log("Firsy");
-    
+    // console.log("First");
   }
-  console.log(result);
+  // console.log(result);
+}
+
+{
+  // How to Copy an Object ?
+  let obj = {name: "Akash", address: {state: "someplace"}};
+  // Shallow Copy (One Level Copying and Nested Objects Are Reference)
+  let copy1 = {...obj};
+  copy1.name = "Rahul";
+  copy1.address.state = "new State"; 
+  // console.log(copy1.name);
+  // console.log(obj.name);
+  // console.log(copy1.address.state);
+  // console.log(obj.address.state);
+  
+  // Depp Copy (All In Object Including Nested objects are Copied No Reference)
+  let obj1 = {name: "RadheKrishna", heroes : {h1: "Ironman"}};
+  // console.log(obj1.name, obj1.heroes.h1);
+  let deepCopy = JSON.parse(JSON.stringify(obj1));
+  deepCopy.name = "HariGobinda";
+  deepCopy.heroes.h1 = "Tony Stark";
+  // console.log(deepCopy.name, deepCopy.heroes.h1);
+  // console.log(obj1.name, obj1.heroes.h1);
+}
+{
+  // Destructuring
+  let obj = {name: "A", age: "2"};
+  let { name: key, age } = obj;
+  // console.log(key, age);
+}
+{
+  // Object.freez()
+  let obj = {name: "a"};
+  Object.freeze(obj);
+  obj.name = "b";
+  // console.log(obj.name);
+}
+{
+  let obj = {name: "a", age: "200"};
+  Object.seal(obj);
+  obj.name = "akash";
+  delete obj.name;
+  // console.log(obj.name);
+}
+{
+  // Merge Two Objects
+  let obj1 = {name: "a"};
+  let obj2 = {age: "100"};
+  let merge = {...obj1, ...obj2};
+  // console.log(merge);
+}
+{
+  // Object.create inheritance
+  let parent = { name : "ab", age: "12"};
+  let child = Object.create(parent);
+  // console.log(child.name, child.age);
+}
+{
+  // Getter and Setter
+  let user = {
+    fistname: "AB",
+    lastName: "CD",
+    get fullName(){
+      return this.firstName + " " + this.lastName;
+    },
+    set fullName(name) {
+      [this.firstName, this.lastName] = name ;
+    }
+  };
+  user.fullName = "Rahul Kumar";
+  // console.log(user.fullName);
+}
+{
+  // Optional Chaining
+  let obj = {name: "a", ageof: {a: "100"}};
+  // console.log(obj.ageof?.a);
+  // console.log(obj.ageof?.b); 
+}
+{
+  // Difference Between __proto__ and prototype
+  function Person () {};
+  let p = new Person();
+  // console.log(p.__proto__ === Person.prototype);
+}
+{
+  // Map and Object
+  let map = new Map();
+  map.set("a", 1);
+  map.set({a: 2}, "values");
+  // console.log(map);
+}
+{
+  // Singleton (both variable point to the same single object)
+  let config = {
+    name: "AppConfig",
+    version: 1.0
+  };
+  let anotherConfig = config;
+  anotherConfig.version = 2.0;
+  // console.log(config);
+  // console.log(anotherConfig);
+  
 }

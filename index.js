@@ -5373,7 +5373,3 @@ printVowel("hello");
   };
   console.log(checkArmstrong(153));
 }
-
-{
-  // 
-}

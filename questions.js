@@ -1,4 +1,3 @@
-
 {
   // Find Factorial of a given number 5.
   let num = 1;
@@ -315,7 +314,7 @@ Print the final array.
     (acc, crr) => {
       if (crr <= 40) acc.allAbove40 = false;
       return acc;
-    },
+    }
     // { allAbove40: true }
   );
 
@@ -385,9 +384,9 @@ Print the final array.
 {
   let arr = [10, 20, 30, 40, 50];
   let max = arr.reduce((acc, crr) => {
-    if(crr > acc){
+    if (crr > acc) {
       acc = crr;
-    };
+    }
     return acc;
   });
   // console.log(max);
@@ -401,7 +400,6 @@ Print the final array.
   temp.push(4);
   // console.log(arr);
   // console.log(temp);
-  
 }
 {
   // Check if 50 exists in [10, 20, 30, 40, 50].
@@ -419,7 +417,7 @@ Print the final array.
 {
   // Find the first number greater than 10, and its index.
   let nums = [5, 10, 15, 20];
-  let find = nums.find(n => n > 10);
+  let find = nums.find((n) => n > 10);
   let findIdx = nums.findIndex((n) => n > 10);
   // console.log(find, findIdx);
 }
@@ -463,14 +461,14 @@ Print the final array.
   // Check if all marks are greater than 40.
   // Check if some marks are greater than 80.
   let marks = [45, 67, 89, 90, 50];
-  let allAbove40 = marks.every(mrk => mrk < 40);
-  let allAbove80 = marks.some(sm => sm > 80);
-  if(allAbove40){
+  let allAbove40 = marks.every((mrk) => mrk < 40);
+  let allAbove80 = marks.some((sm) => sm > 80);
+  if (allAbove40) {
     console.log("Some Above 40");
   } else {
     // console.log("all above 40");
   }
-  if(allAbove80){
+  if (allAbove80) {
     // console.log("Some are Greater Than 80");
   } else {
     console.log("All Above 80");
@@ -484,12 +482,11 @@ Print the final array.
 }
 {
   // Check which of these are arrays:
-  let check =[[1, 2, 3], "Hello", {a: 1}, new Array(3)];
-  // check.forEach((i) => console.log(Array.isArray(i)));  
+  let check = [[1, 2, 3], "Hello", { a: 1 }, new Array(3)];
+  // check.forEach((i) => console.log(Array.isArray(i)));
 
-  let result = check.map((i) => Array.isArray(i))
-  if(result){
-<<<<<<< HEAD
+  let result = check.map((i) => Array.isArray(i));
+  if (result) {
     // console.log("First");
   }
   // console.log(result);
@@ -497,18 +494,18 @@ Print the final array.
 
 {
   // How to Copy an Object ?
-  let obj = {name: "Akash", address: {state: "someplace"}};
+  let obj = { name: "Akash", address: { state: "someplace" } };
   // Shallow Copy (One Level Copying and Nested Objects Are Reference)
-  let copy1 = {...obj};
+  let copy1 = { ...obj };
   copy1.name = "Rahul";
-  copy1.address.state = "new State"; 
+  copy1.address.state = "new State";
   // console.log(copy1.name);
   // console.log(obj.name);
   // console.log(copy1.address.state);
   // console.log(obj.address.state);
-  
+
   // Depp Copy (All In Object Including Nested objects are Copied No Reference)
-  let obj1 = {name: "RadheKrishna", heroes : {h1: "Ironman"}};
+  let obj1 = { name: "RadheKrishna", heroes: { h1: "Ironman" } };
   // console.log(obj1.name, obj1.heroes.h1);
   let deepCopy = JSON.parse(JSON.stringify(obj1));
   deepCopy.name = "HariGobinda";
@@ -518,19 +515,19 @@ Print the final array.
 }
 {
   // Destructuring
-  let obj = {name: "A", age: "2"};
+  let obj = { name: "A", age: "2" };
   let { name: key, age } = obj;
   // console.log(key, age);
 }
 {
   // Object.freez()
-  let obj = {name: "a"};
+  let obj = { name: "a" };
   Object.freeze(obj);
   obj.name = "b";
   // console.log(obj.name);
 }
 {
-  let obj = {name: "a", age: "200"};
+  let obj = { name: "a", age: "200" };
   Object.seal(obj);
   obj.name = "akash";
   delete obj.name;
@@ -538,14 +535,14 @@ Print the final array.
 }
 {
   // Merge Two Objects
-  let obj1 = {name: "a"};
-  let obj2 = {age: "100"};
-  let merge = {...obj1, ...obj2};
+  let obj1 = { name: "a" };
+  let obj2 = { age: "100" };
+  let merge = { ...obj1, ...obj2 };
   // console.log(merge);
 }
 {
   // Object.create inheritance
-  let parent = { name : "ab", age: "12"};
+  let parent = { name: "ab", age: "12" };
   let child = Object.create(parent);
   // console.log(child.name, child.age);
 }
@@ -554,25 +551,25 @@ Print the final array.
   let user = {
     fistname: "AB",
     lastName: "CD",
-    get fullName(){
+    get fullName() {
       return this.firstName + " " + this.lastName;
     },
     set fullName(name) {
-      [this.firstName, this.lastName] = name ;
-    }
+      [this.firstName, this.lastName] = name;
+    },
   };
   user.fullName = "Rahul Kumar";
   // console.log(user.fullName);
 }
 {
   // Optional Chaining
-  let obj = {name: "a", ageof: {a: "100"}};
+  let obj = { name: "a", ageof: { a: "100" } };
   // console.log(obj.ageof?.a);
-  // console.log(obj.ageof?.b); 
+  // console.log(obj.ageof?.b);
 }
 {
   // Difference Between __proto__ and prototype
-  function Person () {};
+  function Person() {}
   let p = new Person();
   // console.log(p.__proto__ === Person.prototype);
 }
@@ -580,23 +577,22 @@ Print the final array.
   // Map and Object
   let map = new Map();
   map.set("a", 1);
-  map.set({a: 2}, "values");
+  map.set({ a: 2 }, "values");
   // console.log(map);
 }
 {
   // Singleton (both variable point to the same single object)
   let config = {
     name: "AppConfig",
-    version: 1.0
+    version: 1.0,
   };
   let anotherConfig = config;
   anotherConfig.version = 2.0;
   // console.log(config);
   // console.log(anotherConfig);
-  
-=======
-    // console.log(result);
-  };
+
+  // console.log(result);
+  // };
   // console.log(result);
 }
 {
@@ -619,8 +615,130 @@ Print the final array.
 👉 find the total sum (use chaining with filter(), map(), reduce()).
   */
 
-  let arr =[1, 2, 3, 4, 5];
-  let chain = arr.filter((n) => n > 2).map((m) => m * 2).reduce((acc, crr) => acc + crr);
+  let arr = [1, 2, 3, 4, 5];
+  let chain = arr
+    .filter((n) => n > 2)
+    .map((m) => m * 2)
+    .reduce((acc, crr) => acc + crr);
   // console.log(chain);
->>>>>>> ec14697cfc000f46950da30604fbc5ccf497f833
+}
+{
+  // try & catch method
+  // console.log("Hello");
+  // console.log("Hello");
+  try {
+    // console.log(a);
+  } catch (err) {
+    // console.log(err);
+  }
+  // console.log("Hello1");
+}
+
+// =========================== PROMISE =========================
+{
+  let data = {
+    name: "a",
+    name2: "b",
+  };
+
+  let promise = new Promise(function (res, rej) {
+    if (data) {
+      res(data.name);
+    } else {
+      rej("Data not Found");
+    }
+  });
+
+  promise
+    .then((result) => {
+      // console.log(result);
+    })
+    .catch((err) => {
+      // console.log(err);
+    })
+    .finally(() => {
+      // console.log("Done");
+    });
+}
+
+{
+  let success = false;
+  let promise2 = new Promise((res, rej) => {
+    if (success) {
+      res("Success");
+    } else {
+      rej("Failed");
+    }
+  });
+
+  promise2
+    .then((result) => {
+      // console.log(result);
+    })
+    .catch((err) => {
+      // console.log(err);
+    });
+}
+
+{
+  let promise = new Promise((res, rej) => {
+    setTimeout(() => {
+      res("Data Fetched");
+    });
+  });
+
+  // promise.then((result) => console.log(result));
+}
+
+{
+  // let cart = ["shoes", "Pants", "Kurata"];
+  // createCartOrder(function (cart) {
+  //   proceedPayment(function (orderId){
+  //   })
+  // })
+  // let promise = createOrder(cart)
+  // promise.then((orderId) => {
+  //   proceedPayment(orderId);
+  // });
+}
+{
+  // promise.all()
+  // promise.allSeteled()
+  // promise.race()
+  // promise.any()
+
+  let p1 = new Promise((res, rej) => {
+    setTimeout(() => {
+      // res("p1 success");
+      rej("p1 success");
+    }, 3000);
+  });
+  let p2 = new Promise((res, rej) => {
+    setTimeout(() => {
+      // res("p2 success");
+      rej("p2 success");
+    }, 1000);
+  });
+  let p3 = new Promise((res, rej) => {
+    setTimeout(() => {
+      // res("p3 success");
+      rej("p3 success");
+    }, 2000);
+  });
+
+  Promise.all([p1, p2, p3])
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err));
+
+  Promise.allSettled([p1, p2, p3])
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err));
+
+  Promise.race([p1, p2, p3])
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err));
+
+  Promise.any([p1, p2, p3])
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err));
 }

@@ -709,36 +709,71 @@ Print the final array.
 
   let p1 = new Promise((res, rej) => {
     setTimeout(() => {
-      // res("p1 success");
-      rej("p1 success");
+      res("p1 success");
+      // rej("p1 success");
     }, 3000);
   });
   let p2 = new Promise((res, rej) => {
     setTimeout(() => {
-      // res("p2 success");
-      rej("p2 success");
+      res("p2 success");
+      // rej("p2 success");
     }, 1000);
   });
   let p3 = new Promise((res, rej) => {
     setTimeout(() => {
-      // res("p3 success");
-      rej("p3 success");
+      res("p3 success");
+      // rej("p3 success");
     }, 2000);
   });
 
   Promise.all([p1, p2, p3])
-  .then((result) => console.log(result))
-  .catch((err) => console.log(err));
+    // .then((result) => console.log(result))
+    .catch((err) => console.log(err));
 
   Promise.allSettled([p1, p2, p3])
-  .then((result) => console.log(result))
-  .catch((err) => console.log(err));
+    // .then((result) => console.log(result))
+    .catch((err) => console.log(err));
 
   Promise.race([p1, p2, p3])
-  .then((result) => console.log(result))
-  .catch((err) => console.log(err));
+    // .then((result) => console.log(result))
+    .catch((err) => console.log(err));
 
   Promise.any([p1, p2, p3])
-  .then((result) => console.log(result))
-  .catch((err) => console.log(err));
+    // .then((result) => console.log(result))
+    .catch((err) => console.log(err));
+}
+
+{
+  const p1 = new Promise((res, rej) => {
+    setTimeout(() => {
+      res("P1 Success");
+    }, 10000);
+  });
+  const p2 = new Promise((res, rej) => {
+    setTimeout(() => {
+      res("P2 Success");
+    }, 5000);
+  });
+
+  async function handelPromise() {
+    // console.log("Hello")
+    const val = await p1;
+    // console.log(val);
+
+    const val2 = await p2;
+    // console.log(val2)
+  }
+
+  handelPromise();
+}
+
+{
+  async function handlePromise() {
+    const API_URL = "https://api.github.com/users/akshaymarch7";
+    const data = await fetch(API_URL);
+    let value = await data.json();
+    console.log(value);
+    
+  };
+  handlePromise();
 }

@@ -744,16 +744,16 @@ Print the final array.
 }
 
 {
-  const p1 = new Promise((res, rej) => {
-    setTimeout(() => {
-      res("P1 Success");
-    }, 10000);
-  });
-  const p2 = new Promise((res, rej) => {
-    setTimeout(() => {
-      res("P2 Success");
-    }, 5000);
-  });
+  // const p1 = new Promise((res, rej) => {
+  //   setTimeout(() => {
+  //     res("P1 Success");
+  //   }, 10000);
+  // });
+  // const p2 = new Promise((res, rej) => {
+  //   setTimeout(() => {
+  //     res("P2 Success");
+  //   }, 5000);
+  // });
 
   async function handelPromise() {
     // console.log("Hello")
@@ -764,7 +764,7 @@ Print the final array.
     // console.log(val2)
   }
 
-  handelPromise();
+  // handelPromise();
 }
 
 {
@@ -772,8 +772,48 @@ Print the final array.
     const API_URL = "https://api.github.com/users/akshaymarch7";
     const data = await fetch(API_URL);
     let value = await data.json();
-    console.log(value);
+    // console.log(value);
     
   };
-  handlePromise();
+  // handlePromise();
 }
+
+ {
+    // let URL = "https://catfact.ninja/fact";
+    // let val = fetch(URL)
+    // val.then(res => {
+    //   console.log(res);
+    //   // res.json()
+    //   // .then(data => console.log(data))
+    //   return res.json()
+    // })
+    // .then(data => {
+    //   console.log(data.fact);
+    //   return fetch(URL)
+    // })
+    // .then(res => {
+    //   return res.json();      
+    // })
+    // .then(data2 => {
+    //   console.log(data2);
+    // })
+    // .catch(err => {
+    //   console.log("ERROR -", err);
+    // })      
+  }
+
+  {
+    let URL = "https://catfact.ninja/fact";
+    async function handleApiCalls (){
+      try{
+        let res = await fetch(URL);
+      let data = await res.json();
+      console.log(data.fact);
+      }
+      catch(err){
+        console.log(err, "ERROR");
+        
+      }
+    }
+    handleApiCalls()
+  }

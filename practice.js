@@ -78,7 +78,6 @@
     };
   };
   // console.log(arr2);
-<<<<<<< HEAD
 }
 
 
@@ -111,11 +110,11 @@ chai.printMe()
 {
   let obj = {a: "1", b: "2", c: "3"};
   for(let key in obj){
-    console.log(key, obj[key]);
+    // console.log(key, obj[key]);
   };
-  console.log(Object.keys(obj));
-  console.log(Object.values(obj));
-  console.log(Object.entries(obj));
+  // console.log(Object.keys(obj));
+  // console.log(Object.values(obj));
+  // console.log(Object.entries(obj));
 }
 
 {
@@ -126,11 +125,9 @@ chai.printMe()
   // Deep Copy
   let deepCopy = JSON.parse(JSON.stringify(obj));
 
-  console.log(copy1);
-  console.log(copy2);
-  console.log(deepCopy);
-=======
->>>>>>> ec14697cfc000f46950da30604fbc5ccf497f833
+  // console.log(copy1);
+  // console.log(copy2);
+  // console.log(deepCopy);
   
 }
   class Parent {
@@ -142,7 +139,7 @@ chai.printMe()
 
   class Child extends Parent{
     constructor(name, identy){
-      console.log(name, identy);
+      // console.log(name, identy);
       super(name, identy);
     };
   };
@@ -166,7 +163,7 @@ chai.printMe()
       }
 
       viewData() {
-        console.log("Data = ", DATA)
+        // console.log("Data = ", DATA)
       }
     };
 
@@ -176,7 +173,7 @@ chai.printMe()
       }
 
       editData(){
-        DATA = "Some New Values";
+        // DATA = "Some New Values";
       }
     }
 
@@ -188,6 +185,5 @@ chai.printMe()
     student1.viewData();
     student2.viewData();
     admin.editData();
-    console.log(DATA);
-    
+    // console.log(DATA);
   }

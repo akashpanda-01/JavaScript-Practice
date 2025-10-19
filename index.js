@@ -5361,6 +5361,8 @@ printVowel("hello");
   };
   // console.log(checkArmstrongNumber(153));
 }
+
+
 {
   function checkArmstrong(num){
     let num1 = num.toString().split("");

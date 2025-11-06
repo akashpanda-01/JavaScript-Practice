@@ -30,3 +30,10 @@
   }
 //   console.log(reverse);
 }
+/Reverse a given number 123.
+  let n = 123;
+  let reverse = 0;
+  for (let temp = n; temp > 0; temp = Math.floor(temp / 10)) {
+    reverse = reverse * 10 + (temp % 10);
+  }
+  // console.log(reverse);

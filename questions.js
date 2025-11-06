@@ -771,13 +771,131 @@ Print the final array.
   async function handlePromise() {
     const API_URL = "https://api.github.com/users/akshaymarch7";
     const data = await fetch(API_URL);
+    console.log(data);
     let value = await data.json();
+    console.log(value);
     // console.log(value);
     
   };
   // handlePromise();
 }
 
+{
+  async function test1(){
+    return "Hello World";
+  };
+  // console.log(test1());
+}
+{
+  async function test2(){
+    let result = await "Hii";
+    // console.log(result);
+  };
+  test2();
+  // console.log("End");
+}
+{
+  async function test3 (){
+    let p = new Promise(res => res("Resolve"))
+    let result = await p;
+    // console.log(result);
+  };
+  test3();
+}
+{
+  async function test4(){
+    // throw new Error("Something Went Wrong");
+  };
+  test4();
+  // console.log("After Function Call");
+}
+{
+  function delay(ms){
+    return new Promise(res => setTimeout(res, ms));
+  };
+  async function sequential(){
+    console.log("Satrt");
+    await delay(1000);
+    console.log("1 Second Passed");
+    await delay(1000);
+    console.log("2 Second Passed");
+  };
+  // sequential();
+}
+{
+  function delay(ms, value){
+    return new Promise((res) => setTimeout(() => res(value), ms));
+  };
+
+  async function parallel(){
+    const p1 = delay(2000, "A");
+    const p2 = delay(2000, "B");
+
+    let result1 = await p1;
+    let result2 = await p2;
+
+    console.log(result1);
+    console.log(result2);
+  };
+  // parallel();
+}
+{
+  function delay(ms, value){
+    return new Promise((res) => setTimeout(() => res(value), ms));
+  };
+
+  async function parallelBetter(){
+    const [a, b] = await Promise.all([delay(2000, "A"), delay(2000, "B")]);
+    console.log(a);
+    console.log(b);
+  };
+  // parallelBetter();
+}
+{
+  async function testError(){
+    try{
+      const p1 = Promise.reject("Failed");
+      let res = await p1;
+      console.log(res);
+    }
+    catch(err){
+      console.log("Caught", err);
+    };
+  };
+  // testError();
+}
+{
+  async function throwErr(){
+    try{
+      throw "Manual Error";
+    }
+    catch(err){
+      console.log(err);
+    };
+  };
+  // throwErr();
+}
+{
+  async function demo(){
+    console.log("A");
+    setTimeout(() => console.log("B"), 0);
+    await Promise.resolve();
+    console.log("c");
+  };
+  // demo();
+  // console.log("D");
+  
+}
+{
+  async function tricky(){
+    console.log("Start");
+    let p = Promise.resolve("Done");
+    p.then(console.log);
+    console.log("End");
+
+  };
+  tricky();
+}
  {
     // let URL = "https://catfact.ninja/fact";
     // let val = fetch(URL)

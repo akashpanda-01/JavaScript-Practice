@@ -187,3 +187,19 @@ chai.printMe()
     admin.editData();
     // console.log(DATA);
   }
+
+
+
+function withLoggedIn(fn){
+  return function(...args){
+    console.log("Calling Function");
+    return fn(...args);
+  };
+}
+
+function add(a, b){
+  return a + b;
+}
+
+const loggedAdd = withLoggedIn(add);
+console.log(loggedAdd(2, 3))
